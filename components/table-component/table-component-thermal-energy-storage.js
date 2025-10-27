@@ -1,14 +1,20 @@
-new gridjs.Grid({
-  columns: ["Name", "Email", "Phone Number"],
+const table1 = new gridjs.Grid({
+  columns: ["HTF", "Heat Capacity (J/kgºC)", "Viscosity", "Cost (SGD/l)", "Availability"],
   data: [
-    ["John", "john@example.com", "(353) 01 222 3333"],
-    ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-    ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
-    ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
-    ["Afshin", "afshin@mail.com", "(353) 22 87 8356"],
+    ["Water", "4180", "x", "x", "Easily available"],
   ],
-}).render(document.getElementById("table-1"));
+});
+table1.render(document.getElementById("HTF-table"));
 
+const htftable = new gridjs.Grid({
+  columns: ["Method", "Mechanism", "Pros", "Cons"],
+  data: [
+    ["Pumps", "4180", "x", "x"],
+    ["Thermosiphon", "4180", "x", "x"],
+    ["Magnetohydrodynamic (MHD)", "4180", "x", "x"],
+  ],
+});
+htftable.render(document.getElementById("Pumping-mechanism"));
 
 class TableComponent extends HTMLElement {
   static get observedAttributes() {

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Light</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="stylesheet" href="./components/team-member/team-member.css">
+  <script type="module" src="./components/team-member/team-member.js"></script>
+
+  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+
+  <script type="module" src="./components/image/image-component.js"></script>
+
+  <script type="module" src="./components/video/video.js"></script>
+
+  <link rel="stylesheet" href="./components/references/references.css">
+
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+
+  <script src=".components/table-component/table-component-thermal-transmission.js"></script>
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+  <style> 
+     .square { 
+        border: 1px solid black;
+        padding: 20px;
+        display: inline-block;
+    } 
+   </style>
+
+</head>
+
+<body>
+
+  <div class="content">
+
+    <sl-button size="medium" pill onclick href="index.html">Back to main page</sl-button>
+    <h1>Thermal Transmission</h1>
+    <sl-divider></sl-divider>
+
+
+    <div>
+      <div id="TT">
+        <p>
+          The thermal tranmission subsystem is responsible for transferring the thermal energy from the receiver to the TES system. This includes the HTF, the connecting pipes, insulation of the pipes, and the pumps.
+        </p>
+      </div>
+
+      <div id="TT-HTF">
+        <h2>Heat transfer fluid: Design Specifications</h2>
+        <!-- For the HTF -->
+        <h3>Heat transfer fluid selection</h3>
+        <p>
+          The HTF is the medium that transfers the thermal energy from the receiver to the TES system. The list of potential HTF is narrowed down based on the operating temperature for the entire thermal transmission subsystem, which is between 60-80ºC. To rank these, the following criterias are considered:
+          <ul>
+            <li>Heat capacity: High heat capacity is ideal as more energy can be stored within the temperature range</li>
+            <li>Viscosity: Low viscosity is ideal to reduce the friction head loss</li>
+            <li>Cost: Low cost is ideal</li>
+            <li>Availability: Easily available is ideal</li>
+          </ul>
+        </p> 
+
+        <table-component subtitle="Table: HTF criteria">
+          <div id="HTF-table"></div>
+        </table-component>
+
+      </div>
+
+      <div id="TT-fluid-motion">
+        <h2>Fluid motion: Design Specifications and Concept Generation</h2>
+        <p>
+          Add text
+          Text
+        </p>
+        <!-- For the fluid motion -->
+        <h3>Experiment 1: Flowing open system using white LED</h3>
+        <p>
+          Text
+          <br /><br />
+          <b>Title:</b> Flowing open system test with white LED
+          <br /><br />
+          <b>Purpose:</b> To attain the power absorbed by the HTF (water) and determine the ideal flow rate for a predetermined temperature change
+          <br /><br />
+          <b>Methodology:</b> Water is cycled through the cylindrical-conical receiver from one container to another and the temperature is measured for the water in both containers. The experiment starts when the white LED is switched on and is left until the outlet temperature reaches constant temperature. The details of the setup are below:
+        </p>
+
+        <table-component subtitle="Table: Details of experiment 1">
+          <div id="Exp-1-details"></div>
+        </table-component>
+        
+        <table-component subtitle="Table: Measurements for experiment 1">
+          <div id="Exp-1-measurements"></div>
+        </table-component>
+          
+        <p>
+          <b>Hypothesis:</b> The power will be higher for the flowing system than for the static system. 
+          <br /><br />
+          Compared to the static experiments in the light subsystem, the fluid in the flowing systems experiences forced convection rather than natural convection due to the presence of the working pump. The convective heat transfer coefficient accounts for the heat transfer between the inner surface of the copper coil and the fluid. In forced convection, the motion increases the rate at which the hot fluid at the surface is replaced by cooler fluid. This is seen in the higher value for convective coefficient in forced convection than the natural convection and the specific value can be obtained from the Nusselt number. Utilising the convection heat transfer equation,
+          <math>
+            <mover>
+              <mi>Q</mi>
+              <mo>&dot;</mo>
+            </mover>
+            <mo>=</mo>
+            <mi>h</mi>
+            <mi>A</mi>
+            <mo>(</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>coil</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>fluid</mn>
+            </msub>
+            <mo>)</mo>
+            </math>
+          </math>
+          , the power absorbed by the fluid will be higher.
+          <br /><br />
+          <b>Results and analysis:</b>
+        </p>
+      </div>
+
+      <div id="TT-results-and-analysis">
+        <h2>Results and Analysis</h2>
+        <p>
+          Text
+        </p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+   <sl-button size="medium" pill onclick href="thermalenergystoragesubs.html">Next subsection: Thermal Energy Storage</sl-button>
+
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component-thermal-transmission.js"></script>
+</body>
+
+</html>
