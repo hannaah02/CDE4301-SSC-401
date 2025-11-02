@@ -180,6 +180,11 @@ const table2 = new gridjs.Grid({
     https://iwakiamerica.com/blog/the-science-behind-total-dynamic-head-and-its-relevance-in-fluid-dynamics/
     Not: https://www.linkedin.com/posts/fernando-romo-sanchez-6ba025303_pump-performance-curves-are-vital-for-calculating-activity-7377459998903201792-jHOM */
 
+    [gridjs.html("Differential pressure <math><mo>(</mo><mi>&Delta;</mi><mi>P</mi><mo>)</mo></math>, bar"), gridjs.html("Differential pressure is the difference in pressure between 2 points.<br /><br /><math><mi>&Delta;</mi><mi>P</mi><mo>=</mo><mi>0.0981</mi><mo>&times;</mo><mi>TDH</mi><mo>&times;</mo><mi>SG</mi></math>,<br />where <math><mi>TDH</mi></math> is the head, and<br /><math><mi>SG</mi></math> is the specific gravity of the fluid. [35]")],
+    /* References!!
+    [35] https://www.engineeringtoolbox.com/pump-head-pressure-d_663.html */
+
+
     [gridjs.html("Net Positive Suction Head (NPSH), <math> <mi>m</mi></math>"), gridjs.html("NPSH is the difference between the inlet pressure to the lowest pressure level inside the pump. [23]")],
     /* References!!
     https://www.grundfos.com/sg/learn/research-and-insights/npsh-net-positive-suction-head */
@@ -207,11 +212,34 @@ const table2 = new gridjs.Grid({
     https://byjus.com/chemistry/liquid-state-vapour-pressure/ */
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/ /* REFERENCES NOT ADDED */
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /* Power */
+
+    [gridjs.html("Power"), gridjs.html("<math><mi>P</mi><mo>=</mo><mi>I</mi><mi>V</mi></math>,<br />where <math><mi>P</mi></math> is the power,<br /><math><mi>I</mi></math> is the current, and<br /><math><mi>V</mi></math> is the voltage.")],
+
+    [gridjs.html("AC Current input"), gridjs.html("<math><msub><mi>I</mi><mn>AC</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mn>DC</mn></msub></mrow><mrow><mi>PF</mi><mo>&dot;</mo><mi>&eta;</mi><mo>&dot;</mo><msub><mi>V</mi><mn>AC</mn></msub></mrow></mfrac></math>,<br />where <math><msub><mi>I</mi><mn>AC</mn></msub></math> is the AC input current (for 1-phase),<br /><math><mi>PF</mi></math> is the power factor,<br /><math><mi>&eta;</mi></math> is the efficiency, and<br /><math><msub><mi>V</mi><mn>AC</mn></msub></math> is the AC input voltage. [29]")],
+    /* References!!
+    [29] https://magna-power.com/learn/kb/calculating-power-supply-ac-input-current */
+
+    [gridjs.html("Power factor (PF)"), gridjs.html("Power factor is a measure of energy efficiency and is the ratio of the working power (in kW) to apparent power (in kVA). [30]")],
+    /* References!!
+    [30] https://www.fluke.com/en-sg/learn/blog/power-quality/power-factor-formula */
+
+    [gridjs.html("Power factor correction (PFC)"), gridjs.html("Power factor correction is the methods used to improve a device's power factor. [31]")],
+    /* References!!
+    [31] https://www.monolithicpower.com/en/learning/resources/power-factor-correction */
+
+    [gridjs.html("Switching power supply (SMPS)"), gridjs.html("SMPS is a form of AC to DC power converter that has higher efficiency than linear power supply. [32]")],
+    /* References!!
+    [32] https://www.tek.com/en/blog/what-is-a-switching-power-supply */
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     /* Insulation */
 
-    [gridjs.html("Thermal resistance <math><mo>(</mo><mi>&theta;</mi></math> or <math><mi>R</mi><mo>)</mo></math>, <math><mfrac><mrow><mi>&deg;</mi><mi>C</mi></mrow> <mrow><mi>W</mi></mrow></mfrac></math>"), gridjs.html("Thermal resistance is the ability of a material to resist the transfer of heat.<br /><br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>&Delta;</mi><mi>T</mi></mrow><mrow><mover><mi>Q</mi><mn>&dot;</mn></mover></mrow></mfrac></math>,<br />where <math><mi>R</mi></math> is the thermal resistance,<br /><math><mi>&Delta;</mi><mi>T</mi></math> is the temperature difference, and<br /><math><mover><mi>Q</mi><mn>&dot;</mn></mover></math> is the power dissipated.<br /><br />In conduction, the thermal resistance is:<br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>L</mi></mrow><mrow><mi>kA</mi></mrow></mfrac></math>,<br />where <math><mi>L</mi></math> is the length of material the heat is conducted through (perpendicular to the heat flow),<br /><math><mi>k</mi></math> is the thermal conductivity, and<br /><math><mi>A</mi></math> is the cross-sectional area perpendicular to the heat flow.<br /><br />In convection, the thermal resistance is:<br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>1</mi></mrow><mrow><mi>h</mi><msub><mi>A</mi><mn>s</mn></msub></mrow></mfrac></math>,<br />where <math><mi>h</mi></math> is the convection heat transfer coefficient, and<br /><math><mi>A</mi></math> is the cross-sectional area perpendicular to the heat flow. [29][30]")],
+    [gridjs.html("Thermal resistance <math><mo>(</mo><mi>&theta;</mi></math> or <math><mi>R</mi><mo>)</mo></math>, <math><mfrac><mrow><mi>&deg;</mi><mi>C</mi></mrow> <mrow><mi>W</mi></mrow></mfrac></math>"), gridjs.html("Thermal resistance is the ability of a material to resist the transfer of heat.<br /><br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>&Delta;</mi><mi>T</mi></mrow><mrow><mover><mi>Q</mi><mn>&dot;</mn></mover></mrow></mfrac></math>,<br />where <math><mi>R</mi></math> is the thermal resistance,<br /><math><mi>&Delta;</mi><mi>T</mi></math> is the temperature difference, and<br /><math><mover><mi>Q</mi><mn>&dot;</mn></mover></math> is the power dissipated.<br /><br />In conduction, the thermal resistance is:<br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>L</mi></mrow><mrow><mi>kA</mi></mrow></mfrac></math>,<br />where <math><mi>L</mi></math> is the length of material the heat is conducted through (perpendicular to the heat flow),<br /><math><mi>k</mi></math> is the thermal conductivity, and<br /><math><mi>A</mi></math> is the cross-sectional area perpendicular to the heat flow.<br /><br />In convection, the thermal resistance is:<br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>1</mi></mrow><mrow><mi>h</mi><msub><mi>A</mi><mn>s</mn></msub></mrow></mfrac></math>,<br />where <math><mi>h</mi></math> is the convection heat transfer coefficient, and<br /><math><mi>A</mi></math> is the cross-sectional area perpendicular to the heat flow. [33][34]")],
     /* References!!
     https://www.xometry.com/resources/materials/thermal-resistance/
     https://community.cadence.com/cadence_blogs_8/b/pcb/posts/ee-thermal-101-thermal-basics-for-electrical-engineers-part-2-of-4-893913089 */

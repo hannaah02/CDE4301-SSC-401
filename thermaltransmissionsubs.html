@@ -67,11 +67,10 @@
     <div>
       <div id="TT">
         <p>
-          The thermal tranmission subsystem is responsible for transferring the thermal energy from the receiver to the TES system. The heat transfer system includes:
+          The thermal transmission subsystem is responsible for transferring the thermal energy from the receiver to the TES system. The heat transfer system includes:
           <ul>
             <li>Heat transfer fluid (HTF)</li>
             <li>Fluid motion</li>
-            <!-- <li>Connections from the receiver to the TES</li> -->
             <li>Insulation for the pipes.</li>
           </ul>
         </p>
@@ -83,10 +82,13 @@
           The design specifications of the thermal transmission subsection are summarised in the table below.
         </p>
 
-       
+       <!--
         <table-component subtitle="Table: Thermal transmission design specifications">
-          <div id="TT-specs"></div>
+          <div id="tt-specs"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/tt-specs.png"
+        subtitle="Table: Thermal transmission design specifications"></image-component>
       
 
       </div>
@@ -99,7 +101,12 @@
         <!-- For the HTF -->
         <h3>Heat transfer fluid selection</h3>
         <p>
-          Considering the existing temperatures of the water and the receiver in previous experiments, the water temperature reaches a maximum of XXX and the receiver reaches a maximum temperature of XXX. As such, our system is not able to run within high temperature ranges common in CSP rigs which can go upwards of
+          Considering the existing temperatures of the water and the receiver in previous experiments, the water temperature reaches a maximum of
+          <math>
+            <mi>67</mi>
+            <mi>&deg;</mi>
+            <mi>C</mi>
+          </math>. As such, our system is not able to run within high temperature ranges common in CSP rigs which can go upwards of
           <math>
             <mi>500</mi>
             <mi>&deg;</mi>
@@ -145,9 +152,15 @@
 
         </p> 
 
-        <table-component subtitle="Table: Properties of different HTF operational at low temperatures">
-          <div id="HTF-table"></div>
+        <!--
+        <table-component subtitle="Table: Properties of different HTF operational at low temperatures [6]">
+          <div id="htf-table"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/htf-table.png"
+        subtitle="Table: Properties of different HTF operational at low temperatures [6]"></image-component>
+
+        <br />
 
         <image-component tag="image" source="assets/htf-decision-matrix.png"
         subtitle="Figure: HTF decision matrix"></image-component>
@@ -169,7 +182,9 @@
           Considering the different methods of driving flow identified in the existing methods earlier, we can select the best option for our CSP system.
           <ul>
             <li><b>Thermosiphons</b> uses gravity and natural circulation, which requires the TES to be above the heat exchanger. This cannot be implemented in our rig as the TES can block the light rays from the reflector and receiver.</li>
-            <li><b>Two-phase loop thermosiphons</b> circulates the water via heating (at the evaporator) and cooling (at the condenser) at the bottom and top of the loop respectively and requires vaporisation. The height difference between these 2 sections matters in improving the heat transfer rate, however, it is still capable of functioning at a height difference of 0m albeit not being ideal. <!-- Reference: https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2516&context=iracc --> As it requires less of a height difference, it has potential to be applied to the system. However, it still requires the HTF to function at close to boiling point, which in our current system with a maximum temperature of XX is not possible. Regardless, as our system improves, and temperature increases to allow the HTF to hit the boiling point, this method can be properly analysed for its feasibility in the CSP rig.</li>
+            <br />
+            <li><b>Two-phase loop thermosiphons</b> circulates the water via heating (at the evaporator) and cooling (at the condenser) at the bottom and top of the loop respectively and requires vaporisation. The height difference between these 2 sections matters in improving the heat transfer rate, however, it is still capable of functioning at a height difference of 0m albeit not being ideal. [7] <!-- Reference: [7] https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2516&context=iracc --> As it requires less of a height difference, it has potential to be applied to the system. However, it still requires the HTF to function at close to boiling point, which in our current system with a maximum temperature of XX is not possible. Regardless, as our system improves, and temperature increases to allow the HTF to hit the boiling point, this method can be properly analysed for its feasibility in the CSP rig.</li>
+            <br />
             <li><b>Pumps</b> are therefore chosen as it is reliable and pump models can be selected to meet the different system requirements. However, the pumps to be used in this system will be different from those used in existing CSP rigs, because their pump requirements are different from our requirements.</li>
           </ul>
         </p>
@@ -187,15 +202,23 @@
           <b>Methodology:</b> Water is cycled through the cylindrical-conical receiver with the white LED from one container to another and the temperature is measured for the water in both containers. A rise in temperature at the outlet container compared to the inlet container would indicate the water is able to be pumped through the receiver. The details of the setup are below.
         </p>
 
+        <!--
         <table-component subtitle="Table: Details of experiment 1">
-          <div id="Exp-1-details"></div>
+          <div id="exp-1-details"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/exp-1-details.png"
+        subtitle="Table: Details of experiment 1"></image-component>
 
         <br />
         
+        <!--
         <table-component subtitle="Table: Measurements for experiment 1">
-          <div id="Exp-1-measurements"></div>
+          <div id="exp-1-measurements"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/exp-1-measurements.png"
+        subtitle="Table: Measurements for experiment 1"></image-component>
 
         <br />
 
@@ -233,12 +256,16 @@
           </math>.
         </p>
 
+        <!--
         <table-component subtitle="Table: Power calculation for open loop system">
-          <div id="Exp-1-results"></div>
+          <div id="exp-1-results"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/exp-1-results.png"
+        subtitle="Table: Power calculation for open loop system"></image-component>
 
         <p>
-          The power absorbed by the water is observed to be higher for the flowing system (142.248 W) than the static system (XX). This is on account of the higher convection coefficient in flowing water and higher <math><mi>&Delta;</mi><mi>T</mi></math> (or temperature gradient) between the water and receiver across time as compared to the static system.
+          The power absorbed by the water is observed to be higher for the flowing system (142.248 W) than the static system (16.01 W). This is on account of the higher convection coefficient in flowing water and higher <math><mi>&Delta;</mi><mi>T</mi></math> (or temperature gradient) between the water and receiver across time as compared to the static system.
           <br /><br />
           The fluid in the flowing system experiences forced convection rather than the natural convection in static system due to the presence of the working pump. As the fluid is forced through the system, cooler fluid replaces the hotter fluid quicker which results in a high temperature gradient between the coil and the fluid. The faster rate of replacement of hotter fluid with cooler fluid also increases the convective heat transfer coefficient, which accounts for the heat transfer between the inner surface of the copper coil and the fluid. The specific value for convective coefficient in forced convection can be obtained using the Nusselt number via the formula 
           <math>
@@ -292,20 +319,28 @@
           <b>Methodology:</b> Water in an insulated container is cycled through the cylindrical-conical receiver and the temperature is measured at the insulated container. The experiment starts when the white LED is switched on and is left until the outlet temperature reaches constant temperature. The details of the setup are below.
         </p>
 
-        <table-component subtitle="Table: Details of experiment 1">
-          <div id="Exp-2-details"></div>
+        <!--
+        <table-component subtitle="Table: Details of experiment 2">
+          <div id="exp-2-details"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/exp-2-details.png"
+        subtitle="Table: Details of experiment 2"></image-component>
 
         <br />
         
-        <table-component subtitle="Table: Measurements for experiment 1">
-          <div id="Exp-2-measurements"></div>
+        <!--
+        <table-component subtitle="Table: Measurements for experiment 2">
+          <div id="exp-2-measurements"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/exp-2-measurements.png"
+        subtitle="Table: Measurements for experiment 2"></image-component>
 
         <br />
 
         <image-component tag="image" source="assets/closed-loop-labelled.png"
-        subtitle="Figure: Image of experiment"></image-component>
+        subtitle="Figure: Image of experiment 2"></image-component>
 
         <p>
           <!--
@@ -328,10 +363,10 @@
             <mi>C</mi>
           </math>, which is lower than the maximum temperature of the static system under white LED of
           <math>
-            <mi>XX</mi>
+            <mi>64</mi>
             <mi>&deg;</mi>
             <mi>C</mi>
-          </math>. The matches the theory of net losses being higher when the water is moved through the system compared to static within the receiver, due to losses along the pipe connecting the receiver to the container and within the container. The point of thermal equilibrium is thus expected to be at a lower temperature as the input heat is the same while the output heat is higher.
+          </math>. This matches the theory of net losses being higher when the water is moved through the system compared to static within the receiver, due to losses along the pipe connecting the receiver to the container and within the container. The point of thermal equilibrium is thus expected to be at a lower temperature as the input heat is the same while the output heat is higher.
           <br /><br />
           Using this maximum temperature of
           <math>
@@ -342,9 +377,7 @@
           <br /><br />
           <b>Shortcomings and Limitations:</b>
           <br /><br />
-          The pipes between the containers and the receiver are not insulated so there will be higher heat loss within the pipes. Also, heat loss can also occur at the container, which despite being styrofoam (polystyrene material), may not be effective at insulating since the volume used is small compared to the insulating box size. This results in bigger air gaps which allows heat loss through convection within the insulating box.
-          <br /><br />
-          Overall, the temperature, which is measured at the container, is expected to give a lower result than if the system were properly insulated. Thus, the maximum temperature here is not as high as it could be after the installation of insulation.          
+          The pipes between the containers and the receiver are not insulated so there will be higher heat loss within the pipes. Overall, the temperature, which is measured at the container, is expected to give a lower result than if the system were properly insulated. Thus, the maximum temperature here is not as high as it could be after the installation of insulation.          
         </p>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -353,6 +386,7 @@
 
         <h3>Selection of pump</h3>
         <h4>Selection of temperature range</h4>
+        <!--
         <p>
           To determine the required flow rate of the system, we set the temperature range between the inlet and outlet of the receiver. The temperature range we set balances between the high and low temperature range to minimise the disadvantages of either sides.
           <br /><br />
@@ -466,6 +500,40 @@
           <br /><br />
           As such, we take an inbetween temperature range of 5-10ºC to limit the issues caused by too high or low temperature ranges.
         </p>
+        -->
+        <p>
+          The total heat transfer to the system will be the same, assuming heat loss are the same. However, the choice of temperature difference affects the heat transfer rate between the HTF and the TES, and the structural integrity of the container.
+          <br /><br />
+          A higher temperature rise increases the heat transfer rate between the HTF and TES given by
+          <math>
+            <mover>
+              <mi>Q</mi>
+              <mn>&dot;</mn>
+            </mover>
+            <mo>=</mo>
+            <mi>hA</mi>
+            <mo>(</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>HTF</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>T</mi>
+              <mn>TES</mn>
+            </msub>
+            <mo>)</mo>
+            <mo>=</mo>
+            <mi>hA</mi>
+            <mi>&Delta;</mi>
+            <mi>T</mi>
+          </math>. This improves its efficiency and allows the TES to charge faster. Faster charging allows the TES to make better use of the available solar energy during sunlight hours.
+          <br /><br />
+          However, temperature changes causes thermal expansion. [26] In rigid structures like the TES box, the thermal expansion will cause pressure to increase, and if temperature rise is too fast, it can cause failures in the structure and sealing due to thermal shock.
+          <br /><br />
+          Therefore, the choice of temperature difference cannot be too high nor too low. Hence, 5 - 10 ºC is selected for this system.
+
+        </p>
 
         <h4>Pump requirements</h4>
         <p>
@@ -482,6 +550,8 @@
             <li>Total dynamic head (TDH)</li>
             <li>NPSHa</li>
           </ul>
+          </p>
+          <p>
           For flow rate, these equations are utilised:
           <br /><br />
           <math>
@@ -557,12 +627,17 @@
           As such, these results are obtained:
         </p>
 
+        <!--
         <table-component subtitle="Table: Flow rate for the different temperature changes">
-          <div id="Pump-FR-from-temp-change"></div>
+          <div id="pump-FR-from-temp-change"></div>
         </table-component>
+        -->
+
+        <image-component tag="image" source="assets/pump-FR-from-temp-change.png"
+        subtitle="Table: Flow rate for the different temperature changes"></image-component>
 
         <p>
-          The TDH and NPSHa are calculated using these equations from theories and concepts:
+          The TDH, differential pressure, and NPSHa are calculated using these equations from theories and concepts:
           <br /><br />
           <math>
             <mi>TDH</mi>
@@ -572,6 +647,17 @@
             <mi>HF</mi>
             <mo>+</mo>
             <mi>HP</mi>
+          </math>
+          <br /><br />
+          <math>
+            <mi>&Delta;</mi>
+            <mi>P</mi>
+            <mo>=</mo>
+            <mi>0.0981</mi>
+            <mo>&times;</mo>
+            <mi>TDH</mi>
+            <mo>&times;</mo>
+            <mi>SG</mi>
           </math>
           <br /><br />
           <math>
@@ -606,18 +692,27 @@
           All the pump requirements are collated in the table below:
         </p>
 
+        <!--
         <table-component subtitle="Table: Pump requirements">
-          <div id="Pump-reqs"></div>
+          <div id="pump-reqs"></div>
         </table-component>
+        -->
+
+        <image-component tag="image" source="assets/pump-reqs.png"
+        subtitle="Table: Pump requirements"></image-component>
 
         <h4>Pump selection</h4>
         <p>
           The pumps required are of low flow rates, thus, we can consider precision (dosing) pumps. Also, the pumps chosen have to be ideally rated for outdoor or underwater use. As such, we can also consider low flow aquarium/submersible pumps. The options for pumps are as follows:
         </p>
 
+        <!--
         <table-component subtitle="Table: Pump options">
-          <div id="Pump-options"></div>
+          <div id="pump-options"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/pump-options.png"
+        subtitle="Table: Pump options"></image-component>
 
         <p>
           To choose between them, these criterias are used in this order of importance:
@@ -700,13 +795,78 @@
               <br />
             </ul>
             <li>Power consumption: Minimise power consumption as it is planned to run using solar panels</li>
+            <br />
+            <ol>
+              <li>Standard power formula: P = IV from theories and concepts</li>
+              <br />
+              <li>For AC supply (Grothen G328A):</li>
+              <br />
+              <ul>
+                <li>Using this formula <math><msub><mi>I</mi><mn>AC</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mn>DC</mn></msub></mrow><mrow><mi>PF</mi><mo>&dot;</mo><mi>&eta;</mi><mo>&dot;</mo><msub><mi>V</mi><mn>AC</mn></msub></mrow></mfrac></math> from theories and concepts.</li>
+                <br />
+                <li>Assuming:</li>
+                <br />
+                <ul>
+                  <li>Grothen G328A uses SMPS as there are references to small lab peristaltic pumps that uses SMPS. [12]</li>
+                  <!-- References: [12] https://www.sigmaaldrich.com/SG/en/product/aldrich/z678414 -->
+                  <li>Power factor = 0.6 for SMPS without power factor correction, assuming worst case. [13]</li>
+                  <!-- References: [13] https://www.st.com/resource/en/application_note/an523-understanding-power-factor-stmicroelectronics.pdf -->
+                  <li>Electric efficiency = 90% for SMPS. [14]</li>
+                  <!-- References: [14] https://www.circuitbread.com/ee-faq/what-are-the-efficiency-levels-of-different-power-supplies -->
+                </ul>
+                <br />
+                <li>Therefore:
+                  <math>
+                    <msub>
+                      <mi>I</mi>
+                      <mn>AC</mn>
+                    </msub>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mrow>
+                        <mi>24</mi>
+                        <mo>&times;</mo>
+                        <mi>1</mi>
+                      </mrow>
+                      <mrow>
+                        <mi>0.6</mi>
+                        <mo>&dot;</mo>
+                        <mi>0.9</mi>
+                        <mo>&dot;</mo>
+                        <mi>240</mi>
+                      </mrow>
+                    </mfrac>
+                    <mo>=</mo>
+                    <mi>0.1852 A</mi>
+                  </math></li>
+                <br />
+                <li><math>
+                  <msub>
+                    <mi>P</mi>
+                    <mn>AC</mn>
+                  </msub>
+                  <mo>=</mo>
+                  <mi>240</mi>
+                  <mo>&times;</mo>
+                  <mi>0.1852</mi>
+                  <mo>=</mo>
+                  <mi>44.45 W</mi>
+                </math></li>
+              </ul>
+            </ol>
+            <br />
             <li>Cost: Minimise cost</li>
           </ol>
         </p>
 
+        <!--
         <table-component subtitle="Table: Pump specifications">
-          <div id="Pump-specs"></div>
+          <div id="pump-specs"></div>
         </table-component>
+        -->
+
+        <image-component tag="image" source="assets/pump-specs.png"
+        subtitle="Table: Pump specifications"></image-component>
 
         <br />
 
@@ -726,8 +886,7 @@
         <h2>Insulation: Design Specifications</h2>
         <h3>Insulation selection</h3>
         <p>
-          Lastly is to select the insulation for the pipe between the receiver and the TES. The intermediate pipe is to be a rubber (PVC) hose of 6mm ID and 9mm OD for its flexibility, durability and low thermal conductivity (compared to copper). The insulation needs to meet a maximum heat loss of 5% of power received (
-          <math>
+          Lastly is to select the insulation for the pipe between the receiver and the TES. The intermediate pipe is to be a rubber (PVC) hose of 6mm ID and 9mm OD for its flexibility, durability and low thermal conductivity (compared to copper). The insulation needs to meet a maximum heat loss of 5% of power received (<math>
             <mi>142.248</mi>
             <mi>W</mi>
             <mo>&times;</mo>
@@ -736,12 +895,16 @@
             <mo>=</mo>
             <mi>7.11</mi>
             <mi>W</mi>
-          </math>). Between the different insulation materials, we balance these:
+          </math>). To narrow down the insulating materials, we consider those of lowest thermal conductivity and those commonly used, for example in air conditioner pipe insulation (polyethelyne foam).
+          <br /><br />
+          Between the different insulation materials, we need to consider these:
           <ul>
             <li>Thermal conductivity: Indicates how easily the heat passes through the material</li>
             <li>Cost: Minimise cost</li>
             <li>Durability: Informs how frequently insulation has to be changed</li>
           </ul>
+          </p>
+          <p>
           To do this, we measure the thickness required and calculate the cost required per unit length of pipe. In the selection of the insulation, we will use these 2 criterias in this order of priority:
           <ol>
             <li>Cost per unit length required to meet the thickness required: Minimise cost</li>
@@ -862,6 +1025,7 @@
                   </mfrac>
                 </math> for pipes.
               </li>
+              <br />
               <li>The outer radius of the insulation,<math><msub><mi>r</mi><mn>outer, insulation</mn></msub></math>, is obtained from the equation and the thickness is then obtained from <math><msub><mi>r</mi><mn>outer, insulation</mn></msub><mo>=</mo><msub><mi>r</mi><mn>outer, pipe</mn></msub></math>. (see MATLAB code function <i>insulation_thickness</i>)
               </li>
               <br />
@@ -870,9 +1034,13 @@
           </ol>
         </p> 
 
+        <!--
         <table-component subtitle="Table: Comparison for different insulation materials">
-          <div id="Insulation-table"></div>
+          <div id="insulation-table"></div>
         </table-component>
+        -->
+        <image-component tag="image" source="assets/insulation-table.png"
+        subtitle="Table: Comparison for different insulation materials"></image-component>
 
         <br />
 
@@ -889,6 +1057,89 @@
     <br />
     <br />
     <sl-divider></sl-divider>
+
+    <h2>References</h2>
+    <p>
+      <ul>
+        <li>[1] PUB, “Water Price,” PUB, Singapore’s National Water Agency, 2025. https://www.pub.gov.sg/Public/WaterLoop/Water-Price.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[2] Engineering ToolBox, “Water - Thermal Conductivity,” Engineeringtoolbox.com, 2012. https://www.engineeringtoolbox.com/water-liquid-gas-thermal-conductivity-temperature-pressure-d_2012.html.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[3] “Ethanol 50%, (v/v).” Available: https://www.columbuschemical.com/MSDS/SDS/Ethanol%2050%25%2C%20%28v-v%29%208589.pdf.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[4] “Therminol® VP1 Heat Transfer Fluid.” Accessed: Oct. 31, 2025. [Online]. Available: https://americasinternational.com/wp-content/uploads/2020/03/THERMINOL-VP1-SDS-EASTMAN.pdf.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[5] Super User, “Potassium Sodium Alloy - ESPI Metals,” Espimetals.com, 2015. https://www.espimetals.com/index.php/msds/799-Potassium%20Sodium%20Alloy.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[6] L. Heller, “Literature Review on Heat Transfer Fluids and Thermal Energy Storage Systems in CSP Plants STERG Report,” 2018. https://www.semanticscholar.org/paper/Literature-Review-on-Heat-Transfer-Fluids-and-in-Heller/05353e299330ac84882ab456a6c63fcd9ecc3118.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[7] P. Zhang, X. Li, and S. Shang, “Effect of height difference on the performance of two-phase thermosyphon loop used in air conditioning system.,” Jul. 2014, Available: https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2516&context=iracc.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[8] “Amazon.com: NTBL GROTHEN G328A Peristaltic Pump 100-240V 114-500ml/min Adjustable High Flow Rate Food Grade Platinum Vulcanized Silicone Tube for DIY Aquarium Lab Chemical Analysis Dosing Additives : Industrial & Scientific,” Amazon.com, 2025. https://www.amazon.com/NTBL-Peristaltic-114-500ml-Adjustable-Vulcanized/dp/B0BNL1514C.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[9] “Graflsoa GROTHEN G928 High-Flow Peristaltic Pump with 304 Stainless Steel Frame, 12V/24V DC Motor, 500mL/min Flow Rate, Easy Maintenance, Wide Applications in Labs and Pharmaceuticals,” Walmart.ca, 2025. https://www.walmart.ca/en/ip/Graflsoa-GROTHEN-G928-High-Flow-Peristaltic-Pump-304-Stainless-Steel-Frame-12V-24V-DC-Motor-500mL-min-Flow-Rate-Easy-Maintenance-Wide-Applications-La/45MRVPFB4B6P.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[10] Shopee.sg, 2017. https://shopee.sg/Peristaltic-Pump-Dosing-Pump-500ml-min-12V-DC-Grothen-G928-For-Analytical-Lab-i.352892875.26482359116.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[11] U. Mini, “USB Mini Submersible Water Pump,” Voltaat, 2021. https://www.voltaat.com/products/usb-mini-submersible-water-pump.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[12] "Multiflow peristaltic pump," Sigmaaldrich. https://www.sigmaaldrich.com/SG/en/product/aldrich/z678414.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[13] L. Wuidart, “APPLICATION NOTE ® UNDERSTANDING POWER FACTOR.” Available: https://www.st.com/resource/en/application_note/an523-understanding-power-factor-stmicroelectronics.pdf.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[14] “The Efficiency Levels of different Power Supplies,” CircuitBread. https://www.circuitbread.com/ee-faq/what-are-the-efficiency-levels-of-different-power-supplies.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[15] kissdumbo.sg, "GROTHEN G328A Peristaltic Pump 100-240V 114-500ml/min Adjustable High Flow Rate Food Grade Platinum Vulcanized Silicone Tube for DIY Aquarium Lab Chemical Analysis Dosing Additives," Shopee. https://shopee.sg/kissdumbo.sg/24001582496.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[16] officestucio.sg, "GROTHEN DC 12V Peristaltic Pump with Silicone Tubing High Flow Water Liquid Pump Dosing Vacuum Pump Self-Priming Anti-Corrosion Adjustable Flow for DIY Aquarium Lab Chemical A OFSG," Shopee. https://shopee.sg/officestucio.sg/23492563891.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[17] xuwaijiao.sg, "Silica Nano Aerogel CompoSite Thermal insulation Blanket Silica Thermal insulation Material Nano Thermal insulation Gel Board", Shopee. https://shopee.sg/xuwaijiao.sg/29878292492.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[18] pratamafoamid.sg, "Super PU Foam Sheet 100x50cm - Steam Iron Base Foam Coaster," Shopee. https://shopee.sg/pratamafoamid.sg/19407230558.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[19] huangciawi.sg, "PE FOAM 3MM & 5MM THICK 1.2M WIDTH SOLD BY THE METER," Shopee. https://shopee.sg/huangciawi.sg/27713302260.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[20] SHENGLI OILFIELD DONGRUN MACHINERY ENGINEERING CO.,LTD, “What is the typical lifespan of Aerogel Felt in different applications? - Blog,” Farersteelpipe.com, Oct. 06, 2025. https://www.farersteelpipe.com/blog/what-is-the-typical-lifespan-of-aerogel-felt-in-different-applications-1329997.html.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[21] J. Tamparong, “10 Things You Must Know Before Using Polyurethane Foam Boards for Insulation,” General Plastics, Jul. 27, 2025. https://www.generalplastics.com/blog/10-things-you-must-know-before-using-polyurethane-foam-boards-for-insulation.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[22] leadong, “What is the life expectancy of PE insulation?,” Lukwom.com, Oct. 07, 2025. https://www.lukwom.com/What-is-the-life-expectancy-of-PE-insulation-id48918585.html.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[23] "Insulation materials and their thermal properties," Greenspec. http://www.greenspec.co.uk/building-design/insulation-materials-thermal-properties/.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[24] “Polyethylene Foam Material,” The Rubber Company. https://therubbercompany.com/sponge-foam/polyethylene-foam/polyethylene-foam.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[25] Clients Now Technologies, “DIFFERENCE BETWEEN PIR AND PUF INSULATION,” Alaska PUF Industries, 2025. https://www.alaskapuf.com/difference-between-pir-and-puf-insulation.php.<!-- [Accessed: 31 Oct 2025].--></li>
+        <br />
+
+        <li>[26] “How to deal with thermal pipe expansion and contraction,” Walraven United Kingdom. https://www.walraven.com/en/how-to-guides/thermal-pipe-expansion/.<!-- [Accessed: 1 Nov 2025].--></li>
+
+      </ul>
+    </p>
 
    <sl-button size="medium" pill onclick href="thermalenergystoragesubs.html">Next subsection: Thermal Energy Storage</sl-button>
 
