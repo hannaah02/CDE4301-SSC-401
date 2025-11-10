@@ -67,19 +67,19 @@
     <div>
       <div id="TT">
         <p>
-          The thermal transmission subsystem is responsible for transferring the thermal energy from the receiver to the TES system. The heat transfer system includes:
+          Thermal transmission transfers thermal energy from the receiver to the thermal energy storage (TES) and includes:
           <ul>
             <li>Heat transfer fluid (HTF)</li>
             <li>Fluid motion</li>
-            <li>Insulation for the pipes.</li>
+            <li>Insulation.</li>
           </ul>
         </p>
 
-        <image-component tag="image" source="assets/transmission-overview.png"
-        subtitle="Figure: Thermal transmission in the entire CSP system"></image-component>
+        <image-component tag="image" source="assets/tt-transmission-overview.png"
+        subtitle="Figure X: Thermal transmission in the CSP"></image-component>
 
         <p>
-          The design specifications of the thermal transmission subsection are summarised in the table below.
+          The design specifications are summarised below.
         </p>
 
        <!--
@@ -88,7 +88,7 @@
         </table-component>
         -->
         <image-component tag="image" source="assets/tt-specs.png"
-        subtitle="Table: Thermal transmission design specifications"></image-component>
+        subtitle="Table X: Thermal transmission design specifications"></image-component>
       
 
       </div>
@@ -99,27 +99,71 @@
       <div id="TT-HTF">
         <h2>Heat transfer fluid</h2>
         <!-- For the HTF -->
+
+        <!-- Part that can be removed -->
+         <h3>Existing Methods: Heat transfer fluid</h3>
+        <p>
+          Heat transfer fluid (HTF) transfers thermal energy from the receiver to the TES. HTM effectiveness depends on these properties:
+          <ul>
+            <li><a href='theories-concepts.html'>Heat transfer coefficient</a>
+              <math>
+                <mi>HTC</mi>
+                <mo>=</mo>
+                <msqrt>
+                  <mfrac>
+                    <mrow>
+                      <mi>k</mi>
+                      <mi>&rho;</mi>
+                      <msub>
+                        <mi>C</mi>
+                        <mn>p</mn>
+                      </msub>
+                    </mrow>
+                    <mrow>
+                      <mi>t</mi>
+                    </mrow>
+                  </mfrac>
+                </msqrt>
+              </math>
+            </li>
+            <ul>
+              <li><a href='theories-concepts.html'>Specific heat capacity</a></li>
+              <li><a href='theories-concepts.html'>Thermal conductivity</a></li>
+              <li>Density: mass per unit volume</li>
+            </ul>
+            <li><a href='theories-concepts.html'>Viscosity</a></li>
+            <li><a href='theories-concepts.html'>Thermal stability</a></li>
+          </ul>
+        </p>
+        <p>
+          The system’s operating temperature and storage requirements are important as different HTF have different properties. [29] Furthermore, as large volumes of HTM are required, cost and performance needs to be balanced. [30]
+          <br /><br />
+          This summary consists of the most common and major categories of HTMs. These are:
+          <ol>
+            <li>Molten salt</li>
+            <li>Liquid metal</li>
+            <li>Thermal oils</li>
+            <li>Gaseous type</li>
+            <li>Water/steam</li>
+            <li>Nanofluids</li>
+            <li>Silicon-based fluids</li>
+          </ol>
+        </p>
+        <p>
+          <!--Between them, molten salt is the most common in high-temperature CSPs due to high operating temperatures and good thermal properties. Synthetic oil is common in moderate-temperature CSPs due to their lower operating temperatures.-->
+          The common HTFs are molten salt and thermal oils, in high-temperature and moderate-temperature CSPs respectively.[29] Nanofluids and silicon-based fluids are new emerging materials. The comparison of each HTF are summarised below.
+        </p>
+        <image-component tag="image" source="assets/exm-htm-htm-comparison.png"
+          subtitle="Figure X: HTF comparison [29][31][32][33][34][35]"></image-component> <!-- References: -->
+        <!-- End of part that can be removed -->
+
         <h3>Heat transfer fluid selection</h3>
         <p>
-          Considering the existing temperatures of the water and the receiver in previous experiments, the water temperature reaches a maximum of
-          <math>
-            <mi>67</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-          </math>. As such, our system is not able to run within high temperature ranges common in CSP rigs which can go upwards of
-          <math>
-            <mi>500</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-          </math>. Hence, we narrow the options of the HTF to within the low temperature ranges capable of working
-          <math>
-            <mo>&lt;</mo>
-            <mi>100</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-          </math>.
+          The HTFs are selected based on the maximum temperature of our CSP system (67ºC, solar tower configuration). We set the operating temperature range from room temperature to 100ºC, accounting for improvements in the light subsystem.
           <br /><br />
-          In selecting a HTF, we need to consider the operating temperature (given above), the thermal properties, its viscosity, cost and safety. The thermal properties can be determined by the heat transfer coefficient,
+
+          <!--
+          To select the HTF, we consider the operating temperature (given above), thermal properties, viscosity, cost and safety. The thermal properties can be determined by the heat transfer coefficient,
           <math>
             <mi>HTC</mi>
             <mo>=</mo>
@@ -138,35 +182,47 @@
                 </mrow>
               </mfrac>
             </msqrt>
-          </math> (from theories and concepts),
+          </math> (from theories and concepts)
           <br /><br />
-          where a higher HTC indicated better thermal performance. The important factors are listed below in order of importance:
+          where a higher HTC indicates better thermal performance and the variables being thermal conductivity, specifc heat capacity and density. The factors to consider in order of importance are:
           <ol>
             <li>Safety: Reduce safety hazard</li>
             <li>Cost: Minimise cost</li>
-            <li>Heat capacity: Higher heat capacity improves HTC</li>
-            <li>Thermal conductivity: Higher thermal conductivity improves HTC</li>
-            <li>Density: Higher density improves HTC</li>
-            <li>Dynamic viscosity: Lower viscosity allows easier motion</li>
+            <li>Heat capacity: Improve HTC</li>
+            <li>Thermal conductivity: Improve HTC</li>
+            <li>Density: Improve HTC</li>
+            <li>Dynamic viscosity: Better flow of HTF</li>
           </ol>
-
         </p> 
+        -->
+          The HTFs are compared based on these:
+          <ol>
+              <li>Safety</li>
+              <li>Cost</li>
+              <li>Heat capacity</li>
+              <li>Thermal conductivity</li>
+              <li>Density</li>
+              <li>Dynamic viscosity</li>
+            </ol>
+        </p>
 
         <!--
         <table-component subtitle="Table: Properties of different HTF operational at low temperatures [6]">
           <div id="htf-table"></div>
         </table-component>
         -->
-        <image-component tag="image" source="assets/htf-table.png"
-        subtitle="Table: Properties of different HTF operational at low temperatures [6]"></image-component>
+        <image-component tag="image" source="assets/tt-htf-table.png"
+        subtitle="Table X: Properties of different low temperature HTF [6]"></image-component>
 
         <br />
 
-        <image-component tag="image" source="assets/htf-decision-matrix.png"
-        subtitle="Figure: HTF decision matrix"></image-component>
+        <image-component tag="image" source="assets/tt-htf-decision-matrix.png"
+        subtitle="Figure X: HTF decision matrix"></image-component>
 
         <p>
-          Based on our criteria, we selected water as the HTF, with water-ethanol solution (10-50%) as an alternative option. As our CSP improves, the temperature of the HTF may go beyond the maximum temperature suitable for the HTF. As such, the presence of other HTF options in the table, which have higher maximum temperature than water, going up to 785ºC, would give more than enough options for HTF in the CSP system.
+          Water is the best option (with it being readily available) and water-ethanol solution (10-50%) is the alternative.
+          <br /><br />
+          If temperatures rises above 100ºC, water can be switched to the other HTF options as they have a higher maximum operating temperature, up to 785ºC.
         </p>
 
       </div>
@@ -177,29 +233,55 @@
       <div id="TT-fluid-motion">
         <h2>Fluid motion</h2>
         <!-- For the fluid motion -->
+
+        <!-- Part that can be removed -->
+        <p>
+          CSPs generally uses pumps, selected based on system requirements (material compatibility, operating temperature, flow rate, pressure requirements). [36] Pump companies like Ruhrpumpen and Sulzer provides pumping solutions. [37][38]
+          <br /><br />
+          Alternatively, thermosiphon can drive flow by gravity and natural circulation. (see Fig X)
+        </p>
+        <image-component tag="image" source="assets/exm-ff-thermosiphon.png"
+          subtitle="Figure X: Working of thermosiphon [39][40]"></image-component>
+        <p>
+         It is mainly used in solar water heaters under low volume and temperature. [41] In CSPs, its operational range and performance depends on HTF properties and the pressure from HTF expansion must be maintained for safe operations. [41] They are used in low to medium-temperature small-scale or prototype CSPs (see figure below) and are not used commercially. [42]
+        </p>
+        <image-component tag="image" source="assets/exm-ff-thermosiphon-ex.png"
+          subtitle="Figure X: Thermosiphon in small-scale linear collector CSP [42]"></image-component>
+        <p>
+          Two-phase (loop) thermosiphons is another option, driving flow by evaporation and condensation which requires the fluid to operate near its boiling point. (see figure X)
+        </p>
+        <image-component tag="image" source="assets/exm-ff-two-phase.png"
+          subtitle="Figure X: Working of two-phase thermosiphon [43]"></image-component>
+        <p>
+          It is tested in prototype CSP systems, like the linear collector CSP below, and is not used commercially. [28] Due to vaporisation, pressure must be controlled for safe operations. [28]
+        </p>
+        <image-component tag="image" source="assets/exm-ff-two-phase-ex.png"
+          subtitle="Figure X: Two phase thermosiphon in linear CSP [28]"></image-component>
+        <!-- End of part that can be removed -->
+
         <h3>Fluid motion mechanism selection</h3>
         <p>
-          Considering the different methods of driving flow identified in the existing methods earlier, we can select the best option for our CSP system.
+          Assessing the feasibility of each mechanism:
           <ul>
-            <li><b>Thermosiphons</b> uses gravity and natural circulation, which requires the TES to be above the heat exchanger. This cannot be implemented in our rig as the TES can block the light rays from the reflector and receiver.</li>
+            <li><b>Thermosiphons</b> requires the TES to be above the receiver, blocking the light rays.</li>
             <br />
-            <li><b>Two-phase loop thermosiphons</b> circulates the water via heating (at the evaporator) and cooling (at the condenser) at the bottom and top of the loop respectively and requires vaporisation. The height difference between these 2 sections matters in improving the heat transfer rate, however, it is still capable of functioning at a height difference of 0m albeit not being ideal. [7] <!-- Reference: [7] https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2516&context=iracc --> As it requires less of a height difference, it has potential to be applied to the system. However, it still requires the HTF to function at close to boiling point, which in our current system with a maximum temperature of XX is not possible. Regardless, as our system improves, and temperature increases to allow the HTF to hit the boiling point, this method can be properly analysed for its feasibility in the CSP rig.</li>
+            <li><b>Two-phase loop thermosiphons</b> can function at 0m height difference between the evaporator and condensor. [7]<!-- Reference: [7] https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2516&context=iracc --> However, the HTF has to function near its boiling point, which our current system cannot reach.<!-- Regardless, if our system improves and allows the HTF temperature to reach its boiling point, this method can be analysed for its feasibility.--></li>
             <br />
-            <li><b>Pumps</b> are therefore chosen as it is reliable and pump models can be selected to meet the different system requirements. However, the pumps to be used in this system will be different from those used in existing CSP rigs, because their pump requirements are different from our requirements.</li>
+            <li><b>Pumps</b> are chosen due to reliability and flexibility in meeting system requirments.</li>
           </ul>
         </p>
 
-        <h3>Proof of concept: Can pumps work in driving flow through the receiver?</h3>
+        <h3>Proof of concept: Can pumps drive flow through the receiver?</h3>
+        <h3>Experiment 1: Flowing open system</h3>
         <p>
-          The following experiments are to test if pumps can be used to drive flow between the receiver and TES and does not provide information able to be used for analysis as the reflector system has yet to be finalised. We utilise the Grothen G928A peristaltic pump available to us to test the concept.
-        </p>
-        <h3>Experiment 1: Flowing open system using white LED</h3>
-        <p>
-          <b>Title:</b> Flowing open system test with white LED.
+          <b>Purpose:</b> Test if flow is observed.
           <br /><br />
-          <b>Purpose:</b> To test if flow is observed.
-          <br /><br />
-          <b>Methodology:</b> Water is cycled through the cylindrical-conical receiver with the white LED from one container to another and the temperature is measured for the water in both containers. A rise in temperature at the outlet container compared to the inlet container would indicate the water is able to be pumped through the receiver. The details of the setup are below.
+          <b>Methodology:</b>
+          <ul>
+            <li>Cycles water through the receiver from one container to another</li>
+            <li>Temperate measured in both containers</li>
+            <li>The experiment runs until outlet temperature stabilises</li>
+          </ul>
         </p>
 
         <!--
@@ -207,8 +289,8 @@
           <div id="exp-1-details"></div>
         </table-component>
         -->
-        <image-component tag="image" source="assets/exp-1-details.png"
-        subtitle="Table: Details of experiment 1"></image-component>
+        <image-component tag="image" source="assets/tt-exp-1-details.png"
+        subtitle="Table X: Experiment 1 details"></image-component>
 
         <br />
         
@@ -217,13 +299,13 @@
           <div id="exp-1-measurements"></div>
         </table-component>
         -->
-        <image-component tag="image" source="assets/exp-1-measurements.png"
-        subtitle="Table: Measurements for experiment 1"></image-component>
+        <image-component tag="image" source="assets/tt-exp-1-measurements.png"
+        subtitle="Table X: Experiment 1 measurements"></image-component>
 
         <br />
 
-        <image-component tag="image" source="assets/open-loop-labelled.png"
-        subtitle="Figure: Image of experiment 1"></image-component>
+        <image-component tag="image" source="assets/tt-open-loop-labelled.png"
+        subtitle="Figure X: Image of experiment 1"></image-component>
 
         <p>
           <!--
@@ -233,27 +315,11 @@
           <b>Results and analysis:</b>
         </p>
 
-        <image-component tag="image" source="assets/results-open-loop.png"
-        subtitle="Figure: Temperature vs time graph for water at inlet and outlet of receiver"></image-component>
+        <image-component tag="image" source="assets/tt-results-open-loop.png"
+        subtitle="Figure X: Temperature vs time graph for water at inlet and outlet of receiver"></image-component>
 
         <p>
-          As seen in the graph, the temperature at the outlet container increases over time with the inlet container water temperature remaining constant. This indicates that water is able to be pumped through the receiver.
-          <br /><br />
-          Using the data and information on the system, we can observe the power absorbed by the water in a flowing system, using
-          <math>
-            <mover>
-              <mi>Q</mi>
-              <mn>&dot;</mn>
-            </mover>
-            <mo>=</mo>
-            <mi>m</mi>
-            <msub>
-              <mi>C</mi>
-              <mn>p</mn>
-            </msub>
-            <mi>&Delta;</mi>
-            <mi>T</mi>
-          </math>.
+          The outlet temperature is 17.5ºC higher than the inlet, indicating water flow through the receiver.
         </p>
 
         <!--
@@ -261,27 +327,11 @@
           <div id="exp-1-results"></div>
         </table-component>
         -->
-        <image-component tag="image" source="assets/exp-1-results.png"
-        subtitle="Table: Power calculation for open loop system"></image-component>
+        <image-component tag="image" source="assets/tt-exp-1-results.png"
+        subtitle="Table X: Power calculation for flowing system"></image-component> <!-- IMPORTANT: Add label that 1st is \Delta T -->
 
         <p>
-          The power absorbed by the water is observed to be higher for the flowing system (142.248 W) than the static system (16.01 W). This is on account of the higher convection coefficient in flowing water and higher <math><mi>&Delta;</mi><mi>T</mi></math> (or temperature gradient) between the water and receiver across time as compared to the static system.
-          <br /><br />
-          The fluid in the flowing system experiences forced convection rather than the natural convection in static system due to the presence of the working pump. As the fluid is forced through the system, cooler fluid replaces the hotter fluid quicker which results in a high temperature gradient between the coil and the fluid. The faster rate of replacement of hotter fluid with cooler fluid also increases the convective heat transfer coefficient, which accounts for the heat transfer between the inner surface of the copper coil and the fluid. The specific value for convective coefficient in forced convection can be obtained using the Nusselt number via the formula 
-          <math>
-            <mi>Nu</mi>
-            <mo>=</mo>
-            <mfrac>
-              <mrow>
-                <mi>hL</mi>
-              </mrow>
-              <mrow>
-                <mi>k</mi>
-              </mrow>
-            </mfrac>
-          </math> (from theories and concepts).
-          <br /><br />
-          The high temperature gradient and high convective heat transfer coefficient combined results in a higher power absorbed by the fluid in a flowing system by the convection heat transfer equation
+          The power absorbed by the water is higher for the flowing (142.3W) than static system (16.01W). The forced convection from the pump replaces hotter fluid with cooler fluid faster, increasing temperature gradient (<math><mi>&Delta;</mi><mi>T</mi></math>) and convective coefficient between the fluid and receiver. This causes the higher power absorbed by the <a href='theories-concepts.html'>convection heat transfer equation</a><!--
           <math>
              <mover>
               <mi>Q</mi>
@@ -301,22 +351,21 @@
               <mn>fluid</mn>
             </msub>
             <mo>)</mo>
-          </math> (from theories and concepts).
-          <br /><br />
-          <b>Shortcomings and Limitations:</b>
-          <br /><br />
-          The pipes between the containers and the receiver are not insulated so there will be higher heat loss within the pipes. As the temperature is measured at the containers, this results in lower temperature at the outlet than expected. Thus, for the calculated power absorbed by the HTF, the results are lower than it should be for this system.
+          </math>--> <!--(from theories and concepts)-->.
         </p>
 
-        <h3>Experiment 2: Flowing closed system using white LED</h3>
+        <h3>Experiment 2: Flowing closed (circulating) system</h3>
         <p>
-          <b>Title:</b> Flowing closed system test with white LED.
+          <b>Purpose:</b> Observe the maximum temperature of circulating water for TES verification (TES subsection).
+          <!--<br /><br />
+          The temperature of the flowing system when stable informs us of the point of thermal equilibrium, where net heat loss is zero. The limit on the maximum temperature of the system is important as it provides constraints for the choices of thermal energy storage.-->
           <br /><br />
-          <b>Purpose:</b> To observe if the maximum temperature when cycling water for verification of thermal energy storage (TES) choice.
-          <br /><br />
-          The temperature of the flowing system when stable informs us of the point of thermal equilibrium, where net heat loss is zero. The limit on the maximum temperature of the system is important as it provides constraints for the choices of thermal energy storage.
-          <br /><br />
-          <b>Methodology:</b> Water in an insulated container is cycled through the cylindrical-conical receiver and the temperature is measured at the insulated container. The experiment starts when the white LED is switched on and is left until the outlet temperature reaches constant temperature. The details of the setup are below.
+          <b>Methodology:</b>
+          <ul>
+            <li>Water circulates from an insulated container through the receiver</li>
+            <li>Temperature in container is measured</li>
+            <li>Experiment runs until temperature stabilises</li>
+          </ul>
         </p>
 
         <!--
@@ -324,8 +373,8 @@
           <div id="exp-2-details"></div>
         </table-component>
         -->
-        <image-component tag="image" source="assets/exp-2-details.png"
-        subtitle="Table: Details of experiment 2"></image-component>
+        <image-component tag="image" source="assets/tt-exp-2-details.png"
+        subtitle="Table X: Experiment 2 details"></image-component>
 
         <br />
         
@@ -334,13 +383,13 @@
           <div id="exp-2-measurements"></div>
         </table-component>
         -->
-        <image-component tag="image" source="assets/exp-2-measurements.png"
-        subtitle="Table: Measurements for experiment 2"></image-component>
+        <image-component tag="image" source="assets/tt-exp-2-measurements.png"
+        subtitle="Table X: Experiment 2 measurements"></image-component>
 
         <br />
 
-        <image-component tag="image" source="assets/closed-loop-labelled.png"
-        subtitle="Figure: Image of experiment 2"></image-component>
+        <image-component tag="image" source="assets/tt-closed-loop-labelled.png"
+        subtitle="Figure X: Image of experiment 2"></image-component>
 
         <p>
           <!--
@@ -350,34 +399,17 @@
           <b>Results and analysis:</b>
         </p>
         
-        <image-component tag="image" source="assets/results-closed-loop.png"
-        subtitle="Figure: Temperature vs time graph for water in container"></image-component>
+        <image-component tag="image" source="assets/tt-results-closed-loop.png"
+        subtitle="Figure X: Temperature vs time graph for water in container"></image-component>
 
         <br />
 
         <p>
-          The temperature stabilises at
-          <math>
-            <mi>57.5</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-          </math>, which is lower than the maximum temperature of the static system under white LED of
-          <math>
-            <mi>64</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-          </math>. This matches the theory of net losses being higher when the water is moved through the system compared to static within the receiver, due to losses along the pipe connecting the receiver to the container and within the container. The point of thermal equilibrium is thus expected to be at a lower temperature as the input heat is the same while the output heat is higher.
-          <br /><br />
-          Using this maximum temperature of
-          <math>
-            <mi>57.5</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-          </math>, we can ensure that the system matches the ideal operating temperature range of the chosen TES (explained in TES subsection).
-          <br /><br />
-          <b>Shortcomings and Limitations:</b>
-          <br /><br />
-          The pipes between the containers and the receiver are not insulated so there will be higher heat loss within the pipes. Overall, the temperature, which is measured at the container, is expected to give a lower result than if the system were properly insulated. Thus, the maximum temperature here is not as high as it could be after the installation of insulation.          
+          The temperature stabilises at 57.5ºC, lower than the static system (64ºC), due to losses between the receiver and container. This is used to verify the TES (TES subsection).    
+        </p>
+        <h3>Overall shortcomings and limitations of both experiments</h3>
+        <p>
+          The pipes between the containers and receiver are not insulated, causing higher heat loss and lower temperature measured (to be addressed later).
         </p>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -385,95 +417,16 @@
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
         <h3>Selection of pump</h3>
-        <h4>Selection of temperature range</h4>
-        <!--
+        <h4>Selection of temperature range between inlet and outlet of receiver</h4>
         <p>
-          To determine the required flow rate of the system, we set the temperature range between the inlet and outlet of the receiver. The temperature range we set balances between the high and low temperature range to minimise the disadvantages of either sides.
-          <br /><br />
-          The disadvantages are a result of the heat transfer, which are the summation of the conduction heat transfer
-          <math>
-            <mover>
-              <mi>Q</mi>
-              <mn>&dot;</mn>
-            </mover>
-            <mo>=</mo>
-            <mo>-</mo>
-            <mi>kA</mi>
-            <mfrac>
-              <mrow>
-                <mi>dT</mi>
-              </mrow>
-              <mrow>
-                <mi>dx</mi>
-              </mrow>
-            </mfrac>
-          </math>, convection heat transfer 
-          <math>
-            <mover>
-              <mi>Q</mi>
-              <mn>&dot;</mn>
-            </mover>
-            <mo>=</mo>
-            <mi>hA</mi>
-            <mo>(</mo>
-            <msub>
-              <mi>T</mi>
-              <mn>1</mn>
-            </msub>
-            <mo>-</mo>
-            <msub>
-              <mi>T</mi>
-              <mn>2</mn>
-            </msub>
-            <mo>)</mo>
-          </math>, and radiation heat transfer
-          <math>
-            <mover>
-              <mi>Q</mi>
-              <mo>&dot;</mo>
-            </mover>
-            <mo>=</mo>
-            <mi>&epsilon;</mi>
-            <mi>&sigma;</mi>
-            <mi>A</mi>
-            <mo>(</mo>
-            <msubsup>
-              <mi>T</mi>
-              <mn>1</mn>
-              <mn>4</mn>
-            </msubsup>
-            <mo>-</mo>
-            <msubsup>
-              <mi>T</mi>
-              <mn>2</mn>
-              <mn>4</mn>
-            </msubsup>
-            <mo>)</mo>
-          </math>
-          <br /><br />. At high temperature ranges, there is a higher net temperature gradient between the HTF and atmosphere. This leads to a higher net heat transfer from the HTF to the atmosphere, resulting to a greater loss to environment. As such, less thermal energy will be stored within the HTF to be passed to the PCM. This will result in lower efficiency of the energy storage system,
-          <math>
-            <msub>
-              <mi>&eta;</mi>
-              <mn>eff</mn>
-            </msub>
-            <mo>=</mo>
-            <mfrac>
-              <mrow>
-                <msub>
-                  <mi>P</mi>
-                  <mn>HTF to TES</mn>
-                </msub>
-              </mrow>
-              <mrow>
-                <msub>
-                  <mi>P</mi>
-                  <mn>R to HTF</mn>
-                </msub>
-              </mrow>
-            </mfrac>
-          </math>, where <math><msub><mi>P</mi><mn>HTF to TES</mn></msub></math> is the power transferred from HTF to the TES, and <math><msub><mi>P</mi><mn>R to HTF</mn></msub></math>is the power transferred from the receiver to the HTF.
-          <br /><br />
-          At low temperature ranges, the concern shifts from heat losses to the power transfer from the HTF to PCM. This follows the convective heat transfer formula
+          The choice of temperature difference affects:
+          <ol>
+            <li>Heat transfer rate between HTF and TES</li>
+            <li>Structural integrity</li>
+          </ol>
+          </p>
+          <p>
+          Considering a high temperature rise, it increases the heat transfer rate between the HTF and TES,
           <math>
             <mover>
               <mi>Q</mi>
@@ -496,42 +449,9 @@
             <mi>hA</mi>
             <mi>&Delta;</mi>
             <mi>T</mi>
-          </math>. With a lower temperature difference across the receiver, the difference between the temperature of the HTF in the inlet and outlet of the TES system is smaller. As such, the temperature difference between the HTF and TES will be low. This makes the heat transfer to the TES to be very inefficient with a low rate of transfer.
+          </math>, improving efficiency of TES charging. However, it causes failures in the structure from thermal expansion. [26]
           <br /><br />
-          As such, we take an inbetween temperature range of 5-10ºC to limit the issues caused by too high or low temperature ranges.
-        </p>
-        -->
-        <p>
-          The total heat transfer to the system will be the same, assuming heat loss are the same. However, the choice of temperature difference affects the heat transfer rate between the HTF and the TES, and the structural integrity of the container.
-          <br /><br />
-          A higher temperature rise increases the heat transfer rate between the HTF and TES given by
-          <math>
-            <mover>
-              <mi>Q</mi>
-              <mn>&dot;</mn>
-            </mover>
-            <mo>=</mo>
-            <mi>hA</mi>
-            <mo>(</mo>
-            <msub>
-              <mi>T</mi>
-              <mn>HTF</mn>
-            </msub>
-            <mo>-</mo>
-            <msub>
-              <mi>T</mi>
-              <mn>TES</mn>
-            </msub>
-            <mo>)</mo>
-            <mo>=</mo>
-            <mi>hA</mi>
-            <mi>&Delta;</mi>
-            <mi>T</mi>
-          </math>. This improves its efficiency and allows the TES to charge faster. Faster charging allows the TES to make better use of the available solar energy during sunlight hours.
-          <br /><br />
-          However, temperature changes causes thermal expansion. [26] In rigid structures like the TES box, the thermal expansion will cause pressure to increase, and if temperature rise is too fast, it can cause failures in the structure and sealing due to thermal shock.
-          <br /><br />
-          Therefore, the choice of temperature difference cannot be too high nor too low. Hence, 5 - 10 ºC is selected for this system.
+          Hence, 5-10ºC change is selected.
 
         </p>
 
@@ -540,91 +460,156 @@
           The system is assumed to be as below.
         </p>
 
-        <image-component tag="image" source="assets/pump-layout.png"
-        subtitle="Figure: Layout for components with pump in thermal transmission"></image-component>
+        <image-component tag="image" source="assets/tt-pump-layout.png"
+        subtitle="Figure X: Layout for components with pump in thermal transmission"></image-component>
 
         <p>
-          The pump requirements are calculated based on the estimated power obtained in the flowing closed loop proof of concept experiment (142.248 W) and the selected temperature ranges (5 - 10 ºC) earlier. The requirements calculated are:
+          For the pump requirements, we calculate:
           <ul>
-            <li>Flow rate</li>
-            <li>Total dynamic head (TDH)</li>
-            <li>NPSHa</li>
+            <li><a href='theories-concepts.html'>Flow rate</a></li>
+            <ul>
+              <li>
+                <math>
+                  <msub>
+                    <mi>Q</mi>
+                    <mn>required</mn>
+                  </msub>
+                  <mo>=</mo>
+                  <msub>
+                    <mi>mass</mi>
+                    <mn>HTF</mn>
+                  </msub>
+                  <msub>
+                    <mi>C</mi>
+                    <mn>p, HTF</mn>
+                  </msub>
+                  <mi>&Delta;</mi>
+                  <mi>T</mi>
+                </math>
+              </li>
+              <li>
+                <math>
+                  <msub>
+                    <mi>time</mi>
+                    <mn>required</mn>
+                  </msub>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub>
+                        <mi>Q</mi>
+                        <mn>required</mn>
+                      </msub>
+                    </mrow>
+                    <mrow>
+                      <msub>
+                        <mi>P</mi>
+                        <mn>absorbed by HTF</mn>
+                      </msub>
+                    </mrow>
+                  </mfrac>
+                </math>
+              </li>
+              <li>
+                <math>
+                  <mi>Velocity</mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mrow>
+                      <msub>
+                        <mi>Length</mi>
+                        <mn>receiver</mn>
+                      </msub>
+                    </mrow>
+                    <mrow>
+                      <msub>
+                        <mi>time</mi>
+                        <mn>required</mn>
+                      </msub>
+                    </mrow>
+                  </mfrac>
+                </math>
+              </li>
+              <li>
+                <math>
+                  <msub>
+                    <mi>Flow rate</mi>
+                    <mn>l/min</mn>
+                  </msub>
+                  <mo>=</mo>
+                  <mi>Velocity</mi>
+                  <msub>
+                    <mi>Area</mi>
+                    <mn>cross-sectional</mn>
+                  </msub>
+                </math>
+              </li>
+            </ul>
+            <li><a href='theories-concepts.html'>Total dynamic head (TDH)</a></li>
+            <!--
+              <ul>
+                <li>
+                  <math>
+                    <mi>TDH</mi>
+                    <mo>=</mo>
+                    <mi>HS</mi>
+                    <mo>+</mo>
+                    <mi>HF</mi>
+                    <mo>+</mo>
+                    <mi>HP</mi>
+                  </math>
+                </li>
+              </ul>-->
+            <li><a href='theories-concepts.html'>Net positive suction head available (NPSHa)</a></li>
+            <!--
+              <ul>
+                <li>
+                  <math>
+                    <msub>
+                      <mi>NPSH</mi>
+                      <mn>a</mn>
+                    </msub>
+                    <mo>=</mo>
+                    <msub>
+                      <mi>h</mi>
+                      <mn>a</mn>
+                    </msub>
+                    <mo>-</mo>
+                    <msub>
+                      <mi>h</mi>
+                      <mn>vpa</mn>
+                    </msub>
+                    <mo>+</mo>
+                    <msub>
+                      <mi>h</mi>
+                      <mn>st</mn>
+                    </msub>
+                    <mo>-</mo>
+                    <msub>
+                      <mi>h</mi>
+                      <mn>f</mn>
+                    </msub>
+                  </math>
+                </li>
+              </ul>-->
+            <li><a href='theories-concepts.html'>Differential pressure</a></li>
+            <!--
+              <ul>
+                <li>
+                  <math>
+                    <mi>&Delta;</mi>
+                    <mi>P</mi>
+                    <mo>=</mo>
+                    <mi>0.0981</mi>
+                    <mo>&times;</mo>
+                    <mi>TDH</mi>
+                    <mo>&times;</mo>
+                    <mi>SG</mi>
+                  </math>
+                </li>
+              </ul>-->
+            <li>(see <i>flowrate_receiver</i> and <i>pump_requirements</i>)</li>
           </ul>
-          </p>
-          <p>
-          For flow rate, these equations are utilised:
-          <br /><br />
-          <math>
-            <msub>
-              <mi>Q</mi>
-              <mn>required</mn>
-            </msub>
-            <mo>=</mo>
-            <msub>
-              <mi>m</mi>
-              <mn>HTF</mn>
-            </msub>
-            <msub>
-              <mi>C</mi>
-              <mn>p, HTF</mn>
-            </msub>
-            <mi>&Delta;</mi>
-            <mi>T</mi>
-          </math> (from theories and concepts)
-          <br /><br />
-          <math>
-            <msub>
-              <mi>t</mi>
-              <mn>required</mn>
-            </msub>
-            <mo>=</mo>
-            <mfrac>
-              <mrow>
-                <msub>
-                  <mi>Q</mi>
-                  <mn>required</mn>
-                </msub>
-              </mrow>
-              <mrow>
-                <msub>
-                  <mi>P</mi>
-                  <mn>absorbed by HTF</mn>
-                </msub>
-              </mrow>
-            </mfrac>
-          </math>
-          <br /><br />
-          <math>
-            <mi>V</mi>
-            <mo>=</mo>
-            <mfrac>
-              <mrow>
-                <msub>
-                  <mi>L</mi>
-                  <mn>receiver</mn>
-                </msub>
-              </mrow>
-              <mrow>
-                <msub>
-                  <mi>t</mi>
-                  <mn>required</mn>
-                </msub>
-              </mrow>
-            </mfrac>
-          </math>
-          <br /><br />
-          <math>
-            <msub>
-              <mi>Flow rate</mi>
-              <mn>l/min</mn>
-            </msub>
-            <mo>=</mo>
-            <mi>VA</mi>
-          </math> (from theories and concepts)
-          <br /><br />
-          (see MATLAB code function <i>flowrate_receiver</i>)
-          <br /><br />
-          As such, these results are obtained:
         </p>
 
         <!--
@@ -633,64 +618,10 @@
         </table-component>
         -->
 
-        <image-component tag="image" source="assets/pump-FR-from-temp-change.png"
-        subtitle="Table: Flow rate for the different temperature changes"></image-component>
+        <image-component tag="image" source="assets/tt-pump-FR-from-temp-change.png"
+        subtitle="Table X: Flow rate for temperature change"></image-component>
 
-        <p>
-          The TDH, differential pressure, and NPSHa are calculated using these equations from theories and concepts:
-          <br /><br />
-          <math>
-            <mi>TDH</mi>
-            <mo>=</mo>
-            <mi>HS</mi>
-            <mo>+</mo>
-            <mi>HF</mi>
-            <mo>+</mo>
-            <mi>HP</mi>
-          </math>
-          <br /><br />
-          <math>
-            <mi>&Delta;</mi>
-            <mi>P</mi>
-            <mo>=</mo>
-            <mi>0.0981</mi>
-            <mo>&times;</mo>
-            <mi>TDH</mi>
-            <mo>&times;</mo>
-            <mi>SG</mi>
-          </math>
-          <br /><br />
-          <math>
-            <msub>
-              <mi>NPSH</mi>
-              <mn>a</mn>
-            </msub>
-            <mo>=</mo>
-            <msub>
-              <mi>h</mi>
-              <mn>a</mn>
-            </msub>
-            <mo>-</mo>
-            <msub>
-              <mi>h</mi>
-              <mn>vpa</mn>
-            </msub>
-            <mo>+</mo>
-            <msub>
-              <mi>h</mi>
-              <mn>st</mn>
-            </msub>
-            <mo>-</mo>
-            <msub>
-              <mi>h</mi>
-              <mn>f</mn>
-            </msub>
-          </math>
-          <br /><br />
-          (see MATLAB code function <i>pump_requirements</i>)
-          <br /><br />
-          All the pump requirements are collated in the table below:
-        </p>
+        <br />
 
         <!--
         <table-component subtitle="Table: Pump requirements">
@@ -698,12 +629,12 @@
         </table-component>
         -->
 
-        <image-component tag="image" source="assets/pump-reqs.png"
-        subtitle="Table: Pump requirements"></image-component>
+        <image-component tag="image" source="assets/tt-pump-reqs.png"
+        subtitle="Table X: Pump requirements"></image-component>
 
         <h4>Pump selection</h4>
         <p>
-          The pumps required are of low flow rates, thus, we can consider precision (dosing) pumps. Also, the pumps chosen have to be ideally rated for outdoor or underwater use. As such, we can also consider low flow aquarium/submersible pumps. The options for pumps are as follows:
+          Only required flow rate is not followed as the temperature range is assumed.
         </p>
 
         <!--
@@ -711,21 +642,18 @@
           <div id="pump-options"></div>
         </table-component>
         -->
-        <image-component tag="image" source="assets/pump-options.png"
-        subtitle="Table: Pump options"></image-component>
+        <image-component tag="image" source="assets/tt-pump-options.png"
+        subtitle="Table X: Pump options"></image-component>
 
         <p>
-          To choose between them, these criterias are used in this order of importance:
+          We consider these:
           <ol>
-            <li>Reasonable temperature rise for flow rate: The range should be around <math><mi>5</mi><mo>-</mo><mi>10</mi><mo>&deg;</mo><mi>C</mi></math> change</li>
+            <li>Temperature rise</li>
             <ul>
-              <br />
-              <li>This is calculated using these equations from theories and concepts</li>
-              <br />
               <li>
                 <math>
                   <msub>
-                    <mi>t</mi>
+                    <mi>time</mi>
                     <mn>through receiver</mn>
                   </msub>
                   <mo>=</mo>
@@ -738,7 +666,7 @@
                     </mrow>
                     <mrow>
                       <msub>
-                        <mi>Flow rate</mi>
+                        <mi><a href='theories-concepts.html'>Flow rate</a></mi>
                         <mn>m/s</mn>
                       </msub>
                     </mrow>
@@ -759,7 +687,7 @@
                   </msub>
                   <mo>&times;</mo>
                   <msub>
-                    <mi>t</mi>
+                    <mi>time</mi>
                     <mn>through receiver</mn>
                   </msub>
                 </math>
@@ -779,7 +707,7 @@
                     </mrow>
                     <mrow>
                       <msub>
-                        <mi>m</mi>
+                        <mi>mass</mi>
                         <mn>HTF, receiver</mn>
                       </msub>
                       <msub>
@@ -791,29 +719,30 @@
                 </math>
               </li>
               <br />
-              <li>(see MATLAB code function <i>flowrate_to_temp</i>)</li>
+              <li>(see <i>flowrate_to_temp</i>)</li>
               <br />
             </ul>
-            <li>Power consumption: Minimise power consumption as it is planned to run using solar panels</li>
+            <li>Power consumption: Powered using solar panels</li>
             <br />
             <ol>
-              <li>Standard power formula: P = IV from theories and concepts</li>
+              <li><a href='theories-concepts.html'>Power formula</a>: P = IV</li>
               <br />
-              <li>For AC supply (Grothen G328A):</li>
+              <li>For AC (Grothen G328A):</li>
               <br />
               <ul>
-                <li>Using this formula <math><msub><mi>I</mi><mn>AC</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mn>DC</mn></msub></mrow><mrow><mi>PF</mi><mo>&dot;</mo><mi>&eta;</mi><mo>&dot;</mo><msub><mi>V</mi><mn>AC</mn></msub></mrow></mfrac></math> from theories and concepts.</li>
+                <li><math><msub><mi><a href='theories-concepts.html'>I</a></mi><mn>AC</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mn>DC</mn></msub></mrow><mrow><mi>PF</mi><mo>&dot;</mo><mi>&eta;</mi><mo>&dot;</mo><msub><mi>V</mi><mn>AC</mn></msub></mrow></mfrac></math></li>
                 <br />
                 <li>Assuming:</li>
                 <br />
                 <ul>
-                  <li>Grothen G328A uses SMPS as there are references to small lab peristaltic pumps that uses SMPS. [12]</li>
+                  <li>Grothen G328A uses SMPS. [12]</li>
                   <!-- References: [12] https://www.sigmaaldrich.com/SG/en/product/aldrich/z678414 -->
-                  <li>Power factor = 0.6 for SMPS without power factor correction, assuming worst case. [13]</li>
+                  <li>Power factor = 0.6, assuming worst case (without PFC). [13]</li>
                   <!-- References: [13] https://www.st.com/resource/en/application_note/an523-understanding-power-factor-stmicroelectronics.pdf -->
-                  <li>Electric efficiency = 90% for SMPS. [14]</li>
+                  <li>Electric efficiency = 90%. [14]</li>
                   <!-- References: [14] https://www.circuitbread.com/ee-faq/what-are-the-efficiency-levels-of-different-power-supplies -->
                 </ul>
+                <!--
                 <br />
                 <li>Therefore:
                   <math>
@@ -852,10 +781,10 @@
                   <mo>=</mo>
                   <mi>44.45 W</mi>
                 </math></li>
-              </ul>
+              </ul>-->
             </ol>
             <br />
-            <li>Cost: Minimise cost</li>
+            <li>Cost</li>
           </ol>
         </p>
 
@@ -865,16 +794,16 @@
         </table-component>
         -->
 
-        <image-component tag="image" source="assets/pump-specs.png"
-        subtitle="Table: Pump specifications"></image-component>
+        <image-component tag="image" source="assets/tt-pump-specs.png"
+        subtitle="Table X: Pump specifications"></image-component>
 
         <br />
 
-        <image-component tag="image" source="assets/pump-decision-matrix.png"
-        subtitle="Figure: Pump decision matrix"></image-component>
+        <image-component tag="image" source="assets/tt-pump-decision-matrix.png"
+        subtitle="Figure X: Pump decision matrix"></image-component>
 
         <p>
-          Based on the decision matrix, the Grothen G328A is the best option that we will use and will consider the Grothen G928 as an alternative option.
+          Grothen G328A is the best option and Grothen G928 is the alternative.
         </p>
 
       </div>
@@ -883,40 +812,31 @@
     <sl-divider></sl-divider>
 
       <div id="TT-insulation">
-        <h2>Insulation: Design Specifications</h2>
-        <h3>Insulation selection</h3>
+        <h2>Pipe insulation: Design Specifications</h2>
+        <h3>Pipe insulation selection</h3>
         <p>
-          Lastly is to select the insulation for the pipe between the receiver and the TES. The intermediate pipe is to be a rubber (PVC) hose of 6mm ID and 9mm OD for its flexibility, durability and low thermal conductivity (compared to copper). The insulation needs to meet a maximum heat loss of 5% of power received (<math>
-            <mi>142.248</mi>
-            <mi>W</mi>
-            <mo>&times;</mo>
-            <mi>5</mi>
-            <mo>%</mo>
-            <mo>=</mo>
-            <mi>7.11</mi>
-            <mi>W</mi>
-          </math>). To narrow down the insulating materials, we consider those of lowest thermal conductivity and those commonly used, for example in air conditioner pipe insulation (polyethelyne foam).
+          The intermediate pipe used is PVC hose for flexibility, durability and low thermal conductivity. The maximum allowable heat loss is set at 5% of power received (7.11W). Insulating materials with lowest thermal conductivity and those commonly used (eg. polyethelyne foam for air conditioner) are selected.
           <br /><br />
-          Between the different insulation materials, we need to consider these:
-          <ul>
-            <li>Thermal conductivity: Indicates how easily the heat passes through the material</li>
-            <li>Cost: Minimise cost</li>
-            <li>Durability: Informs how frequently insulation has to be changed</li>
-          </ul>
+          To compare them, we consider:
+          <ol>
+            <li>Thermal conductivity</li>
+            <li>Cost</li>
+            <li>Durability</li>
+          </ol>
           </p>
           <p>
-          To do this, we measure the thickness required and calculate the cost required per unit length of pipe. In the selection of the insulation, we will use these 2 criterias in this order of priority:
+          Accounting for heat loss requirement, we consider:
           <ol>
-            <li>Cost per unit length required to meet the thickness required: Minimise cost</li>
+            <li>Cost per unit length to meet the thickness required</li>
             <ul>
               <br />
-              <li>Calculated using the cost and size of the material available and the thickness required (explained later). (see MATLAB code functions <i>cost_insulation</i> for cost per unit length for the specific thickness sold and <i>cost_per_length</i> for cost per length required to meet the thickness required)</li>
+              <li>Calculated using cost, size and thickness required (see <i>cost_insulation</i> and <i>cost_per_length</i>)</li>
               <br />
             </ul>
-            <li>Thickness required: A material too thick will take up too much space</li>
+            <li>Thickness required</li>
             <ul>
               <br />
-              <li>Calculated using these equations from theories and concepts</li>
+              <li>Calculated <a href='theories-concepts.html'>using</a>:</li>
               <br />
               <li>
                 <math>
@@ -925,7 +845,7 @@
                       <mi>Q</mi>
                       <mn>&dot;</mn>
                     </mover>
-                    <mn>wall, HTF to atm</mn>
+                    <mn>HTF to atm</mn>
                   </msub>
                   <mo>=</mo>
                   <mfrac>
@@ -941,8 +861,10 @@
                       </msub>
                     </mrow>
                     <mrow>
-                      <mi>R</mi>
-                      <mn>total</mn>
+                      <msub>
+                        <mi>R</mi>
+                        <mn>total</mn>
+                      </msub>
                     </mrow>
                   </mfrac>
                 </math>
@@ -1006,13 +928,13 @@
                       <mfrac>
                         <mrow>
                           <msub>
-                            <mi>r</mi>
+                            <mi>radius</mi>
                             <mn>outer</mn>
                           </msub>
                         </mrow>
                         <mrow>
                           <msub>
-                            <mi>r</mi>
+                            <mi>radius</mi>
                             <mn>inner</mn>
                           </msub>
                         </mrow>
@@ -1026,11 +948,11 @@
                 </math> for pipes.
               </li>
               <br />
-              <li>The outer radius of the insulation,<math><msub><mi>r</mi><mn>outer, insulation</mn></msub></math>, is obtained from the equation and the thickness is then obtained from <math><msub><mi>r</mi><mn>outer, insulation</mn></msub><mo>=</mo><msub><mi>r</mi><mn>outer, pipe</mn></msub></math>. (see MATLAB code function <i>insulation_thickness</i>)
+              <li>(see <i>insulation_thickness</i>)
               </li>
               <br />
             </ul>
-            <li>Durability: Frequency of insulation change</li>
+            <li>Durability</li>
           </ol>
         </p> 
 
@@ -1039,18 +961,16 @@
           <div id="insulation-table"></div>
         </table-component>
         -->
-        <image-component tag="image" source="assets/insulation-table.png"
-        subtitle="Table: Comparison for different insulation materials"></image-component>
+        <image-component tag="image" source="assets/tt-insulation-table.png"
+        subtitle="Table X: Comparing different insulation materials"></image-component>
 
         <br />
 
-        <image-component tag="image" source="assets/insulation-decision-matrix.png"
-        subtitle="Figure: Insulation decision matrix"></image-component>
+        <image-component tag="image" source="assets/tt-insulation-decision-matrix.png"
+        subtitle="Figure X: Insulation decision matrix"></image-component>
 
         <p>
-          Based on the chart, the best option is PIR/PUR foam, with the alternative option being PE foam.
-          <br /><br />
-          The purchase and testing of the insulation will be conducted next semester.
+          The best option is PIR/PUR foam and PE is the alternative. This will be tested next semester.
         </p>
 
       </div>
@@ -1137,7 +1057,36 @@
         <br />
 
         <li>[26] “How to deal with thermal pipe expansion and contraction,” Walraven United Kingdom. https://www.walraven.com/en/how-to-guides/thermal-pipe-expansion/.<!-- [Accessed: 1 Nov 2025].--></li>
+        <br />
 
+        <li>[27] “GROTHEN DC 12V ปั๊มรีดพร้อมท่อซิลิโคน ปั๊มปุ๋ย ปั๊มสารเคมี เกรดอุตสาหกรรม 12VDC สีใส สีเขียว,” Miniature-solution.com, 2025. https://www.miniature-solution.com/p/911.<!-- [Accessed: 4 Nov 2025].--></li>
+
+        <li>[28] N. V. Velson, J. Charles, and J. Wang, “Loop Thermosyphon Enhanced Solar Collector,” OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information), Jul. 2022, doi: https://doi.org/10.2172/2324931.</li>
+
+        <li>[29] Collins Chike Kwasi-Effah. (2024). Heat Transfer Fluids in Solar Thermal Power Plants: A Review. NIPES - Journal of Science and Technology Research. Retrieved from https://journals.nipes.org/index.php/njstr/article/view/1109.</li>
+
+        <li>[30] K. Vignarooban, X. Xu, A. Arvay, K. Hsu, and A. M. Kannan, “Heat transfer fluids for concentrating solar power systems – A review,” Applied Energy, vol. 146, pp. 383–396, May 2015, doi: https://doi.org/10.1016/j.apenergy.2015.01.125.</li>
+
+        <!--HTF table-->
+        <li>[31] “HELISOL® 5A,” WACKER Website, 2025. https://www.wacker.com/h/en-us/c/helisol-5a/p/000006109 (accessed Nov. 02, 2025).</li>
+        <li>[32] M. Botejara-Antúnez, J. González-Domínguez, F. J. Rebollo-Castillo, and J. García-Sanz-Calcedo, “Life cycle and environmental impact assessment of heat transfer fluids in parabolic trough CSP plants,” Sustainable Energy Technologies and Assessments, vol. 74, p. 104188, Jan. 2025, doi: https://doi.org/10.1016/j.seta.2025.104188.</li>
+        <li>[33] Alami, A.H., Ramadan, M., Tawalbeh, M. et al. A critical insight on nanofluids for heat transfer enhancement. Sci Rep 13, 15303 (2023). https://doi.org/10.1038/s41598-023-42489-0</li>
+        <li>[34] A. Heinzel et al., “Liquid Metals as Efficient High-Temperature Heat-Transport Fluids,” Energy Technology, vol. 5, no. 7, pp. 1026–1036, Mar. 2017, doi: https://doi.org/10.1002/ente.201600721.</li>
+        <li>[35] A. Yahya, Jaouad Zerhouni, El Ghali Bennouna, Nourddine Boutammachte, and A. Lagrioui, “An Overview of Silicone-Based Heat Transfer Fluids in Concentrated Solar Power Systems,” E3S Web of Conferences, vol. 649, pp. 01007–01007, Jan. 2025, doi: https://doi.org/10.1051/e3sconf/202564901007.</li>
+
+        <li>[36] “Pumps for Concentrated Solar Power,” Ruhrpumpen.com, Feb. 19. https://www.ruhrpumpen.com/en/downloads/resources/markets/65-solar-market-en/file.html.</li>
+
+        <li>[37] Ruhrpumpen Group Website - Molten Salt Pump for Yumen Xinneng CSP plant,” Ruhrpumpen.com, Dec. 07, 2018. https://www.ruhrpumpen.com/en/media-center/molten-salt-pump-for-yumen-xinneng-csp.</li>
+        <li>[38] “Sulzer technology selected for 100 MW solar energy project in China | Sulzer,” Sulzer.com, 2024. https://www.sulzer.com/en/shared/news/240702-sulzer-technology-selected-for-100-mw-solar-energy-project-in-china.</li>
+
+        <li>[39] S. S. HUSSAIN, “Solar water heaters are an eco-friendly and efficient way to utilize solar energy for daily hot water needs. Among the various designs available, the thermosyphon system stands out due to its simplicity and effectiveness.,” Linkedin.com, Jun. 05, 2024. https://www.linkedin.com/pulse/understanding-thermosyphon-effect-solar-water-heaters-hussain-h33dc. </li>
+        <li>[40] A. Jamar, Z. A. A. Majid, W. H. Azmi, M. Norhafana, and A. A. Razak, “A review of water heating system for solar energy applications,” International Communications in Heat and Mass Transfer, vol. 76, pp. 178–187, Aug. 2016, doi: https://doi.org/10.1016/j.icheatmasstransfer.2016.05.028.</li>
+
+        <li>[41] P. D. Ranjan, S. Basu, and P, Dhanush A, “Experimental investigation on the performance of thermosyphon charging of a single-medium stratified storage system for concentrated solar power applications,” arXiv (Cornell University), Dec. 2022, doi: https://doi.org/10.48550/arxiv.2211.16953.</li>
+
+        <li>[42] J. Saed, M. Abdunnabi, A. Essnid, and A. Buishi, “New Designed Thermosyphon Solar Water Heater with Small Sized Parabolic Trough Collectors,” Solar Energy and Sustainable Development Journal, vol. 6, no. 2, pp. 30–41, Dec. 2017, doi: https://doi.org/10.51646/jsesd.v6i2.44.</li>
+
+        <li>[43] J. Charles and N. V. Velson, “LOOP THERMOSYPHON DESIGN FOR SOLAR THERMAL DESALINATION,” Proceeding of 5-6th Thermal and Fluids Engineering Conference (TFEC), pp. 239–248, Jan. 2021, doi: https://doi.org/10.1615/tfec2021.cmd.036291.</li>
       </ul>
     </p>
 
