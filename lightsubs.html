@@ -53,7 +53,7 @@
     <div>
       <div id="Sunlight">
         <h1><u> Sunlight </u></h1>
-        <h2> 1.1 Solar Spectrum </h2>
+        <h2 style="padding-top: 20px;"> 1.1 Solar Spectrum </h2>
         
          <p> The solar radiation spectrum consists of: </p>
 
@@ -75,7 +75,7 @@
             ></image-component>
           </div>
 
-        <h2> 1.2 Irradiance (W/m<sup>2</sup>) </h2>
+        <h2 style="padding-top: 40px;"> 1.2 Irradiance (W/m<sup>2</sup>) </h2>
 
         <p> Power of electromagnetic radiation (solar spectrum) received per unit area.</p>
         <ul>
@@ -87,7 +87,7 @@
         </div>
         </ul>
 
-        <h2> 1.3 Sunlight hours </h2>
+        <h2 id = 'sunlighthours'; style="padding-top: 40px;"> 1.3 Sunlight hours </h2>
         <p>Number of hours where solar irradiation is the strongest during the day (5.5hrs).</p>
         <div style="display: flex; justify-content: center;">
           <image-component
@@ -98,7 +98,7 @@
           ></image-component>
         </div>
         
-        <h2> 1.4 Zenith Angle (θ) </h2>
+        <h2 style="padding-top: 40px;"> 1.4 Zenith Angle (θ) </h2>
         <p> Angle between the sun and the vertical. </p>
         <div style="display: flex; justify-content: center;">
           <image-component
@@ -126,8 +126,8 @@
       </div>
 
       <div id="n">
-        <h1 style="padding-top: 20px;"><u>Literature Review of Existing Methods</u></h1>
-        <h2 id = 'Reflector' >2.1 Reflector</h2>
+        <h1 style="padding-top: 70px;"><u>Literature Review of Existing Methods</u></h1>
+        <h2 id = 'Reflector'; style="padding-top: 20px;" >2.1 Reflector</h2>
         <p>Below is a summary of existing reflector designs:</p>
         <div style="display: flex; justify-content: center;">
           <image-component
@@ -137,12 +137,13 @@
             style="width: 100%; height: auto;"
           ></image-component>
         </div>
-        <p> From these we'll be focusing on Solar Tower, and Parabolic Dish methods as it produces the highest efficiency.</p>
+        <p>From these, we will focus on the Solar Tower and Parabolic Dish methods, as they offer the highest efficiency.</p>
       </div>
 
       <div id="">
-        <h2>2.2 Receiver</h2>
-        <h3 id = 'Receiver Designs'>2.2.1 Receiver Designs</h3>
+        <h2 style="padding-top: 40px;">2.2 Receiver</h2>
+        <h3 id = 'Receiver Designs'; style="padding-top: 20px;">2.2.1 Receiver Designs</h3>
+        <p> Since both Solar Tower and Parabolic Dish configurations use compact receiver designs instead of absorber tubes as seen from the images above, this section will explore the receiver designs considered for these systems.</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
@@ -152,7 +153,7 @@
           ></image-component>
         </div>
 
-        <h3 id="Receiver Materials">2.2.2 Receiver Materials</h3>
+        <h3 id="Receiver Materials"; style="padding-top: 40px;">2.2.2 Receiver Materials</h3>
         <p> Desirable properties for materials include:</p>
         <ul>
           <li>High thermal absorptivity, and conductivity</li>
@@ -175,7 +176,8 @@
       </div>
 
       <div id="">
-        <h1 style="padding-top: 20px;"><u>Design Specifications</u></h1>
+        <h1 style="padding-top: 70px;"><u>Design Specifications</u></h1>
+        <p>To capture the maximum amount of sunlight and effectively concentrate it onto the receiver, the following design specifications are considered.</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
@@ -187,8 +189,9 @@
       </div>
 
       <div id="">
-        <h1 style="padding-top: 20px;"><u>Design</u></h1>
-        <h2>3.1 Concept selection </h2>
+        <h1 style="padding-top: 70px;"><u>Design</u></h1>
+        <h2 style="padding-top: 20px;">3.1 Concept selection </h2>
+        <p>Below is the morphological chart and concept scoring table, which outline various design combinations considered for the light subsystem.</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
@@ -210,14 +213,39 @@
         <p> Based on the concept scoring we have decided to select option C as the initial concept.</p>
       </div>
 
-      <div id="">
-        <h2>3.2 CSP Configuraton</h2>
-        <p>Based on <a href = '#Concentrated Solar Power'> existing CSP methods</a>, Solar Tower and Parabolic Dish methods have the highest efficiency. Hence, we'll be utlising these methods in the subsequent sections.</p>
-      </div>
+      <h2 style="padding-top: 40px;">3.2 Reflector</h2>
+        <p>An 80cm stainless steel wok with mirror tiles was used to construct a parabolic dish.</p>
+        <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/mirror wok.png"
+              subtitle="Figure: Parabolic Dish"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+        </div>
+
+        <p>Based on formula <b>(f = D<sup>2</sup> / (16d))</b>, SolTrace and Tonatiuh simulations, and experiments the focal point was determined to be 17.17 cm from the base.</p>
+        <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/focal point calc.png"
+              subtitle="Table: Focal point calculation"
+              style="width: 50%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/focal point.png"
+              subtitle="Figure: Parabolic Dish simulation, experiment to determine focal point"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+        </div>
 
       <div id="">
-        <h2>3.3 Receiver</h2>
-        <h3>3.3.1 Receiver Design</h3>
+        <h2 style="padding-top: 40px;">3.3 Receiver</h2>
+        <h3 style="padding-top: 20px;">3.3.1 Receiver Design</h3>
         <p>Based on <a href = '#Receiver Designs'> existing receiver designs</a>, after evaluating optical and thermal efficiency, fabrication and maintenance complexity, and operating temperature range, we chose a hybrid design combining external tubular and cavity receivers.</p>
         <p>According to an analysis done on cavity receivers, Cylinder-concial receiver performs the best as shown in the graph.</p>
         
@@ -230,8 +258,8 @@
           ></image-component>
         </div>
 
-        <p>To maximize the sunlight collection area, the receiver’s exterior will remain uninsulated, unlike conventional cavity receivers. Thermal losses will be minimal since our system operates at a lower temperature than large-scale CSP systems</p>
-        <p>The receiver dimensions from the paper were scaled to match the solar tower CSP rig for comparable results and fabricated using a 3D-printed mould.</p>
+        <p>To maximize the sunlight collection area, the receiver’s exterior will remain uninsulated, unlike conventional cavity receivers. Thermal losses will be minimal since our system operates at a lower temperature than large-scale CSP systems.</p>
+        <p>The receiver dimensions from the paper were scaled to match the receiver from the Solar Tower CSP rig for comparable results and fabricated using a 3D-printed mould.</p>
       
         <div style="display: flex; justify-content: center;">
           <image-component
@@ -242,7 +270,7 @@
           ></image-component>
         </div>
 
-        <h3>3.3.2 Receiver Material</h3>
+        <h3 style="padding-top: 40px;">3.3.2 Receiver Material</h3>
         <p>As <a href = '#Receiver Materials'> existing receiver materials</a> are expensive and less accessible, alternatives were considered and copper was selected from the table below.</p>
         <div style="display: flex; justify-content: center;">
             <image-component
@@ -253,7 +281,7 @@
             ></image-component>
           </div>
 
-        <p>An experiment was conducted to determine if thinner copper tubes transfer heat more efficiently than thicker ones, which is crucial given the limited sunlight hours. Based on the results, thin coils were selected.</p>
+        <p>An experiment was conducted to determine if thinner copper tubes transfer heat more efficiently than thicker ones, which is crucial given the limited <a href = #sunlighthours>sunlight hours</a>. Based on the results, thin coils were selected.</p>
         <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -273,38 +301,10 @@
             ></image-component>
           </div>
 
-        <h2>3.4 Reflector</h2>
-        <p>An 80cm stainless steel wok with mirror tiles was used to construct a parabolic dish.</p>
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/mirror wok.png"
-              subtitle="Figure: Parabolic Dish"
-              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-        </div>
-
-        <p>Based on formula (f = D<sup>2</sup> / (16d)), SolTrace and Tonatiuh simulations, and experiments the focal point was determined to be 17.17 cm from the base.</p>
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/focal point calc.png"
-              subtitle="Table: Focal point calculation"
-              style="width: 50%; height: auto;display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-        </div>
-
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/focal point.png"
-              subtitle="Figure: Parabolic Dish simulation, experiment to determine focal point"
-              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-        </div>
+        
     
-    <h1 style="padding-top: 20px;"><u>Testing</u></h1>
-    <h2>4.1 Artificial Lighting</h2>
+    <h1 style="padding-top: 70px;"><u>Testing</u></h1>
+    <h2 style="padding-top: 20px;">4.1 Artificial Lighting</h2>
     <p>Since natural sunlight is not always available, artificial lighting will be used to simulate the solar spectrum, with LEDs for visible light and halogen lamps for infrared. An irradiance of 1000 W/m<sup>2</sup> will be supplied, as standard solar tests are conducted under this condition.</p>
     <div style="display: flex; justify-content: center;">
             <image-component
@@ -345,8 +345,8 @@
             ></image-component>
           </div>
 
-    <h2>4.2 Experiment</h2>
-    <h3>4.2.1 Effectiveness of parabolic dish with mirrors</h3>
+    <h2 style="padding-top: 40px;">4.2 Experiment</h2>
+    <h3 style="padding-top: 20px;">4.2.1 Effectiveness of parabolic dish with mirrors</h3>
     <P>An experiment was conducted to evaluate the effectiveness of the parabolic dish with mirrors. The results showed that while the mirrors improved performance, the increase was minimal compared to the dish without mirrors.</P>
     <div style="display: flex; justify-content: center;">
             <image-component
@@ -377,7 +377,7 @@
             ></image-component>
           </div>
 
-    <h3>4.2.2 Static experiment in sunlight</h3>
+    <h3 style="padding-top: 40px;">4.2.2 Static experiment in sunlight</h3>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -398,7 +398,7 @@
           </div>
 
 
-    <h1 style="padding-top: 20px;"><u>Future Improvements</u></h1>
+    <h1 style="padding-top: 70px;"><u>Future Improvements</u></h1>
     <ul>
     <li> Hybrid system combining Parabolic Dish and Solar Tower configurations can be considered to increase the area of reflective surfaces.</li>
     <div style="display: flex; justify-content: center;">
