@@ -53,7 +53,7 @@
     <div>
       <div id="Sunlight">
         <h1><u> Sunlight </u></h1>
-        <h2> 1.1 Solar Spectrum </h2>
+        <h2 style="padding-top: 20px;"> 1.1 Solar Spectrum </h2>
         
          <p> The solar radiation spectrum consists of: </p>
 
@@ -61,7 +61,7 @@
             <image-component
               tag="image"
               source="assets/solar spectrum table.png"
-              subtitle="Table: Solar Spectrum"
+              subtitle="Table: Solar Spectrum [7]"
               style="width: 50%; height: auto; display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
@@ -70,14 +70,14 @@
             <image-component
               tag="image"
               source="assets/solar radiation spectrum graph.png"
-              subtitle="Figure: Solar Spectrum"
+              subtitle="Figure: Solar Spectrum [7]"
               style="width: 70%; height: auto;"
             ></image-component>
           </div>
 
-        <h2> 1.2 Irradiance (W/m<sup>2</sup>) </h2>
+        <h2 style="padding-top: 40px;"> 1.2 Irradiance (W/m<sup>2</sup>) </h2>
 
-        <p> Power of electromagnetic radiation (solar spectrum) received per unit area.</p>
+        <p> Power of electromagnetic radiation (solar spectrum) received per unit area [8].</p>
         <ul>
         <li style="margin-bottom: 10px;"><b>Direct Normal Irradiance (DNI)</b> – Solar radiation received directly from the sun, measured on a surface perpendicular to the sun’s rays. </li>
         <li style="margin-bottom: 10px;"><b>Diffuse Horizontal Irradiance (DHI)</b> – Solar radiation scattered by the atmosphere and reaching the surface from all directions. </li>
@@ -87,24 +87,24 @@
         </div>
         </ul>
 
-        <h2> 1.3 Sunlight hours </h2>
+        <h2 id = 'sunlighthours'; style="padding-top: 40px;"> 1.3 Sunlight hours </h2>
         <p>Number of hours where solar irradiation is the strongest during the day (5.5hrs).</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
             source="assets/sunlight hours.png"
-            subtitle="Figure: Sunlight Hours - Singapore"
+            subtitle="Figure: Sunlight Hours - Singapore [9]"
             style="width: 100%; height: auto;"
           ></image-component>
         </div>
         
-        <h2> 1.4 Zenith Angle (θ) </h2>
+        <h2 style="padding-top: 40px;"> 1.4 Zenith Angle (θ) </h2>
         <p> Angle between the sun and the vertical. </p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
             source="assets/zenith angle.png"
-            subtitle="Figure: Zenith Angle"
+            subtitle="Figure: Zenith Angle [10]"
             style="width: 50%; height: auto;"
           ></image-component>
         </div>
@@ -114,8 +114,8 @@
           <image-component
             tag="image"
             source="assets/zenith angle singapore.png"
-            subtitle="Table: Zentih Angle -Singapore"
-            style="width: 30%; height: auto;"
+            subtitle="Table: Zentih Angle - Singapore [9]"
+            style="width: 40%; height: auto;"
           ></image-component>
         </div>
         <p> Hence, a sunlight tracking system is unnecessary, as the small angle variation doesn’t justify the added cost.</p>
@@ -126,32 +126,34 @@
       </div>
 
       <div id="n">
-        <h1 style="padding-top: 20px;"><u>Existing methods</u></h1>
-        <h2 id = 'Concentrated Solar Power' >2.1 Concentrated Solar Power</h2>
+        <h1 style="padding-top: 70px;"><u>Literature Review of Existing Concentrated Solar Power Methods</u></h1>
+        <h2 id = 'Reflector'; style="padding-top: 20px;" >2.1 Reflector</h2>
+        <p>Below is a summary of existing reflector designs:</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
             source="assets/existing methods csp.png"
-            subtitle="Table: Existing CSP configurations"
+            subtitle="Table: Existing Reflector Designs [11]"
             style="width: 100%; height: auto;"
           ></image-component>
         </div>
-        <p> From these we'll be focusing on Solar Tower, and Parabolic Dish methods as it produces the highest efficiency.</p>
+        <p>From these, we will focus on the Solar Tower and Parabolic Dish methods, as they offer the highest efficiency.</p>
       </div>
 
       <div id="">
-        <h2>2.2 Receiver</h2>
-        <h3 id = 'Receiver Designs'>2.2.1 Receiver Designs</h3>
+        <h2 style="padding-top: 40px;">2.2 Receiver</h2>
+        <h3 id = 'Receiver Designs'; style="padding-top: 20px;">2.2.1 Receiver Designs</h3>
+        <p> Since both Solar Tower and Parabolic Dish configurations use compact receiver designs instead of absorber tubes as seen from the images above, this section will explore the receiver designs considered for these systems.</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
             source="assets/existing methods receiver design.png"
-            subtitle="Table: Existing Receiver Designs"
+            subtitle="Table: Existing Receiver Designs [12],[13],[14],[15],[16]"
             style="width: 100%; height: auto;"
           ></image-component>
         </div>
 
-        <h3 id="Receiver Materials">2.2.2 Receiver Materials</h3>
+        <h3 id="Receiver Materials"; style="padding-top: 40px;">2.2.2 Receiver Materials</h3>
         <p> Desirable properties for materials include:</p>
         <ul>
           <li>High thermal absorptivity, and conductivity</li>
@@ -170,11 +172,12 @@
           <li>Inconel 740H</li>
         </ul>
 
-        <p>From these materials Inconel 740H provides the best lifetime and cost/power performance. </p>
+        <p>From these materials Inconel 740H provides the best lifetime and cost/power performance [17]. </p>
       </div>
 
       <div id="">
-        <h1 style="padding-top: 20px;"><u>Design Specifications</u></h1>
+        <h1 style="padding-top: 70px;"><u>Design Specifications</u></h1>
+        <p>To capture the maximum amount of sunlight and effectively concentrate it onto the receiver, the following design specifications are considered.</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
@@ -186,8 +189,9 @@
       </div>
 
       <div id="">
-        <h1 style="padding-top: 20px;"><u>Design</u></h1>
-        <h2>3.1 Concept selection </h2>
+        <h1 style="padding-top: 70px;"><u>Design</u></h1>
+        <h2 style="padding-top: 20px;">3.1 Concept selection </h2>
+        <p>Below is the morphological chart and concept scoring table, which outline various design combinations considered for the light subsystem.</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
@@ -209,71 +213,8 @@
         <p> Based on the concept scoring we have decided to select option C as the initial concept.</p>
       </div>
 
-      <div id="">
-        <h2>3.2 CSP Configuraton</h2>
-        <p>Based on <a href = '#Concentrated Solar Power'> existing CSP methods</a>, Solar Tower and Parabolic Dish methods have the highest efficiency. Hence, we'll be utlising these methods in the subsequent sections.</p>
-      </div>
-
-      <div id="">
-        <h2>3.3 Receiver</h2>
-        <h3>3.3.1 Receiver Design</h3>
-        <p>Based on <a href = '#Receiver Designs'> existing receiver designs</a>, after evaluating optical and thermal efficiency, fabrication and maintenance complexity, and operating temperature range, we chose a hybrid design combining external tubular and cavity receivers.</p>
-        <p>According to an analysis done on cavity receivers, Cylinder-concial receiver performs the best as shown in the graph.</p>
-        
-        <div style="display: flex; justify-content: center;">
-          <image-component
-            tag="image"
-            source="assets/cavity receivers.png"
-            subtitle="Figure: Cavity receivers comparison"
-            style="width: 80%; height: auto;display: block; margin: 0 auto 30px auto;"
-          ></image-component>
-        </div>
-
-        <p>To maximize the sunlight collection area, the receiver’s exterior will remain uninsulated, unlike conventional cavity receivers. Thermal losses will be minimal since our system operates at a lower temperature than large-scale CSP systems</p>
-        <p>The receiver dimensions from the paper were scaled to match the solar tower CSP rig for comparable results and fabricated using a 3D-printed mould.</p>
-      
-        <div style="display: flex; justify-content: center;">
-          <image-component
-            tag="image"
-            source="assets/receiver design.png"
-            subtitle="Figure: Upscaled receiver dimensions, 3D printed mould and receiver"
-            style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
-          ></image-component>
-        </div>
-
-        <h3>3.3.2 Receiver Material</h3>
-        <p>As <a href = '#Receiver Materials'> existing receiver materials</a> are expensive and less accessible, alternatives were considered and copper was selected from the table below.</p>
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/receiver materials.png"
-              subtitle="Table: Alternative Receiver Materials"
-              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-
-        <p>An experiment was conducted to determine if thinner copper tubes transfer heat more efficiently than thicker ones, which is crucial given the limited sunlight hours. Based on the results, thin coils were selected.</p>
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/thick thin coil.png"
-              subtitle="Table: Comparison between thick, thin copper tubes"
-              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-      
-        <p>Another experiment was conducted to determine if black painted increased the thermal energy absorption. Based on the results obtained the receiver was painted black.</p>
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/black paint.png"
-              subtitle="Table: Effectiveness of black paint in absorbing heat"
-              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-
-        <h2>3.4 Reflector</h2>
-        <p>An 80cm stainless steel wok with mirror tiles was used to construct a parabolic dish.</p>
+      <h2 style="padding-top: 40px;">3.2 Reflector</h2>
+        <p>An 80 cm stainless steel wok was selected for constructing the parabolic dish, as it was the largest commercially available option that could fit within the 1 m<sup>2</sup> solar tower rig. Mirror tiles were applied to the wok’s surface to enhance its reflectivity.</p>
         <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -283,7 +224,7 @@
             ></image-component>
         </div>
 
-        <p>Based on formula (f = D<sup>2</sup> / (16d)), SolTrace and Tonatiuh simulations, and experiments the focal point was determined to be 17.17 cm from the base.</p>
+        <p>Based on formula <b>(f = D<sup>2</sup> / (16d))</b>, SolTrace and Tonatiuh simulations, and experiments the focal point of the parabolic dish was determined to be 17.17 cm from the base.</p>
         <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -301,26 +242,128 @@
               style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
             ></image-component>
         </div>
+
+      <div id="">
+        <h2 style="padding-top: 40px;">3.3 Receiver</h2>
+        <h3 style="padding-top: 20px;">3.3.1 Receiver Design</h3>
+        <p>Based on <a href = '#Receiver Designs'> existing receiver designs</a>, after evaluating optical and thermal efficiency, fabrication and maintenance complexity, and operating temperature range, we chose a hybrid design combining external tubular and cavity receivers.</p>
+        <p>According to an analysis done on cavity receivers, Cylinder-concial receiver performs the best as shown in the graph.</p>
+        
+        <div style="display: flex; justify-content: center;">
+          <image-component
+            tag="image"
+            source="assets/cavity receivers.png"
+            subtitle="Figure: Cavity receivers comparison [15]"
+            style="width: 80%; height: auto;display: block; margin: 0 auto 30px auto;"
+          ></image-component>
+        </div>
+
+        <p>To maximize the sunlight collection area, the receiver’s exterior will remain uninsulated, unlike conventional cavity receivers. Thermal losses will be minimal since our system operates at a lower temperature than large-scale CSP systems.</p>
+        <p>The receiver dimensions from the paper were scaled to match the receiver from the Solar Tower CSP rig for comparable results and fabricated using a 3D-printed mould.</p>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <h4>Receiver Mould</h4>
+        <model-viewer 
+          src="components/3d-render/receiver_mould.glb" 
+          alt="3D Printed Receiver Mould" 
+          auto-rotate 
+          camera-controls 
+          style="width: 600px; height: 400px; background-color: #f5f5f5;">
+        </model-viewer>
+      
+        <div style="display: flex; justify-content: center;">
+          <image-component
+            tag="image"
+            source="assets/receiver design.png"
+            subtitle="Figure: Upscaled receiver dimensions, 3D printed mould and receiver"
+            style="width: 100%; height: auto;display: block; margin: 30px auto 30px auto;"
+          ></image-component>
+        </div>
+
+        <h3 style="padding-top: 40px;">3.3.2 Receiver Material</h3>
+        <p>As <a href = '#Receiver Materials'> existing receiver materials</a> are expensive and less accessible, alternatives were considered and copper was selected from the table below.</p>
+        <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/receiver materials.png"
+              subtitle="Table: Alternative Receiver Materials [18],[19],[20],[21]"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+
+        <p>An experiment was conducted to determine if thinner copper tubes transfer heat more efficiently than thicker ones, which is crucial given the limited <a href = #sunlighthours>sunlight hours</a>. Based on the results, thin coils were selected.</p>
+        <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/thick thin coil.png"
+              subtitle="Table: Experiment parameters for comparison between thick and thin copper tubes"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+        <h4><b>Results & Analysis</b></h4>
+         <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/thick thin tube graph.png"
+              subtitle="Figure: Comparison between thick and thin copper tubes"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+        <p>The thinner coil shows a faster temperature rise than the thicker coil, indicating a higher rate of heat transfer. Since it contains less water, it gains and loses heat more quickly, leading to a lower thermal equilibrium temperature. However, this will not affect our system as the Heat Transfer Fluid circulates in an enclosed loop.</p>
+        
+      
+        <p style = "padding-top: 70px;" >Another experiment was conducted to determine if black paint increased the thermal energy absorption. Based on the results obtained, the receiver was painted black.</p>
+        <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/black paint.png"
+              subtitle="Table: Experiment parameters for testing the effectiveness of black paint in absorbing heat"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+
+        <h4><b>Results & Analysis</b></h4>
+         <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/black paint graph.png"
+              subtitle="Figure: Comparison between black painted copper surface and bare copper surface"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+        <p>The painted surface shows a higher heat transfer rate to water, indicated by its steeper temperature gradient, and reaches a stable water temperature of 53°C, 16°C higher than the unpainted setup. Therefore, the black-painted surface demonstrates superior energy absorption and heat transfer, and will be used in subsequent experiments.</p>
+        <p style = "Padding-top:50px;">Based on the experiments and analysis conducted, the receiver was constructed using thin (6.35mm) copper tubes and was painted black to maximise the absorption of heat. </p>
+ 
     
-    <h1 style="padding-top: 20px;"><u>Testing</u></h1>
-    <h2>4.1 Artificial Lighting</h2>
-    <p>Since natural sunlight is not always available, artificial lighting will be used to simulate the solar spectrum, with LEDs for visible light and halogen lamps for infrared. An irradiance of 1000 W/m<sup>2</sup> will be supplied, as standard solar tests are conducted under this condition.</p>
+    <h1 style="padding-top: 70px;"><u>Testing</u></h1>
+    <h2 style="padding-top: 20px;">4.1 Artificial Lighting</h2>
+    <p>Since natural sunlight is not always available, artificial lighting will be used to simulate the solar spectrum, with LEDs for visible light and halogen lamps for infrared. An irradiance of 1000 W/m<sup>2</sup> will be supplied, as standard solar tests are conducted under this condition [23].</p>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/artificial lighting.png"
-              subtitle="Figure: Simulation of Sunlight (AM1.5G) using artificial lighting"
+              subtitle="Figure: Simulation of Sunlight (AM1.5G) using artificial lighting [22]"
               style="width: 60%; height: auto;display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
 
-    <P>Limitations:</P>
+    <P>Limitations of using artificial lighting:</P>
     <ul>
     <li>Materials do not absorb all wavelengths equally, resulting in deviations from results obtained under natural sunlight.</li>
     <li>Shadowing is difficult to avoid if both sources are used at the same time.</li>
     </ul>
 
     <p style="margin-top: 70px;">The following rig was designed to place the light during testing:</p>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <h4>Artificial Lighting Frame</h4>
+    <model-viewer 
+      src="components/3d-render/aritifical_lighting_frame.glb" 
+      alt="Artificial Lighting Frame" 
+      auto-rotate 
+      camera-controls 
+      style="width: 600px; height: 400px; background-color: #f5f5f5;">
+    </model-viewer>
+        
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -344,18 +387,54 @@
             ></image-component>
           </div>
 
-    <h2>4.2 Experiment</h2>
-    <h3>4.2.1 Effectiveness of parabolic dish with mirrors</h3>
+    <h2 style="padding-top: 40px;">4.2 Experiment</h2>
+    <h3 style="padding-top: 20px;">4.2.1 Effectiveness of parabolic dish with mirrors</h3>
     <P>An experiment was conducted to evaluate the effectiveness of the parabolic dish with mirrors. The results showed that while the mirrors improved performance, the increase was minimal compared to the dish without mirrors.</P>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/wok experiment.png"
-              subtitle="Table: Experiment 4.2.1"
+              subtitle="Figure: Copper surface temperature"
               style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
 
+      <h4>Results & Analysis</h4>
+      <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/copper surface temperature.png"
+              subtitle="Figure: Copper surface temperature"
+              style="width: 80%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+
+      <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/water inside the receiver.png"
+              subtitle="Figure: Water temperature inside the receiver"
+              style="width: 80%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+
+        <h4>Limitations</h4>
+        <p style = 'padding-bottom: 40px'>The smaller temperature difference between the copper surface and water in the non-mirrored wok experiment, compared to without the wok and mirrored wok experiments, may be due to the thermocouple probe touching the inner copper surface of the receiver. This experiment will be repeated using an end-cap to secure the probe and more accurately measure the water temperature.</p>
+
+        <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/percentage increase.png"
+              subtitle="Table: Contribution of reflectors"
+              style="width: 60%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+
+      
+
+        <p> Based on the data, the wok with mirrors heats both the water and copper to higher steady-state temperatures. However, the water and receiver surface temperatures remain similar for both mirrored and non-mirrored woks.</p>
+
+    
     <p>This may be due to poor light concentration caused by the uneven surface resulting from pasting mirrors on the wok. This theory was verified by measuring the irradiance along the central axis for the parabolic dishes with and without mirrors.</p>
     <div style="display: flex; justify-content: center;">
             <image-component
@@ -376,12 +455,22 @@
             ></image-component>
           </div>
 
-    <h3>4.2.2 Static experiment in sunlight</h3>
+    <h3 style="padding-top: 40px;">4.2.2 Static experiment in sunlight</h3>
+    <p>An experiment was conducted to evaluate the maximum temperature achievable by the CSP system in heating the water within the receiver under natural solar conditions.</p>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/static sunlight.png"
               subtitle="Table: Experiment 4.2.2"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+
+    <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/static sunlight graph.png"
+              subtitle="Figure: Experiment 4.2.2 Results"
               style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
@@ -397,7 +486,7 @@
           </div>
 
 
-    <h1 style="padding-top: 20px;"><u>Future Improvements</u></h1>
+    <h1 style="padding-top: 70px;"><u>Future Improvements</u></h1>
     <ul>
     <li> Hybrid system combining Parabolic Dish and Solar Tower configurations can be considered to increase the area of reflective surfaces.</li>
     <div style="display: flex; justify-content: center;">
@@ -432,5 +521,3 @@
 </body>
 
 </html>
-
-

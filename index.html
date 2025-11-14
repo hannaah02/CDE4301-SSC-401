@@ -53,7 +53,7 @@
 
     <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
-      <h2>Table of Contents</h2>
+      <h2>Table of Content</h2>
       <sl-tree>
         <sl-tree-item>
           <a href="#abstract">Abstract</a>
@@ -158,7 +158,7 @@
       <div id="background">
         <h2> 1. Background</h2>
         <p>
-          Concentrated solar power (CSP) is a system that collects thermal energy. It redirects and concentrates sunlight using mirrors onto a receiver. The receiver conducts the thermal energy to the heat transfer fluid (HTF) within it, which is then transferred to a thermal energy storage (TES) system or an electricity generator.
+          Concentrated solar power (CSP) is a system that collects thermal energy. It redirects and concentrates sunlight using mirrors onto a receiver. The receiver conducts the thermal energy to the heat transfer fluid (HTF) within it, which is then transferred to a thermal energy storage (TES) system or the application.
           <br /><br />
           Other solar capture methods, like photovoltaic (PV) systems are more mature. However, they are overall more costly, considering maintenance and replacement costs. Furthermore, the lifespan of CSP systems are higher than PV systems.
           <br /><br />
@@ -547,10 +547,10 @@
             <mi>T</mi>
           </math>. Figure XX illustrates the primary thermal properties of materials used for sensible heat storage:
           </p>
-          <image-component tag="image" source="assets/exp-tes-thermal-prop-sensible.png"
+          <image-component tag="image" source="assets\TES-Sensible heat image .png"
           subtitle="Figure X: Thermal properties of sensible heat materials"></image-component> <!-- References: -->
           <p>
-          The general requirements for sensible heat storage materials used in residential applications can be summarized as follows:
+          The general requirements for sensible heat storage materials used can be summarized as follows:
           <ul>
             <li><b>High energy density</b>, achieved through materials with high density and specific heat capacity.</li>
             <li><b>Good thermal conductivity</b> (typically greater than 0.3<math><mi>W</mi><mo>/</mo><mi>m</mi><mi>K</mi></math>) and <b>high thermal diffusivity</b> to enable efficient heat transfer.</li>
@@ -566,59 +566,60 @@
         <image-component tag="image" source="assets/exm-tes-sensible-water-rock.png"
           subtitle="Figure X: Comparison of (a) water and aquifer and (b) rock bed as sensible heat storage"></image-component> <!-- References: -->
           <p>
-            From the criteria above, water is considered one of the most effective materials for heat storage in residential systems because of its high specific heat capacity and availability compared to other sensible heat storage media. The rock or pebble bed is considered another promising sensible heat storage medium, particularly because it has high volume density, can operate at temperatures exceeding
+            From the criteria above, water is considered one of the most effective materials for heat storage in residential systems because of its high specific heat capacity and availability compared to other sensible heat storage media.The rock or pebble bed is considered another promising sensible heat storage medium, particularly because it has relatively high volume density, can operate at temperatures exceeding 100 °C, higher thermal conductivity, withstands high thermal stress, and avoids problems such as leakage or corrosion that occur with water. However, following our other subsections, our system operating range is first designed to work at operating temperature of less than
             <math>
               <mi>100</mi>
               <mi>&deg;</mi>
               <mi>C</mi>
-            </math>, higher thermal conductivity, withstands high thermal stress, and avoids problems such as leakage or corrosion that occur with water. However, following our next part, our system operating range is first designed to work at operating temperature of less than
-            <math>
-              <mi>100</mi>
-              <mi>&deg;</mi>
-              <mi>C</mi>
-            </math> along with using water as HTF. This type of TES materials will be considered for the next semester.
+            </math> along with using water as HTF.
             <br /><br />
-            A common application of water is the solar water heating tank (illustrated in Fig. XX). In a direct (open-loop) system, the solar collector transfers heat directly to the water in the tank, or an indirect (closed-loop) system using a separate HTF that circulates through the collector and a heat exchanger, keeping it isolated from the tank water to prevent contamination and allow the use of antifreeze solutions natural stratification occurs due to changes in density with temperature, hot water rises to the top, cooler water settles at the bottom, and the layer in between forms the thermocline. Another cycle can be used to circulate hot water output and cold water input for supply.
+            A common application of water is the solar water heating tank (illustrated in Fig. XX). In a direct (open-loop system), the solar collector transfers heat directly to the water in the tank, or an indirect (closed-loop) system using a separate HTF that circulates through the collector and a heat exchanger, keeping it isolated from the tank water to prevent contamination and allow the use of antifreeze solutions natural stratification occurs due to changes in density with temperature, hot water rises to the top, cooler water settles at the bottom, and the layer in between forms the thermocline. Another cycle can be used to circulate hot water output and cold water input for supply. Natural thermal stratification enhances the efficiency of TES systems by maintaining temperature layers, which minimizes mixing losses and allows hot water to be drawn at higher temperatures while maximizing overall heat storage capacity.
           </p>
-          <image-component tag="image" source="assets/exm-tes-solar-heater.png"
+          <image-component tag="image" source="assets\TES-solar water heater.png"
           subtitle="Figure X: Diagram of solar water heater"></image-component> <!-- References: -->
           <p>
             <b>Thermochemical energy storage</b>
             <br /><br />
             Thermochemical energy storage systems retain heat through reversible chemical reactions or sorption processes. A general reaction can be expressed as:
+          </p>
+          <p style="text-align: center;">
             <math>
 
-            </math>  heat + A ⇌ B + C ; Q = ΔHreaction
+            </math>  Heat + C ⇌ A + B ; Q = ΔH<sub>reaction</sub>
           </p>
-          <image-component tag="image" source="assets/exm-tes-tces-system.png"
-          subtitle="Figure X: Diagram of TCES system"></image-component> <!-- References: -->
+          <image-component tag="image" source="assets\TES-TCES mechanism.png"
+          subtitle="Figure X: Diagram of TCES mechanism"></image-component> <!-- References: -->
           <p>
-            In the endothermic (charging) direction, substance <i>A</i> breaks down into <i>B</i> and <i>C</i> while absorbing heat <i>Q</i>. Unlike sensible or latent (PCM-based) heat storage, thermochemical systems store energy in the chemical potential of the reaction products rather than as temperature or phase change. As long as B and C remain separated, the stored energy does not dissipate over time.
-            <br /><br />
-            When the two components are recombined, the reverse exothermic (discharging) reaction occurs, regenerating A and releasing the stored heat. In sorption-based systems, <i>B</i> is the sorbent, <i>C</i> the sorbate, and <i>A</i> their combined compound. Some of the low temperature TCES are shown below.
+            In the charging (endothermic) phase, C splits into B and A, absorbing heat Q. Thermochemical systems store energy in chemical bonds, and this energy remains stable as long as B and A stay separate. When recombined, the reverse (exothermic) reaction reforms A and releases the stored heat. 
           </p>
-          <image-component tag="image" source="assets/exm-tes-low-temp-tces.png"
-          subtitle="Figure X: List of low temperature TCES systems"></image-component> <!-- References: -->
+          <image-component tag="image" source="assets\TES-TCES calcium looping diagram.png"
+          subtitle="Figure X: TCES Calcium Looping system in TES"></image-component> <!-- References: -->
           <p>
             TCES materials exhibit the highest energy density among thermal storage methods because chemical reactions can store significantly more energy per unit mass or volume.
             <br /><br />
-            Although TCES is able to store the highest volumetric energy density, TCES system is not suitable for a small-scale CSP application operating at low temperature because its reaction-based mechanisms require higher temperatures, complex reactor designs, and precise control of gas–solid or solid–solid equilibria. Although TCES offers high theoretical energy density and long-term storage potential, its low technological maturity, slow reaction kinetics, and high material and capital costs make it impractical for low-temperature solar applications. In contrast, phase change material (PCM) systems are commercially available, compact, and easily integrated with conventional heat-transfer loops, providing efficient and stable heat storage at nearly constant temperature within the desired range. Therefore, a PCM-based latent heat storage system represents a more feasible, economical, and operationally simple solution than a TCES system for small-scale CSP applications.
+            Although TCES is able to store the highest volumetric energy density, TCES system is not suitable for a small-scale CSP application operating at low temperature because its reaction-based mechanisms require complex reactor designs, and precise control of gas-solid or solid-solid equilibria. Its low technological maturity, slow reaction kinetics, and high material and capital costs make it impractical for low-temperature solar applications. 
           </p>
           <p>
-            <b>Latent Heat System</b>
+            <b>Latent Heat Storage</b>
           </p>
           <image-component tag="image" source="assets/exm-tes-pcm-diag.png"
           subtitle="Figure X: Diagram of PCM system"></image-component> <!-- References: -->
           <p>
-            Solar thermal energy can be effectively stored as latent heat through the use of phase change materials (PCMs). These materials provide higher energy storage capacity per unit mass or volume and ensure better temperature stability for stored hot water. During the daytime solar cycle, the PCM absorbs heat as it changes phase from solid to liquid, storing thermal energy without significant temperature fluctuation.
+            Latent heat storage involves a phase change such as melting, evaporation, or crystallization at a constant temperature. Because of the high enthalpy associated with phase transitions, latent TES stores more energy than sensible heat systems of the same size, though it operates over a narrow temperature range. The stored energy is given by 
+            Q<sub>fusion</sub> = mL.
+            Solar thermal energy can be effectively stored as latent heat through the use of phase change materials (PCMs). These materials provide higher energy storage capacity per unit mass or volume. During the daytime solar cycle, the PCM absorbs heat as it changes phase from solid to liquid, storing thermal energy without significant temperature fluctuation.
             <br /><br />
-            When integrated into a water tank, the presence of PCM greatly increases the total heat storage capacity of the system, as illustrated in Fig. xxx. PCMs are generally classified into three main categories:
+            ////When integrated into a water tank, the presence of PCM greatly increases the total heat storage capacity of the system, as illustrated in Fig. xxx./// PCMs are generally classified into three main categories:
             <ol>
-              <li><b>Inorganic PCMs</b>, such as hydrated salt solutions composed of natural salts and water,</li>
-              <li><b>Bio-based PCMs</b>, derived from natural fatty acids like vegetable oils, and</li>
-              <li><b>Organic PCMs</b>, typically made from petroleum-based byproducts.</li>
+              <li><b>Inorganic PCMs</b>, such as hydrated salt solutions composed of natural salts and water</li>
+              <li><b>Bio-based PCMs</b>, derived from natural fatty acids like vegetable oils</li>
+              <li><b>Organic PCMs</b>, typically made from petroleum-based byproducts</li>
             </ol>
           </p>
+          </p>
+          <image-component tag="image" source="assets\TES-PCMs material types.png"
+          subtitle="Figure X: PCMs types and properties"></image-component> <!-- References: -->
+          <p>
           <p>
             In latent heat storage systems, energy is stored by changing the physical state of the storage medium rather than simply raising its temperature, making it a highly efficient approach for solar thermal applications.
 
