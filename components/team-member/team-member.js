@@ -26,7 +26,7 @@ class TeamMember extends HTMLElement {
     <style>
       :host {
         display: block;
-        max-width: 120px;
+        max-width: 160px;
         text-align: center;
       }
 
