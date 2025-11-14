@@ -109,7 +109,7 @@
           ></image-component>
         </div>
 
-        <p> The zenith angle near the equator changes very little. In Singapore (1.35<sup>°</sup>N), Solcast data shows it varies only between 0.3<sup>°</sup> and 0.9<sup>°</sup> during sunlight hours. </p>
+        <p> The zenith angle near the equator changes very little during the day. In Singapore (1.35<sup>°</sup>N), Solcast data shows it varies only between 0.3<sup>°</sup> and 0.9<sup>°</sup> during sunlight hours. </p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
@@ -124,7 +124,7 @@
 
         
       </div>
-
+      <sl-divider></sl-divider>
       <div id="n">
         <h1 style="padding-top: 70px;"><u>Literature Review of Existing Concentrated Solar Power Methods</u></h1>
         <h2 id = 'Reflector'; style="padding-top: 20px;" >2.1 Reflector</h2>
@@ -187,11 +187,11 @@
           ></image-component>
         </div>
       </div>
-
+      <sl-divider></sl-divider>
       <div id="">
         <h1 style="padding-top: 70px;"><u>Design</u></h1>
         <h2 style="padding-top: 20px;">3.1 Concept selection </h2>
-        <p>Below is the morphological chart and concept scoring table, which outline various design combinations considered for the light subsystem.</p>
+        <p>Below is the morphological chart and concept scoring table, which outline various design combinations considered for the light subsystem based on the design specifications.</p>
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
@@ -214,7 +214,7 @@
       </div>
 
       <h2 style="padding-top: 40px;">3.2 Reflector</h2>
-        <p>An 80 cm stainless steel wok was selected for constructing the parabolic dish, as it was the largest commercially available option that could fit within the 1 m<sup>2</sup> solar tower rig. Mirror tiles were applied to the wok’s surface to enhance its reflectivity.</p>
+        <p>An 80 cm stainless steel wok was selected for constructing the parabolic dish, as it was the largest commercially available option that could fit within the 1 m<sup>2</sup> solar tower rig, that could maximise the reflective surface area. Mirror tiles were applied to the wok’s surface to enhance its reflectivity.</p>
         <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -258,25 +258,15 @@
           ></image-component>
         </div>
 
-        <p>To maximize the sunlight collection area, the receiver’s exterior will remain uninsulated, unlike conventional cavity receivers. Thermal losses will be minimal since our system operates at a lower temperature than large-scale CSP systems.</p>
+        <p>To maximize the receiver’s available surface area for absorbing heat from sunlight, the receiver’s exterior will remain uninsulated, unlike conventional cavity receivers. Thermal losses will be minimal since our system operates at a lower temperature than large-scale CSP systems.</p>
         <p>The receiver dimensions from the paper were scaled to match the receiver from the Solar Tower CSP rig for comparable results and fabricated using a 3D-printed mould.</p>
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-        <h4>Receiver Mould</h4>
-        <model-viewer 
-          src="components/3d-render/receiver_mould.glb" 
-          alt="3D Printed Receiver Mould" 
-          auto-rotate 
-          camera-controls 
-          style="width: 600px; height: 400px; background-color: #f5f5f5;">
-        </model-viewer>
       
         <div style="display: flex; justify-content: center;">
           <image-component
             tag="image"
             source="assets/receiver design.png"
             subtitle="Figure: Upscaled receiver dimensions, 3D printed mould and receiver"
-            style="width: 100%; height: auto;display: block; margin: 30px auto 30px auto;"
+            style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
           ></image-component>
         </div>
 
@@ -334,10 +324,10 @@
         <p>The painted surface shows a higher heat transfer rate to water, indicated by its steeper temperature gradient, and reaches a stable water temperature of 53°C, 16°C higher than the unpainted setup. Therefore, the black-painted surface demonstrates superior energy absorption and heat transfer, and will be used in subsequent experiments.</p>
         <p style = "Padding-top:50px;">Based on the experiments and analysis conducted, the receiver was constructed using thin (6.35mm) copper tubes and was painted black to maximise the absorption of heat. </p>
  
-    
+    <sl-divider></sl-divider>
     <h1 style="padding-top: 70px;"><u>Testing</u></h1>
     <h2 style="padding-top: 20px;">4.1 Artificial Lighting</h2>
-    <p>Since natural sunlight is not always available, artificial lighting will be used to simulate the solar spectrum, with LEDs for visible light and halogen lamps for infrared. An irradiance of 1000 W/m<sup>2</sup> will be supplied, as standard solar tests are conducted under this condition [23].</p>
+    <p>Since natural sunlight is not always available, artificial lighting was be used to simulate the solar spectrum, with LEDs for visible light and halogen lamps for infrared. An irradiance of 1000 W/m<sup>2</sup> will be supplied, as standard solar tests are conducted under this condition [23].</p>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -347,28 +337,18 @@
             ></image-component>
           </div>
 
-    <P>Limitations of using artificial lighting:</P>
+    <P>Limitations of using artifical lighting:</P>
     <ul>
     <li>Materials do not absorb all wavelengths equally, resulting in deviations from results obtained under natural sunlight.</li>
     <li>Shadowing is difficult to avoid if both sources are used at the same time.</li>
     </ul>
 
     <p style="margin-top: 70px;">The following rig was designed to place the light during testing:</p>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    
-    <model-viewer 
-      src="components/3d-render/aritifical_lighting_frame.glb" 
-      alt="Artificial Lighting Frame" 
-      auto-rotate 
-      camera-controls 
-      style="width: 600px; height: 400px; background-color: #f5f5f5;">
-    </model-viewer>
-        
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/light rig.png"
-              subtitle="Figure: Artificial Lighting Frame"
+              subtitle="Figure: Al Profile rig"
               style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
@@ -389,7 +369,7 @@
 
     <h2 style="padding-top: 40px;">4.2 Experiment</h2>
     <h3 style="padding-top: 20px;">4.2.1 Effectiveness of parabolic dish with mirrors</h3>
-    <P>An experiment was conducted to evaluate the effectiveness of the parabolic dish with mirrors. The results showed that while the mirrors improved performance, the increase was minimal compared to the dish without mirrors.</P>
+    <P>An experiment was conducted to evaluate the effectiveness of the parabolic dish (wok) with mirrors. </P>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -419,7 +399,7 @@
           </div>
 
         <h4>Limitations</h4>
-        <p style = 'padding-bottom: 40px'>The smaller temperature difference between the copper surface and water in the non-mirrored wok experiment, compared to without the wok and mirrored wok experiments, may be due to the thermocouple probe touching the inner copper surface of the receiver. This experiment will be repeated using an end-cap to secure the probe and more accurately measure the water temperature.</p>
+        <p style = 'padding-bottom: 40px'>The smaller temperature difference observed between the copper surface and water in the non-mirrored wok experiment, compared to both the no-wok and mirrored-wok setups, may be due to the thermocouple probe making contact with the inner copper surface of the receiver. To ensure a more accurate measurement of the water temperature, this experiment will be repeated using an end-cap to properly secure the probe.</p>
 
         <div style="display: flex; justify-content: center;">
             <image-component
@@ -432,7 +412,7 @@
 
       
 
-        <p> Based on the data, the wok with mirrors heats both the water and copper to higher steady-state temperatures. However, the water and receiver surface temperatures remain similar for both mirrored and non-mirrored woks.</p>
+        <p> Based on the data, the wok with mirrors heats both the water and copper to higher steady-state temperatures. However, the water and receiver surface temperatures remain similar for both mirrored and non-mirrored wok experiments.</p>
 
     
     <p>This may be due to poor light concentration caused by the uneven surface resulting from pasting mirrors on the wok. This theory was verified by measuring the irradiance along the central axis for the parabolic dishes with and without mirrors.</p>
@@ -445,7 +425,7 @@
             ></image-component>
           </div>
 
-    <p>In addition, multiple reflections within the wok before reaching the receiver may have also reduced the intensity of the absorbed light.</p>
+    <p>In addition, multiple reflections of the light ray within the wok before reaching the receiver may have also reduced the intensity of the absorbed light.</p>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -466,6 +446,7 @@
             ></image-component>
           </div>
 
+    <h4>Results & Analysis </h4>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -474,6 +455,7 @@
               style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
+    <p>The maximum temperature reached under natural sunlight within sunlight hours is 61.6<sup>°</sup>C.</p>
 
     <p>Under sunlight, the Solar Tower configuration achieved higher temperatures than the Parabolic Dish. Even when compared to the Parabolic Dish with LED under constant irradiance, the Solar Tower still reached higher temperatures, likely due to its larger reflective surface area.</p>
     <div style="display: flex; justify-content: center;">
@@ -485,7 +467,7 @@
             ></image-component>
           </div>
 
-
+    <sl-divider></sl-divider>
     <h1 style="padding-top: 70px;"><u>Future Improvements</u></h1>
     <ul>
     <li> Hybrid system combining Parabolic Dish and Solar Tower configurations can be considered to increase the area of reflective surfaces.</li>
@@ -500,6 +482,10 @@
     <li>Explore methods to make the wok surface reflective, smooth and concentrate light better.</li>
     <li>Explore methods to reduce convective heat losses from the receiver.</li>
     </ul>
+
+    <sl-divider></sl-divider>
+    <h1 style="padding-top: 20px;"><u>Appendix</u></h1>
+
 
   </div>
 
