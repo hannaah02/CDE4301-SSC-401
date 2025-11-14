@@ -88,9 +88,10 @@
           </sl-tree-item>
         </sl-tree-item>
 
-        <!--sl-tree-item expanded>
-          <a href="#literature-review">2. Literature Review</a>
-          <sl-tree-item>
+        <sl-tree-item >
+          <a href="#subsections">2. Subsections</a>
+        </sl-tree-item>
+          <!--sl-tree-item>
             <a href="#basic-theories-and-principles">2.1 Basic Theories and Principles</a>
           </sl-tree-item>
           <sl-tree-item expanded>
@@ -156,7 +157,7 @@
       <div id="background">
         <h2> 1. Background</h2>
         <image-component tag="image" source="assets/csp.jpg"
-        subtitle="Figure X: Large Scale Concentrated Solar Power Plant [1]"></image-component>
+        subtitle="Figure 01: Large Scale Concentrated Solar Power Plant [1]"></image-component>
         <p> Concentrated solar power (CSP) is a system that collects thermal energy. It redirects and concentrates sunlight using mirrors onto a receiver. The receiver conducts the thermal energy to the heat transfer fluid (HTF) within it, which is then transferred to a thermal energy storage (TES) system or the application.</p>
         <p> CSP systems are used globally, with 7360MW in operation and 3351MW in construction as of March 2025. Its market is worth USD 5.8 billion (2025), with a compound annual growth rate (CAGR) of 8.3% from 2025 to 2035 [2].</p>
         <p> However, most of these systems are large-scale, about 5-10 acres of land per MW are used, mainly for electricity generation, with an electric efficiency up to 16% [2].</p>
@@ -175,29 +176,29 @@
         <p> The rig we will be optimising is the current 1x1m CSP rig that was built alongside the UROP team (see below). It consists of a 1m^3 area underneath, 8 parabolic mirrors, a black aluminium pot with water as the receiver. The specifications are given below.</p>
 
         <image-component tag="image" source="assets/mains-urop-rig.png"
-        subtitle="Figure X: UROP rig, with 1x1x1m space underneath reflectors and receiver"></image-component>
+        subtitle="Figure 02: UROP rig, with 1x1x1m space underneath reflectors and receiver"></image-component>
         <br/>
         <image-component tag="image" source="assets/mains-urop-rig-2.png"
-        subtitle="Figure X: UROP CSP rig at rooftop"></image-component>
+        subtitle="Figure 03: UROP CSP rig at rooftop"></image-component>
         <br/>
         <image-component tag="image" source="assets/mains-urop-reflectors.png"
-        subtitle="Figure X: Dimensions of reflectors"></image-component>
+        subtitle="Figure 04: Dimensions of reflectors"></image-component>
         <br/>
         <image-component tag="image" source="assets/mains-urop-dim.png"
-        subtitle="Table X: Specifications of UROP CSP rig"></image-component>
+        subtitle="Table 01: Specifications of UROP CSP rig"></image-component>
       </div>
 
       <div id="aims & objectives">
         <h3> 1.3 Aims & Objectives</h3>
         <p> The aim of this project is to identify the optimal configuration of a scalable, low-cost CSP system consisting of the light, thermal transmission and thermal energy storage (TES) subsystems. </p>
         <image-component tag="image" source="assets/mains-subsection-aim.png"
-        subtitle="Table X: Aims of each subsection"></image-component>
+        subtitle="Table 02: Aims of each subsection"></image-component>
         <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/overall system.png"
-              subtitle="Figure: Complete (Light, Thermal Transmission, Thermal Energy Storage) system"
-              style="width: 80%; height: auto;display: block; margin: 0 auto 30px auto;"
+              subtitle="Figure 05: Complete (Light, Thermal Transmission, Thermal Energy Storage) system"
+              style="width: 80%; height: auto;display: block; margin: 40px auto 30px auto;"
             ></image-component>
           </div>
       </div>
@@ -239,7 +240,7 @@
         <p>The project timeline is summarized in the Gantt chart below, with detailed tasks outlined for the current subsections. New subsections will be added for hot water production, focusing on assessing the volume of water that can be maintained at 40–45°C and evaluating the feasibility of desalination if heating up to 100°C is achievable.</p>
       </div>
       <image-component tag="image" source="assets/mains-proj-plan.png"
-      subtitle="Figure X: Project plan gantt chart for the rest of project"></image-component>
+      subtitle="Figure 06: Project plan gantt chart for the rest of project"></image-component>
     </div>
     <br />
     <br />
@@ -247,7 +248,7 @@
 
     <div>
       <div id="subsections">
-        <h2>4. Subsections</h2>
+        <h2>2. Subsections</h2>
         <p>
         The project is currently split to 3 subsections and the information on each subsections are split to their respective pages below.
         <ol>
@@ -261,7 +262,7 @@
     </div>
     <br />
     <br />
-    <sl-divider></sl-divider>
+    <!--sl-divider></sl-divider>
 
     
     <br />
@@ -286,6 +287,76 @@
       <sl-divider></sl-divider>
       <h2>References</h2>
       <ul>
+        <li>[1] “3,009 Concentrated Solar Power Stock Videos, Footage & 4K Video Clips,” Getty Images, [Online]. Available : https://www.gettyimages.com/videos/concentrated-solar-power. Accessed: Nov. 3, 2025.</li>
+        
+        <li>[2] “Concentrated Solar Power [CSP] Market Size and Growth, 2028,” www.fortunebusinessinsights.com. https://www.fortunebusinessinsights.com/industry-reports/concentrated-solar-power-market-100751 </li>
+        
+        <li>[3] “CSP Projects Around the World,” SolarPACES. https://www.solarpaces.org/worldwide-csp/csp-projects-around-the-world/</li>
+        
+        <li>[4] “Why are solar panels so expensive? | SaveOnEnergy,” SaveOnEnergy.com, Jan. 16, 2025. https://www.saveonenergy.com/solar-energy/are-solar-panels-expensive/</li>
+        
+        <li>[5] Chowdhury, M.S.,Rahman, K.S.,T.Chowdhury, N.Nuthammachot, K.Techato, M.Akhtaruzzaman, S.K.Tiong, K.Sopian&N.Amin, “An overview of solar photovoltaic panels’end‑of‑life material recycling”, EnergyStrategyReviews, vol.27, p.100431,2020.</li>
+        
+        <li>[6] S. Kraemer, “What are the Pros and Cons of Longer Solar Contracts?,” SolarPACES, Mar. 05, 2024. [Online]. Available: https://www.solarpaces.org/what-are-the-pros-and-cons-of-longer-solar-contracts/</li>
+
+        <li>[7] “What is the Ideal Temperature to Shower in?”, RHEE Asia, Blog, Oct. 2, 2019. [Online]. Available: https://www.rheemasia.com/blog/what-is-the-ideal-temperature-to-shower-in/. </li>
+        
+        <li>[8] “Tropics,” Wikipedia, [Online]. Available: https://en.wikipedia.org/wiki/Tropics. Accessed: Nov. 3, 2025. (en.wikipedia.org)</li>
+        
+        <li>[9] United Nations, “Percentage of Total Population Living in Coastal Areas,” Methodology Sheet, Division for Sustainable Development, Dept. of Economic and Social Affairs, Oct. 2014. [Online]. Available: https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/oceans_seas_coasts/pop_coastal_areas.pdf. </li>
+
+        <li>[10] T. H. G. “Solar Radiation Spectrum,” SunWind Solar, [Online]. Available: https://sunwindsolar.com/blog/solar-radiation-spectrum/.</li>
+
+        <li>[11] First Green Consulting, “Differentiate between the DNI, DHI and GHI?,” May 03, 2012. https://firstgreenconsulting.wordpress.com/2012/04/26/differentiate-between-the-dni-dhi-and-ghi/</li>
+
+        <li>[12] Solcast, “Historical data — Solcast API Toolkit.” [Online]. Available: https://toolkit.solcast.com.au/historical. </li>
+
+        <li>[13] U.Kumar, “Understanding Solar Angles: Elevation, Incidence & More,” Arka360 Blog, Sept. 23 2025. [Online]. Available: https://arka360.com/ros/solar-angles.</li>
+
+        <li>[14] M.Avgoulas, W.Keller, S.R.R.Pireaux et al., “Technical, environmental and economic comparison of building‑integrated photovoltaic (BIPV) window technologies in a Scandinavian climate,” Journal of Energy Storage, vol. 37, p. 102469, May 2021. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S2213138821004446. </li>
+
+        <li>[15] C.K.Ho and B.Iverson, “Review of Central Receiver Designs for High‑Temperature Power Cycles,” presented at the [conference name unknown], 2012. [Online]. Available: https://www.osti.gov/biblio/1141055</li>
+
+        <li>[16] C. Belmonte and R. Tayactac, “Advances in Pressurized Volumetric Solar Receivers: A review,” E3S Web of Conferences, vol. 566, p. 04005, Jan. 2024, doi: 10.1051/e3sconf/202456604005.</li>
+
+        <li>[17] L. Pang, T. Wang, R. Li, and Y. Yang, “Two-stage solar power tower cavity-receiver design and thermal performance analysis,” AIP Conference Proceedings, vol. 1850, p. 030037, Jan. 2017, doi: 10.1063/1.4984380.</li>
+
+        <li>[18] E. Bellosa, E. Bousia, C. Tzivanidis, and S. Pavlovic, “Optical and thermal analysis of different cavity receiver designs for solar dish concentrators,” Energy Convers. Manag. X, vol. 6, p. 100086, 2020.</li>
+
+        <li>[19] G. Gentile, F. S. Carli, M. Speranzella, M. Binotti, M. E. Cholette, and G. Manzolini, “Enhancing solar tower competitiveness with star-shaped receivers,” Appl. Energy, vol. 391, p. 125844, Aug. 2025, doi: 10.1016/j.apenergy.2025.125844.</li>
+
+        <li>[20] M. Laporte-Azcué, P. Á. González, M. R. Rodriguez-Sanchez, and D. Santana, “Material selection for solar central receiver tubes,” Sol. Energy Mater. Sol. Cells, vol. 231, p. 111317, Oct. 2021, doi: 10.1016/j.solmat.2021.111317.</li>
+
+        <li>[21] Humboldt State University and WGBH Educational Foundation, “Saved by The Sun,” 2007. [Online]. Available: https://www.pbs.org/wgbh/nova/education/activities/pdf/3406_solar_03.pdf</li>
+
+        <li>[22] Editor Engineeringtoolbox, “Understanding convective heat Transfer: Coefficients, Formulas & Examples,” Mar. 06, 2025. https://www.engineeringtoolbox.com/convective-heat-transfer-d_430.html</li>
+
+        <li>[23] Editor Engineeringtoolbox, “Radiation heat transfer,” Mar. 24, 2025. https://www.engineeringtoolbox.com/radiation-heat-transfer-d_431.html</li>
+
+        <li>[24] Editor Engineeringtoolbox, “Thermal Conductivity of Metals and Alloys: Data Table & Reference Guide,” Mar. 04, 2025. https://www.engineeringtoolbox.com/thermal-conductivity-metals-d_858.html</li>
+
+        <li>[25] C. Titakis and P. Vassiliou, “Evaluation of 4-Year Atmospheric Corrosion of Carbon Steel, Aluminum, Copper and Zinc in a Coastal Military Airport in Greece,” Corros. Mater. Degrad., vol. 1, no. 1, p. 8, May 2020, doi: 10.3390/cmd1010008.</li>
+
+        <li>[26] “Physical ductility of the elements - FailureCriteria.com.” https://www.failurecriteria.com/physicalductilit.html</li>
+
+        <li>[27] “Metal costs - Roy Mech.” https://roymech.org/Useful_Tables/Matter/Costs.html</li>
+
+        <li>[28] D.Dunning, “Is Solar Panel Efficiency Important?,” ThinkSolar Knowledge Hub, April 26, 2024. [Online]. Available: https://thinksolar.co.nz/knowledge‑hub‑posts/is‑solar‑panel‑efficiency‑important/</li>
+
+        <li>[29] “Recent Strategies for High-Performing Indoor Perovskite Photovoltaics,” Nanomaterials, vol. 13, no. 2, p. 259, Jan. 2023, doi: 10.3390/nano13020259.</li>
+
+        <li>[30] “Absorption of light | Research Starters | EBSCO Research,” EBSCO. https://www.ebsco.com/research-starters/science/absorption-light</li>
+
+        <li>[31] Quora, “Are lumens linearly additive? If I have two light sources side-by-side emitting 1000 lumens each, am I going to have the same amount of light emitted in an enclosed room as if I had a single light source that’s …?”, Quora, 2025. [Online]. Available: https://www.quora.com/Are-lumens-linearly-additive-If-I-have-two-light-sources-side-by-side-emitting-1000-lumens-each-am-I-going-to-have-the-same-amount-of-light-emitted-in-an-enclosed-room-as-if-I-had-a-single-light-source-thats?top_ans=72720041.</li>
+
+        <li>[32] “Inverse Square Law,” BYJU'S, [Online]. Available: https://byjus.com/physics/inverse-square-law/ </li>
+
+        <li>[33] Concentration Ratio — an overview, ScienceDirect Topics: Engineering, Elsevier. [Online]. Available: https://www.sciencedirect.com/topics/engineering/concentration-ratio.</li>
+
+        <li>[34] OpenStax, “4.4 Electric Power and Energy – includes Heat energy,” Douglas College Physics 1207. https://pressbooks.bccampus.ca/introductorygeneralphysics2phys1207/chapter/20-4-electric-power-and-energy/</li>
+
+        <li>[35] R.Peamsuwan, P.Waramit, I.Worapun, B.Krittacom, T.Phoo‑Ngernkham, and R.Luampon, “Investigation of Tungsten Halogen Lamp for Possible Usage as Heat Source for Testing Solar Collector,” Energy and Built Environment, vol. 4, pp. 517‑528, Apr. 2024, doi:10.1016/j.enbenv.2023.04.002.</li>
+
         <li>[36] PUB, “Water Price,” PUB, Singapore’s National Water Agency, 2025. https://www.pub.gov.sg/Public/WaterLoop/Water-Price.<!-- [Accessed: 31 Oct 2025].--></li>
 
         <li>[37] Engineering ToolBox, “Water - Thermal Conductivity,” Engineeringtoolbox.com, 2012. https://www.engineeringtoolbox.com/water-liquid-gas-thermal-conductivity-temperature-pressure-d_2012.html.<!-- [Accessed: 31 Oct 2025].--></li>
