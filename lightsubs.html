@@ -61,7 +61,7 @@
             <image-component
               tag="image"
               source="assets/solar spectrum table.png"
-              subtitle="Table: Solar Spectrum [7]"
+              subtitle="Table: Solar Spectrum [10]"
               style="width: 50%; height: auto; display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
@@ -70,14 +70,14 @@
             <image-component
               tag="image"
               source="assets/solar radiation spectrum graph.png"
-              subtitle="Figure: Solar Spectrum [7]"
+              subtitle="Figure: Solar Spectrum [10]"
               style="width: 70%; height: auto;"
             ></image-component>
           </div>
 
         <h2 style="padding-top: 40px;"> 1.2 Irradiance (W/m<sup>2</sup>) </h2>
 
-        <p> Power of electromagnetic radiation (solar spectrum) received per unit area [8].</p>
+        <p> Power of electromagnetic radiation (solar spectrum) received per unit area [11].</p>
         <ul>
         <li style="margin-bottom: 10px;"><b>Direct Normal Irradiance (DNI)</b> – Solar radiation received directly from the sun, measured on a surface perpendicular to the sun’s rays. </li>
         <li style="margin-bottom: 10px;"><b>Diffuse Horizontal Irradiance (DHI)</b> – Solar radiation scattered by the atmosphere and reaching the surface from all directions. </li>
@@ -93,7 +93,7 @@
           <image-component
             tag="image"
             source="assets/sunlight hours.png"
-            subtitle="Figure: Sunlight Hours - Singapore [9]"
+            subtitle="Figure: Sunlight Hours - Singapore [12]"
             style="width: 100%; height: auto;"
           ></image-component>
         </div>
@@ -104,7 +104,7 @@
           <image-component
             tag="image"
             source="assets/zenith angle.png"
-            subtitle="Figure: Zenith Angle [10]"
+            subtitle="Figure: Zenith Angle [13]"
             style="width: 50%; height: auto;"
           ></image-component>
         </div>
@@ -114,7 +114,7 @@
           <image-component
             tag="image"
             source="assets/zenith angle singapore.png"
-            subtitle="Table: Zentih Angle - Singapore [9]"
+            subtitle="Table: Zentih Angle - Singapore [12]"
             style="width: 40%; height: auto;"
           ></image-component>
         </div>
@@ -133,7 +133,7 @@
           <image-component
             tag="image"
             source="assets/existing methods csp.png"
-            subtitle="Table: Existing Reflector Designs [11]"
+            subtitle="Table: Existing Reflector Designs [14]"
             style="width: 100%; height: auto;"
           ></image-component>
         </div>
@@ -148,7 +148,7 @@
           <image-component
             tag="image"
             source="assets/existing methods receiver design.png"
-            subtitle="Table: Existing Receiver Designs [12],[13],[14],[15],[16]"
+            subtitle="Table: Existing Receiver Designs [15],[16],[17],[18],[19]"
             style="width: 100%; height: auto;"
           ></image-component>
         </div>
@@ -172,9 +172,10 @@
           <li>Inconel 740H</li>
         </ul>
 
-        <p>From these materials Inconel 740H provides the best lifetime and cost/power performance [17]. </p>
+        <p>From these materials Inconel 740H provides the best lifetime and cost/power performance [20]. </p>
       </div>
 
+      <sl-divider></sl-divider>
       <div id="">
         <h1 style="padding-top: 70px;"><u>Design Specifications</u></h1>
         <p>To capture the maximum amount of sunlight and effectively concentrate it onto the receiver, the following design specifications are considered.</p>
@@ -224,7 +225,7 @@
             ></image-component>
         </div>
 
-        <p>Based on formula <b>(f = D<sup>2</sup> / (16d))</b>, SolTrace and Tonatiuh simulations, and experiments the focal point of the parabolic dish was determined to be 17.17 cm from the base.</p>
+        <p>Based on formula <b>(f = D<sup>2</sup> / (16d))</b>[21], SolTrace and Tonatiuh simulations, and experiments the focal point of the parabolic dish was determined to be 17.17 cm from the base.</p>
         <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -258,7 +259,7 @@
           ></image-component>
         </div>
 
-        <p>To maximize the receiver’s available surface area for absorbing heat from sunlight, the receiver’s exterior will remain uninsulated, unlike conventional cavity receivers. Thermal losses will be minimal since our system operates at a lower temperature than large-scale CSP systems.</p>
+        <p>To maximize the receiver’s available surface area for absorbing heat from sunlight, the receiver’s exterior will remain uninsulated, unlike conventional cavity receivers. Thermal losses will be minimal since our system operates at a lower temperature than large-scale CSP systems [22],[23].</p>
         <p>The receiver dimensions from the paper were scaled to match the receiver from the Solar Tower CSP rig for comparable results and fabricated using a 3D-printed mould.</p>
       
         <div style="display: flex; justify-content: center;">
@@ -276,7 +277,7 @@
             <image-component
               tag="image"
               source="assets/receiver materials.png"
-              subtitle="Table: Alternative Receiver Materials [18],[19],[20],[21]"
+              subtitle="Table: Alternative Receiver Materials [24],[25],[26],[27]"
               style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
@@ -327,20 +328,20 @@
     <sl-divider></sl-divider>
     <h1 style="padding-top: 70px;"><u>Testing</u></h1>
     <h2 style="padding-top: 20px;">4.1 Artificial Lighting</h2>
-    <p>Since natural sunlight is not always available, artificial lighting was be used to simulate the solar spectrum, with LEDs for visible light and halogen lamps for infrared. An irradiance of 1000 W/m<sup>2</sup> will be supplied, as standard solar tests are conducted under this condition [23].</p>
+    <p>Since natural sunlight is not always available, artificial lighting was be used to simulate the solar spectrum, with LEDs for visible light and halogen lamps for infrared. An irradiance of 1000 W/m<sup>2</sup> will be supplied, as standard solar tests are conducted under this condition [28].</p>
     <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/artificial lighting.png"
-              subtitle="Figure: Simulation of Sunlight (AM1.5G) using artificial lighting [22]"
+              subtitle="Figure: Simulation of Sunlight (AM1.5G) using artificial lighting [29]"
               style="width: 60%; height: auto;display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
 
     <P>Limitations of using artifical lighting:</P>
     <ul>
-    <li>Materials do not absorb all wavelengths equally, resulting in deviations from results obtained under natural sunlight.</li>
-    <li>Shadowing is difficult to avoid if both sources are used at the same time.</li>
+    <li>Materials do not absorb all wavelengths equally, resulting in deviations from results obtained under natural sunlight [30].</li>
+    <li>Shadowing is difficult to avoid if both sources are used at the same time [31].</li>
     </ul>
 
     <p style="margin-top: 70px;">The following rig was designed to place the light during testing:</p>
@@ -355,7 +356,7 @@
 
     <p>The height of the light from the ground was adjusted to simulate 1000W/m<sup>2</sup> as shown based on:</p>
     <div style="text-align: center; margin-top: 1px; margin-bottom: 20px;">
-        <b>I ∝ (1/d)<sup>2</sup></b>
+        <b>I ∝ (1/d)<sup>2</sup></b> [32]
         </div>
 
     <div style="display: flex; justify-content: center;">
@@ -452,10 +453,10 @@
               tag="image"
               source="assets/static sunlight graph.png"
               subtitle="Figure: Experiment 4.2.2 Results"
-              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
+              style="width: 100%; height: auto;display: block; margin: 0 auto 5px auto;"
             ></image-component>
           </div>
-    <p>The maximum temperature reached under natural sunlight within sunlight hours is 61.6<sup>°</sup>C.</p>
+    <p style = 'padding-bottom: 60px;'>The maximum temperature reached under natural sunlight within sunlight hours is 61.6<sup>°</sup>C.</p>
 
     <p>Under sunlight, the Solar Tower configuration achieved higher temperatures than the Parabolic Dish. Even when compared to the Parabolic Dish with LED under constant irradiance, the Solar Tower still reached higher temperatures, likely due to its larger reflective surface area.</p>
     <div style="display: flex; justify-content: center;">
