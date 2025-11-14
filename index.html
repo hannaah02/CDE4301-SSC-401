@@ -41,11 +41,11 @@
     <!-- This is the team member component use to display details about your team members -->
     <div class="team-member-wrapper">
       <team-member avatar="assets/blackranger.png" name="Arani" department="Mechanical Engineering"
-        year="Light subsection"></team-member>
+        year="2026"></team-member>
       <team-member avatar="assets/yellowranger.png" name="Hannah" department="Mechanical Engineering"
-        year="Thermal transmission subsection"></team-member>
+        year="2026"></team-member>
       <team-member avatar="assets/redranger.png" name="Thuan" department="Chemical Engineering"
-        year="Thermal energy storage subsection"></team-member>
+        year="2026"></team-member>
     </div>
 
     <!-- This is a divide from the shoelace library for aesthetic purpose -->
@@ -53,7 +53,7 @@
 
     <!-- This is the table-of-content component use to define all of the link directly to each section -->
     <div class="table-of-content">
-      <h2>Table of Content</h2>
+      <h2>Table of Contents</h2>
       <sl-tree>
         <sl-tree-item>
           <a href="#abstract">Abstract</a>
@@ -66,17 +66,29 @@
         <sl-tree-item expanded>
           <a href="#background">1. Background</a>
           <sl-tree-item>
-            <a href="#motivation-and-technical-gaps">1.1 Motivations and Technical Gaps</a>
+            <a href="#small-scale CSP">1.1 Why focus on small scale Concentrated Solar Power?</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#aims">1.2 Aims</a>
+            <a href="#UROP Solar Tower rig">1.2 UROP Solar Tower rig</a>
           </sl-tree-item>
           <sl-tree-item>
-            <a href="#objectives">1.3 Objectives</a>
+            <a href="#aims & objectives">1.3 Aims & Objectives</a>
+          </sl-tree-item>
+          </sl-tree-item>
+            <a href="#potential use case">1.4 Potential Use Case</a>
+          </sl-tree-item>
+          </sl-tree-item>
+            <a href="#value prop">1.5 Value Proposition</a>
+          </sl-tree-item>
+          </sl-tree-item>
+            <a href="#discussion">1.6 Discussion</a>
+          </sl-tree-item>
+          </sl-tree-item>
+            <a href="#project plan">1.7 Project Plan</a>
           </sl-tree-item>
         </sl-tree-item>
 
-        <sl-tree-item expanded>
+        <!--sl-tree-item expanded>
           <a href="#literature-review">2. Literature Review</a>
           <sl-tree-item>
             <a href="#basic-theories-and-principles">2.1 Basic Theories and Principles</a>
@@ -84,28 +96,14 @@
           <sl-tree-item expanded>
             <a href="#existing-methods">2.2 Existing Methods</a>
             <sl-tree-item>
-              <a href="#existing-methods-csp">2.2.1 Existing Methods: Concentrated Solar Power</a>
+              <a href="#existing-methods-receiver">2.2.1 Existing Methods: Receiver</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#existing-methods-urop">2.2.2 Existing Methods: Solar Tower Configuration (UROP)</a>
+              <a href="#existing-methods-thermal-energy-storage">2.2.2 Existing Methods: Thermal Energy Storage</a>
             </sl-tree-item>
             <sl-tree-item>
-              <a href="#existing-methods-receiver">2.2.3 Existing Methods: Receiver</a>
+              <a href="#existing-methods-desalination">2.2.3 Existing Methods: Desalination</a>
             </sl-tree-item>
-            <sl-tree-item>
-              <a href="#existing-methods-heat-transfer-fluid">2.2.4 Existing Methods: Heat Transfer Medium/Heat Transfer Fluid</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#existing-methods-fluid-flow">2.2.5 Existing Methods: Fluid Flow</a>
-            </sl-tree-item>
-            <sl-tree-item>
-              <a href="#existing-methods-thermal-energy-storage">2.2.6 Existing Methods: Thermal Energy Storage</a>
-            </sl-tree-item>
-            <!--
-            <sl-tree-item>
-              <a href="#existing-methods-desalination">2.2.XX Existing Methods: Desalination</a>
-            </sl-tree-item>
-            -->
           </sl-tree-item>
         </sl-tree-item>
 
@@ -157,123 +155,64 @@
     <div>
       <div id="background">
         <h2> 1. Background</h2>
-        <p>
-          Concentrated solar power (CSP) is a system that collects thermal energy. It redirects and concentrates sunlight using mirrors onto a receiver. The receiver conducts the thermal energy to the heat transfer fluid (HTF) within it, which is then transferred to a thermal energy storage (TES) system or the application.
-          <br /><br />
-          Other solar capture methods, like photovoltaic (PV) systems are more mature. However, they are overall more costly, considering maintenance and replacement costs. Furthermore, the lifespan of CSP systems are higher than PV systems.
-          <br /><br />
-          CSP systems are used globally, with 7360MW in operation and a further 3351MW in construction as of March 2025. <!-- References --> Its market is worth USD 5.8 billion (2025), with a compound annual growth rate (CAGR) of 8.3% from 2025 to 2035. <!-- References -->
-          <br /><br />
-          However most of these systems are large scale, about 5 - 10 acres of land per MW are used, mainly for electricity generation, with an electric efficiency up to 16%. <!-- References --><!-- References -->
-          <br /><br />
-          Despite that, there are small-scaled plants used for industrial process heat and in rural or off-grid areas for electricity or poly-generation. <!-- References --> The electric efficiency is comparable with large-scale systems, of up to 15% or 30% for low temperature
-          <math>
-            <mo>(</mo>
-            <mo>&lt;</mo>
-            <mi>500</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-            <mo>)</mo>
-          </math> and high temperature
-          <math>
-            <mo>(</mo>
-            <mo>&gt;</mo>
-            <mi>500</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-            <mo>)</mo>
-          </math> systems respectively. <!-- References -->
-          <br /><br />
-          For this project, we focus on a unit measurement
-          <math>
-            <mo>(</mo>
-            <mi>1</mi>
-            <msup>
-              <mi>m</mi>
-              <mn>2</mn>
-            </msup>
-            <mo>)</mo>
-          </math> rig for the prototype to develop a modular and scalable solution. Each rig is self-contained but also compatible with one another considering the application purposes. Implementing this system would include having multiple of these modular rigs side-by-side, making it flexible in terms of size and layout.
-          <br /><br />
-          In terms of application, our industry partner, ES&T Environmental, has identified a growing demand among hotels in coastal Indonesia for efficient and sustainable hot water production. Due to the large space in the hotel and availability of sunlight, a small-scale CSP system is suitable for the location for hot water production. (see Fig X)
-          </p>
-
-          <image-component tag="image" source="assets/hotel-front.png"
-          subtitle="Figure 1: Front Entrance of Hotel in Tanjung Balai, Indonesia"></image-component>
-          <image-component tag="image" source="assets/hotel-empty-space.png"
-          subtitle="Figure 2: Empty Space at Hotel in Tanjung Balai, Indonesia"></image-component>
-
-          <p>
-          ES&T Environmental has also identified inefficient salt production in northern Vietnam due to the poor humidity control in the process. Again, it is suitable for small-scale CSP system due to the space and sunlight availability for desalination to produce concentrated brine. The concentrated brine can be utilised to reduce the production time for salt production.
-          <br /><br />
-          As desalination also outputs freshwater, its usage can also apply to the hotels in coastal Indonesia due to its proximity to the sea. Furthermore, freshwater as a resource is valuable worldwide as less than 1% of freshwater is accessible for human use in the world. <!-- References --> Furthermore, around 35% of the global population faces water scarcity, much of it in coastal regions. <!-- References --> Hence, the small-scale CSP desalination application holds value outside the identified case.
-        </p>
+        <p> Concentrated solar power (CSP) is a system that collects thermal energy. It redirects and concentrates sunlight using mirrors onto a receiver. The receiver conducts the thermal energy to the heat transfer fluid (HTF) within it, which is then transferred to a thermal energy storage (TES) system or the application.</p>
+        <p> CSP systems are used globally, with 7360MW in operation and 3351MW in construction as of March 2025. Its market is worth USD 5.8 billion (2025), with a compound annual growth rate (CAGR) of 8.3% from 2025 to 2035 [2].</p>
+        <p> However, most of these systems are large-scale, about 5-10 acres of land per MW are used, mainly for electricity generation, with an electric efficiency up to 16% [2].</p>
+        <p> Despite that, there are small-scale plants used for industrial process heat and in rural or off-grid areas for electricity or poly-generation [2]. The electric efficiency is comparable with large-scale systems, of up to 15% or 30% for low temperature (<500ºC) and high temperature (>500ºC) systems respectively [3].</p>
+          
       </div>
 
-      <div id="motivation-and-technical-gaps">
-        <h3> 1.1 Motivations and Technical Gaps</h3>
-        <p>
-          A scalable
-          <math>
-            <mi>1</mi>
-            <mo>&times;</mo>
-            <mi>1</mi>
-            <mi>m</mi>
-          </math> CSP system that uses free resources such as sunlight and seawater to provide a reliable hot water supply for showering at
-          <math>
-            <mi>45</mi>
-            <mi>&deg;</mi>
-            <mi>C</mi>
-          </math> and produce brine as a byproduct, offering an affordable, sustainable solution for communities in equatorial developing regions, which consists of 16% of the world population.
-        </p>
+      <div id="small-scale CSP">
+        <h3> 1.1 Why focus on small scale Concentrated Solar Power?</h3>
+        <p> Over the years, many have adopted photovoltaics (PV) to generate electricity from sunlight. However, concentrated solar power (CSP) offers several advantages. CSP systems have lower installation and maintenance costs due to their simpler mechanical design. They also have a longer lifespan, whereas PV systems typically last around 25 years. Additionally, CSP components are easier to recycle since they are made from less complex materials.</p>
+        <p> Given these benefits, we aim to explore how small-scale CSP systems can be integrated into everyday applications to provide a more sustainable and efficient source of energy.</p>
       </div>
 
-      <div id="aims">
-        <h3> 1.2 Aims</h3>
-        <p>
-          The existing CSP rig is unit sized with 8 parabolic reflectors directing light to a pot filled with water. (see Fig X) Some notable limitations of the system is that the thermal energy collected is not stored and the thermal collector is not optimised. Furthermore, there is no application tied to the existing CSP system.
-        </p>
-        <!-- Insert image of existing CSP rig
-         <image-component tag="image" source="assets/hotel-empty-space.png"
-          subtitle="Figure 2: Empty Space at Hotel in Tanjung Balai, Indonesia"></image-component>
-          -->
-        <p>
-          Hence, we intend to work on and optimise the existing rig to:
-          <ul>
-            <li>Store collected energy</li>
-            <li>Heat water</li>
-            <li>Produce concentrated brine and freshwater from seawater</li>
-          </ul>
-        </p>
-        <p>
-          This includes:
-          <ul>
-            <li>Optimising reflectors</li>
-            <li>Developing receiver</li>
-            <li>Developing a thermal energy transfer system</li>
-            <li>Developing a thermal energy storage system</li>
-            <li>Developing the application subsystems</li>
-          </ul>
-        </p>
+      <div id="UROP Solar Tower rig">
+        <h3> 1.2 UROP Solar Tower rig</h3>
+        <p> The rig we will be optimising is the current 1x1m CSP rig that was built alongside the UROP team (see below). It consists of a 1m^3 area underneath, 8 parabolic mirrors, a black aluminium pot with water as the receiver. The specifications are given below.</p>
       </div>
 
-      <div id="objectives">
-        <h3> 1.3 Objectives</h3>
-        <p>
+      <div id="aims & objectives">
+        <h3> 1.3 Aims & Objectives</h3>
+        <p> The aim of this project is to identify the optimal configuration of a scalable, low-cost CSP system consisting of the light, thermal transmission and thermal energy storage (TES) subsystems. </p>
+      </div>
+
+      <div id="potential use case">
+        <h3> 1.4 Potential Use Case </h3>
+        <p> Multiple 1 m² CSP rigs will be deployed to help meet the energy demands of the selected applications. </p>
+        <h4>Indonesia</h4>
+        <p>Our industry partner, ES&T Environmental, has identified a growing demand among coastal hotels in Indonesia for efficient and sustainable hot water production. With abundant sunlight and ample space, small-scale CSP systems are well-suited for this purpose.</p>
+        <h4>Vietnam</h4>
+        <p>In northern Vietnam, salt production depends on solar evaporation of seawater, but the process is inefficient due to poor humidity control. Using brine obtained from seawater, desalination can help accelerate salt production by reducing the overall drying time.</p>
+        <h4><u>Application</u></h4>
+        <P>To address these use cases, particularly focusing on hot water production in Indonesia, we propose two solutions:</P>
+        <ul>
+          <li>1-stage process - Hot water production (40-45<sup>°</sup>C) using tap water</li>
+          <li>2-stage process - Hot water production using seawater</li>
           <ul>
-            <li>Objective 1: Hot water storage</li>
-            <ul>
-              <li>Volume: 10 l</li>
-              <li>Temperature: <math><mo>&gt;</mo><mi>40</mi><mo>-</mo><mi>45</mi><mi>&deg;</mi><mi>C</mi></math></li>
-              <li>Duration: 5 hours</li>
-            </ul>
-            <li>Objective 2: Desalination</li>
-            <ul>
-              <li>Collect freshwater</li>
-              <li>Increase concentration of brine</li>
-            </ul>
+            <li>Heating of seawater to obtain freshwater and brine (100<sup>°</sup>C)</li>
+            <li>Heating of freshwater to produce hot water (40-45<sup>°</sup>C)</li>
           </ul>
-        </p>
+        </ul>
+
+        <p>The single-stage process is designed specifically for the Indonesia case, while the two-stage process applies to both the Indonesia and Vietnam cases. Both processes will be tested. The two-stage process will be implemented only if seawater can be heated to 100<sup>°</sup>C</p>
+    
+      </div>
+
+      <div id="value prop">
+        <h3> 1.5 Value Proposition </h3>
+        <p>A scalable 1×1 m CSP system that uses free resources such as sunlight and seawater to provide a reliable hot water supply for showering at 45 °C or produce brine, offering an affordable, sustainable solution for communities in equatorial developing regions (16% of the world population)[5],[6].</p>
+      </div>
+
+      <div id = 'discussion'>
+        <h3> 1.6 Discussion </h3>
+        <p>The project focuses on developing an optimized, customizable, and scalable low-cost CSP rig for research purposes. Further improvements are needed (as discussed in respective sections) before testing its water storage capacity and temperature performance for the intended use case. Beyond this, additional design modifications will be made to improve compatibility, such as using alternative materials to reduce cost, and enhancing portability and ease of setup.</p>
+      </div>
+
+      <div id = 'project plan'>
+        <h3> 1.7 Project Plan </h3>
+        <p>The project timeline is summarized in the Gantt chart below, with detailed tasks outlined for the current subsections. New subsections will be added for hot water production, focusing on assessing the volume of water that can be maintained at 40–45°C and evaluating the feasibility of desalination if heating up to 100°C is achievable.</p>
       </div>
 
     </div>
@@ -284,6 +223,15 @@
     <div>
       <div id="literature-review">
         <h2>2. Literature Review</h2>
+        <p>
+          This section is split to 2 parts:
+          <ol>
+            <li> Basic Theory and Principles, which goes through the underlying concepts, and </li>
+            <li> Existing Methods, which summarises current state-of-the-art methods used.</li>
+          </ol>
+        </p>
+      </div>
+
       <div id="basic-theories-and-principles">
         <h3>2.1 Basic Theories and Principles</h3>
         <p>
@@ -291,366 +239,13 @@
         </p>
       </div>
 
-      <div id="existing-methods">
-        <h3>2.2 Existing Methods</h3>
-        <p>
-          A CSP system focussing on thermal energy storage consists of:
-          <ul>
-            <li>Reflectors: concentrates light onto receiver</li>
-            <li>Receivers: transfers the thermal energy to the HTM flowing through it</li>
-            <li>Heat transfer materials (HTM): transfers the energy from the receiver to the thermal energy storage</li>
-            <li>Thermal energy storage (TES): stores energy</li>
-          </ul>
-        </p>
-      </div>
+      
 
-      <div id="existing-methods-csp">
-        <h4>2.2.1 Existing Methods: Concentrated Solar Power</h4>
-        <p>
-          CSP generates energy by concentrating solar irradiance onto a receiver. From this concept, there are 4 main methods for concentrating the solar irradiance:
-          <ul>
-            <li><b>Parabolic Trough:</b> Uses long curved mirrors to focus sunlight onto a receiver tube running along the focal line, heating fluid to generate steam and electricity.</li>
-            <li><b>Fresnel System:</b> Uses flat, narrow mirror strips to focus sunlight onto a fixed receiver, offering a cheaper, simpler alternative to trough systems.</li>
-            <li><b>Central Tower (Solar Power Tower):</b> Uses a large field of heliostats (mirrors) to concentrate sunlight onto a central receiver at the top of a tower, producing very high temperatures.</li>
-            <li><b>Parabolic Dish:</b> Uses a dish-shaped mirror to concentrate sunlight onto a single point receiver, achieving high efficiency for small-scale power generation.</li>
-          </ul>
-        </p>
-        <p>
-          Some CSP system uses solar tracking:
-          <ul>
-            <li><b>Single Axis Tracking system:</b> Single-axis tracking can be either horizontal to the ground, vertical to the ground, or on a tilted axis pointing to the polar star/parallel to earth’s polar axis. Its tilt in all other axis are fixed to maximise the reflected solar radiation.<!-- References: --></li>
-            <li><b>Dual Axis Tracking system:</b> Dual-axis tracking uses either solar azimuth and solar altitude axes or solar altitude and east-west axes.<!-- References: --></li>
-          </ul>
-        </p>
-      </div>
+        
 
-      <div id="existing-methods-urop">
-        <h4>2.2.2 Existing Methods: Solar Tower Configuration (UROP)</h4>
-        <p>
-          We have built a 1m2 rig in solar tower configuration as shown together with the UROP team.
-        </p>
-        <image-component tag="image" source="assets/exm-urop-dim.png"
-          subtitle="Figure X: Dimensions for UROP CSP system"></image-component>
-        <image-component tag="image" source="assets/exm-urop-ref-dim.png"
-          subtitle="Figure X: Dimensions for UROP CSP system's reflectors"></image-component>
-        <image-component tag="image" source="assets/exm-urop-csp-img.png"
-          subtitle="Figure X: Images of the CSP system"></image-component>
-      </div>
+        
 
-      <div id="existing-methods-receiver">
-        <h4>2.2.3 Existing Methods: Receiver</h4>
-        <h3>Materials</h3>
-        <p>
-          Materials chosen to construct receivers should ideally be:
-          <ul>
-            <li>Highly thermally absorptive and conductive</li>
-            <li>Able to handle high heat flux</li>
-            <li>Weather and corrosion resistant </li>
-            <li>Durable</li>
-            <li>Cost effective</li>
-          </ul>
-        </p>
-        <p>
-          Most commonly used receiver materials for constructing external receivers include Haynes 230, alloy 316H, Inconel 625,740H and 800H. Among these 740H shows the best lifetime and cost/power performance.<!-- References: --> However, these metals are less accessible and costlier compared to off the shelf metals such as copper.
-        </p>
-        <image-component tag="image" source="assets/exm-receiver-alloy-price.png"
-          subtitle="Figure X: Alloy price"></image-component>
-        <p>
-          Furthermore, high performance receiver surfaces are coated with a high absorption and low emissivity coating. This reduces heat-lost caused by infrared radiant emission from the collector to ambient.<!-- References: -->
-          <br /><br />
-          Several studies have investigated the use of copper as a potential material for CSP receivers.<!-- References: --> Other potential low-cost, readily available, and thermally efficient materials include:
-        </p>
-        <image-component tag="image" source="assets/exm-receiver-mat-alt.png"
-          subtitle="Figure X: Alternative materials"></image-component>
-        <h3>Design</h3>
-        <p>
-          <b>External Tubular Receiver</b>
-          <br /><br />
-          External tubular receivers are made of vertical tubes arranged in a cylindrical or cubic shape (see figure x), with insulation on the inside. It absorbs thermal energy by solar radiance concentrating on the outer surface of the receiver. They are commonly used due to its simple fabrication,<!-- References: --> and can be seen in commercial plants like Gemasolar in Spain and the Crescent Dunes in USA.<!-- References: -->
-        </p>
-        <image-component tag="image" source="assets/exm-receiver-ext-tub-rec.png"
-          subtitle="Figure X: External tubular receiver"></image-component> <!-- References: -->
-        <p>
-          However, as the solar radiance is concentrated on the outside of the receiver, it results in several issues:
-          <ul>
-            <li>Loss of reflected radiance to the environment</li>
-            <li>High loss by thermal emission<!-- References: --></li>
-          </ul>
-        </p>
-
-        <p>
-          <b>Cavity Receiver</b>
-          <br /><br />
-          Cavity receivers are hollow structures insulated on the outside which receive concentrated solar radiance from the inside.<!-- References: --> Compared to external receivers, they have the benefit of having:
-          <ul>
-            <li>Lower losses by radiation and convection</li>
-            <li>Reabsorption of reflected energy<!-- References: --></li>
-          </ul>
-        </p>
-        <image-component tag="image" source="assets/exm-receiver-cavity-rec-working.png"
-          subtitle="Figure X: Cavity receiver"></image-component> <!-- References: -->
-        <p>
-          The optimal cavity receiver for tower CSPs is determined by Bellos et al to be a cylindrical-conical shape (see Fig X) which maximises the thermal, optical and exergy efficiency as compared to other designs.<!-- References: -->
-        </p>
-        <image-component tag="image" source="assets/exm-receiver-cavity-rec-optim.png"
-          subtitle="Figure X: Optimal design for cavity receiver"></image-component> <!-- References: -->
-
-        <p>
-          <b>Bladed Receiver</b>
-          <br /><br />
-          Bladed receivers are external receivers similar to the cylindrical receivers but with blades instead of having an insulated internal volume. As compared to flatter designs (non-bladed designs), it is better due to:
-          <ul>
-            <li>Reabsorption of reflected energy<!-- References: --></li>
-            <li>View factor reduction to the environment</li>
-            <li>Both sides are irradiated<!-- References: --></li>
-          </ul>
-        </p>
-        <image-component tag="image" source="assets/exm-receiver-bladed-rec.png"
-          subtitle="Figure X: Bladed receiver"></image-component> <!-- References: -->
-        <p>
-          Its design is a balance of size and tilt angle. Considering the design, larger surface area improves its light capturing ability, yet increases thermal losses. Despite that, it overall yields a 2% improvement over flat designs.
-          <br /><br />
-          The optimal bladed receiver design recently published is a 3-star design with overall improvements in efficiency compared to the cylindrical design.<!-- References: -->
-        </p>
-        <image-component tag="image" source="assets/exm-receiver-bladed-rec-optim.png"
-          subtitle="Figure X: Optimal design for laded receiver"></image-component> <!-- References: -->
-
-          <p>
-            <b>Volumetric Receiver</b>
-            <br /><br />
-            Volumetric receivers are solar receivers with a porous absorber that lets sunlight penetrate into its volume, heating a heat transfer fluid (HTF) that flows through it. This design increases the heat transfer area, allows higher radiation flux, improves efficiency, reduces heat loss, and is well-suited for high-temperature applications like Rankine or Brayton cycles.<!-- References: -->
-          </p>
-          <image-component tag="image" source="assets/exm-receiver-porous-vol-rec.png"
-          subtitle="Figure X: Porous volumetric receiver"></image-component> <!-- References: -->
-          <image-component tag="image" source="assets/exm-receiver-pressurised-vol-rec.png"
-          subtitle="Figure X: Pressurised volumetric receiver"></image-component> <!-- References: -->
-          <image-component tag="image" source="assets/exm-receiver-summ.png"
-          subtitle="Figure X: Summary of existing methods for receivers"></image-component>
-      </div>
-
-      <div id="existing-methods-heat-transfer-fluid">
-        <h4>2.2.4 Existing Methods: Heat Transfer Medium/Heat Transfer Fluid</h4>
-        <p>
-          Heat transfer medium (HTM) are generally used to transfer the thermal energy from the receiver to another subsystem for storage, and are liquid, gaseous or solid, with some cases using HTM also as a thermal energy storage.<!-- References: --> Its effectiveness in transferring energy is determined by these factors:
-          <ul>
-            <li>Heat transfer coefficient
-              <math>
-                <mi>HTC</mi>
-                <mo>=</mo>
-                <msqrt>
-                  <mfrac>
-                    <mrow>
-                      <mi>k</mi>
-                      <mi>&rho;</mi>
-                      <msub>
-                        <mi>C</mi>
-                        <mn>p</mn>
-                      </msub>
-                    </mrow>
-                    <mrow>
-                      <mi>t</mi>
-                    </mrow>
-                  </mfrac>
-                </msqrt>
-              </math>
-            </li>: informs the overall efficiency of heat transfer of the material
-            <ul>
-              <li>Specific heat capacity: the amount of heat stored in the material per unit rise in temperature</li>
-              <li>Thermal conductivity: how efficiently heat can move within the material</li>
-              <li>Density: amount of mass per unit volume</li>
-            </ul>
-            <li>Viscosity: the fluids resistance to flow</li>
-            <li>Thermal stability: the ability to resist decomposition with temperature rise</li>
-          </ul>
-        </p>
-        <p>
-          The system’s operating temperature and storage requirements are important considerations when selecting a HTM as different HTM have different advantages and disadvantages when it comes to their operating range (because of melting point, boiling point and thermal stability) and energy density (because of specific heat capacity).<!-- References: -->
-          <br /><br />
-          Among HTMs, synthetic oils and molten salts are the most common, with new HTMs being developed to improve the performance.
-          <br /><br />
-          The main categories of HTMs are:
-          <ol>
-            <li>Molten salt, eg. sodium nitrate (NaNO3), potassium nitrate (KNO3)</li>
-            <li>Liquid metal</li>
-            <li>Thermal oils, eg. Dowtherm A®, Therminol D-12® y Therminol VP-1®</li>
-            <li>Gaseous type, eg. CO2</li>
-            <li>Nanofluids, nanoparticles combined into a base fluid</li>
-            <li>Silicon-based fluids, eg. HELISOL® 5A<!-- References: --></li>
-          </ol>
-        </p>
-        <p>
-          They are summarised in the table below.
-        </p>
-        <image-component tag="image" source="assets/exm-htm-htm-comparison.png"
-          subtitle="Figure X: HTM comparison"></image-component> <!-- References: -->
-        <p>
-          Among them includes emerging technologies: nanofluids and silicon-based fluids.
-          <br /><br />
-          For nanofluids, by suspending small quantities of nanoparticles, eg. metals, in a base fluid, such as water, it aims to improve the thermal properties, primarily thermal conductivity, which enhances the heat transfer.  In terms of nanofluids application as HTF, the limitations are largely due to the limited knowledge of the mechanism, but also caused by its complexity and cost.<!-- References: -->
-          <br /><br />
-          Silicon-based fluids are made of linear or cyclic siloxane polymers (siloxane chains with side groups, usually -CH3) that are thermally inert and are highly compatible with standard materials in CSP plants.  Its chemical composition and bonds are utilised to improve its thermal properties, such as its stronger covalent bond contributing to its thermal stability.<!-- References: -->
-        </p>
-      </div>
-       
-      <div id="existing-methods-fluid-flow">
-        <h4>2.2.5 Existing Methods: Fluid Flow</h4>
-        <p>
-          In CSP systems, the method for moving the HTF is generally through heavy-duty pumps. The choice of pumps depends on the system requirements, such as material properties to avoid corrosion and material incompatibility, operating temperature, total dynamic head, differential pressure, net positive suction head available and flow rate.<!-- References: --> Pump companies like Ruhrpumpen<!-- References: --> and Sulzer<!-- References: --> provide pumping solutions for the CSP system.
-          <br /><br />
-          Another method is the thermosiphon, which utilises gravity and the inverse relationship between temperature and density which results in natural circulation to drive the fluid. (see Fig X)
-        </p>
-        <image-component tag="image" source="assets/exm-ff-thermosiphon.png"
-          subtitle="Figure X: Working of thermosiphon"></image-component> <!-- References: -->
-        <p>
-          It is typically used in solar water heaters as a method for heating water without electricity. In CSP, it is used in small-scale or prototype systems to circulate the HTF between the receiver and the TES, largely in linear CSP systems.<!-- References: --> (see fig X)
-        </p>
-        <image-component tag="image" source="assets/exm-ff-thermosiphon-ex.png"
-          subtitle="Figure X: Thermosiphon in linear CSP system"></image-component> <!-- References: -->
-        <p>
-          Two-phase loop thermosiphons are also used in some CSP systems. The flow in two-phase loop thermosiphons works by the evaporating and condensing at the bottom and top of the loop respectively. (see figure X) As the two-phase loop thermosiphons require vaporisation, the HTF must operate near its boiling point.
-        </p>
-        <image-component tag="image" source="assets/exm-ff-two-phase.png"
-          subtitle="Figure X: Working of two-phase loop thermosiphon"></image-component> <!-- References: -->
-        <p>
-          Its application is currently limited to small-scale or prototype CSPs, particularly linear CSP systems as seen below.<!-- References: -->
-        </p>
-        <image-component tag="image" source="assets/exm-ff-two-phase-ex.png"
-          subtitle="Figure X: Working of two-phase loop thermosiphon"></image-component> <!-- References: -->
-      </div>
-
-      <div id="existing-methods-thermal-energy-storage">
-        <h4>2.2.6 Existing Methods: Thermal Energy Storage</h4>
-        <p>
-          Thermal energy storage (TES) plays a central role in commercial concentrated solar power (CSP) by enabling power generation beyond periods of direct sunlight. Nowadays, thermal energy storage is widely integrated into concentrated solar power (CSP) projects, approximately 58% of parabolic trough installations (with 62% of these offering more than 7 hours of storage), 48% of linear Fresnel projects (62% with storage exceeding 7 hours), and 68% of power tower systems (43% with storage beyond 7 hours) are equipped with storage capabilities, thereby enabling prolonged energy generation. By contrast, CSP projects based on parabolic dish systems have not incorporated thermal storage commercially. 
-          <br /><br />
-          A TES system can be ranked by combining performance, cost, and safety criteria. Key performance factors include volumetric energy density or power density, round-trip efficiency, parasitic power use, heat losses, and operating-temperature suitability. Cost and practical metrics cover capital and maintenance cost, footprint or weight, and scalability, while safety and integration depend on material compatibility, environmental impact, and technology maturity or supply availability. A TES with high volumetric energy density can, in theory, store more heat in less space and reduce thermal losses.
-          <br /><br />
-          TES can be categorized into 3 main types: Sensible heat storage, latent heat storage, and thermochemical storage. Figure XX show that thermochemical storage has highest volumetric energy density followed by latent heat storage and sensible storage.
-        </p>
-        <image-component tag="image" source="assets/exm-tes-common-mediums.png"
-          subtitle="Figure X: Common mediums for TES"></image-component> <!-- References: -->
-        <image-component tag="image" source="assets/exm-tes-volumetric-energy-density.png"
-          subtitle="Figure X: Volumetric energy density overview"></image-component> <!-- References: -->
-        <p>
-          <b>Sensible Heat System</b>
-          <br /><br />
-          Sensible heat storage involves storing energy by changing the temperature of a material. The amount of heat that can be stored depends on the material’s mass, specific heat capacity, and the temperature range it experiences as
-          <math>
-            <mi>Q</mi>
-            <mo>=</mo>
-            <mi>m</mi>
-            <msub>
-              <mi>C</mi>
-              <mn>p</mn>
-            </msub>
-            <mi>&Delta;</mi>
-            <mi>T</mi>
-          </math>. Figure XX illustrates the primary thermal properties of materials used for sensible heat storage:
-          </p>
-          <image-component tag="image" source="assets\TES-Sensible heat image .png"
-          subtitle="Figure X: Thermal properties of sensible heat materials"></image-component> <!-- References: -->
-          <p>
-          The general requirements for sensible heat storage materials used can be summarized as follows:
-          <ul>
-            <li><b>High energy density</b>, achieved through materials with high density and specific heat capacity.</li>
-            <li><b>Good thermal conductivity</b> (typically greater than 0.3<math><mi>W</mi><mo>/</mo><mi>m</mi><mi>K</mi></math>) and <b>high thermal diffusivity</b> to enable efficient heat transfer.</li>
-            <li><b>Ease of manufacturing</b> and <b>low cost</b>, making large-scale use practical.</li>
-            <li><b>Chemical stability</b>, <b>low corrosiveness</b>, and <b>minimal environmental impact</b>, including zero ozone depletion potential (ODP) and low global warming potential (GWP).</li>
-          </ul>
-        </p>
-        <p>
-          Below is the few best heat sensible materials for our modular small-scale CSP system based on above criterias:
-        </p>
-        <image-component tag="image" source="assets/exm-tes-sensible-comparison.png"
-          subtitle="Figure X: Comparison of different sensible heat materials"></image-component> <!-- References: -->
-        <image-component tag="image" source="assets/exm-tes-sensible-water-rock.png"
-          subtitle="Figure X: Comparison of (a) water and aquifer and (b) rock bed as sensible heat storage"></image-component> <!-- References: -->
-          <p>
-            From the criteria above, water is considered one of the most effective materials for heat storage in residential systems because of its high specific heat capacity and availability compared to other sensible heat storage media.The rock or pebble bed is considered another promising sensible heat storage medium, particularly because it has relatively high volume density, can operate at temperatures exceeding 100 °C, higher thermal conductivity, withstands high thermal stress, and avoids problems such as leakage or corrosion that occur with water. However, following our other subsections, our system operating range is first designed to work at operating temperature of less than
-            <math>
-              <mi>100</mi>
-              <mi>&deg;</mi>
-              <mi>C</mi>
-            </math> along with using water as HTF.
-            <br /><br />
-            A common application of water is the solar water heating tank (illustrated in Fig. XX). In a direct (open-loop system), the solar collector transfers heat directly to the water in the tank, or an indirect (closed-loop) system using a separate HTF that circulates through the collector and a heat exchanger, keeping it isolated from the tank water to prevent contamination and allow the use of antifreeze solutions natural stratification occurs due to changes in density with temperature, hot water rises to the top, cooler water settles at the bottom, and the layer in between forms the thermocline. Another cycle can be used to circulate hot water output and cold water input for supply. Natural thermal stratification enhances the efficiency of TES systems by maintaining temperature layers, which minimizes mixing losses and allows hot water to be drawn at higher temperatures while maximizing overall heat storage capacity.
-          </p>
-          <image-component tag="image" source="assets\TES-solar water heater.png"
-          subtitle="Figure X: Diagram of solar water heater"></image-component> <!-- References: -->
-          <p>
-            <b>Thermochemical energy storage</b>
-            <br /><br />
-            Thermochemical energy storage systems retain heat through reversible chemical reactions or sorption processes. A general reaction can be expressed as:
-          </p>
-          <p style="text-align: center;">
-            <math>
-
-            </math>  Heat + C ⇌ A + B ; Q = ΔH<sub>reaction</sub>
-          </p>
-          <image-component tag="image" source="assets\TES-TCES mechanism.png"
-          subtitle="Figure X: Diagram of TCES mechanism"></image-component> <!-- References: -->
-          <p>
-            In the charging (endothermic) phase, C splits into B and A, absorbing heat Q. Thermochemical systems store energy in chemical bonds, and this energy remains stable as long as B and A stay separate. When recombined, the reverse (exothermic) reaction reforms A and releases the stored heat. 
-          </p>
-          <image-component tag="image" source="assets\TES-TCES calcium looping diagram.png"
-          subtitle="Figure X: TCES Calcium Looping system in TES"></image-component> <!-- References: -->
-          <p>
-            TCES materials exhibit the highest energy density among thermal storage methods because chemical reactions can store significantly more energy per unit mass or volume.
-            <br /><br />
-            Although TCES is able to store the highest volumetric energy density, TCES system is not suitable for a small-scale CSP application operating at low temperature because its reaction-based mechanisms require complex reactor designs, and precise control of gas-solid or solid-solid equilibria. Its low technological maturity, slow reaction kinetics, and high material and capital costs make it impractical for low-temperature solar applications. 
-          </p>
-          <p>
-            <b>Latent Heat Storage</b>
-          </p>
-          <image-component tag="image" source="assets/exm-tes-pcm-diag.png"
-          subtitle="Figure X: Diagram of PCM system"></image-component> <!-- References: -->
-          <p>
-            Latent heat storage involves a phase change such as melting, evaporation, or crystallization at a constant temperature. Because of the high enthalpy associated with phase transitions, latent TES stores more energy than sensible heat systems of the same size, though it operates over a narrow temperature range. The stored energy is given by 
-            Q<sub>fusion</sub> = mL.
-            Solar thermal energy can be effectively stored as latent heat through the use of phase change materials (PCMs). These materials provide higher energy storage capacity per unit mass or volume. During the daytime solar cycle, the PCM absorbs heat as it changes phase from solid to liquid, storing thermal energy without significant temperature fluctuation.
-            <br /><br />
-            ////When integrated into a water tank, the presence of PCM greatly increases the total heat storage capacity of the system, as illustrated in Fig. xxx./// PCMs are generally classified into three main categories:
-            <ol>
-              <li><b>Inorganic PCMs</b>, such as hydrated salt solutions composed of natural salts and water</li>
-              <li><b>Bio-based PCMs</b>, derived from natural fatty acids like vegetable oils</li>
-              <li><b>Organic PCMs</b>, typically made from petroleum-based byproducts</li>
-            </ol>
-          </p>
-          </p>
-          <image-component tag="image" source="assets\TES-PCMs material types.png"
-          subtitle="Figure X: PCMs types and properties"></image-component> <!-- References: -->
-          <p>
-          <p>
-            In latent heat storage systems, energy is stored by changing the physical state of the storage medium rather than simply raising its temperature, making it a highly efficient approach for solar thermal applications.
-
-            <!-- To continue -->
-          </p>
-      </div>
-
-      <!--
-      <div id="existing-methods-desalination">
-        <h4>2.2.XX Existing Methods: Desalination</h4>
-        <p>
-          Text
-        </p>
-      </div>
-    </div>
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    -->
-
-    <div>
-      <div id="overall-design-specifications">
-        <h2>3. Overall Design Specifications</h2>
-        <p>
-          <b>Summmary:</b> Insert components about limiting conditions, eg. height limits, cost limits, width, etc. This will be used in the comparison of different systems (identified in the existing methods) in each individual subsections.
-        </p>
-      </div>
-    </div>
-    <br />
-    <br />
-    <sl-divider></sl-divider>
+    
 
     <div>
       <div id="subsections">
@@ -670,14 +265,7 @@
     <br />
     <sl-divider></sl-divider>
 
-    <div>
-      <div id="conclusion-and-future-work">
-        <h2>5. Conclusion and Future Work</h2>
-        <p>
-          Text
-        </p>
-      </div>
-    </div>
+    
     <br />
     <br />
     <sl-divider></sl-divider>
@@ -688,10 +276,18 @@
           subtitle="Video: Never gonna give you up?"></video-component>
         -->
 
+        <!-- This is an example of how you might use the table component -->
+        <!--table-component subtitle="Table: Demo table">
+          <div id="table-1"></div>
+        </table-component>
+        
+      
+
     <!-- This is an example of how you can use the references component to create references -->
     <div id="references" class="references">
       <sl-divider></sl-divider>
       <h2>References</h2>
+      <p>IEEE Style References. Minimally 10-12 proper references. Maximum 3-5 websites.</p>
       <ul>
         <li>
           Text
