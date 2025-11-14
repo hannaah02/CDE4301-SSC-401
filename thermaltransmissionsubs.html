@@ -82,11 +82,6 @@
           The design specifications are summarised below.
         </p>
 
-       <!--
-        <table-component subtitle="Table: Thermal transmission design specifications">
-          <div id="tt-specs"></div>
-        </table-component>
-        -->
         <image-component tag="image" source="assets/tt-specs.png"
         subtitle="Table X: Thermal transmission design specifications"></image-component>
       
@@ -98,14 +93,11 @@
 
       <div id="TT-HTF">
         <h2>Heat transfer fluid</h2>
-        <!-- For the HTF -->
-
-        <!-- Part that can be removed -->
-         <h3>Existing Methods: Heat transfer fluid</h3>
+        <h3>Existing Methods: Heat transfer fluid</h3>
         <p>
           Heat transfer fluid (HTF) transfers thermal energy from the receiver to the TES. HTM effectiveness depends on these properties:
           <ul>
-            <li><a href='theories-concepts.html'>Heat transfer coefficient</a>
+            <li><a href='TT-theories-concepts'>Heat transfer coefficient</a>
               <math>
                 <mi>HTC</mi>
                 <mo>=</mo>
@@ -127,12 +119,12 @@
               </math>
             </li>
             <ul>
-              <li><a href='theories-concepts.html'>Specific heat capacity</a></li>
-              <li><a href='theories-concepts.html'>Thermal conductivity</a></li>
+              <li><a href='TT-theories-concepts'>Specific heat capacity</a></li>
+              <li><a href='TT-theories-concepts'>Thermal conductivity</a></li>
               <li>Density: mass per unit volume</li>
             </ul>
-            <li><a href='theories-concepts.html'>Viscosity</a></li>
-            <li><a href='theories-concepts.html'>Thermal stability</a></li>
+            <li><a href='TT-theories-concepts'>Viscosity</a></li>
+            <li><a href='TT-theories-concepts'>Thermal stability</a></li>
           </ul>
         </p>
         <p>
@@ -150,51 +142,15 @@
           </ol>
         </p>
         <p>
-          <!--Between them, molten salt is the most common in high-temperature CSPs due to high operating temperatures and good thermal properties. Synthetic oil is common in moderate-temperature CSPs due to their lower operating temperatures.-->
           The common HTFs are molten salt and thermal oils, in high-temperature and moderate-temperature CSPs respectively.[29] Nanofluids and silicon-based fluids are new emerging materials. The comparison of each HTF are summarised below.
         </p>
         <image-component tag="image" source="assets/exm-htm-htm-comparison.png"
-          subtitle="Figure X: HTF comparison [29][31][32][33][34][35][44][45]"></image-component> <!-- References: -->
-        <!-- End of part that can be removed -->
+          subtitle="Figure X: HTF comparison [29][31][32][33][34][35][44][45]"></image-component>
 
         <h3>Heat transfer fluid selection</h3>
         <p>
           The HTFs are selected based on the maximum temperature of our CSP system (67ºC, solar tower configuration). We set the operating temperature range from room temperature to 100ºC, accounting for improvements in the light subsystem.
           <br /><br />
-
-          <!--
-          To select the HTF, we consider the operating temperature (given above), thermal properties, viscosity, cost and safety. The thermal properties can be determined by the heat transfer coefficient,
-          <math>
-            <mi>HTC</mi>
-            <mo>=</mo>
-            <msqrt>
-              <mfrac>
-                <mrow>
-                  <mi>k</mi>
-                  <mi>&rho;</mi>
-                  <msub>
-                    <mi>C</mi>
-                    <mn>p</mn>
-                  </msub>
-                </mrow>
-                <mrow>
-                  <mi>t</mi>
-                </mrow>
-              </mfrac>
-            </msqrt>
-          </math> (from theories and concepts)
-          <br /><br />
-          where a higher HTC indicates better thermal performance and the variables being thermal conductivity, specifc heat capacity and density. The factors to consider in order of importance are:
-          <ol>
-            <li>Safety: Reduce safety hazard</li>
-            <li>Cost: Minimise cost</li>
-            <li>Heat capacity: Improve HTC</li>
-            <li>Thermal conductivity: Improve HTC</li>
-            <li>Density: Improve HTC</li>
-            <li>Dynamic viscosity: Better flow of HTF</li>
-          </ol>
-        </p> 
-        -->
           The HTFs are compared based on these:
           <ol>
               <li>Safety</li>
@@ -206,11 +162,6 @@
             </ol>
         </p>
 
-        <!--
-        <table-component subtitle="Table: Properties of different HTF operational at low temperatures [6]">
-          <div id="htf-table"></div>
-        </table-component>
-        -->
         <image-component tag="image" source="assets/tt-htf-table.png"
         subtitle="Table X: Properties of different low temperature HTF [6]"></image-component>
 
@@ -220,9 +171,9 @@
         subtitle="Figure X: HTF decision matrix"></image-component>
 
         <p>
-          Water is the best option (with it being readily available) and water-ethanol solution (10-50%) is the alternative.
+          Water is the best option (with it being readily available) and water-ethanol solution (10-50%) is the alternative. Water is thus chosen and is already being used in the light subsystem, with it proving to work well within the temperature range of the existing system.
           <br /><br />
-          If temperatures rises above 100ºC, water can be switched to the other HTF options as they have a higher maximum operating temperature, up to 785ºC.
+          However, if temperature rises above 100ºC, water can be switched to water-ethanol solution or the other HTF options as they have a higher maximum operating temperature, up to 785ºC.
         </p>
 
       </div>
@@ -232,9 +183,7 @@
 
       <div id="TT-fluid-motion">
         <h2>Fluid motion</h2>
-        <!-- For the fluid motion -->
-
-        <!-- Part that can be removed -->
+         <h3>Existing Methods: Fluid motion</h3>
         <p>
           CSPs generally uses pumps, selected based on system requirements (material compatibility, operating temperature, flow rate, pressure requirements). [36] Pump companies like Ruhrpumpen and Sulzer provides pumping solutions. [37][38]
           <br /><br />
@@ -257,7 +206,6 @@
         </p>
         <image-component tag="image" source="assets/exm-ff-two-phase-ex.png"
           subtitle="Figure X: Two phase thermosiphon in linear CSP [28]"></image-component>
-        <!-- End of part that can be removed -->
 
         <h3>Fluid motion mechanism selection</h3>
         <p>
@@ -265,7 +213,7 @@
           <ul>
             <li><b>Thermosiphons</b> requires the TES to be above the receiver, blocking the light rays.</li>
             <br />
-            <li><b>Two-phase loop thermosiphons</b> can function at 0m height difference between the evaporator and condensor. [7]<!-- Reference: [7] https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2516&context=iracc --> However, the HTF has to function near its boiling point, which our current system cannot reach.<!-- Regardless, if our system improves and allows the HTF temperature to reach its boiling point, this method can be analysed for its feasibility.--></li>
+            <li><b>Two-phase loop thermosiphons</b> can function at 0m height difference between the evaporator and condensor. [7]<!-- Reference: [7] https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2516&context=iracc --> However, it requires the HTF to function near its boiling point, which our current system cannot reach. Should our system enable the HTF temperature to reach its boiling point, this method can be tested for its feasibility.</li>
             <br />
             <li><b>Pumps</b> are chosen due to reliability and flexibility in meeting system requirments.</li>
           </ul>
@@ -274,31 +222,19 @@
         <h3>Proof of concept: Can pumps drive flow through the receiver?</h3>
         <h3>Experiment 1: Flowing open system</h3>
         <p>
-          <b>Purpose:</b> Test if flow is observed.
-          <br /><br />
-          <b>Methodology:</b>
-          <ul>
-            <li>Cycles water through the receiver from one container to another</li>
-            <li>Temperate measured in both containers</li>
-            <li>The experiment runs until outlet temperature stabilises</li>
-          </ul>
+          This experiment is conducted to observe if flow can be achieved using pumps.
         </p>
 
-        <!--
-        <table-component subtitle="Table: Details of experiment 1">
-          <div id="exp-1-details"></div>
-        </table-component>
-        -->
+        <image-component tag="image" source="assets/tt-exp-1-purpose.png"
+        subtitle="Table X: Experiment 1 purpose"></image-component>
+
+        <br />
+
         <image-component tag="image" source="assets/tt-exp-1-details.png"
         subtitle="Table X: Experiment 1 details"></image-component>
 
         <br />
-        
-        <!--
-        <table-component subtitle="Table: Measurements for experiment 1">
-          <div id="exp-1-measurements"></div>
-        </table-component>
-        -->
+
         <image-component tag="image" source="assets/tt-exp-1-measurements.png"
         subtitle="Table X: Experiment 1 measurements"></image-component>
 
@@ -308,10 +244,6 @@
         subtitle="Figure X: Image of experiment 1"></image-component>
 
         <p>
-          <!--
-          <b>Hypothesis:</b> The power absorbed by the HTF will be higher for flowing system than static system due to higher convection heat transfer coefficient of HTF and higher temperature gradient between the coil surface and the HTF.
-          <br /><br />
-          -->
           <b>Results and analysis:</b>
         </p>
 
@@ -322,16 +254,11 @@
           The outlet temperature is 17.5ºC higher than the inlet, indicating water flow through the receiver.
         </p>
 
-        <!--
-        <table-component subtitle="Table: Power calculation for open loop system">
-          <div id="exp-1-results"></div>
-        </table-component>
-        -->
         <image-component tag="image" source="assets/tt-exp-1-results.png"
-        subtitle="Table X: Power calculation for flowing system"></image-component> <!-- IMPORTANT: Add label that 1st is \Delta T -->
+        subtitle="Table X: Power calculation for flowing system"></image-component>
 
         <p>
-          The power absorbed by the water is higher for the flowing (142.3W) than static system (16.01W). The forced convection from the pump replaces hotter fluid with cooler fluid faster, increasing temperature gradient (<math><mi>&Delta;</mi><mi>T</mi></math>) and convective coefficient between the fluid and receiver. This causes the higher power absorbed by the <a href='theories-concepts.html'>convection heat transfer equation</a><!--
+          The power absorbed by the water is higher for the flowing (142.3W) than static system (16.01W). The forced convection from the pump replaces hotter fluid with cooler fluid faster, increasing temperature gradient (<math><mi>&Delta;</mi><mi>T</mi></math>) and convective coefficient between the fluid and receiver. This causes the higher power absorbed by the <a href='TT-theories-concepts'>convection heat transfer equation</a>,
           <math>
              <mover>
               <mi>Q</mi>
@@ -351,38 +278,24 @@
               <mn>fluid</mn>
             </msub>
             <mo>)</mo>
-          </math>--> <!--(from theories and concepts)-->.
+          </math>.
         </p>
 
         <h3>Experiment 2: Flowing closed (circulating) system</h3>
         <p>
-          <b>Purpose:</b> Observe the maximum temperature of circulating water for TES verification (TES subsection).
-          <!--<br /><br />
-          The temperature of the flowing system when stable informs us of the point of thermal equilibrium, where net heat loss is zero. The limit on the maximum temperature of the system is important as it provides constraints for the choices of thermal energy storage.-->
-          <br /><br />
-          <b>Methodology:</b>
-          <ul>
-            <li>Water circulates from an insulated container through the receiver</li>
-            <li>Temperature in container is measured</li>
-            <li>Experiment runs until temperature stabilises</li>
-          </ul>
+          This experiment is conducted to observe the maximum temperature of the system.
         </p>
 
-        <!--
-        <table-component subtitle="Table: Details of experiment 2">
-          <div id="exp-2-details"></div>
-        </table-component>
-        -->
+        <image-component tag="image" source="assets/tt-exp-2-purpose.png"
+        subtitle="Table X: Experiment 2 purpose"></image-component>
+
+        <br />
+
         <image-component tag="image" source="assets/tt-exp-2-details.png"
         subtitle="Table X: Experiment 2 details"></image-component>
 
         <br />
         
-        <!--
-        <table-component subtitle="Table: Measurements for experiment 2">
-          <div id="exp-2-measurements"></div>
-        </table-component>
-        -->
         <image-component tag="image" source="assets/tt-exp-2-measurements.png"
         subtitle="Table X: Experiment 2 measurements"></image-component>
 
@@ -392,10 +305,6 @@
         subtitle="Figure X: Image of experiment 2"></image-component>
 
         <p>
-          <!--
-          <b>Hypothesis:</b> Due to additional losses outside of the receiver, for example within the hose connecting the receiver to the container, the temperature of the water when stabilised will be lower than the temperature of the water when static in the coil.
-          <br /><br />
-          -->
           <b>Results and analysis:</b>
         </p>
         
@@ -466,7 +375,7 @@
         <p>
           For the pump requirements, we calculate:
           <ul>
-            <li><a href='theories-concepts.html'>Flow rate</a></li>
+            <li><a href='TT-theories-concepts'>Flow rate</a></li>
             <ul>
               <li>
                 <math>
@@ -545,8 +454,7 @@
                 </math>
               </li>
             </ul>
-            <li><a href='theories-concepts.html'>Total dynamic head (TDH)</a></li>
-            <!--
+            <li><a href='TT-theories-concepts'>Total dynamic head (TDH)</a></li>
               <ul>
                 <li>
                   <math>
@@ -559,9 +467,8 @@
                     <mi>HP</mi>
                   </math>
                 </li>
-              </ul>-->
-            <li><a href='theories-concepts.html'>Net positive suction head available (NPSHa)</a></li>
-            <!--
+              </ul>
+            <li><a href='TT-theories-concepts'>Net positive suction head available (NPSHa)</a></li>
               <ul>
                 <li>
                   <math>
@@ -591,9 +498,8 @@
                     </msub>
                   </math>
                 </li>
-              </ul>-->
-            <li><a href='theories-concepts.html'>Differential pressure</a></li>
-            <!--
+              </ul>
+            <li><a href='TT-theories-concepts'>Differential pressure (<math><mi>&Delta;</mi><mi>P</mi></math>)</a></li>
               <ul>
                 <li>
                   <math>
@@ -607,27 +513,15 @@
                     <mi>SG</mi>
                   </math>
                 </li>
-              </ul>-->
+              </ul>
             <li>(see <i>flowrate_receiver</i> and <i>pump_requirements</i>)</li>
           </ul>
         </p>
-
-        <!--
-        <table-component subtitle="Table: Flow rate for the different temperature changes">
-          <div id="pump-FR-from-temp-change"></div>
-        </table-component>
-        -->
 
         <image-component tag="image" source="assets/tt-pump-FR-from-temp-change.png"
         subtitle="Table X: Flow rate for temperature change"></image-component>
 
         <br />
-
-        <!--
-        <table-component subtitle="Table: Pump requirements">
-          <div id="pump-reqs"></div>
-        </table-component>
-        -->
 
         <image-component tag="image" source="assets/tt-pump-reqs.png"
         subtitle="Table X: Pump requirements"></image-component>
@@ -637,18 +531,13 @@
           Only required flow rate is not followed as the temperature range is assumed.
         </p>
 
-        <!--
-        <table-component subtitle="Table: Pump options">
-          <div id="pump-options"></div>
-        </table-component>
-        -->
         <image-component tag="image" source="assets/tt-pump-options.png"
         subtitle="Table X: Pump options"></image-component>
 
         <p>
           We consider these:
           <ol>
-            <li>Temperature rise</li>
+            <li>Temperature rise, <math><mi>&Delta;</mi><mi>T</mi></math></li>
             <ul>
               <li>
                 <math>
@@ -666,7 +555,7 @@
                     </mrow>
                     <mrow>
                       <msub>
-                        <mi><a href='theories-concepts.html'>Flow rate</a></mi>
+                        <mi><a href='TT-theories-concepts'>Flow rate</a></mi>
                         <mn>m/s</mn>
                       </msub>
                     </mrow>
@@ -725,74 +614,30 @@
             <li>Power consumption: Powered using solar panels</li>
             <br />
             <ol>
-              <li><a href='theories-concepts.html'>Power formula</a>: P = IV</li>
+              <li><a href='TT-theories-concepts'>Power formula</a>: P = IV</li>
               <br />
               <li>For AC (Grothen G328A):</li>
               <br />
               <ul>
-                <li><math><msub><mi><a href='theories-concepts.html'>I</a></mi><mn>AC</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mn>DC</mn></msub></mrow><mrow><mi>PF</mi><mo>&dot;</mo><mi>&eta;</mi><mo>&dot;</mo><msub><mi>V</mi><mn>AC</mn></msub></mrow></mfrac></math></li>
+                <li><math><msub><mi><a href='TT-theories-concepts'>I</a></mi><mn>AC</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mn>DC</mn></msub></mrow><mrow><mi>PF</mi><mo>&dot;</mo><mi>&eta;</mi><mo>&dot;</mo><msub><mi>V</mi><mn>AC</mn></msub></mrow></mfrac></math></li>
                 <br />
                 <li>Assuming:</li>
                 <br />
                 <ul>
                   <li>Grothen G328A uses SMPS. [12]</li>
                   <!-- References: [12] https://www.sigmaaldrich.com/SG/en/product/aldrich/z678414 -->
-                  <li>Power factor = 0.6, assuming worst case (without PFC). [13]</li>
+                  <li>Power factor (PF) = 0.6, assuming worst case (without PFC). [13]</li>
                   <!-- References: [13] https://www.st.com/resource/en/application_note/an523-understanding-power-factor-stmicroelectronics.pdf -->
                   <li>Electric efficiency = 90%. [14]</li>
                   <!-- References: [14] https://www.circuitbread.com/ee-faq/what-are-the-efficiency-levels-of-different-power-supplies -->
                 </ul>
-                <!--
-                <br />
-                <li>Therefore:
-                  <math>
-                    <msub>
-                      <mi>I</mi>
-                      <mn>AC</mn>
-                    </msub>
-                    <mo>=</mo>
-                    <mfrac>
-                      <mrow>
-                        <mi>24</mi>
-                        <mo>&times;</mo>
-                        <mi>1</mi>
-                      </mrow>
-                      <mrow>
-                        <mi>0.6</mi>
-                        <mo>&dot;</mo>
-                        <mi>0.9</mi>
-                        <mo>&dot;</mo>
-                        <mi>240</mi>
-                      </mrow>
-                    </mfrac>
-                    <mo>=</mo>
-                    <mi>0.1852 A</mi>
-                  </math></li>
-                <br />
-                <li><math>
-                  <msub>
-                    <mi>P</mi>
-                    <mn>AC</mn>
-                  </msub>
-                  <mo>=</mo>
-                  <mi>240</mi>
-                  <mo>&times;</mo>
-                  <mi>0.1852</mi>
-                  <mo>=</mo>
-                  <mi>44.45 W</mi>
-                </math></li>
-              </ul>-->
+                <li>See <a href='TT-AC-power'>Appendix X</a> for calculation</li>
+              </ul>
             </ol>
             <br />
             <li>Cost</li>
           </ol>
         </p>
-
-        <!--
-        <table-component subtitle="Table: Pump specifications">
-          <div id="pump-specs"></div>
-        </table-component>
-        -->
 
         <image-component tag="image" source="assets/tt-pump-specs.png"
         subtitle="Table X: Pump specifications"></image-component>
@@ -803,7 +648,7 @@
         subtitle="Figure X: Pump decision matrix"></image-component>
 
         <p>
-          Grothen G328A is the best option and Grothen G928 is the alternative.
+          Grothen G328A is selected as the best option for the current non-optimised system, with the Grothen G928 as an alternative. In the next semester, the variable flow rate capability of the Grothen G328A will be utilised to test and verify the optimal flow rate which maximises the TES charging efficiency, provided that its flow rate range remains sufficient after system optimisation.
         </p>
 
       </div>
@@ -836,7 +681,7 @@
             <li>Thickness required</li>
             <ul>
               <br />
-              <li>Calculated <a href='theories-concepts.html'>using</a>:</li>
+              <li>Calculated <a href='TT-theories-concepts'>using</a>:</li>
               <br />
               <li>
                 <math>
@@ -956,11 +801,6 @@
           </ol>
         </p> 
 
-        <!--
-        <table-component subtitle="Table: Comparison for different insulation materials">
-          <div id="insulation-table"></div>
-        </table-component>
-        -->
         <image-component tag="image" source="assets/tt-insulation-table.png"
         subtitle="Table X: Comparing different insulation materials"></image-component>
 
@@ -970,7 +810,7 @@
         subtitle="Figure X: Insulation decision matrix"></image-component>
 
         <p>
-          The best option is PIR/PUR foam and PE is the alternative.
+          The best option is PIR/PUR foam, which will be tested in the next semester. PE foam will be kept as an alternative.
         </p>
 
       </div>
@@ -983,18 +823,20 @@
       <ol>
         <li>HTF</li>
         <ul>
-          <li>HTF refilling for HTF losses</li>
+          <li>Install HTF refill section for HTF losses</li>
+        </ul>
+        <li>Pumps</li>
+        <ul>
+          <li>Conduct studies to obtain optimal flow rate to maximise TES charging efficiency</li>
+          <li>Install pump with ideal flow rate to system</li>
         </ul>
         <li>Pipe insulation</li>
         <ul>
-          <li>Building</li>
-          <li>Testing</li>
+          <li>Fabricate, install, and test insulation to meet heat loss requirements</li>
         </ul>
         <li>TES box insulation</li>
         <ul>
-          <li>Designing</li>
-          <li>Building</li>
-          <li>Testing</li>
+          <li>Design, fabricate, install, and test insulation to meet heat loss requirements</li>
         </ul>
       </ol>
     </p>
@@ -1002,6 +844,101 @@
     <br />
     <br />
     <sl-divider></sl-divider>
+
+    <div id="TT-theories-concepts"></div>
+    <h2>Appendix B1: Theories and Concepts</h2>
+    <p>
+      
+    </p>
+    <table-component subtitle="Table B1.1: Theories and concepts under thermal transmission subsection">
+      <div id="Transmission"></div>
+    </table-component>
+
+    <div id="TT-AC-power"></div>
+    <h2>Appendix B2: Calculation of AC power for Grothen G328A</h2>
+    <p>
+      <a href='TT-theories-concepts'>Power formula</a>: P = IV
+      <br />
+      For AC:
+      <math>
+        <msub>
+          <mi><a href='TT-theories-concepts'>I</a></mi>
+          <mn>AC</mn>
+        </msub>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <msub>
+              <mi>P</mi>
+              <mn>DC</mn>
+            </msub>
+          </mrow>
+          <mrow>
+            <mi>PF</mi>
+            <mo>&dot;</mo>
+            <mi>&eta;</mi>
+            <mo>&dot;</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>AC</mn>
+            </msub>
+          </mrow>
+        </mfrac>
+      </math>
+      <br />
+      Grothen G328A specifications:
+      <ul>
+        <li>AC input: 240V</li>
+        <li>Output voltage: 24V 1A</li>
+      </ul>
+      </p>
+      <p>
+      Assuming:
+      <ul>
+        <li>Grothen G328A uses SMPS. [12]</li>
+        <li>Power factor (PF) = 0.6, assuming worst case (without PFC). [13]</li>
+        <li>Electric efficiency = 90%. [14]</li>
+      </ul>
+      </p>
+      <p>
+      Therefore:
+        <math>
+          <msub>
+            <mi>I</mi>
+            <mn>AC</mn>
+          </msub>
+          <mo>=</mo>
+          <mfrac>
+            <mrow>
+              <mi>24</mi>
+              <mo>&times;</mo>
+              <mi>1</mi>
+            </mrow>
+            <mrow>
+              <mi>0.6</mi>
+              <mo>&dot;</mo>
+              <mi>0.9</mi>
+              <mo>&dot;</mo>
+              <mi>240</mi>
+            </mrow>
+          </mfrac>
+          <mo>=</mo>
+          <mi>0.1852 A</mi>
+        </math>
+      <br />
+      <math>
+        <msub>
+          <mi>P</mi>
+          <mn>AC</mn>
+        </msub>
+        <mo>=</mo>
+        <mi>240</mi>
+        <mo>&times;</mo>
+        <mi>0.1852</mi>
+        <mo>=</mo>
+        <mi>44.45 W</mi>
+      </math>
+    </p>
 
     <h2>References</h2>
     <p>

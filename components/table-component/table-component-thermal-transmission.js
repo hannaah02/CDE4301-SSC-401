@@ -1,174 +1,139 @@
-const table9 = new gridjs.Grid({
-  data: [
-    [gridjs.html("Medium"), "Water"],
-    [gridjs.html("Volume in receiver"), gridjs.html("<math><mi>0.198717</mi><mi>l</mi></math>")],
-    [gridjs.html("Volume in intermediate pipe"), gridjs.html("<math><mi>0.057267</mi><mi>l</mi></math>")],
-    [gridjs.html("Volume in TES"), gridjs.html("<math><mi>22</mi><mi>l</mi></math>")],
-    [gridjs.html("Installable volume"), gridjs.html("<math><mi>22.255984</mi><mi>l</mi></math>")],
-
-    [gridjs.html("Type of flow"), "Laminar (low speed flow)"],
-    [gridjs.html("Flow rate"), gridjs.html("<math><mi>0.204184</mi><mo>-</mo><mi>0.408367</mi><mi>l</mi><mo>/</mo><mi>min</mi></math>")],
-    [gridjs.html("Fluid flow mechanism"), "Pump"],
-    [gridjs.html("Power consumption"), "44.45 W"],
-    [gridjs.html("Pump height"), "0m above ground"],
-    [gridjs.html("Length of pipes"), gridjs.html("Receiver length: 10.41 m<br />Intermediate piping length: 3 m")],
-
-    [gridjs.html("Insulation material"), "Polyisocyanurate/Polyurethane foam (PIR/PUR)"],
-    [gridjs.html("Thermal conductivity of insulating material"), gridjs.html("0.023 – 0.026 <math><mi>W</mi><mo>/</mo><mi>m</mi><mi>K</mi></math>")],
-    [gridjs.html("Maximum heat loss in intermediate pipes"), "5% of power absorbed: 7.11 W"],
-  ],
-});
-table9.render(document.getElementById("tt-specs"));
-
-const table1 = new gridjs.Grid({
-  columns: ["HTF", gridjs.html("<math><msub><mi>T</mi><mn>min</mn></msub></math>, <math><mo>&deg;</mo><mi>C</mi></math>"), gridjs.html("<math><msub><mi>T</mi><mn>min</mn></msub></math>, <math><mo>&deg;</mo><mi>C</mi></math>"), "Safety hazard", gridjs.html("Cost, USD/kg"), gridjs.html("Heat Capacity, <math><mi>kJ</mi><mo>/</mo><mi>kg</mi><mo>&deg;</mo><mi>C</mi></math>"), gridjs.html("Thermal conductivity, <math><mi>W</mi><mo>/</mo><mi>m</mi><mi>K</mi></math>"), gridjs.html("Density, <math><mi>kg</mi><mo>/</mo><msup><mi>m</mi><mn>3</mn></msup></math>"), gridjs.html("Dynamic viscosity, <math><mi>m</mi><mi>Pa</mi><mo>&dot;</mo><mi>s</mi></math><div></div>")],
-  data: [
-    ["Water", gridjs.html("<math><mi>0</mi></math>"), gridjs.html("<math><mi>100</mi></math>"), gridjs.html("Safe"), gridjs.html("<math><mi>0.0025</mi></math> [1]"), gridjs.html("<math><mi>4.180</mi></math>"), gridjs.html("<math><mi>0.65091</mi></math> [2]"), gridjs.html("<math><mi>1000</mi></math>"), gridjs.html("<math><mi>1.0518</mi></math>")],
-    ["Water-Ethanol solution (10-50%)", gridjs.html("<math><mo>-</mo><mi>10</mi></math>"), gridjs.html("<math><mi>150</mi></math>"), gridjs.html("Flammable,<br />skin irritant,<br />eye irritant,<br />respiratory irritation [3]"), gridjs.html("<math><mi>1.5</mi></math>"), gridjs.html("<math><mi>3.5</mi><mo>-</mo><mi>4.0</mi></math>"), gridjs.html("<math><mi>0.4</mi><mo>-</mo><mi>0.55</mi></math>"), gridjs.html("<math><mi>850</mi></math>"), gridjs.html("<math><mi>1.5</mi><mo>-</mo><mi>0.4</mi></math>")],
-    ["Synthetic oil (Therminol VP-1)", gridjs.html("<math><mi>15</mi></math>"), gridjs.html("<math><mi>393</mi></math>"), gridjs.html("Skin irritant,<br />harmful if inhaled,<br />respiratory irritant [4]"), gridjs.html("<math><mi>2.1</mi></math>"), gridjs.html("<math><mi>2.37</mi><mo>-</mo><mi>2.73</mi></math>"), gridjs.html("<math><mi>0.095</mi><mo>-</mo><mi>0.077</mi></math>"), gridjs.html("<math><mi>815</mi><mo>-</mo><mi>673</mi></math>"), gridjs.html("<math><mi>0.25</mi><mo>-</mo><mi>0.12</mi></math>")],
-    ["NaK Eutectic Alloy (NaK-78)", gridjs.html("<math><mo>-</mo><mi>12.6</mi></math>"), gridjs.html("<math><mi>785</mi></math>"), gridjs.html("Water reactive,<br />skin corrosion,<br />serious eye damage [5]"), gridjs.html("<math><mi>2</mi></math>"), gridjs.html("<math><mi>0.872</mi><mo>-</mo><mi>0.893</mi></math>"), gridjs.html("<math><mi>24.1</mi><mo>-</mo><mi>26.3</mi></math>"), gridjs.html("<math><mi>659</mi><mo>-</mo><mi>779</mi></math>"), gridjs.html("<math><mi>0.279</mi><mo>-</mo><mi>0.131</mi></math>")],
-  ],
-  /* References!!
-  [1] https://www.pub.gov.sg/Public/WaterLoop/Water-Price
-  [2] https://www.engineeringtoolbox.com/water-liquid-gas-thermal-conductivity-temperature-pressure-d_2012.html
-  [3] https://www.columbuschemical.com/MSDS/SDS/Ethanol%2050%25%2C%20%28v-v%29%208589.pdf
-  [4] https://americasinternational.com/wp-content/uploads/2020/03/THERMINOL-VP1-SDS-EASTMAN.pdf
-  [5] https://www.espimetals.com/index.php/msds/799-Potassium%20Sodium%20Alloy
-  [6] https://www.semanticscholar.org/paper/Literature-Review-on-Heat-Transfer-Fluids-and-in-Heller/05353e299330ac84882ab456a6c63fcd9ecc3118
-   */
-});
-table1.render(document.getElementById("htf-table"));
-
 const table2 = new gridjs.Grid({
+  columns: ["Term/Concepts", "Definition"],
   data: [
-    ["Receiver", "Cylindrical-conical"],
-    ["Light source", "White LED"],
-    ["Volume of water in receiver", gridjs.html("<math><mi>0.1987</mi><mi>l</mi></math>")],
-    ["Irradiance intensity", gridjs.html("<math><mi>1000</mi><mfrac><mrow><mi>W</mi></mrow><mrow><msup><mi>m</mi><mn>2</mn></msup></mrow></mfrac></math>")],
-    ["Flow rate", gridjs.html("<math><mi>0.1167</mi><mi>l</mi><mo>/</mo><mi>min</mi></math> (10% of Grothen G928A Peristaltic pump)")],
+
+    /* Heat Transfer Fluid (HTF) */
+
+    [gridjs.html("Heat transfer coefficient (HTC) in transient heat conduction"), gridjs.html("Heat transfer coefficient describes the efficiency of the heat transfer.<br /><br /><math><mi>HTC</mi><mo>=</mo><msqrt><mfrac><mrow><mi>k</mi><mi>&rho;</mi><msub><mi>C</mi><mn>p</mn></msub></mrow><mrow><mi>t</mi></mrow></mfrac></msqrt></math>,<br />where <math><mi>HTC</mi></math> is the heat transfer coefficient,<br /><math><mi>k</mi></math> is the thermal conductivity,<br /><math><mi>&rho;</mi></math> is the density,<br /><math><msub><mi>C</mi><mn>p</mn></msub></math> is the specific heat capacity, and<br /><math><mi>t</mi></math> is the time. [16]")],
+    /* References!!!
+    https://thermtest.com/the-ultimate-guide-to-heat-transfer-fluids
+    */
+
+    [gridjs.html("Thermal stability"), gridjs.html("Thermal stability is the materials ability to resist breaking down under heat. [17]")],
+    /* References!!
+    https://www.sciencedirect.com/topics/materials-science/thermal-stability
+    Not: https://www.sciencedirect.com/science/article/abs/pii/B9780128498767000105 */
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /* Fluid motion */
+
+    [gridjs.html("Nusselt number (Nu)"), gridjs.html("Nusselt number is the ratio between the convective and conductive heat transfer. Nusselt number is also a function of Reynold's number and Prandtl's number.<br /><br /><math><mi>Nu</mi><mo>=</mo><mfrac><mrow><mi>hL</mi></mrow><mrow><mi>k</mi></mrow></mfrac></math>,<br />where <math><mi>h</mi></math> is the convective heat transfer coefficient,<br /><math><mi>L</mi></math> is the charactertistic length, and<br /><math><mi>k</mi></math> is the thermal conductivity. [18]<br /><br /><b>For flat plate (laminar):</b> <math><mi>Nu</mi><mo>=</mo><mi>0.664</mi><msup><mi>Re</mi><mn>0.5</mn></msup><msup><mi>Pr</mi><mn>1/3</mn></msup></math> for <math><mi>Re</mi><mo>></mo><mi>5</mi><mo>&times;</mo><msup><mi>10</mi><mn>5</mn></msup></math><br /><b>For circular tube under constant surface temperature (laminar):</b> <math><mi>Nu</mi><mo>=</mo><mi>3.66</mi></math><br /><b>For cicular tube under constant surface heat flux (laminar):</b> <math><mi>Nu</mi><mo>=</mo><mi>4.36</mi></math>,<br />where Re is Reynold's number, and<br />Pr is Prandtl's number. [19]")],
+    /* References!!!
+    https://www.sciencedirect.com/topics/chemical-engineering/nusselt-number
+    Not: www.sciencedirect.com/science/article/pii/S0017931016302083
+    https://www.thermal-engineering.org/what-is-laminar-vs-turbulent-nusselt-number-definition/
+    */
+
+    [gridjs.html("Flow rate (Q), <math><mfrac><mrow><msup><mi>m</mi><mn>3</mn></msup></mrow><mrow><mi>s<mi></mrow></mfrac></math>"), gridjs.html("Flow rate is the measure of the volume of fluid passing through per unit time.<br /><br /><math> <mi>Q</mi> <mo>=</mo><mi>V</mi><mi>A</mi></math>, <br />where <math><mi>V</mi></math> is the velocity, and <br /><math><mi>A</mi></math> is the area.")],
+
+    [gridjs.html("Viscocity, <math><mfrac><mrow><mi>&mu;</mi> </mrow><mrow> <mi>P</mi><mi>a</mi><mo>&sdot;</mo><mi>s</mi></mrow></mfrac></math>"), gridjs.html("Unit for luminous flux, a measure of the total amount of visible light that a light source emits.")],
+
+    [gridjs.html("Static Head (HS), <math> <mi>m</mi></math>"), gridjs.html("Static head is the total vertical distance between the surface of the water's origin to its destination. [20]")],
+    /* References!!
+    https://iwakiamerica.com/blog/the-science-behind-total-dynamic-head-and-its-relevance-in-fluid-dynamics/ */
+
+    [gridjs.html("Friction Head (HF), <math> <mi>m</mi></math>"), gridjs.html("Friction head is the head loss due to friction as the fluid moves through the pipe. [20]")],
+    /* References!!
+    https://iwakiamerica.com/blog/the-science-behind-total-dynamic-head-and-its-relevance-in-fluid-dynamics/ */
+
+    [gridjs.html("Pressure Head (HP), <math> <mi>m</mi></math>"), gridjs.html("Pressure head is the pressure the pump needs to overcome. [21]")],
+    /* References!!
+    https://www.globalpumps.com.au/blog/what-role-does-head-pressure-play */
+
+    [gridjs.html("Total Dynamic Head (TDH), <math> <mi>m</mi></math>"), gridjs.html("Summation of the head losses in a fluid system. It is the equivalent height the pump needs to raise the fluid and is used as a gauge for the energy required to pump a fluid through a system. [20][22]")],
+    /* References!!
+    https://www.grundfos.com/content/dam/global/page-assets/learn/ecademy/pdfs/us-course-108L-module-1-pump-selection-basics.pdf
+    https://iwakiamerica.com/blog/the-science-behind-total-dynamic-head-and-its-relevance-in-fluid-dynamics/
+    Not: https://www.linkedin.com/posts/fernando-romo-sanchez-6ba025303_pump-performance-curves-are-vital-for-calculating-activity-7377459998903201792-jHOM */
+
+    [gridjs.html("Differential pressure <math><mo>(</mo><mi>&Delta;</mi><mi>P</mi><mo>)</mo></math>, bar"), gridjs.html("Differential pressure is the difference in pressure between 2 points.<br /><br /><math><mi>&Delta;</mi><mi>P</mi><mo>=</mo><mi>0.0981</mi><mo>&times;</mo><mi>TDH</mi><mo>&times;</mo><mi>SG</mi></math>,<br />where <math><mi>TDH</mi></math> is the head, and<br /><math><mi>SG</mi></math> is the specific gravity of the fluid. [35]")],
+    /* References!!
+    [35] https://www.engineeringtoolbox.com/pump-head-pressure-d_663.html */
+
+
+    [gridjs.html("Net Positive Suction Head (NPSH), <math> <mi>m</mi></math>"), gridjs.html("NPSH is the difference between the inlet pressure to the lowest pressure level inside the pump. [23]")],
+    /* References!!
+    https://www.grundfos.com/sg/learn/research-and-insights/npsh-net-positive-suction-head */
+
+    [gridjs.html("Net Positive Suction Head Available (NPSHa), <math> <mi>m</mi></math>"), gridjs.html("NPSHs is the NPSH available in the system. NPSHa needs to be higher than the NPSH required (NPSHr) of a pump.<br /><br /><math><msub><mi>NPSH</mi><mn>a</mn></msub><mo>=</mo><msub><mi>h</mi><mn>a</mn></msub><mo>-</mo><msub><mi>h</mi><mn>vpa</mn></msub><mo>+</mo><msub><mi>h</mi><mn>st</mn></msub><mo>-</mo><msub><mi>h</mi><mn>f</mn></msub></math>,<br />where <math><msub><mi>h</mi><mn>a</mn></msub></math> is the absolute pressure,<br /><math><msub><mi>h</mi><mn>vpa</mn></msub></math> is the absolute value of the vapour head,<br /><math><msub><mi>h</mi><mn>st</mn></msub></math> is the static head, and<br /><math><msub><mi>h</mi><mn>f</mn></msub></math> is the friction head. [24][25]")],
+    /* References!! 
+     https://www.northridgepumps.com/article-67_low-npsh-pumps-guide
+     https://www.pumpsandsystems.com/npsh-calculation-step-step-guide */
+
+    [gridjs.html("Net Positive Suction Head Required (NPSHr), <math> <mi>m</mi></math>"), gridjs.html("NPSHr is the lowest inlet pressure required for the pump to work properly and reduce cavitation or flashing. [23]")],
+    /* References!! 
+    https://www.grundfos.com/sg/learn/research-and-insights/npsh-net-positive-suction-head */
+
+    
+    [gridjs.html("Cavitation"), gridjs.html("Cavitation refers to the phenomenon in pumps caused by the formation and implosion of vapor bubbles due to pressure variations. This phenomenon damages metal components. The damage leaves a cratered surface. [26][27]")],
+    /* References!!
+    https://www.csidesigns.com/blog/articles/what-is-pump-cavitation-and-how-to-prevent-it
+    https://tameson.com/pages/cavitation-flashing */
+
+    [gridjs.html("Flashing"), gridjs.html("Flashing is the beginning stages of cavitation. Vapour bubbles form as the liquid passes thorugh an area of presssure lower than the vapour pressure, but does not implode. Excessive bubbles chokes valves, increasing flow velocity, which causes damage. The damage caused leaves a smooth and shiny surface. [27]")],
+    /* References!!
+    https://tameson.com/pages/cavitation-flashing */
+
+    [gridjs.html("Vapour pressure"), gridjs.html("Vapour pressure is the pressure exerted by a vapour with its liquid or solid phases in a closed system, at a given temperature at thermal equilibrium. [28]")],
+    /* References!!
+    https://byjus.com/chemistry/liquid-state-vapour-pressure/ */
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /* Power */
+
+    [gridjs.html("Power"), gridjs.html("<math><mi>P</mi><mo>=</mo><mi>I</mi><mi>V</mi></math>,<br />where <math><mi>P</mi></math> is the power,<br /><math><mi>I</mi></math> is the current, and<br /><math><mi>V</mi></math> is the voltage.")],
+
+    [gridjs.html("AC Current input"), gridjs.html("<math><msub><mi>I</mi><mn>AC</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>P</mi><mn>DC</mn></msub></mrow><mrow><mi>PF</mi><mo>&dot;</mo><mi>&eta;</mi><mo>&dot;</mo><msub><mi>V</mi><mn>AC</mn></msub></mrow></mfrac></math>,<br />where <math><msub><mi>I</mi><mn>AC</mn></msub></math> is the AC input current (for 1-phase),<br /><math><mi>PF</mi></math> is the power factor,<br /><math><mi>&eta;</mi></math> is the efficiency, and<br /><math><msub><mi>V</mi><mn>AC</mn></msub></math> is the AC input voltage. [29]")],
+    /* References!!
+    [29] https://magna-power.com/learn/kb/calculating-power-supply-ac-input-current */
+
+    [gridjs.html("Power factor (PF)"), gridjs.html("Power factor is a measure of energy efficiency and is the ratio of the working power (in kW) to apparent power (in kVA). [30]")],
+    /* References!!
+    [30] https://www.fluke.com/en-sg/learn/blog/power-quality/power-factor-formula */
+
+    [gridjs.html("Power factor correction (PFC)"), gridjs.html("Power factor correction is the methods used to improve a device's power factor. [31]")],
+    /* References!!
+    [31] https://www.monolithicpower.com/en/learning/resources/power-factor-correction */
+
+    [gridjs.html("Switching power supply (SMPS)"), gridjs.html("SMPS is a form of AC to DC power converter that has higher efficiency than linear power supply. [32]")],
+    /* References!!
+    [32] https://www.tek.com/en/blog/what-is-a-switching-power-supply */
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /* Insulation */
+
+    [gridjs.html("Thermal resistance <math><mo>(</mo><mi>&theta;</mi></math> or <math><mi>R</mi><mo>)</mo></math>, <math><mfrac><mrow><mi>&deg;</mi><mi>C</mi></mrow> <mrow><mi>W</mi></mrow></mfrac></math>"), gridjs.html("Thermal resistance is the ability of a material to resist the transfer of heat.<br /><br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>&Delta;</mi><mi>T</mi></mrow><mrow><mover><mi>Q</mi><mn>&dot;</mn></mover></mrow></mfrac></math>,<br />where <math><mi>R</mi></math> is the thermal resistance,<br /><math><mi>&Delta;</mi><mi>T</mi></math> is the temperature difference, and<br /><math><mover><mi>Q</mi><mn>&dot;</mn></mover></math> is the power dissipated.<br /><br />In conduction, the thermal resistance is:<br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>L</mi></mrow><mrow><mi>kA</mi></mrow></mfrac></math>,<br />where <math><mi>L</mi></math> is the length of material the heat is conducted through (perpendicular to the heat flow),<br /><math><mi>k</mi></math> is the thermal conductivity, and<br /><math><mi>A</mi></math> is the cross-sectional area perpendicular to the heat flow.<br /><br />In convection, the thermal resistance is:<br /><math><mi>R</mi><mo>=</mo><mfrac><mrow><mi>1</mi></mrow><mrow><mi>h</mi><msub><mi>A</mi><mn>s</mn></msub></mrow></mfrac></math>,<br />where <math><mi>h</mi></math> is the convection heat transfer coefficient, and<br /><math><mi>A</mi></math> is the cross-sectional area perpendicular to the heat flow. [33][34]")],
+    
+    /* References!!
+    https://www.xometry.com/resources/materials/thermal-resistance/
+    https://community.cadence.com/cadence_blogs_8/b/pcb/posts/ee-thermal-101-thermal-basics-for-electrical-engineers-part-2-of-4-893913089 */
+
+    /* Same as convection heat transfer coefficient
+    [gridjs.html("Film coefficient (h), <math><mfrac><mrow><mi>W</mi></mrow><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>&sdot;</mo><mi>K</mi></mrow></math>"), gridjs.html("The amount of heat flux required to cause a unit difference in temperature between the surface and the bulk temperature.")],
+    /* References!!!
+    https://innovationspace.ansys.com/courses/wp-content/uploads/sites/5/2020/08/Lesson-2-Film-Coefficient-tp.pdf */
+
+    [gridjs.html("Specific Heat Capacity <math><mo>(</mo><msub><mi>C</mi><mn>p</mn></msub><mo>)</mo></math>, <math><mi>J</mi><mo>/</mo><mi>k</mi><mi>g</mi><mo>&sdot;</mo><mi>K</mi></math>"), gridjs.html("Amount of energy used to increase temperature of the goven object with mass of 1kg by 1K.<br /><br /><math><mi>Q</mi><mo>=</mo><mi>m</mi><msub><mi>C</mi><mn>p</mn></msub><mo>(</mo><msub><mi>T</mi><mn>1</mn></msub><mo>-</mo><msub><mi>T</mi><mn>2</mn></msub><mo>)</mo></math>, <br />where <math><mi>Q</mi></math> is the heat added, <br /><math><mi>m</mi></math> is the mass, <br /><math><msub><mi>C</mi><mn>p</mn></msub></math> is the specific heat capacity, and <br /><math><msub><mi>T</mi><mn>1</mn></msub></math> and <math><msub><mi>T</mi><mn>2</mn></msub></math> are the initial and final temperatures respectively.")],
+
+    [gridjs.html("Thermal conductivity (k), <math><mi>W</mi><mo>/</mo><mi>m</mi><mi>K</mi></math>"), gridjs.html("Amount of heat transferred per unit time through a unit area of a material, when there is a unit temperature difference across a unit thickness.")],
+
+    [gridjs.html("Convection heat transfer, <math><mi>W</mi></math>"), gridjs.html("Energy transfer rate by movement of the fluid.<br /><br /><math><mover><mi>Q</mi><mo>&dot;</mo></mover><mo>=</mo><mi>h</mi><mi>A</mi><mo>(</mo><msub><mi>T</mi><mn>1</mn></msub><mo>-</mo><msub><mi>T</mi><mn>2</mn></msub><mo>)</mo></math>,<br />where <math><mover><mi>Q</mi><mo>&dot;</mo></mover></math> is the heat transfer rate, <br /><math><mi>h</mi></math> is the convective heat transfer coefficient,<br /><math><mi>A</mi></math> is the area,<br /><math><msub><mi>T</mi><mn>1</mn></msub></math> is the temperature of the heated surface, and<br /><math><msub><mi>T</mi><mn>2</mn></msub></math> is the temperature of the fluid.")],
+
+    [gridjs.html("Radiative heat transfer, <math><mi>W</mi></math>"), gridjs.html("Energy transfer rate by radiation.<br /><br /><math><mover><mi>Q</mi><mo>&dot;</mo></mover><mo>=</mo><mi>&epsilon;</mi><mi>&sigma;</mi><mi>A</mi><mo>(</mo><msubsup><mi>T</mi><mn>1</mn><mn>4</mn></msubsup><mo>-</mo><msubsup><mi>T</mi><mn>2</mn><mn>4</mn></msubsup><mo>)</mo></math>,<br />where <math><mover><mi>Q</mi><mo>&dot;</mo></mover></math> is the heat transfer rate, <br /><math><mi>&epsilon;</mi></math> is the emissivity of the object,<br /><math><mi>&sigma;</mi></math> is the absorptivity of the object,<br /><math><mi>A</mi></math> is the area,<br /><math><msub><mi>T</mi><mn>1</mn></msub></math> is the temperature of the heated surface, and<br /><math><msub><mi>T</mi><mn>2</mn></msub></math> is the temperature of the fluid.")],
+    
+    [gridjs.html("Conduction heat transfer (Fourier's law), <math><mi>W</mi></math>"), gridjs.html("Energy transfer rate through a material by conduction.<br /><br /><math><mover><mi>Q</mi><mo>&dot;</mo></mover><mo>=</mo><mo>-</mo><mi>k</mi><mi>A</mi><mfrac><mi>dT</mi><mi>dx</mi></mfrac></math>,<br />where <math><mover><mi>Q</mi><mo>&dot;</mo></mover></math> is the heat transfer rate, <br /><math><mi>k</mi></math> is the thermal conductivity,<br /><math><mi>A</mi></math> is the area, and<br /><math><mfrac><mi>dT</mi><mi>dx</mi></mfrac></math> is the temperature gradient.")],
+
+    [gridjs.html("Heat transfer rate"), gridjs.html("<math><msub><mover><mi>Q</mi><mo>&dot;</mo></mover><mn>net</mn></msub><mo>=</mo><msub><mover><mi>Q</mi><mo>&dot;</mo></mover><mn>convection</mn></msub><mo>+</mo><msub><mover><mi>Q</mi><mo>&dot;</mo></mover><mn>radiative</mn></msub><mo>+</mo><msub><mover><mi>Q</mi><mo>&dot;</mo></mover><mn>conduction</mn></msub></math>,<br />where <math><msub><mover><mi>Q</mi><mo>&dot;</mo></mover><mn>net</mn></msub></math> is the total heat transfer rate,<br /><math><msub><mover><mi>Q</mi><mo>&dot;</mo></mover><mn>convection</mn></msub></math> is the convective heat transfer rate,<br /><math><msub><mover><mi>Q</mi><mo>&dot;</mo></mover><mn>radiative</mn></msub></math> is the radiative heat transfer rate, and<br /><math><msub><mover><mi>Q</mi><mo>&dot;</mo></mover><mn>conduction</mn></msub></math> is the conductive heat transfer rate.")],
+
   ],
 });
-table2.render(document.getElementById("exp-1-details"));
-
-const table3 = new gridjs.Grid({
-  columns: ["Measurements", "Measuring device"],
-  data: [
-    [gridjs.html("Temperature of water in inlet container"), "Thermocouple"],
-    [gridjs.html("Temperature of water in outlet container"), "Thermocouple"],
-  ],
-});
-table3.render(document.getElementById("exp-1-measurements"));
-
-const table4 = new gridjs.Grid({
-  data: [
-    ["Temperature difference between inlet and outlet", gridjs.html("<math><mi>46</mi><mo>-</mo><mi>28.5</mi><mo>=</mo><mi>17.5<mo>&deg;</mo><mi>C</mi></math>")],
-    ["Flow rate", gridjs.html("<math><mi>0.1167</mi><mi>l</mi><mo>/</mo><mi>min</mi></math>")],
-    ["Specific heat capacity of water", gridjs.html("<math><mi>4180</mi><mi>J</mi><mo>/</mo><mi>k</mi><mi>g</mi><mo>&sdot;</mo><mi>&deg;</mi><mi>C</mi></math>")],
-    ["Volume of water in receiver", gridjs.html("<math><mi>0.1987</mi><mi>l</mi></math>")],
-    ["Mass of water in receiver", gridjs.html("<math><mi>0.1987</mi><mi>kg</mi></math>")],
-    ["Time taken to flow through the receiver", gridjs.html("<math><<mfrac><mrow><mi>Volume</mi></mrow><mrow><msub><mi>Flow rate</mi><mn>l/min</mn></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>0.1987</mi></mrow><mrow><mi>0.1167</mi></mrow></mfrac><mo>=</mo><mi>1.703</mi><mi>min</mi><mo>=</mo><mi>102.18</mi><mi>s</mi></math>")],
-    ["Power absorbed by water (flowing system)", gridjs.html("<math><mfrac><mrow><mi>m</mi><msub><mi>C</mi><mn>p</mn></msub><mi>&Delta;</mi><mi>T</mi></mrow><mrow><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>0.1987</mi><mo>&times;</mo><mi>4180</mi><mo>&times;</mo><mi>17.5</mi></mrow><mrow><mi>102.18</mi></mrow></mfrac><mo>=</mo><mi>142.248</mi><mi>W</mi></math>")],
-  ],
-});
-table4.render(document.getElementById("exp-1-results"));
-
-
-const table5 = new gridjs.Grid({
-  data: [
-    ["Receiver", "Cylindrical-conical"],
-    ["Light source", "White LED"],
-    ["Irradiance intensity", gridjs.html("<math><mi>1000</mi><mfrac><mrow><mi>W</mi></mrow><mrow><msup><mi>m</mi><mn>2</mn></msup></mrow></mfrac></math>")],
-    ["Flow rate", gridjs.html("<math><mi>0.1167</mi><mi>l</mi><mo>/</mo><mi>min</mi></math> (10% of Grothen G928A Peristaltic pump)")],
-  ],
-});
-table5.render(document.getElementById("exp-2-details"));
-
-const table6 = new gridjs.Grid({
-  columns: ["Measurements", "Measuring device"],
-  data: [
-    [gridjs.html("Temperature of water in container"), "Thermocouple"],
-  ],
-});
-table6.render(document.getElementById("exp-2-measurements"));
-
-const table7 = new gridjs.Grid({
-  data: [
-    ["Fluid", "Water",],
-    ["Viscosity (dynamic)", gridjs.html("<math><mi>1.0518</mi><mi>m</mi><mi>Pa</mi><mo>&dot;</mo><mi>s</mi></math>"),],
-    ["Density", gridjs.html("<math><mi>1000</mi><mfrac><mrow><mi>kg</mi></mrow><mrow><msup><mi>m</mi><mn>3</mn></msup></mrow></mfrac></math>"),],
-    ["Temperature", gridjs.html("<math><mi>28</mi><mo>-</mo><mi>60</mi><mo>&deg;</mo><mi>C</mi></math>"),],
-    ["Total dynamic head", gridjs.html("<math><mi>0.878400</mi><mi>m</mi></math>"),],
-    [gridjs.html("NPSHa (at <math><<mi>60</mi><mo>&deg;</mo><mi>C</mi></math>)"), gridjs.html("<math><mi>7.483985</mi><mi>m</mi></math>"),],
-    ["Flow rate", gridjs.html("<math><mi>0.204184</mi><mo>-</mo><mi>0.408367</mi><mi>l</mi><mo>/</mo><mi>min</mi></math>"),],
-  ],
-});
-table7.render(document.getElementById("pump-reqs"));
-
-const table8 = new gridjs.Grid({
-  columns: ["Model", "Specifications", "Other notes"],
-  data: [
-    ["Grothen G328A", gridjs.html("<ul><li>Output voltage: 24V 1A</li><li>Flow rate: 0.114 - 0. 500 l/min</li><li>DC motor: 12V</li><li>AC input: 240V</li></ul> [8]"), gridjs.html("<b>Cons:</b><br />-<br /><b>Pros:</b><br />0.114 l/min gives <math><mi>17.9</mi><mo>&deg;</mo><mi>C</mi></math> change and 0.500 l/min gives <math><mi>4.1</mi><mo>&deg;</mo><mi>C</mi></math> change, which is within the range required.")],
-    ["Grothen G928", gridjs.html("<ul><li>Motor power: 12V, 24V(Optional)</li><li>Type: Peristaltic pump</li><li>Flow rate: 0.500 l/min</li><li>DC motor current: 0.5 - 1 A, 4A (stall)</li></ul> [9][10]"), gridjs.html("<b>Cons:</b><br />0.500 l/min gives <math><mi>4.1</mi><mo>&deg;</mo><mi>C</mi></math> change, which is slightly out of the requirements.<br />Modifications are required to ensure it can be used outdoors.<br /><b>Pros:</b><br />As connections have to be done ourselves, it will be easier to connect to solar panels.")],
-    ["USB Mini Submersible Water Pump", gridjs.html("<ul><li>Power: 0.4 - 1.5 W</li><li>DC Voltage: 2.5 - 6 V</li><li>Working current: 130 - 220 mA</li><li>Head: 0.40 - 1.10 m</li><li>Flow rate: 1.33 - 2.00 l/min</li></ul> [11]"), gridjs.html("<b>Cons:</b><br />This is one of the lowest possible flow rate for aquarium pumps and the flow rate of 1.33 l/min gives <math><mi>1.54</mi><mo>&deg;</mo><mi>C</mi></math> change and 2.00 l/min gives <math><mi>1.02</mi><mo>&deg;</mo><mi>C</mi></math> change, which is very small.<br /><b>Pros:</b><br />Since it is submersible, it will not take space within the limited space below the receiver and reflectors.<br />Also, it does not require as much modification to make it suitable for usage outdoors.")],
-  ],
-});
-table8.render(document.getElementById("pump-options"));
-/* References!!
-[8] https://www.amazon.com/NTBL-Peristaltic-114-500ml-Adjustable-Vulcanized/dp/B0BNL1514C
-[9] https://www.walmart.ca/en/ip/Graflsoa-GROTHEN-G928-High-Flow-Peristaltic-Pump-304-Stainless-Steel-Frame-12V-24V-DC-Motor-500mL-min-Flow-Rate-Easy-Maintenance-Wide-Applications-La/45MRVPFB4B6P
-[10] https://shopee.sg/Peristaltic-Pump-Dosing-Pump-500ml-min-12V-DC-Grothen-G928-For-Analytical-Lab-i.352892875.26482359116
-[11] https://www.voltaat.com/products/usb-mini-submersible-water-pump
-*/
-
-const table10 = new gridjs.Grid({
-  columns: ["Pump", "Flow rate, l/min", gridjs.html("Temperature rise, <math><mi>&deg;</mi><mi>C</mi></math>"), "Power consumption, W", "Cost, SGD"],
-  data: [
-    ["Goethe G328A [8]", "0.114 - 0. 500", gridjs.html("4.1 - 17.9"), "44.45", "86.98 [15]"],
-    ["Grothen G928 [9][10]", "0.500", gridjs.html("4.1"), "6 - 24", "38.18 [16]"],
-    ["USB Mini Submersible Water Pump [11]", "1.33 - 2.00", gridjs.html("1.02 - 1.54"), "0.4 - 1.5", "5"],
-  ],
-});
-table10.render(document.getElementById("pump-specs"));
-/* References!!
-https://www.amazon.com/NTBL-Peristaltic-114-500ml-Adjustable-Vulcanized/dp/B0BNL1514C (same as above)
-https://www.walmart.ca/en/ip/Graflsoa-GROTHEN-G928-High-Flow-Peristaltic-Pump-304-Stainless-Steel-Frame-12V-24V-DC-Motor-500mL-min-Flow-Rate-Easy-Maintenance-Wide-Applications-La/45MRVPFB4B6P (same as above)
-https://www.voltaat.com/products/usb-mini-submersible-water-pump (same as above)
-https://www.aliexpress.com/item/1005006398985788.html#nav-specification
-https://shopee.sg/Peristaltic-Pump-Dosing-Pump-500ml-min-12V-DC-Grothen-G928-For-Analytical-Lab-i.352892875.26482359116
-https://shopee.sg/product/261596770/24001582496?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkY0N5akVpcE5OamJEdjRRTHBOTzhmazBSdGV5RWpMdWQwT0dzaWRYcFo1cXFLNTlRNWhRRzJjUE1OVmZxRU5EUTFvVThkSmtlSFI4c05zL2E2UUp4d3B2aTBpT3pQMW5wanI2aE9WRHcySFA&gad_source=4&gad_campaignid=20887891397
-https://shopee.sg/product/277026990/23492563891?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkY0N5akVpcE5OamJEdjRRTHBOTzhmbGNRZkxIVjh5dlcvZlBXQTV6VExwSjZmVTRZb2tBZlN3Uk1kK2VwZjRwQWlBd2dIMU9FNVpsSWR6NkJaaUJ5OXNHaXNBaHMrUStQd1AvNkNJRjJjd2o&gad_source=1&gad_campaignid=20887585400
-https://www.walmart.ca/en/ip/Graflsoa-GROTHEN-G928-High-Flow-Peristaltic-Pump-304-Stainless-Steel-Frame-12V-24V-DC-Motor-500mL-min-Flow-Rate-Easy-Maintenance-Wide-Applications-La/45MRVPFB4B6P
-https://www.voltaat.com/products/usb-mini-submersible-water-pump
-*/
-
-const table11 = new gridjs.Grid({
-  columns: ["Insulation material", gridjs.html("Thermal conductivity <math><mi>W</mi><mo>/</mo><mi>m</mi><mi>K</mi></math>"), "Cost per unit length", "Thickness required, mm", "Cost per unit length to meet thickness required, SGD", "Durability"],
-  data: [
-    ["Aerogel", gridjs.html("0.014 [23]"), "14.15 SGD for 3mm [17]", "8.510679", "40.15", "20-30 years [20]"],
-    ["Polyisocyanurate/Polyurethane foam (PIR/PUR)", gridjs.html("0.023 – 0.026 [23]"), "0.24 SGD for 20mm [18]", "21.708707 - 28.617394", "0.26 - 0.35", "40 years [21]"],
-    ["Polyethelyne (PE) foam", gridjs.html("0.04 [24]"), "0.10 SGD for 5mm [19]", "94.079069", "1.90", "15-20  years [22]"],
-  ],
-});
-table11.render(document.getElementById("insulation-table"));
-/* References
-[17] https://shopee.sg/Silica-Nano-Aerogel-CompoSite-Thermal-insulation-Blanket-Silica-Thermal-insulation-Material-Nano-Thermal-insulation-Gel-Board-i.1356232114.29878292492
-[18] https://shopee.sg/product/280224396/19407230558?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkY0N5akVpcE5OamJEdjRRTHBOTzhma0tPTDdGMkNHK2pnbDREOFQrOGpaRzRsclp1Y2RQbnNQNHZ1KzAya2FjWmxlNDBUY01DaUx2NFk4aGJUUjcrVlNHYXNkRFZqZG1qc1dXUlZLbzRQeng&gad_source=1&gad_campaignid=1690731353
-[19] https://shopee.sg/product/265054860/27713302260?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkY0N5akVpcE5OamJEdjRRTHBOTzhma0N0WjlCZDNmbXQ1eExIN0M1NlNWa2RFUUdYNG1FSXd2azkralQyMzNMY09OL09zc000dzk1dFJjcUFsQ2RyeWpqY3BxdWRScjNEODZXNWhRUG82dWo
-[20] https://www.farersteelpipe.com/blog/what-is-the-typical-lifespan-of-aerogel-felt-in-different-applications-1329997.html
-[21] https://www.generalplastics.com/blog/10-things-you-must-know-before-using-polyurethane-foam-boards-for-insulation
-[22] https://www.lukwom.com/What-is-the-life-expectancy-of-PE-insulation-id48918585.html
-[23] http://www.greenspec.co.uk/building-design/insulation-materials-thermal-properties/
-[24] https://therubbercompany.com/sponge-foam/polyethylene-foam/polyethylene-foam
-[25] https://www.alaskapuf.com/difference-between-pir-and-puf-insulation.php */
-
-const table12 = new gridjs.Grid({
-  columns: [gridjs.html("<math><mi>&Delta;</mi><mi>T</mi></math>, <math><mi>&deg;</mi><mi>C</mi></math>"), gridjs.html("Flow rate, <math><mi>l</mi><mo>/</mo><mi>min</mi></math>")],
-  data: [
-    ["5", "0.408367"],
-    ["10", "0.204184"],
-  ],
-});
-table12.render(document.getElementById("pump-FR-from-temp-change"));
+table2.render(document.getElementById("Transmission"));
 
 
 class TableComponent extends HTMLElement {
