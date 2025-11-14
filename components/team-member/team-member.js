@@ -22,7 +22,7 @@ class TeamMember extends HTMLElement {
     <img src="${this.avatar}" alt="${this.name}">
     <p><strong>${this.name}</strong></p>
     <p>${this.department}</p>
-    <p style = ="padding-top: 20px;"><strong>${this.subsystem}</strong></p>
+    <p style = ="padding-top: 50px;"><strong>${this.subsystem}</strong></p>
     <style>
       :host {
         display: block;
