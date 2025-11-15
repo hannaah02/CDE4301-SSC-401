@@ -41,11 +41,11 @@
     <!-- This is the team member component use to display details about your team members -->
     <div class="team-member-wrapper">
       <team-member avatar="assets/blackranger.png" name="Arani" department="Mechanical Engineering"
-        subsystem="Light Subsystem"></team-member>
+        subsystem="Light"></team-member>
       <team-member avatar="assets/yellowranger.png" name="Hannah" department="Mechanical Engineering"
-        subsystem="Thermal Transmission Subsystem"></team-member>
+        subsystem="Thermal Transmission"></team-member>
       <team-member avatar="assets/redranger.png" name="Thuan" department="Chemical Engineering"
-        subsystem="Thermal Energy Storage Subsystem"></team-member>
+        subsystem="Thermal Energy Storage"></team-member>
     </div>
 
     <!-- This is a divide from the shoelace library for aesthetic purpose -->
@@ -132,9 +132,7 @@
     <div>
       <div id="abstract">
         <h2>Abstract</h2>
-        <p>
-          Text
-        </p>
+        <p>Large-scale Concentrated Solar Power (CSP) plants have been widely studied and successfully implemented for electricity generation. However, small-scale CSP systems remain largely unexplored, despite offering several advantages over solar PV panels, including simpler mechanical designs, lower installation and maintenance costs, longer lifespans, and easier recyclability. These advantages highlight the potential for CSP technology to support practical, small-scale uses. This project investigates the development of a scalable, low-cost CSP system. A potential application of the proposed system is hot water production for showering. The project aims to design and evaluate the feasibility of small-scale CSP as a sustainable thermal energy solution.</p>
       </div>
     </div>
     <br />
@@ -144,9 +142,8 @@
     <div>
       <div id="acknowledgements">
         <h2>Acknowledgements</h2>
-        <p>
-          Text
-        </p>
+        <p>We would like to express our sincere gratitude to our project supervisor, Prof. Lim Li Hong Idris, for her invaluable guidance, encouragement, and continuous support throughout the course of this project. We are also deeply grateful to our industry partner, Mr. Tan Toh Hian, for providing direction, insights, and consistent support.</p>
+        <p>Our appreciation extends to the SolarReborn UROP team for the support and assistance they have provided throughout the project. We would also like to thank Ms. Annie Tan and the staff at the Electronics Lab, Mr. Dickson Foo and the staff at the Central Workshop, Mr. Vincent Bay and the staff at the Fabrication Lab, as well as the IDP staff, whose support and expertise were essential in bringing this project to completion.</p>
       </div>
     </div>
     <br />
@@ -157,7 +154,7 @@
       <div id="background">
         <h2> 1. Background</h2>
         <image-component tag="image" source="assets/csp.jpg"
-        subtitle="Figure 01: Large Scale Concentrated Solar Power Plant [1]"></image-component>
+        subtitle="Figure 01: Large scale Concentrated Solar Power Plant [1]"></image-component>
         <p> Concentrated solar power (CSP) is a system that collects thermal energy. It redirects and concentrates sunlight using mirrors onto a receiver. The receiver conducts the thermal energy to the heat transfer fluid (HTF) within it, which is then transferred to a thermal energy storage (TES) system or the application.</p>
         <p> CSP systems are used globally, with 7360MW in operation and 3351MW in construction as of March 2025. Its market is worth USD 5.8 billion (2025), with a compound annual growth rate (CAGR) of 8.3% from 2025 to 2035 [2].</p>
         <p> However, most of these systems are large-scale, about 5-10 acres of land per MW are used, mainly for electricity generation, with an electric efficiency up to 16% [2].</p>
@@ -173,7 +170,7 @@
 
       <div id="UROP Solar Tower rig">
         <h3 style = "margin-top: 50px;"> 1.2 UROP Solar Tower rig</h3>
-        <p> The rig we will be optimising is the current 1x1m CSP rig that was built alongside the UROP team (see below). It consists of a 1m^3 area underneath, 8 parabolic mirrors, a black aluminium pot with water as the receiver. The specifications are given below.</p>
+        <p> The rig we will be optimising is the current 1x1m CSP rig that was built alongside the UROP team (see below). It consists of a 1m<sup>3</sup> area underneath, 8 parabolic mirrors, a black aluminium pot with water as the receiver. The specifications are given below.</p>
 
         <image-component tag="image" source="assets/mains-urop-rig.png"
         subtitle="Figure 02: UROP rig, with 1x1x1m space underneath reflectors and receiver"></image-component>
@@ -207,7 +204,7 @@
         <h3 style = "margin-top: 50px;"> 1.4 Potential Use Case </h3>
         <p> Multiple 1 m² CSP rigs will be deployed to help meet the energy demands of the selected applications. </p>
         <h4>Indonesia</h4>
-        <p>Our industry partner, ES&T Environmental, has identified a growing demand among coastal hotels in Indonesia for efficient and sustainable hot water production. With abundant sunlight and ample space, small-scale CSP systems are well-suited for this purpose.</p>
+        <p>Our industry partner, ES&T Environmental, has identified a growing demand among coastal hotels in Indonesia for efficient and sustainable hot water production for showering. With abundant sunlight and ample space, small-scale CSP systems are well-suited for this purpose.</p>
         <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
@@ -230,13 +227,13 @@
           </div>
         
         <h4><u>Application</u></h4>
-        <P>To address these use cases, particularly focusing on hot water production in Indonesia, we propose two solutions:</P>
+        <P>To address these use cases, particularly focusing on hot water production for showering in Indonesia, we propose two solutions:</P>
         <ul>
-          <li>1-stage process - Hot water production (40-45<sup>°</sup>C) using tap water</li>
+          <li>1-stage process - Hot water production (40-45<sup>°</sup>C [7]) using tap water</li>
           <li>2-stage process - Hot water production using seawater</li>
           <ul>
             <li>Heating of seawater to obtain freshwater and brine (100<sup>°</sup>C)</li>
-            <li>Heating of freshwater to produce hot water (40-45<sup>°</sup>C)</li>
+            <li>Heating of freshwater to produce hot water (40-45<sup>°</sup>C [7])</li>
           </ul>
         </ul>
 
@@ -246,7 +243,7 @@
 
       <div id="value prop">
         <h3 style = "margin-top: 50px;"> 1.5 Value Proposition </h3>
-        <p>A scalable 1×1 m CSP system that uses free resources such as sunlight and seawater to provide a reliable hot water supply for showering at 45 °C or produce brine, offering an affordable, sustainable solution for communities in equatorial developing regions (16% of the world population)[8],[9].</p>
+        <p>A scalable 1×1 m CSP system that uses free resources such as sunlight and seawater to provide a reliable hot water supply for showering at 45 °C [7] or produce brine, offering an affordable, sustainable solution for communities in equatorial developing regions (16% of the world population)[8],[9].</p>
       </div>
 
       <div id = 'discussion'>
@@ -269,12 +266,12 @@
       <div id="subsections">
         <h2>2. Subsections</h2>
         <p>
-        The project is currently split to 3 subsections and the information on each subsections are split to their respective pages below.
+        The project is currently split to 3 subsections, and the information on each subsection is displayed on its respective page below.
         <ol>
           <li><a href="lightsubs.html">Light</a></li>
           <li><a href="thermaltransmissionsubs.html">Thermal Transmission</a></li>
           <li><a href="thermalenergystoragesubs.html">Thermal Energy Storage</a></li>
-          <li><a href="sensingsubs.html">Sensing</a></li>
+          <li><a href="sensingsubs.html">Sensing</a>  (only used during the design and testing phase to capture data and optimise the system)</li>
         </ol>
         </p>
       </div>
@@ -300,7 +297,7 @@
         </table-component>
       -->
       
-
+    <sl-button size="medium" pill onclick href="lightsubs.html">Next: Light</sl-button>
 
     <div id="references" class="references">
       <sl-divider></sl-divider>
@@ -322,7 +319,7 @@
         
         <li>[8] “Tropics,” Wikipedia, [Online]. Available: https://en.wikipedia.org/wiki/Tropics. Accessed: Nov. 3, 2025. (en.wikipedia.org)</li>
         
-        <li>[9] United Nations, “Percentage of Total Population Living in Coastal Areas,” Methodology Sheet, Division for Sustainable Development, Dept. of Economic and Social Affairs, Oct. 2014. [Online]. Available: https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/oceans_seas_coasts/pop_coastal_areas.pdf. </li>
+        <li>[9] United Nations, “Percentage of Total Population Living in Coastal Areas,” Methodology Sheet, Division for Sustainable Development, Dept. of Economic and Social Affairs, Oct. 2014. [Online]. Available:https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/oceans_seas_coasts/pop_coastal_areas.pdf. </li>
 
         <li>[10] T. H. G. “Solar Radiation Spectrum,” SunWind Solar, [Online]. Available: https://sunwindsolar.com/blog/solar-radiation-spectrum/.</li>
 
