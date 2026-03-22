@@ -1,8 +1,6 @@
-function thickness = insulation_thickness(power_water, k_insulation, k_water, T_water, L, perc_loss) % in mm
+function thickness = insulation_thickness(power_water, k_insulation, k_water, T_water, L, perc_loss, k_pipe, pipe_ID, pipe_OD) % in m
 
 max_heat_loss = (perc_loss/100) * power_water; % W
-pipe_ID = 6 * 10^-3; % m Inner diameter of pipe
-pipe_OD = 9 * 10^-3; % m
 h_air = 50; % set as average https://www.engineersedge.com/heat_transfer/convective_heat_transfer_coefficients__13378.htm
 Nu_water = 4.36; % https://repository.up.ac.za/server/api/core/bitstreams/e88e9466-73c1-4110-9287-294a60dc546c/content
 h_water = (Nu_water * k_water)/pipe_ID; % Nu = (h * L)/k;
@@ -16,7 +14,6 @@ r1 = pipe_ID/2;
 r2 = pipe_OD/2;
 hi = h_water;
 hc = h_air;
-k_pipe = 0.19; % Thermal conductivity of hose (W/(m K)) https://www.engineeringtoolbox.com/thermal-conductivity-plastics-d_1786.html
 
 syms r3 real
 

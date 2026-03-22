@@ -1,4 +1,3 @@
-clc; clear; close all;
 
 % Insulation
 
@@ -9,11 +8,13 @@ k_water = 650.91; % Thermal conductivity of water at 60ºC https://www.engineeri
 L = 3.0; % Length of pipe. Here is total length to account for both sides
 
 % Hose
-k_pipe = 0.19; % Thermal conductivity of hose (W/(m K)) https://www.engineeringtoolbox.com/thermal-conductivity-plastics-d_1786.html
-pipe_ID = 6 * 10^-3; % m Inner diameter of pipe
-pipe_OD = 9 * 10^-3; % m
+k_pipe = 14.4; % Thermal conductivity of Steel - Stainless, Type 304 	14.4 (W/(m K)) https://www.engineeringtoolbox.com/thermal-conductivity-metals-d_858.html
+pipe_ID = 3 * 10^-3; % m Inner diameter of pipe
+pipe_OD = 10.3 * 10^-3; % m
+% Smallest size: https://www.nandishwarsteel.com/stainless-steel-pipe-dimensions.html#:~:text=Table_title:%20STAINLESS%20STEEL%20PIPE%20DIMENSION%20AS%20PER,%7C%20Sch%2DXXS:%20%2D%20%7C%20:%20%2D%20%7C
 
-
+% pipe_ID = 6 * 10^-3; % m Inner diameter of pipe
+% pipe_OD = 13.7 * 10^-3; % m
 
 % Comparing insulation
 

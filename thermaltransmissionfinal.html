@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thermal Transmission</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="stylesheet" href="./components/team-member/team-member.css">
+  <script type="module" src="./components/team-member/team-member.js"></script>
+
+  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+
+  <script type="module" src="./components/image/image-component.js"></script>
+
+  <script type="module" src="./components/video/video.js"></script>
+
+  <link rel="stylesheet" href="./components/references/references.css">
+
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+
+  <script src=".components/table-component/table-component-thermal-transmission.js"></script>
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+  <style> 
+     .square { 
+        border: 1px solid black;
+        padding: 20px;
+        display: inline-block;
+    } 
+   </style>
+
+<!-- ~~~~~~~ -->
+  <style>
+    .gridjs-table {
+      table-layout: auto !important;
+      width: 100% !important;
+    }
+
+    .gridjs-th {
+      white-space: nowrap !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+
+    <sl-button size="medium" pill onclick href="index.html">Back to main page</sl-button>
+    <h1>Thermal Transmission</h1>
+    <sl-divider></sl-divider>
+
+     <div>
+      <div id="tt_recapn">
+        <h2>Recap</h2>
+        <p>
+          In the interim, the HTF options was compared and water was selected. The methods of thermal transmission was also considered, with pumps being the most feasible. The pump was also proven to allow thermal transmission. Lastly, heat loss was identified in the pipes and different insulating materials were compared, settling with __ as optimal insulating material.
+        </p>
+        <p>
+          In the follow up, the installation of pumps and implementation of insulation was required in the next semester.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <div id="tt_insulation">
+        <h2>Insulation</h2>
+        <p>
+          In the interim, PUR/PIR insulation was the best option. In this section, we compare the PUR/PIR insulation with commonly used airconditioning insulation (material: XX), and translucent insulating material (TIM)-style insulation. These insulations and its usage in the tests are explained below.
+        </p>
+        <p>
+          PUR/PIR insulation is selected in the interim. For the project, we use spray PUR/PIR foam with a Aluminium duct (7mm diameter) to encapsulate the insulation. <!--Insert image-->
+        </p>
+        <p>
+          Airconditioning insulation is a common material and can be bought off the shelves, reducing manufacturing time. We use XX type of airconditioning insulation. <!--Insert image-->
+        </p>
+        <p>
+          TIM prevents heat loss and allows irradiance to heat the absorber (pipe with HTF). The transparent insulation (allowing transmission of irradiance) consists of pockets of stagnant air by design, which improves thermal resistance by eliminating convection. Using the concepts of TIM, (single layer) translucent corrugated plastic board is used to wrap around the absorber (hose) to allow transmission and reduce convection of air. <!--Insert image-->
+        </p>
+        <p>
+          The insulations are tested in shade, under sunlight, and under sunlight moving to shade, with control (no insulation) and repeated 3 times for accuracy. The results are below.
+        </p>
+        <p>
+          In the shade, the PUR/PIR performed marginally better than airconditioning insulation. In the sunlight, the PUR/PIR performed best. Notably, the TIM was able to achieve a higher equilibrium temperature than PUR/PIR and airconditioning insulation under sunlight, which can be accounted by transmission heating the absorber or by conduction or radiation based on material properties. In the experiment starting in sunlight and ending in shade, the PUR/PIR performed best. Overall, PUR/PIR performed best in all experiments.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <div id="tt_transmission_methods">
+        <h2>Testing methods of thermal transmission</h2>
+        <p>
+          In the interim, pumps have been proven to allow thermal transmission. In this section, we assess thermosyphons in the system, assuming that the TES is able to be raised above the receiver.
+        </p>
+        <p>
+          In small scale tests, we assessed if flow is observed in standard thermosyphon methods and if a removal of height difference allowed flow. The tests indicate that the height difference of 0m was unable to allow flow, which can be observed in standard thermosyphons as comparison and control. As such, to use passive methods, height difference is necessary.
+        </p>
+        <p>
+          However, in our TES, the pipe are unable to be laid out exactly as the standard thermosyphon small scale tests. Hence, we test a small scale system using the limitations of our prototype rig (namely, hose fed through top of TES and heated section as coil).
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <div id="tt_system_size">
+        <h1>Optimal size of system</h1>
+        <p>
+          In the final design, a system of rigs will be utilised. To assess the optimal size per system, we consider:
+        </p>
+        <ol>
+          <li>Heat loss across the system, set at threshold of XX% (XX: cite), and</li>
+          <li>System requirements (head and flow rate), comparing to exising pumps</li>
+        </ol>
+        <p>
+          The system of rigs are analysed based on these configurations, which are capable of tesellation, allowing optimal usage of land area.
+        </p>
+        <p>
+          From this, we also determine the best system connectivity plan and pipe size based on:
+        </p>
+        <ol>
+          <li>Heat loss</li>
+          <li>System head, linking to pump availability</li>
+          <li>Cost (pump and pipe) XX</li>
+        </ol>
+        <h2>System layout</h2>
+        <image-component tag="image" source="assets/tt_final/rig-layout.jpg"
+          subtitle="Table XXX: Diagram of system rigs layout for different number of rigs"></image-component>
+        <h3>Heat loss along pipe</h3>
+        <p>
+          We compare 2 sets of layout:
+        </p>
+        <ol>
+          <li>Separate loop, where each rig has its own pump</li>
+          <image-component tag="image" source="assets/tt_final/separate-loop-diagram.jpg"
+          subtitle="Table XXX: Diagram of pipe system for separate loop system"></image-component>
+          <li>Single loop, where a single loop runs through the entire system. (see diagram below)</li>
+          <image-component tag="image" source="assets/tt_final/single-loop-diagram.jpg"
+          subtitle="Table XXX: Diagram of pipe system for single loop system"></image-component>
+        </ol>
+        <p>
+          Based on the length required per system and per layout, we plotted the total efficiency of the pipes to the number of rigs based on the 5% heat loss assumption along 3m pipe. The layout are as follows:
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate_loop_total_efficiency.jpg"
+          subtitle="Table XXX: Efficiency vs number of rigs in separate loop system"></image-component>
+        <image-component tag="image" source="assets/tt_final/single_loop_total_efficiency.jpg"
+          subtitle="Table XXX: Efficiency vs number of rigs in single loop system"></image-component>
+        <p>
+          Based on the area available in the hotel (0.5 hectares) and the approximate layout of the building, we can estimate the number of systems to fit in the hotel and its layout for the different system rig size (see below for example and appendix for all). Using this, the pipe efficiency of the entire system can be estimated using the heat loss approximation above.
+        </p>
+        <image-component tag="image" source="assets/tt_final/system-layout.jpg"
+          subtitle="Table XXX: Layout of system of rigs (size=5)"></image-component>
+        <image-component tag="image" source="assets/tt_final/inter-system-efficiency.jpg"
+          subtitle="Table XXX: Efficiency vs number of rigs between system and hot water tank"></image-component>
+        <p>
+          The threshold of the entire system is set at XX% to meet the lowest loss in commercial heating (cite XX). As such the overall heat loss of the combined system is obtained (see below XX), with the threshold indicating system size of <math><mo>&le;</mo></math>XX to meet the requirements.
+          <!--
+          The threshold of the pipe efficiency is set at 80% (or 0.8). Between the 2 systems, the single loop is capable of having greater number of rigs than the separate loop for the same drop in efficiency, which is related to the total length of piping required. Overall, a single loop system of rigs <math><mo>&le;</mo></math>6 meets the requirements set under heat loss.
+          -->
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system-efficiency.jpg"
+          subtitle="Table XXX: Efficiency vs number of rigs in entire system"></image-component>
+
+        <h3>System requirements</h3>
+        <p>
+          In this section, we assess the flow rate for 5ºC temperature rise, net positive suction head available (NPSHa), and head of the separate and single loop systes. For each of these systems, we consider 3 pipes to replace the rubber hose pipes which is not able to handle high pressures when connected to water mains:
+          <!--From the prior section, single loop system is more efficient than separate in reducing heat loss. As such, this section will focus on single loop system only. -- alter: consider both systems BUT the seprate loop system is maximum system head per number of rigs. This one use with the Grothen to compare
+        </p>
+        <p>
+          In the final system, rubber hose pipes and clamps will not be able to handle high pressures associated with water mains connections. As such, the materials required will be altered:-->
+        </p>
+        <ul>
+          <li>Rubber hose pipes <i>to</i> stainless steel pipes (to compare size)</li>
+          <ol>
+            <li>1/8" nominal bore (smallest size)</li>
+            <li>3/4" nominal bore</li>
+            <li>1" nominal bore</li>
+          </ol>
+          <li>Clamps <i>to</i> associated fittings like couplers, reducers, enlargers</li>
+          <li>Additional fittings like tank connectors, 90º bends</li>
+        </ul>
+        <h4>Flow rate</h4>
+        <p>
+          The flow rate is calculated for each system size based on the power (XXX) from interim for a total of 5ºC rise from inlet to outlet of TES tank. The calculations ignores heat loss along the pipe. The flow rate vs size of rig is as seen below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/single_loop_flow_rate.jpg"
+          subtitle="Table XXX: Flow rate (l/min) vs number of rigs in single loop system"></image-component>
+        
+        <h4>NPSH available</h4>
+        <p>
+          For usage in centrifugal pumps, the Net Positive Suction Head (NPSH) available is calculated for each system using the flow rate above and by assuming the K-values and friction factor (0.02). From these, 2 plots of NPSH available curve are plotted on the head versus flow rate graph for the 1/8 and the 3/4 size pipe.
+        </p>
+        <image-component tag="image" source="assets/tt_final/npsha_1_8.jpg"
+          subtitle="Table XXX: NPSH available for 1/8 pipe"></image-component>
+        <image-component tag="image" source="assets/tt_final/npsha_3_4.jpg"
+        subtitle="Table XXX: NPSH available for 3/4 pipe"></image-component>
+
+        <h4>Head required</h4>
+        <p>
+          The head of each system is calculated using the flow rate above and by assuming the K-values of the fittings and friction factor of the flow (0.02). Two plots are generated of the head required versus the flow rate required, for the 1/8", 3/4" size and 1" pipe.
+        </p>
+        <image-component tag="image" source="assets/tt_final/sys_head_1_8.jpg"
+          subtitle="Table XXX: Head of system vs flow rate for 1/8 pipe"></image-component>
+        <image-component tag="image" source="assets/tt_final/sys_head_3_4.jpg"
+        subtitle="Table XXX: Head of system vs flow rate for 3/4 pipe"></image-component>
+      </div>
+      <h4>Ideal pipe size</h4>
+      <!--
+      <p>
+        COMPARE WITH INSULATION ALSO?
+      </p>
+      -->
+      <h4>Pumps required for single loop system versus separate loop system</h4>
+      <p>
+        Since the system requires high system head and low flow rate, centrifugal pumps are not suitable. However, among the many positive displacement (PD) pumps, with the pressure water pump being the most optimal, the flow rate and maximum head provided still did not meet the requirements, considering that the pump head versus flow rate of PD pumps are nearly vertical, we assume a linear line graph of gradient XX to compare.
+        Cost between both systems? Cost of pump and cost of pipe (and fittings?).
+      </p>
+      <image-component tag="image" source="assets/tt_final/pump_curve.jpg"
+        subtitle="Table XXX: Head vs flow rate for 3/4 pipe with PD pump"></image-component>
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    </div>
+
+
+  </div>
+
+
+   <sl-button size="medium" pill onclick href="thermalenergystoragesubs.html">Next subsection: Thermal Energy Storage</sl-button>
+
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component-thermal-transmission.js"></script>
+</body>
+
+</html>
