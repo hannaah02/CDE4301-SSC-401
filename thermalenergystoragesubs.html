@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -49,127 +48,260 @@
     <sl-button size="medium" pill onclick href="index_interim.html">Back to main page</sl-button>
     <h1>Thermal Energy Storage</h1>
     <sl-divider></sl-divider>
-
-    <div>
+        <div>
       <div id="TES">
         <p>
-          Thermal Energy Storage (TES) of our modular CSP  system includes:
+          Thermal Energy Storage (TES) of our CSP  system includes:
           <ul>
+            <li>Existing methods of TES</li>
             <li>TES structures</li>
             <li>Heat transfer enhancements</li>
             <li>Phase change materials (PCMs)</li>
+            <li>Experiments</li>
+            <li>Future work</li>
+            <li>Appendix</li>
           </ul>
         </p>
+ <h2>1. Literature Review of Existing Thermal Energy Storage Method</h2>
+        <p>
+         Thermal energy storage (TES) is essential in CSP plants, enabling operation beyond periods of direct sunlight. It is widely adopted in commercial systems, with TES integrated into most parabolic trough, linear Fresnel, and power tower installations, many providing over 7 hours of storage [99]. In contrast, most parabolic dish CSP systems have not yet incorporated TES commercially [100].
+          <br /><br />
+        TES systems can be ranked by performance, cost, and safety. Key factors include energy density, efficiency, heat losses, operating-temperature suitability, capital cost, footprint, scalability, and material or environmental safety [99]. Higher volumetric energy density generally allows more heat to be stored in less space with lower losses [100].
+          <br /><br />
+          TES can be categorized into 3 main types: Sensible heat storage, latent heat storage, and thermochemical storage. Figure 39 show that thermochemical storage has highest volumetric energy density followed by latent heat storage and sensible storage [98],[103].
+          <p></p>
+            Click <a href='theories-concepts.html'>here</a> to go to the theories and principles of TES page.
+        </p>
+        <image-component tag="image" source="assets/exm-tes-common-mediums.png"
+          subtitle="Figure 38: Common mediums for TES [98]" ></image-component> <!-- References: -->
+        <image-component tag="image" source="assets/exm-tes-volumetric-energy-density.png"
+          subtitle="Figure 39: Volumetric energy density overview [103]"></image-component> <!-- References: -->
+        <p>
+          <b>1.1. Sensible Heat System</b>
+          <br /><br />
+          Sensible heat storage involves storing energy by changing the temperature of a material as
+          Q<sub>store</sub> = mC<sub>p</sub>ΔT [104].
+          </p>
+          <image-component tag="image" source="assets\TES-Sensible heat image .png"
+          subtitle="Figure 40: Thermal properties of sensible heat materials [105]."></image-component> <!-- References: -->
+          <p>
+          Sensible heat storage materials should provide high energy density, adequate thermal conductivity (>0.3 W m⁻¹ K⁻¹), and high thermal diffusivity for efficient heat transfer. They must also be low-cost, easy to manufacture, and chemically stable, with low corrosiveness and minimal environmental impact (low ODP and GWP) [105].
+        </p>
+      <div id="basic-theories-and-principles">
+        <p>
+          Below is the few best heat sensible materials for our modular small-scale CSP system based on above criterias:
+        
+        </p>
+        <image-component tag="image" source="assets/exm-tes-sensible-comparison.png"
+          subtitle="Table 35: Comparison of different sensible heat materials [105],[107]"></image-component> <!-- References: -->
+        
+          <p>
+            From the criteria above, water is considered one of the most effective materials for heat storage in residential systems because of its high specific heat capacity and availability compared to other sensible heat storage media. The rock or pebble bed is considered another promising sensible heat storage medium, particularly because it has relatively high volume density, can operate at temperatures exceeding 100 °C, higher thermal conductivity, withstands high thermal stress, and avoids problems such as leakage or corrosion that occur with water (see Appendix). However, following our other subsections, our system operating range is first designed to work at operating temperature of less than
+            <math>
+              <mi>100</mi>
+              <mi>&deg;</mi>
+              <mi>C</mi>
+            </math> along with using water as HTF.
+            <br /><br />
+            A common application of water-based TES is the solar water heating tank (Fig. 41) [106]. In direct (open-loop) systems, the solar collector heats the tank water directly, while indirect (closed-loop) systems use a separate heat-transfer fluid (HTF) and a heat exchanger to prevent contamination and enable the use of antifreeze solutions. During operation, natural thermal stratification forms due to density differences: hotter water rises to the top, cooler water settles at the bottom, and a thermocline forms between them [105]. This stratification improves TES efficiency by reducing mixing losses and enabling the delivery of higher-temperature water while maximizing effective storage capacity [106].
+          </p>
+          <image-component tag="image" source="assets\TES-solar water heater.png"
+          subtitle="Figure 41: Diagram of solar water heater [105]"></image-component> <!-- References: -->
+          <p>
+            <b>1.2. Thermochemical energy storage</b>
+            <br /><br />
+            Thermochemical energy storage systems retain heat through reversible chemical reactions or sorption processes. A general reaction can be expressed as:
+          </p>
+          <p style="text-align: center;">
+            <math>
+
+            </math>  Heat + C ⇌ A + B ; Q = ΔH<sub>reaction</sub> [108]
+          </p>
+          <image-component tag="image" source="assets\TES-TCES mechanism.png"
+          subtitle="Figure 42: Diagram of TCES mechanism [108]"></image-component> <!-- References: -->
+          <p>
+            In the charging (endothermic) phase, C splits into B and A, absorbing heat Q. Thermochemical systems store energy in chemical bonds, and this energy remains stable as long as B and A stay separate. When recombined, the reverse (exothermic) reaction reforms A and releases the stored heat [109]. 
+          
+            TCES materials exhibit the highest energy density among thermal storage methods because chemical reactions can store significantly more energy per unit mass or volume [110]. However,
+            TCES system is not suitable for a small-scale CSP application operating at low temperature because its reaction-based mechanisms require complex reactor designs, and precise control of gas-solid or solid-solid equilibria [111]. 
+          </p>
+          <p>
+            <b>1.3. Latent Heat Storage</b>
+          </p>
+          <image-component tag="image" source="assets/exm-tes-pcm-diag.png"
+          subtitle="Figure 43: Diagram of PCM system [112]"></image-component> <!-- References: -->
+          <p>
+            Latent heat storage involves a phase change such as melting, evaporation, or crystallization at a constant temperature. Because of the high enthalpy associated with phase transitions, latent TES stores more energy than sensible heat systems of the same size, though it operates over a narrow temperature range [113]. The stored energy is given by 
+            Q<sub>fusion</sub> = mL.
+            Solar thermal energy can be effectively stored as latent heat through the use of phase change materials (PCMs). These materials provide higher energy storage capacity per unit mass or volume [107].
+            <p>
+
+            PCMs are generally classified into three main categories [107]:
+            <ol>
+              <li><b>Inorganic PCMs</b>, such as hydrated salt solutions composed of natural salts and water</li>
+              <li><b>Bio-based PCMs</b>, derived from natural fatty acids like vegetable oils</li>
+              <li><b>Organic PCMs</b>, typically made from petroleum-based byproducts</li>
+            </ol>
+          See appendix for propertises of each type of PCMs
+          </p>
+
+ <h2>2. Thermal Energy Storage Structures</h2>
+        <p>
+            Thermal Energy Storage (TES) stores heat using suitable thermal materials. Our overall proposed design is a water tank packed with encapsulated PCMs, as shown in Figure 44, which is integrated with other CSP subsystems in Figure 45.
+        </p>
+        </p>
         <image-component tag="image" source="assets\TES-overall design.png"
-        subtitle="Figure X: Overall TES design"></image-component>
+        subtitle="Figure 44: Overall TES design"></image-component>
         <p>
         </p>
         <image-component tag="image" source="assets/TES natural stratrification.png"
-        subtitle="Figure X: Overall TES integration"></image-component>
+        subtitle="Figure 45: Overall TES integration"></image-component>
         <p>
-          The design specifications are summarised below.
+          The key TES design specifications are summarised below. In the proposed system, available installable volume is prioritised over container geometry, allowing greater flexibility in the final configuration. The following sections outline the rationale for these specifications and describe how the TES design will be implemented in the next semester.
         </p>
-          <image-component tag="image" source="assets\TES overall spec.png"
-        subtitle="Table X: TES design specifications"></image-component>
+          <image-component tag="image" source="assets\TES overall.png"
+        subtitle="Table 36: TES design specifications"></image-component>
       </div>
 
       <div id="TES-structure">
-        <h2>Thermal Energy Storage Structures</h2>
-        <h3>Existing TES systems</h3>
+        <h3>2.1. Selection of TES systems</h3>
         <p>
-          
-        </p>
-
-        <p>
-          Among the existing TES systems, the water tank with PCMs shows the best overall suitability due to its strong compatibility with CSP systems, good commercial availability, and moderate cost and complexity. In contrast, solid thermocline, TCES calcium looping, and two-tank molten salt systems are more complex and less practical for small- or medium-scale applications. Overall, the water PCM hybrid system offers a more efficient and feasible solution for compact CSP-based thermal storage.
+         Among the TES existing options, a water tank with encapsulated PCMs offers the best fit due to its compatibility, availability, and low cost to our modular CSP. 
         </p>
         <image-component tag="image" source="assets\TES method scoring.png"
-        subtitle="Table X: TES existing system scoring"></image-component>
+        subtitle="Table 37: TES existing system scoring"></image-component>
         <p>
-          <h3>Existing TES structures</h3>
+          <h3>2.2 Existing TES structures</h3>
         </p>
-        <p>
-          Latent heat storage containers are generally classified as compact or encapsulated.
-Compact systems hold the PCM in a large vessel with an internal heat exchanger, often of the shell-and-tube type, commonly used in water-heating applications.
-Encapsulated systems contain the PCM in many small sealed units over which the heat-transfer fluid flows, offering greater design flexibility and suitability for both air and water heating networks. A void space is included in each unit to allow for PCM expansion during melting.
+        <p> For the chosen TES system, two configurations are possible depending on how the PCM is arranged: compact and encapsulated. Compact systems hold the PCM in a single large vessel with an internal heat exchanger, typical of water-heating applications [115]. Encapsulated systems use many small sealed PCM units immersed in the heat-transfer fluid, offering greater design flexibility and compatibility with both air and water heating networks [115],[117].
         </p>
         <image-component tag="image" source="assets\TES structure pcm2.png"
-        subtitle="Figure X: TES in different PCMs configuration"></image-component>
+        subtitle="Figure 46: TES in different PCMs configuration [118]"></image-component>
         <p>
         </p>
-        Text
+        Table 38 illustrates why the encapsulated PCM system is preferred, as it offers leak-proof containment and enables more efficient charging and discharging
         </p>
-        <image-component tag="image" source="assets\TES PCM structure.png"
-        subtitle="Figure X: TES in different PCMs settings"></image-component>
+        <image-component tag="image" source="assets\TES compact vs encap.png"
+        subtitle="Table 38: Comparison of PCMs system"></image-component>
         <p>
-        Text
-        </p>
-        <image-component tag="image" source="assets\TES PCM structure 3.png"
-        subtitle="Figure X: TES in thermocline PCMs system"></image-component>
-        <p>
+        
         <div id="TES-heat transfer enhancement">
-    <h2>Heat Transfer Enhancement</h2>
-        <h3>Exisiting Methods</h3>
+    <h2>3. Heat Transfer Enhancement</h2>
+        <h3>3.1. Exisiting Methods</h3>
         <p>
-          Text
-        </p>
-        <image-component tag="image" source="assets\TES fibre for heat transfer.png"
-        subtitle="Figure X: Heat transfer enhancement fibre"></image-component>
-        <p>
+          For PCM systems, heat transfer is commonly improved through encapsulation, metal foams, and conductive meshes. Encapsulation increases the surface-area-to-volume ratio, enabling faster melting and solidification while preventing leakage [115]. Metal foams create a highly conductive porous network that spreads heat rapidly through the PCM and reduces supercooling [119]. Conductive meshes offer a practical middle ground, improving thermal diffusivity at lower cost than full metal-foam structures (see Appendix). In addition, metal-encapsulated containers are often selected to further maximise heat transfer, as discussed in the next section.
         </p>
         </p>
 
       </div>
 
       <div id="TES-PCMs">
-        <h2>Phase Change Material (PCMs)</h2>
-        <h3>Exisiting Methods</h3>
-          Text
-        </p>
-        <image-component tag="image" source="assets/TES PCMS material.png"
-        subtitle="Table X: Propertises of different PCMs materials"></image-component>
+        <h2>4. Phase Change Material (PCMs)</h2>
+        <h3>4.1. Material Selection</h3>
+          To match with our CSP system, several phase change materials are selected based through material scoring as shown (see Appendix for selected PCMs propertises). Among them, paraffin is chosen as primary PCMs due to its low-cost, safe, and high latent heat enthalpy.
+       
+          
+          </p>
+        <image-component tag="image" source="assets/TES PCM selection.png"
+        subtitle="Table 39: PCMs materials scoring"></image-component>
         <p>
-          Text
+       <h3>4.2. PCM Container Selection</h3>
+          A variety of PCM containers shown in Figure are commercially available, but these options differ in thermal performance, cost and mechanical strength. Metal capsules (aluminium or stainless steel) offer high thermal conductivity for faster charging and discharging, while plastic-based containers are cheaper but less effective for heat transfer [117].
         </p>
         <image-component tag="image" source="assets/TES PCM container.png"
-        subtitle="Figure X: Encapsulated Containers"></image-component>
+        subtitle="Figure 47: Encapsulated Containers [120]"></image-component>
         <p>
-          Text
+          Among all options, the aluminium bottle is selected based on the criteria shown in Table 40. However, the stainless-steel cylinder remains a promising alternative for next semester designs, offering smaller size, better heat diffusivity, and moderate cost
         </p>
         <image-component tag="image" source="assets/TES PCM container scoring.png"
-        subtitle="Figure X: PCMs containers scoring"></image-component>
+        subtitle="Table 40: PCMs containers scoring"></image-component>
         <p>
-          Text
+         The specifications of the aluminium bottle used to contain the PCM are tabulated below.
+        <div>
+        <img src="assets\TES al1.png" style="width:200px; display:inline-block;border:2px solid black;">
+        <img src="assets\TES ball capsule.png" style="width:200px; display:inline-block;border:2px solid black;">
+        <img src="assets\TES cylinder steel.png" style="width:200px; display:inline-block;border:2px solid black;">
+          <p style="text-align:center; font-style:italic;">
+           Figure 48: Aluminum bottle; Ball Capsules; Steel Cylinder 
+          </p>
+        </div>                        
         </p>
         <image-component tag="image" source="assets/TES Al bottle.png"
-        subtitle="Figure X: Heat transfer enhancement fibre"></image-component>
+        
+        subtitle="Figure 49: Aluminum bottle specification"></image-component>
         <p>                              
         <p>
-          Text
         </p>
 
       </div>
 
-        <h3>Proof of concept:</h3>
-        <h3>Experiment 1:</h3>
-        <p>
-          <b>Purpose:</b> 
-          <br /><br />
-          <b>Methodology:</b>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+        <h2>5. Proof of concept:</h2>
+        <h3>5.1. Experiment 1:</h3>
+        <image-component tag="image" source="assets\TES ex1.png"
+        subtitle="Table 41: Experiment 1 Setup"></image-component>
           <b>Results and Analysis:</b>
+          <p>
+            The temperature decreases very quickly at the start, then the curve bends and the cooling slows down near ≈59 °C. The shoulder around 59 °C corresponds to the solidification of paraffin wax: latent heat is being released, so the temperature falls more slowly than in purely sensible cooling. Being a mixture of many hydrocarbons, it solidifies over a temperature range (~55–60 °C) [121]. 
+          </p>
+             
+          <image-component tag="image" source="assets\TES expt1 graph.png"
+        subtitle="Figure 50: Experiment 1 result: Temperature profile of cooling Paraffin Wax "></image-component>
         </p>
-
-
-      <div id="TES-design-of-experiments">
-        <h2>Future work</h2>
+        <h3>5.2. Experiment 2:</h3>
+        <image-component tag="image" source="assets\TES ex22.png"
+        subtitle="Table 42: Experiment 2 Setup"></image-component>
         <p>
-          Text
         </p>
+          <b>Results and Analysis:</b>
+          <p>
+            Both graphs show that under moderate insulation, adding paraffin wax significantly slows the cooling rate compared to the control box with only water. In the 150 mL paraffin test, the water remains above 50 °C for an additional 0.9 h (5.5 h − 4.6 h), while in the 500 mL test, the retention time at 50 °C increases to 2.8 h. Scaling this trend to our full TES volume suggests a retention time of more than 5 h at 50 °C and up to 9.5 h at 40 °C with the same insulation. This confirm paraffin wax increases thermal storage capacity and slows temperature decay due to its latent heat and heat capacity. Larger PCM volumes provide proportionally longer retention, demonstrating strong potential for sustained heat delivery in the final TES design.
+          <image-component tag="image" source="assets\TES exp2 graph.png"
+        subtitle="Figure 51: Experiment 2 result: left: paraffin wax vol = 150ml; right: paraffin wax vol = 500ml "></image-component>
+        </p>
+        <h3>5.3. Experiment 3:</h3>
+        <image-component tag="image" source="assets\TES ex31.png"
+        subtitle="Table 43: Experiment 3 Setup"></image-component>
+          <b>Results and Analysis:</b>
+          <p>
+            The cooling curves show that the paraffin box maintains higher temperatures for a longer period than the water-only box under identical insulation. At 40 °C, the paraffin box reaches this point at 11.3 h, compared to 8.6 h for the non-paraffin box, giving an additional 2.7 h of useful heat retention. This extended duration is due to the latent heat released during paraffin solidification, which slows the temperature drop after melting. These results indicate that when scaled to a TES unit with similar installable volume, PCM integration will provide longer temperature retention than water alone, improving the system’s ability to deliver sustained low-temperature heat.
+            <p></p>
+          <image-component tag="image" source="assets\TES ex3.png"
+        subtitle="Figure 52: Experiment 3 result: Paraffin box : 500ml paraffin and 500ml water, non-paraffin box: 1L water 
+          "></image-component>
+        </p>
+       
+      <div id="TES-design-of-experiments">
+        <h2>6. Future work</h2>
+        <p>
+        <li> TES system will be fully implemented with integrated insulation </li>
+        <li>PCMs (e.g., sodium thiosulfate, erythritol) will be selected based on required operating temperatures </li>
+        <li>Smaller container sizes will be explored to improve heat transfer and modularity</li>
+
+        </p>
+      </div>
+
+      <div id="TES-appendix">
+        <h2>7. Appendix C</h2>
+        <p>
+          <image-component tag="image" source="assets/exm-tes-sensible-water-rock.png"
+          subtitle="Figure 1C: Comparison of (a) water and aquifer and (b) rock bed as sensible heat storage"></image-component> <!-- References: -->
+        </p>
+        </p>
+          <image-component tag="image" source="assets\TES-TCES calcium looping diagram.png"
+          subtitle="Figure 2C: TCES Calcium Looping system in TES"></image-component> <!-- References: -->
+          <p>
+            </p>
+          <image-component tag="image" source="assets\TES-PCMs material types.png"
+          subtitle="Table 1C: PCMs types and properties"></image-component> <!-- References: -->
+          <p>
+         </p>
+        <image-component tag="image" source="assets/TES PCMS material.png"
+        subtitle="Table 2C: Propertises of different PCMs materials"></image-component>
+        <p>
+        </p>
+        <image-component tag="image" source="assets\TES fibre for heat transfer.png"
+        subtitle="Figure 3C: Heat transfer enhancement fibre may replace"></image-component>
+        <p>
       </div>
     </div>
     <br />

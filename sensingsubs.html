@@ -53,29 +53,75 @@
     <div>
       <div id="sensing">
         <p>
-          Text
+        The sensing subsystem was implemented for testing purposes only. It comprises the following components:
+          <ul>
+            <li>Sensors and Electronics</li>
+            <li>Sensor Setup and Configuration</li>
+            <li>Data Logging and Analysis</li>
+          </ul>
         </p>
       </div>
 
       <div id="sensing-design-specifications-and-concept-generation">
-        <h2>Design Specifications and Concept Generation</h2>
+        <h2>Sensors and Electronics Employed</h2>
         <p>
-          Text
+          The sensing subsystem employs a suite of temperature, humidity, and irradiance measurement devices to capture the thermal and environmental behaviour of the CSP setup. Sensor selection was guided by the required measurement range, accuracy, response time, and suitability for outdoor, high-temperature operation. Together, these instruments provide continuous monitoring of key parameters such as receiver temperature, TES tank conditions, ambient environment, and solar input. A consolidated summary of each sensor’s function and role in the system is presented below. For ambient and outdoor measurements, digital temperature sensors provide sufficient accuracy and stability, whereas the K-type thermometer is better suited for high-temperature indoor testing and applications requiring a small, fast-response probe.
         </p>
-
-      </div>
-
-      <div id="sensing-design-of-experiments">
-        <h2>Design of Experiments</h2>
+           </p>
+        <image-component tag="image" source="assets\Sensing 2.png"
+        subtitle="Figure 53: Summary of sensors used"></image-component>
         <p>
-          Text
+          
+          
+        </div>
+        
+        <div id="sensing-design-of-experiments">
+          <h2>Sensor Setup and Configuration</h2>
+          <p>
+            The DHT11 Temperature sensor and digital temperature sensor is circuited as shown below. An audino code (ESP32_MQTT.ino) is implemented into ESP32 to read sensors outputs, perform validation, and transmit data to the logging platform for real-time monitoring
+          </p>
+       <image-component tag="image" source="assets\Sensor setting1.png"
+       subtitle="Figure 54: DS18B20 setup board"></image-component>
+       <p>
+          </p>
+       <image-component tag="image" source="assets\Sensor setting2.png"
+       subtitle="Figure 55: DHT setup board"></image-component>
+       <p>
+       <image-component tag="image" source="assets\Sensor code1.png"
+       subtitle="Figure 56: ESP32 code setup sample"></image-component>
+       <p>
+        The configured ESP32 is connected to the Raspberry Pi 5 to enable autonomous measurement, data acquisition, and logging throughout the experiment. Additionally, pyranometer can be connected to Pi 5 and stored its data locally.
+          </p>
+       <image-component tag="image" source="assets\Sensor setting4.png"
+       subtitle="Figure 57: Sensors Integrated up "></image-component>
+       <p>
+          The experiment is conducted with all sensors fully integrated into the CSP setup, as shown in Figure X. 
+          </p>
+          </p>
+       <image-component tag="image" source="assets\Sensor setting 3.png"
+       subtitle="Figure 58: Indoor test with all sensors integrated"></image-component>
+       <p>
         </p>
       </div>
 
       <div id="sensing-results-and-analysis">
-        <h2>Results and Analysis</h2>
+        <h2>Data Logging and Analysis</h2>
         <p>
-          Text
+          To enable automatic data logging, several Python scripts were deployed on the Raspberry Pi 5. These include a script for receiving sensor data from the MQTT broker (HiveMQ) and forwarding it to an online MongoDB database, using mqtt_to_mongo.py, as well as scripts for exporting the logged data to Excel for further analysis. However, this cloud-based approach requires a stable Wi-Fi connection and is therefore less suitable for continuous outdoor measurements. To address this limitation, local data storage on the Raspberry Pi 5 was implemented. In this configuration, the ESP32 is flashed with local_data.ino, and the Pi executes Python scripts such as ESP32_localLog.py and Apogee_linux.py to read serial data directly through USB and store it locally for later offline processing.
+      </p>
+       <image-component tag="image" source="assets\Sensor log1.png"
+       subtitle="Figure 59: Raspberry Pi 5 with scripts running"></image-component>
+       <p>
+      </p>
+       <image-component tag="image" source="assets\Sensor message .png"
+       subtitle="Figure 60: Data message from ESP32"></image-component>
+       <p>
+        Data collected is then exported to excel for further analysis and plotting
+        </p>
+       <image-component tag="image" source="assets\Sensor Data log.png"
+       subtitle="Figure 61: Excel export for analysis"></image-component>
+       <p>
+       </p>
         </p>
       </div>
     </div>
