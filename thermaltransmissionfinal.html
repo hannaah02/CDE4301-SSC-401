@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thermal Transmission</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="stylesheet" href="./components/team-member/team-member.css">
+  <script type="module" src="./components/team-member/team-member.js"></script>
+
+  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+
+  <script type="module" src="./components/image/image-component.js"></script>
+
+  <script type="module" src="./components/video/video.js"></script>
+
+  <link rel="stylesheet" href="./components/references/references.css">
+
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+
+  <script src=".components/table-component/table-component-thermal-transmission.js"></script>
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+  <style> 
+     .square { 
+        border: 1px solid black;
+        padding: 20px;
+        display: inline-block;
+    } 
+   </style>
+
+<!-- ~~~~~~~ -->
+  <style>
+    .gridjs-table {
+      table-layout: auto !important;
+      width: 100% !important;
+    }
+
+    .gridjs-th {
+      white-space: nowrap !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+
+    <sl-button size="medium" pill onclick href="index.html">Back to main page</sl-button>
+    <h1>Thermal Transmission</h1>
+    <sl-divider></sl-divider>
+
+     <div>
+      <div id="tt_recapn">
+        <h2>Recap</h2>
+        <!--
+        <p>
+          In the interim, the HTF options was compared and water was selected. The methods of thermal transmission was also considered, with pumps being the most feasible. The pump was also proven to allow thermal transmission. Lastly, heat loss was identified in the pipes and different insulating materials were compared, settling with __ as optimal insulating material.
+        </p>
+        -->
+        <p>
+          Summary of work done in interim is as follows:
+        </p>
+        <ol>
+          <li>Heat Transfer Fluid (HTF) were compared and water was chosen</li>
+          <li>Method of thermal transmission was assessed and pump was proven to be able to transfer heat</li>
+          <li>Heat loss was identified and insulative materials were compared with PUR/PIR being the optimal choice.</li>
+        </ol>
+        <p>
+          In this semester, the installation of pumps and implementation of insulation was required in the next semester.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="tt_insulation">
+        <h2>Insulation</h2>
+        <p>
+          The PUR/PIR insulation selected in the interim is compared with the commonly used airconditioning insulation (material: polypropylene random polymer (PPR)), and translucent insulation material (TIM) style insulation (explained later). The choice of insulations and its implementation are explained below.
+        </p>
+        <p>
+          PUR/PIR insulation is selected in the interim, comparing the cost, thickness required and durability. For this experiment, we use spray PUR/PIR foam with an aluminium duct (7mm diameter) to encapsulate the insulation.
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/purpir.jpg"
+          subtitle="Figure XXX: Image of PUR/PIR insulation"></image-component>
+        <p>
+          Airconditioning (aircon) insulation is a common insulation that can be bought off the shelves, reducing manufacturing time. For this experiment, we use PPR of thickness XXmm and inner diameter XXmm.
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/aircon.jpg"
+          subtitle="Figure XXX: Image of aircon insulation"></image-component>
+        <p>
+          TIM prevents heat loss, while allowing irradiance to heat the absorber (pipe with water). To enable this, the insulation is tranparent, allowing transmission of irradiance. It also has a specific configuration between layers made to prevent convection of air between layers by forming pockets of stagnant air (see figure XX), which loses less heat. Using the concept of TIM, (single layer) translucent corrugated plastic board is used to wrap around the absorber (hose) to improve irradiance transmission and reduce convection of air. This insulation is termed as 'translucent insulation'.
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/ti-structures.jpg"
+          subtitle="Figure XXX: Example of geometry that traps air [XX: https://www.designingbuildings.co.uk/wiki/Transparent_insulation]"></image-component>
+        <image-component tag="image" source="assets/tt_final/images/translucent.jpg"
+          subtitle="Figure XXX: Image of translucent insulation"></image-component>
+          
+        <h3>Insulation Experiment</h3>
+        <p>
+          The details and setup of the insulation experiment are below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/insulation-details.jpg"
+          subtitle="Table XXX: Details of insulation experiment"></image-component>
+        <image-component tag="image" source="assets/tt_final/images/insulation-test-image.jpg"
+          subtitle="Figure XXX: Example of insulation test setup"></image-component>
+        <p>
+          The experiment was repeated to verify results. The results of the experiments are below with extra results in Appendix XX.
+        </p>
+        <h4>In shade</h4>
+        <image-component tag="image" source="assets/tt_final/insulation-shade.jpg"
+          subtitle="Figure XXX: Result of insulation experiment in shade"></image-component>
+        <p>
+          The PUR/PIR and aircon insulation performed best at the start with the same low rate of heat loss, but as temperature drops, the aircon insulation graph has a higher rate of heat loss than PUR/PIR insulation (see below). The translucent insulation did not perform as well as the PUR/PIR and aircon insulation at high temperatures (around 60ºC), but as the temperature fell, the rate of heat loss improved, reaching lower heat loss than both PUR/PIR and aircon insulation (see below).
+        </p>
+        <image-component tag="image" source="assets/tt_final/insulation-shade-60.jpg"
+          subtitle="Figure XXX: Result of insulation experiment in shade at 60ºC"></image-component>
+        <image-component tag="image" source="assets/tt_final/insulation-shade-45.jpg"
+          subtitle="Figure XXX: Result of insulation experiment in shade at 45ºC"></image-component>
+        <image-component tag="image" source="assets/tt_final/insulation-shade-40.jpg"
+          subtitle="Figure XXX: Result of insulation experiment in shade at 40ºC"></image-component>
+        <p>
+          Overall, the CSP system is expected to function at high temperatures above 40ºC up to 60ºC. Thus, the trend at high temperatures is most important, of which PUR/PIR insulation performed best, with aircon insulation being second best.
+        </p>
+
+        <h4>Under sunlight</h4>
+        <image-component tag="image" source="assets/tt_final/insulation-indirect-sun.jpg"
+          subtitle="Figure XXX: Results of experiment in mainly indirect sunlight"></image-component>
+        <image-component tag="image" source="assets/tt_final/insulation-direct-sun.jpg"
+          subtitle="Figure XXX: Results of experiment in mainly direct sunlight"></image-component>
+        <p>
+          When conducting the experiments under sunlight, 2 different results were obtained where PUR/PIR and aircon insulation performed best in each of them. This is determined to be the result of testing under different conditions: direct and indirect sunlight. When conducted under mainly direct sunlight, the aircon insulation performed better with a lower rate of heat loss, whereas in mainly indirect sunlight, the PUR/PIR insulation performed better. This is theorised to be a result of the different absorptivity between the aircon insulation and the PUR/PIR insulation. As the aircon insulation is of black colour, it has a high absorptivity of 	about 0.94 [XX: cite], whereas the aluminium foil covering the PUR/PIR insulation has an absorptivity of 0.15 [XX: http://www.solarmirror.com/fom/fom-serve/cache/43.html]. Between the two insulations, PUR/PIR insulation will thus have lower energy absorbed than the aircon insulation. This is verified as the PUR/PIR has more stable temperature under sunlight compared to the aircon insulation (see below). This accounts for the variations between the aircon and PUR/PIR insulation results conducted under sunlight.
+        </p>
+        <image-component tag="image" source="assets/tt_final/insulation-sun-details.jpg"
+          subtitle="Figure XXX: More fluctuations in water temperature with aircon insulation than with PUR/PIR insulation"></image-component>
+        <!--
+        <p>
+          It is also noted that the water temperature for the test with the translucent insulation also fluctuates, mostly seen in the experiment over extended periods in mainly direct sunlight. This can be due to the absorption of the irradiance which has been transmitted thorugh the translucent layers.
+        </p>
+        -->
+        <!--
+        <image-component tag="image" source="assets/tt_final/insulation-direct-sun-long.jpg"
+          subtitle="Figure XXX: Results of experiment in mainly direct sunlight for 5 hours"></image-component>
+        -->
+        <h4>From sunlight to shade</h4>
+        <image-component tag="image" source="assets/tt_final/insulation-indirect-sun-shade.jpg"
+          subtitle="Figure XXX: Results of experiment from indirect sunlight to shade"></image-component>
+        <p>
+        <image-component tag="image" source="assets/tt_final/insulation-direct-sun-shade.jpg"
+          subtitle="Figure XXX: Results of experiment from direct sunlight to shade"></image-component>
+        <p>
+          In the experiment conducted testing from sunlight to shade, the same trend as the under sunlight was observed, where in direct sunlight, the aircon insulation performed best and in indirect sunlight, the PUR/PIR insulation performed best.
+        </p>
+        <h4>Conclusion</h4>
+        <p>
+          The selection of the optimal insulation depends on the context of the applications. On the rig, the insulation will be largely underneath the reflectors (XX: Insert image), which will block direct sunlight and will be largely shaded. Furthermore, the application is in Tanjong Balai, which receives mainly indirect sunlight. As such, for the section of pipe above the reflectors, the result from the indirect sunlight will matter more. Overall, for both cases, the PUR/PIR insulation is the best option considering the results above.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="tt-integration">
+        <h2>Integration of system</h2>
+        <h3>Initial integration</h3>
+        <p>
+          In the integration, the length of pipe is run thorough the centre X frame and to the TES (with 20 <i>l</i> of water) and pump in the configuration below. The length of the pipe was kept long in the initial integration as movement of the TES is expected. The length will be subsequently shortened.
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/integrated-1-long-pipes.jpg"
+          subtitle="Figure XXX: Layout of integrated system"></image-component>
+        <p>
+          The insulation does not cover the entire length of the pipe. The green pipe is unable to be insulated as the pipe cannot be damaged and the PUR/PIR insulation is not flexible enough to cover insulation for the other areas. This will be addressed later when the TES is able to be fixed, and this section is to see the impact of insulation installation. The image of the system uninsulated and insulated using PUR/PIR insulation is seen below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/integrated-1-insulation.jpg"
+          subtitle="Figure XXX: Insulation in integrated system"></image-component>
+        <p>
+          In this section, we observe the effect of the insulation on the temperature of the water in the TES. Below are the temperature of water in the TES for the uninsulated and insulated system with the long pipe for both cases.
+        </p>
+        <image-component tag="image" source="assets/tt_final/integrated-1-uninsulated-labelled.jpg"
+          subtitle="Figure XXX: Temperature of water in TES and in control for uninsulated pipes (Max: 41.44ºC, 36.19ºC) ADD FOR CONTROL TEMP"></image-component>
+        <image-component tag="image" source="assets/tt_final/integrated-1-insulated-labelled.jpg"
+          subtitle="Figure XXX: Temperature of water in TES and in control for insulated pipes (Max: 43.81ºC, 35.56ºC) ADD FOR CONTROL TEMP"></image-component>
+      </div>
+      <p>
+        Comparing between the maximum temperature of the TES water and the control water, the temperature difference in the uninsulated system is 5.25ºC, and in the insulated system is 8.25ºC, which is a 57.14% rise.
+      </p>
+      <h4>Isolation of the TES from the receiver</h4>
+      <p>
+        However, it is observed that the temperature dropped past sundown until it matches the control water volume. This shows that the system loses all of its stored energy overnight. This is suspected to be due to the pump running constantly, which causes loss of heat thorugh the receiver. To verify and rectify this, we isolate the TES from the receiver system between 5pm and 10am through:
+      </p>
+      <ol>
+        <li>the installation of a relay, which shuts off power to the pump from 5pm to 10am</li>
+        <li>lifting the TES inlet pipe from the surface of the water in the TES</li>
+      </ol>
+      <p>
+        <i>Insert images to explain</i>
+      </p>
+      <p>
+        By doing so, we prevent heat loss by conduction up the hose to the receiver thorugh the isolation of the inlet pipe and the peristaltic pump. The results of this change is below. It is also to note that the volume of water in the TES was reduced to XX<i>l</i> so only the rate of heat loss can be compared.
+      </p>
+      <image-component tag="image" source="assets/tt_final/integrated-2-isolation-compare-prev-labelled.jpg"
+          subtitle="Figure XXX: Temperature of water in TES and in control before isolating systems (Max: 43.81ºC, 35.56ºC)"></image-component>
+      <image-component tag="image" source="assets/tt_final/integrated-2-isolation-labelled.jpg"
+          subtitle="Figure XXX: Temperature of water in TES and in control after isolating systems (Max: 49.81ºC, 38.25ºC)"></image-component>
+      <p>
+        Based on the results, the isolation reduces the rate of heat loss when the sun is down. The results shows that the TES water temperature is consistently above the control water temperature indicating the TES is able to store thermal energy overnight. The effect of this can be seen in the rise in the temperature difference between the maximum temperature of the TES water and control water from 8.25ºC to 11.56ºC.
+      </p>
+      <h4>Shortening of the pipe and improved insulation</h4>
+      <p>
+        Due to the length of the pipe and the gaps between the insulation, there are losses in thermal energy. This can be addressed by fixing the TES underneath the middle X frame, which will have the shortest length of pipe required. For areas the PUR/PIR are unable to cover under the reflectors, aircon insulation will be used as it is the second best performing insulation under shade and is flexible enough to cover the hose.
+      </p>
+      <p><i>insert image of the layout</i></p>
+      <image-component tag="image" source="assets/tt_final/integrated-2-isolation-addpts.jpg"
+          subtitle="Figure XXX: Temperature of water in TES and in control before shortening pipes and fixing insulation (Max: 49.81ºC, 38.25ºC) ADD FOR CONTROL TEMP"></image-component>
+      <image-component tag="image" source="assets/tt_final/integrated-3-shortening-addpts.jpg"
+          subtitle="Figure XXX: Temperature of water in TES and in control after shortening pipes and fixing insulation (Max: 55.19ºC, 36.31ºC) ADD FOR CONTROL TEMP"></image-component>
+      <p>
+        Comparing between the maximum temperature of the TES water and the control water, the temperature difference increased from 11.56ºC to 18.88ºC, which is a 63.32% improvement.
+      </p>
+      <h4>Conclusion and Further Work</h4>
+      <p>
+        The integrated system is able to concentrate thermal energy and store it. However, it does not meet the design requirements of:
+      </p>
+      <ol>
+        <li>60ºC operating temperature</li>
+        <li>XX hours of minimum 40ºC temperature water stored in TES</li>
+      </ol>
+      <p>
+        Furthermore, the system required power input, which in our system is supplied by the power source. The intended goal for the energy input is to minimise power input, and ideally remove any input power requirements. Further tests to assess feasibility of a passive system (no power input required) at a scall-scale has been conducted (see next section). However, in the instance where full implementation of a passive system in a full rig is not possible, the power is to be supplied by solar panels (XX: in Appendix XX for solar panels required for the prototype and then another one under the final system design for that pump).
+      </p>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="tt_transmission_methods">
+        <h2>Testing methods of thermal transmission</h2>
+        <p>
+          In the interim, pumps have been proven to allow thermal transmission. In this section, we assess thermosyphons in the system, to assess the importance of height differences and its potential for usage in the CSP, provided that the TES can be placed outside the 1x1m rig size. (insert rough image of what it will look like. better to explain in image than words)
+        </p>
+        <p>
+          In small scale tests, we assessed if flow is observed in standard thermosyphon methods and if a removal of height difference allowed flow. The tests indicate that the height difference of 0m was unable to allow flow, which can be observed in standard thermosyphons as comparison and control. As such, to use passive methods, height difference is necessary.
+        </p>
+        <p>
+          However, in our TES, the pipe are unable to be laid out exactly as the standard thermosyphon small scale tests. Hence, we test a small scale system using the limitations of our prototype rig (namely, hose fed through top of TES and heated section as coil).
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="tt_system_size">
+        <h1>Optimal size of system</h1>
+        <p>
+          In the final design, the system will be connected to the water mains for steady supply of water and pressure driving the flow from the TES to the shower. Furthermore, a system of rigs will be utilised, where multiple rigs will be connected to 1 TES. The layout minimises distance between each rig to the TES and allows for modular expansion (see below).
+        </p>
+        <image-component tag="image" source="assets/tt_final/rig-layout.jpg"
+          subtitle="Figure XXX: Diagram of system rigs layout for different system size (no of rigs), up to 10 rigs"></image-component>
+        <p>
+          Firstly, as the system will be pressurised due to the connections to the water mains, the existing fixtures and pipes needs to be altered to fit the new conditions.
+        </p>
+        <ol>
+          <li>The rubber hose will be switched to 304 stainless steel pipe, as the commonly used pipe in plumbing (XX: add standards)</li>
+          <li>Clamps needs to be changed to relevant fittings</li>
+          <li>Pressure relief valve added for safety</li>
+          <li>Non-return valve to prevent backflow</li>
+        </ol>
+        <p>
+          These will be further explained with system layouts under cost analysis.
+        </p>
+        <p>
+          Secondly, considering the system of rigs, two connection configurations are considered:
+        </p>
+        <ol>
+          <li>Parallel configuration, where each rig are connected independantly to the TES</li>
+          <image-component tag="image" source="assets/tt_final/separate-loop-diagram.jpg"
+          subtitle="Figure XXX: Diagram of pipe system for parallel system (separate loop)"></image-component>
+          <li>Series configuration, where fluid flows sequentially through multiple rigs</li>
+          <image-component tag="image" source="assets/tt_final/single-loop-diagram.jpg"
+          subtitle="Figure XXX: Diagram of pipe system for series system (single loop)"></image-component>
+        </ol>
+        <p>
+          We also need to consider the system head, which is affected by the pipe size. Hence, we consider these 3 pipe sizes for 304 stainless steel pipes:
+        </p>
+        <ol>
+          <li>1/8" nominal pipe, smallest common size [XX: https://www.nandishwarsteel.com/stainless-steel-pipe-dimensions.html#:~:text=Table_title:%20STAINLESS%20STEEL%20PIPE%20DIMENSION%20AS%20PER,%7C%20Sch%2DXXS:%20%2D%20%7C%20:%20%2D%20%7C]</li>
+          <li>3/4" nominal pipe, commonly used in residential plumbing [XX: https://www.splashplumbing.com/what-size-pipe-for-house-plumbing-a-guide-to-choosing-the-right-dimensions/#:~:text=What%20are%20the%20standard%20pipe,fixture%20connected%20to%20the%20system]</li>
+          <li>1" nominal pipe, commonly used in residential plumbing [XX: https://www.splashplumbing.com/what-size-pipe-for-house-plumbing-a-guide-to-choosing-the-right-dimensions/#:~:text=What%20are%20the%20standard%20pipe,fixture%20connected%20to%20the%20system]</li>
+        </ol>
+        <p>
+          Finally, we need to determine the optimal size in the system of rigs, termed as system size.
+        </p>
+
+        <h2>Pipe size</h2>
+        <p>
+          To determine the optimal pipe size, we compare the system head required for the different pipe size. We do this for both parallel and series configuration with the different system size.
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-comparison.jpg"
+          subtitle="Figure XXX: Comparing the system head per rig for parallel system"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-34.jpg"
+        subtitle="Figure XXX: Comparing the system head per rig for parallel system (3/4 inch pipe)"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-1.jpg"
+        subtitle="Figure XXX: Comparing the system head per rig for parallel system (1 inch pipe)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-comparison-rigs.jpg"
+          subtitle="Figure XXX: Comparing the system head per rig for series system"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-34-rigs.jpg"
+        subtitle="Figure XXX: Comparing the system head per rig for series system (3/4 inch pipe)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-1-rigs.jpg"
+        subtitle="Figure XXX: Comparing the system head per rig for series system (1 inch pipe)"></image-component>
+        <p>
+          Between the  1/8" and 3/4", there is a large difference in system head in both parallel and series configuration. The extremely large head for 1/8" pipe, especially in the series configuration, with head 1167.41m for 10 rigs, makes it unsuitable for the system. Between 3/4" and 1", 1" have lower system head overall. However, with increased pipe size, the heat loss increases. Considering XX insulation for 304 stainless steel pipe with commonly used sizing for 3/4" and 1", to reduce limit heat loss to 5% (of XX), the thickness of insulation needs to be XX to XX. The increase in thickness needs to be minimal, with maximum diameter of 7cm based on experience with our prototype rig. Hence, 3/4" pipe is selected.
+        </p>
+        <h2>Parallel vs series configuration</h2>
+        <p>
+          To decide the optimal configuration, the thermal efficiency of the pipes within the system of rigs will be considered. The length of the pipe is determined from:
+        </p>
+        <ol>
+          <li>Layout of rigs (see figure XX and XX above)</li>
+          <li>Pipe length estimation (to run loop in MATLAB)</li>
+          <li>Assumptions, overestimations</li>
+        </ol>
+        <p>
+          Fibreglass is used as the insulation, with it being an off the shelf insulation used for pipes. [XX: cite] [XX: https://cxinsulation.en.made-in-china.com/product/JAlRuDTHTzYv/China-Customizable-Asj-Faced-Fiberglass-Pipe-Insulation-Available-in-Various-Sizes-and-Thicknesses.html?acc=5494762105-lxy&cpn=23486536000-&tgt=&net=x&dev=c-&gid=Cj0KCQjw7IjOBhDyARIsAFzrWQyfvDQ9gfb66VOfEdsw2LJOLgF0NMa0NjKYE-DSyKGprUZEF4HM1OEaAm3tEALw_wcB&kwd=&mtp=&loc=9062546-&gad_source=1&gad_campaignid=23481894866&gclid=Cj0KCQjw7IjOBhDyARIsAFzrWQyfvDQ9gfb66VOfEdsw2LJOLgF0NMa0NjKYE-DSyKGprUZEF4HM1OEaAm3tEALw_wcB] The insulation thickness is chosen to be ___ as we consider off the shelf options and limit the overall diameter to 70mm. Using 40ºC temperature difference between water and atmosphere, assuming maxiumum temperature difference possible in the system, the rate of heat loss per meter is about 10W/m. [XX: https://www.engineeringtoolbox.com/heat-loss-insulated-pipes-d_1151.html]
+        </p>
+        <p>
+          Based on these, we plot the thermal efficiency for each system size (no of rigs) for both parallel and series system configuration.
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-internal-eff.jpg"
+          subtitle="Figure XXX: Comparing the thermal efficiency of pipes within the system of rigs by system size in parallel system"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-internal-eff.jpg"
+          subtitle="Figure XXX: Comparing the thermal efficiency of pipes within the system of rigs by system size in series system"></image-component>
+        <p>
+          Based on the results, the parallel configuration is less efficient with more rigs and the series configuration is more efficient with more rigs. This is due to the average length of pipe per rig (total length of pipe required/no of rigs), as the series configuration allows the average length of pipe per rig to decrease with increasing rigs and the parallel increases with increasing rigs. Hence, series configuration is the optimal choice with less heat loss.
+        </p>
+        <h2>Optimal system size</h2>
+        <p>
+          Based on the area available in the hotel (0.5 hectares) we can get the approximate layout of the building (see below). For this analysis, we will look at one side of the hotel (same on both sides).
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
+          subtitle="Figure XXX: Dimensions of available space and sample connections between TES and hot water storage tank"></image-component>
+        <p>
+          Based on the dimensions, we can estimate the number of systems to fit on one rooftop and its layout for the different system rig size (see below for example and Appendix XX for all).
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-5.jpg"
+          subtitle="Figure XXX: Sample of rig layout (system size = 5, or no of rigs = 5)"></image-component>
+        <p>
+           Using this, the thermal efficiency of the entire piping system on one rooftop can be obtained.
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-total-eff.jpg"
+          subtitle="Figure XXX: Comparing the thermal efficiency of entire system by system size in series system"></image-component>
+        <p>
+          The thermal efficiency of the entire system follows the trend of the thermal efficiency within the system of rigs. To find the optimal size, the better option would be to consider the total useful energy attained as not all system size allows the full usage of the rooftop area (see system size 7 versus 4). Thus, we calculate the useful energy per system size for the entire system under series configuration on one rooftop.
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-useful-energy.jpg"
+          subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system"></image-component>
+        <p>
+          We observe that the total useful energy obtained peaked at system size of 4 and 6. For further analysis, we will conduct cost analysis of these 2 sizes to finalise the optimal size.
+        </p>
+        <h2>Cost analysis</h2>
+        <p>
+          To explain the fittings and the 
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/system-diagram-4.jpg"
+          subtitle="Figure XXX: System diagram for system size = 4"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/system-diagram-6.jpg"
+          subtitle="Figure XXX: System diagram for system size = 6"></image-component>
+        <p>
+          Using cost of purchasing in bulk, the overall cost of the system for the thermal transmission subsystem is calculated for system of rigs size of 4 and 6 as below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/cost-analysis-tt.jpg"
+          subtitle="Table XXX: Cost analysis of thermal transmission subsystem only"></image-component>
+        <p>
+          The cost of having system size of 6 is much lower than that of 4 by XX% considering thermal transmission subsystem only. When considering the light and thermal energy storage subsystems, the cost difference will be larger as less rigs and less TES is required for system size of 6. For a relatively small drop in useful energy of XX, the drop in cost is more significant, making the system size of 6 more reasonable for the application.
+        </p>
+    
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="tt-appendix-insulation">
+        <h1>Appendix XX: Insulation experiment</h1>
+          <h4>Minimum insulation for PUR/PIR and translucent insulation</h4>
+          <p>
+            For PUR/PIR: (from interim)
+          </p>
+          <p>
+            Thickness required: XXmm
+          </p>
+          <p>
+            For translucent insulation: Consider each layer to be plastic layer of XXmm and stagnant air of XXmm, so each layer is XXmm.
+          </p>
+          <p>
+            Number of layers: XX
+          </p>
+          <image-component tag="image" source="assets/tt_final/images/translucent-inner.jpg"
+          subtitle="Figure XXX: Inner cross-section of translucent insulation"></image-component>
+          <h4>In shade</h4>
+          <h4>In sunlight</h4>
+          <h4>From sunlight to shade</h4>
+
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="appendix-system-design">
+        <h1>Appendix XX: System design detailed process with all results</h1>
+        <h4>Pipe size</h4>
+        <p>
+          The pipe sizes to be compared are based on commonly used stainless steel pipe sizes in residential plumbing as well as the smallest size (which is the closest to current hose size on our prototype) commonly available. Prior to the calculation of the head, the flow rate needs to be obtained. For the parallel configuration, the flow rate is constant for all the different system sizes (no of rigs) at 0.409 l/min. However, for the series system, the flow rate differs. The flow rate for the series configuration is calculated using 5ºC difference between the inlet and outlet of the TES, assuming no heat loss thorugh the pipe (ie. only considering heat gain from the receivers). The result is below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-fr.jpg"
+          subtitle="Figure XXX: Flow rate versus system size (no of rigs) for series configuration (single loop)"></image-component>
+        <p>
+          Using the flow rate, the system head was calculated considering the different fittings required. The different fittings required and number of fitings are as follows, using the sketch below as a guide for number of fittings:
+        </p>
+        <ul>
+          <li>XX</li>
+        </ul>
+        <p>
+          Based on that, the system head was calculated for each pipe size, graphs located below as well as the combined results.
+        </p>
+        <p>
+          The Net Positive Suction Head available (NPSHa) was also calculated and to be used if the system is able to use centrifugal pumps. The length of pipe on the suction side of the pump was assumed to be 0.5m in length as an overestimation and can be altered from the main MATLAB code under <i>L_npsh</i>.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+   <sl-button size="medium" pill onclick href="thermalenergystoragesubs.html">Next subsection: Thermal Energy Storage</sl-button>
+
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component-thermal-transmission.js"></script>
+</body>
+
+</html>
