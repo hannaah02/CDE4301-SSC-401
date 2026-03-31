@@ -47,16 +47,18 @@
   <div class="content">
 
     <sl-button size="medium" pill onclick href="index_interim.html">Back to main page</sl-button>
-    <h1>Light</h1>
+    <h1>Light Subsystem</h1>
     <p>The goal of the light subsystem is to capture as much thermal energy as possible. This is typically achieved by using reflectors to direct sunlight onto the receiver. The captured thermal energy is then transferred to the thermal energy storage for later use via thermal transmission, which will be discussed in later sections.</p>
      <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/applicationrequirements.png"
               subtitle="Table XX: Application Requirements "
-              style="width: 70%; height: auto; display: block; margin: 0 auto 30px auto;"
+              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
+
+    <sl-divider></sl-divider>
     
     <p>The following design specifications have been developed for the light subsystem to meet the requirements of the project application in Tanjung Balai.</p>
     <div style="display: flex; justify-content: center;">
@@ -64,9 +66,23 @@
               tag="image"
               source="assets/designspecs.png"
               subtitle="Table XX: Design Specifications "
-              style="width: 70%; height: auto; display: block; margin: 0 auto 30px auto;"
+              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
             ></image-component>
           </div>
+    <p> The sunlight conditions in Indonesia are assumed to be 1,000 W/m² and AM1.5 based on standard test conditions []. The average Direct Normal Irradiance is assumed to be 385 W/m², based on data from Solcast [], and the sunlight hours are assumed to be 5.5 hrs [].</p>
+    <p> Based on the weather data assumed above, the required reflector area needed if 100% of the captured rays are reflected and absorbed by the water (thermal transmission fluid) in the receiver would be 0.329 m². However, accounting for losses from the reflectors and receiver, the reflector area can be scaled up to a minimum of 1 m², as the test rig area is 1 m².</p>
+    <p> The reflectivity of commercially available cost-effective mirrors ranges between 85%–95%. The weight is not a critical factor because the installation will be fixed in place after setup. Additionally, the rig will be transported in parts, allowing for easy assembly, so weight considerations are minimal.</p>
+    <p> The absorptivity of the material used in the receiver is crucial, as it determines how effectively the receiver can absorb sunlight reflected by the mirrors. Therefore, an absorptivity of 90% is chosen for the receiver material.</p>
+    <p> A highly absorptive material is also highly emissive. In the case of the receiver, we aim to maximize absorption while minimizing emissivity. Therefore, the emissivity will be controlled within 1.5%–70%, as the emissivity of black paint is 90% [], and surfaces with measured emissivity values for temperatures in the 100 – 400 °C range fall within this range.</p>
+    <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/reflectorareacalc.png"
+              subtitle="Table XX: Reflector Area Calculation "
+              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+
     
     <sl-divider></sl-divider>
 
