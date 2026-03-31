@@ -7,14 +7,32 @@ power_per_rig = 142.3;
 L = 1;
 To = 25;
 Ti = 60;
-r1 = (26.7 * 10-3)/2;
-r2 = r1 + (25 * 10-3);
-k_pipe = 0.037;
+r1 = (20 * 10^-3)/2;
+r2 = (26.7 * 10-3)/2;
+r3 = r2 + (25 * 10-3);
+k_pipe = 14.4;
+k_insulation = 0.036; % 0.037;
 hc = 50;
 
+k_water = 0.65091;
+Nu_water = 4.36; 
+h_water = (Nu_water * k_water)/(r1 * 2);
+hi = h_water;
+
 heat_loss_per_meter = (2 * pi * L * (Ti - To))/( ...
+    (1/(r1 * hi)) + ...
     (log(r2/r1)/k_pipe) + ...
-    (1/(r2 * hc))) % ignoring convection of water and the conduction thorugh the pipe
+    (log(r3/r2)/k_insulation) + ...
+    (1/(r3 * hc)))
+
+% heat_loss_uninsulated = (2 * pi * L * (Ti - To))/( ...
+%     (1/(r1 * hi)) + ...
+%     (log(r2/r1)/k_pipe) + ...
+%     (1/(r2 * hc)))
+
+% heat_loss_per_meter = (2 * pi * L * (Ti - To))/( ...
+%     (log(r2/r1)/k_pipe) + ...
+%     (1/(r2 * hc))) % ignoring convection of water and the conduction thorugh the pipe
 
 % heat_loss_per_meter = 10; %(142.3 * 0.05)/3; https://www.engineeringtoolbox.com/heat-loss-insulated-pipes-d_1151.html
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -151,39 +169,9 @@ total_length_per_system = [total_length_per_system total_length];
 figure;
 plot(no_rigs, efficiency);
 grid on;
-xlabel('Number of rigs');
+xlabel('System size');
 ylabel('Pipe Efficiency (over 1)');
-title('Thermal efficiency of pipe in system of rigs (Separate loop, parallel system)');
-% 
-% % fall in efficiency (incremental)
-% eff_drop_inc = zeros(1, length(efficiency)-1);
-% 
-% for i = 2:length(efficiency)
-%     eff_drop_inc(i-1) = ...
-%         (efficiency(i-1) - efficiency(i)) / efficiency(i-1) * 100;
-% end
-% 
-% figure;
-% plot(no_rigs(2:end), eff_drop_inc);
-% grid on;
-% xlabel('Number of rigs');
-% ylabel('Incremental efficiency drop (%)');
-% title('Marginal Pipe Efficiency Loss per Additional Rig (Separate loop)');
-% 
-% % cumulative fall
-% eff_drop_cum = ...
-%     (efficiency(1) - efficiency) / efficiency(1) * 100;
-% 
-% figure;
-% plot(no_rigs, eff_drop_cum);
-% grid on;
-% xlabel('Number of rigs');
-% ylabel('Cumulative efficiency drop (%)');
-% title('Cumulative Pipe Efficiency Loss vs Single Rig (Separate loop)');
-
-% summation of efficiencies
-% eta_tank = (mx*eta_x + my*eta_y)/(mx + my);
-% eta_final = eta_A * eta_tank;
+title('Thermal efficiency of pipe in system of rigs vs System size (Separate loop, parallel system)');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -222,16 +210,16 @@ end
 figure;
 plot(no_rigs, NPSHa_list_18);
 grid on;
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('NPSH available in system/m');
-title('NPSH available vs no of rigs (1/8 inch pipe) (Separate loop, parallel system)');
+title('NPSH available vs System size (1/8 inch pipe) (Separate loop, parallel system)');
 
 figure;
 plot(no_rigs, sys_head_list_18);
 grid on;
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('Head in system/m');
-title('Head in system vs no of rigs (1/8 inch pipe) (Separate loop, parallel system)');
+title('Head in system vs System size (1/8 inch pipe) (Separate loop, parallel system)');
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -256,16 +244,16 @@ end
 figure;
 plot(no_rigs, NPSHa_list_34);
 grid on;
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('NPSH available in system/m');
-title('NPSH available vs no of rigs (3/4 inch pipe) (Separate loop, parallel system)');
+title('NPSH available vs System size (3/4 inch pipe) (Separate loop, parallel system)');
 
 figure;
 plot(no_rigs, sys_head_list_34);
 grid on;
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('Head in system/m');
-title('Head in system vs no of rigs (3/4 inch pipe) (Separate loop, parallel system)')
+title('Head in system vs System size (3/4 inch pipe) (Separate loop, parallel system)')
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -290,16 +278,21 @@ end
 figure;
 plot(no_rigs, NPSHa_list_1);
 grid on;
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('NPSH available in system/m');
-title('NPSH available vs no of rigs (1 inch pipe) (Separate loop, parallel system)');
+title('NPSH available vs System size (1 inch pipe) (Separate loop, parallel system)');
 
 figure;
 plot(no_rigs, sys_head_list_1);
 grid on;
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('Head in system/m');
-title('Head in system vs no of rigs (1 inch pipe) (Separate loop, parallel system)')
+title('Head in system vs System size (1 inch pipe) (Separate loop, parallel system)')
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 figure;
 plot(no_rigs, NPSHa_list_18, 'k'); hold on;
@@ -309,9 +302,9 @@ grid on;
 legend('Pipe size 1/8 inch', ...
     'Pipe size 3/4 inch', ...
        'Pipe size 1 inch');
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('NPSH available in system/m');
-title('NPSH available vs no of rigs (comparison) (Separate loop, parallel system)');
+title('NPSH available vs System size (comparison) (Separate loop, parallel system)');
 
 figure;
 plot(no_rigs, sys_head_list_18, 'k'); hold on;
@@ -321,24 +314,31 @@ grid on;
 legend('Pipe size 1/8 inch', ...
     'Pipe size 3/4 inch', ...
        'Pipe size 1 inch');
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('Head in system/m');
-title('Head in system vs no of rigs (comparison) (Separate loop, parallel system)')
+title('Head in system vs System size (comparison) (Separate loop, parallel system)')
 
 % Not much difference between 3/4 to 1 pipe
 
-[total_eff, total_energy_collected] = overall_sys_eff(heat_loss_per_meter, total_length_per_system, power_per_rig);
+[total_eff, total_energy_collected, total_energy_loss] = overall_sys_eff(heat_loss_per_meter, total_length_per_system, power_per_rig);
 
 figure;
 plot(no_rigs, total_eff);
 grid on;
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('Efficiency of entire system');
-title('Efficiency of entire system vs no of rigs (Separate loop, parallel system)')
+title('Efficiency of entire system vs System size (Separate loop, parallel system)')
 
 figure;
 plot(no_rigs, total_energy_collected);
 grid on;
-xlabel('No of rigs');
+xlabel('System size');
 ylabel('Total energy provided by system (W)');
-title('Useful energy generated by system vs no of rigs (Separate loop, parallel system)')
+title('Useful energy generated by system vs System size (Separate loop, parallel system)')
+
+figure;
+plot(no_rigs, (total_energy_loss./total_energy_collected).*100);
+grid on;
+xlabel('System size');
+ylabel('Percentage loss of energy of total energy dellivered');
+title('Pipe loss as percentage of total energy delivered vs System size (Separate loop, parallel system)')

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thermal Transmission</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="stylesheet" href="./components/team-member/team-member.css">
+  <script type="module" src="./components/team-member/team-member.js"></script>
+
+  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+
+  <script type="module" src="./components/image/image-component.js"></script>
+
+  <script type="module" src="./components/video/video.js"></script>
+
+  <link rel="stylesheet" href="./components/references/references.css">
+
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+
+  <script src=".components/table-component/table-component-thermal-transmission.js"></script>
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+  <style> 
+     .square { 
+        border: 1px solid black;
+        padding: 20px;
+        display: inline-block;
+    } 
+   </style>
+
+<!-- ~~~~~~~ -->
+  <style>
+    .gridjs-table {
+      table-layout: auto !important;
+      width: 100% !important;
+    }
+
+    .gridjs-th {
+      white-space: nowrap !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+
+    <sl-button size="medium" pill onclick href="index.html">Back to main page</sl-button>
+    <h1>Final system design</h1>
+    <sl-divider></sl-divider>
+
+     <div>
+      <div id="final_intro">
+        <h2>Introduction</h2>
+        <p>
+            The hotel occupies an area of 0.5 hectares. Based on visual estimation (see images of hotel below) and using reference dimensions of standard hotel width (maximum 14m) [XX: https://www.steelconstruction.info/Residential_and_mixed-use_buildings#:~:text=%5Btop%5DHotels&text=For%20hotel%20projects%2C%20it%20is,to%20other%20mixed-use%20buildings], the approximate layout and usable installation areas (greyed out) are illustrated below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/dimensions-only.jpg"
+          subtitle="Figure XXX: Dimensions of hotel"></image-component>
+        <p>
+          The CSP system to be integrated will consist of modular ‘system of rigs’ where each system consists of multiple rigs (receiver and reflectors only, each rig is 1x1m) connected to a TES tank. (see figure XX) This aims to reduce overall cost per rig.
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs.jpg"
+          subtitle="Figure XXX: System layout for system of rigs"></image-component>
+        <p>
+          Water will be supplied to the TES tank via the water mains, which also provides pressure to drive flow to the hot water storage tank and showers. The hot water storage tank is located in the hotel where it reduces the length of cold water when the shower is switched on, serves as a storage location for extra hot water, to be used when the day has less sun, and provides additional heating when required to maintain water temperatures.
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
+          subtitle="Figure XXX: Overall system layout"></image-component>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="tt_system_size">
+        <h2>Thermal transmission</h2>
+        <p>
+          <!--
+          In the final design, the system will be connected to the water mains for steady supply of water and pressure driving the flow from the TES to the shower. Furthermore, a system of rigs will be utilised, where multiple rigs will be connected to 1 TES. -->
+          For each system size (number of rigs in a system), the layout below is chosen to minimise distance between each rig to the TES and allows for modular expansion.
+        </p>
+        <image-component tag="image" source="assets/tt_final/rig-layout.jpg"
+          subtitle="Figure XXX: Diagram of system rigs layout for different system size (no of rigs), up to 10 rigs"></image-component>
+        <p>
+          As the system will be pressurised due to the connections to the water mains, the existing fixtures and pipes needs to be altered to fit the new conditions.
+        </p>
+        <ol>
+          <li>The rubber hose will be switched to 304 stainless steel pipe, as it is used in water mains connections, is durable outdoors, and can withstand high temperatures [4][5]</li>
+          <li>Clamps needs to be changed to relevant fittings</li>
+          <li>Pressure relief valve added for safety</li>
+          <li>Non-return valve to prevent backflow</li>
+        </ol>
+        <p>
+          These will be further explained with system layouts under cost analysis.
+        </p>
+        <p>
+          Furthermore, considering the system of rigs, two connection configurations are considered:
+        </p>
+        <ol>
+          <li>Parallel configuration, where each rig are connected independantly to the TES</li>
+          <image-component tag="image" source="assets/tt_final/separate-loop-diagram.jpg"
+          subtitle="Figure XXX: Diagram of pipe system for parallel system (separate loop)"></image-component>
+          <li>Series configuration, where fluid flows sequentially through multiple rigs</li>
+          <image-component tag="image" source="assets/tt_final/single-loop-diagram.jpg"
+          subtitle="Figure XXX: Diagram of pipe system for series system (single loop)"></image-component>
+        </ol>
+        <p>
+          We also need to consider the system head, which is affected by the pipe size. Hence, these 3 pipe sizes are considered for the pipes:
+        </p>
+        <ol>
+          <li>1/8" nominal pipe, smallest common size [6]</li>
+          <li>3/4" nominal pipe, commonly used in residential plumbing [7]</li>
+          <li>1" nominal pipe, commonly used in residential plumbing [7]</li>
+        </ol>
+        <p>
+          Finally, the optimal system size for the system of rigs has to be determined.
+        </p>
+
+        <h3>Pipe size</h3>
+        <p>
+          To determine the optimal pipe size, the system head required is compared for the different pipe size. The larger the system head, the more resistance exists in the system that the pump has to overcome, leading to a more powerful pump required. Thus, system head for each system size is used to compare the pipe sizes, considering both parallel and series configuration.
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-comparison.jpg"
+          subtitle="Figure XXX: Comparing the system head per rig for parallel system"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-comparison.jpg"
+          subtitle="Figure XXX: Comparing the system head per rig for series system"></image-component>
+        <p>
+          Between the  1/8" and 3/4", there is a large difference in system head in both parallel and series configuration. The extremely large head for 1/8" pipe, especially in the series configuration, with head 1167.41m for 10 rigs, makes it unsuitable for the system. Between 3/4" and 1", 1" have lower system head overall but the difference is minimal (see below). However, with increased pipe size, the heat loss increases. Considering aerogel insulation for 304 stainless steel pipe with commonly used sizing for 3/4" and 1", to reduce limit heat loss to 7.1150W along 3m (5% loss of 142.3W), the thickness of insulation needs to change from XX mm (3/4") to XX mm (1"). The total thickness needs to be minimal, with maximum diameter of 7cm based on experience with our prototype rig. Hence, 3/4" pipe is selected.
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-34.jpg"
+        subtitle="Figure XXX: Comparing the system head per rig for parallel system (3/4 inch pipe)"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-1.jpg"
+        subtitle="Figure XXX: Comparing the system head per rig for parallel system (1 inch pipe)"></image-component>
+        
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-34.jpg"
+        subtitle="Figure XXX: Comparing the system head per rig for series system (3/4 inch pipe)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-1.jpg"
+        subtitle="Figure XXX: Comparing the system head per rig for series system (1 inch pipe)"></image-component>
+
+        <h3>Parallel vs series configuration</h3>
+        <p>
+          To decide the optimal configuration, the thermal efficiency of the pipes within the system of rigs will be considered. The length of the pipe is determined from:
+        </p>
+        <ol>
+          <li>Layout of rigs (see figure XX and XX above)</li>
+          <li>Pipe length estimation (to run loop in MATLAB, see Appendix XX)</li>
+          <!---<li>Assumptions, overestimations</li>-->
+        </ol>
+        <p>
+          Aircon insulation is used as the insulation, based on tests conducted and implementation (see sections above). Using the thickness of 25mm (thickest option commonly available [8]) and using highest possible temperature difference expected of 35ºC, is expected to lose heat at a rate of 7.1722W/m. This meets the design specification for heat loss per meter of <math><mn>&le;</mn></math>7.95W/m.
+        </p>
+        <p>
+          Based on these, the thermal efficiency for each system size (no of rigs) for both parallel and series system configuration is plotted.
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-internal-eff.jpg"
+          subtitle="Figure XXX: Comparing the thermal efficiency of pipes within the system of rigs by system size in parallel system"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-internal-eff.jpg"
+          subtitle="Figure XXX: Comparing the thermal efficiency of pipes within the system of rigs by system size in series system"></image-component>
+        <p>
+          Based on the results, the parallel configuration is less efficient with increased system size and the series configuration shows the opposite trend. <!--is more efficient with increased system size.--> This is caused by the reduction in the average length of pipe per rig with increasing system size in the series configuration, allowing the average heat loss per rig to fall, in comparison to the parallel configuration where the average length of pipe per rig increases with increasing system size. Hence, series configuration is the optimal choice with less heat loss.
+        </p>
+
+        <h3>Optimal system size</h3>
+        <p>
+          The optimal system size will be calculated based on the maximum system of rigs able to fit on the available space.
+        </p>
+        <p>
+          Based on the area available in the hotel (0.5 hectares) we can get the approximate layout of the building (see below). For this analysis, we will look at one side of the hotel (same on both sides).
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
+          subtitle="Figure XXX: Dimensions of available space and sample connections between TES and hot water storage tank"></image-component>       
+        <p>
+          Based on the dimensions, we can estimate the maximum number of system of rigs that fits on one rooftop and its layout for the different system size (see below for example and Appendix XX for all).
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-5.jpg"
+          subtitle="Figure XXX: Sample of rig layout (system size = 5)"></image-component>
+        
+        <p>
+          Based on the layout, the thermal efficiency of the system can be obtained, assuming maximum number of system of rigs are used for each system size. The thermal efficiency versus system size is below.
+        </p> 
+        <image-component tag="image" source="assets/tt_final/single-loop/single-overall-eff.jpg"
+          subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system"></image-component>
+        <p>
+          The thermal efficiency generally follows the trend observed in the earlier results for within the system of rigs, where the efficiency improves with increasing system size. To meet the design specifications of pipe losses <math><mn>&le;</mn></math>17.5%, the system size should be over 3.
+        </p>
+        <p>
+          To accurately assess the potential of the system, the total useful energy for these configurations is considered to better assess the performance of the system. Not all system size allows the full usage of the rooftop area (see system size 7 versus 4 below) and the useful energy comparison is a more accurate comparison as to the potential of the system.
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-7-4.jpg"
+          subtitle="Figure XXX: System of rigs size 7 versus 4"></image-component>
+
+        <image-component tag="image" source="assets/tt_final/single-loop/single-energy.jpg"
+          subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system"></image-component>
+        <p>
+          The total useful energy obtained is oberved to peak at system size of 4 and 6, with system size 6 having 737.7W less than system size of 4, being a 0.9105% reduction in useful energy. These system sizes are ideal since they have a neater square/rectangular shape overall, making it more efficient for modularity and being able to make full use of spaces which tend to be rectangular. It is also small enough to ensure that more systems will be able to fit, being less constrained by larger widths. Between these 2 configurations, cost analysis will be used to finalise the optimal size.
+        </p>
+        <h3>Cost analysis</h3>
+        <p>
+          The equipment required for the entire setup (both rooftops) follows the diagram below and the rig layout used earlier (see figure XX).
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs-4.jpg"
+          subtitle="Figure XXX: System diagram for system size = 4"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs.jpg"
+          subtitle="Figure XXX: System diagram for system size = 6"></image-component>
+        <p>
+          Using cost of purchasing in bulk, the overall cost of the system for the thermal transmission subsystem is calculated for system of rigs size of 4 and 6 as below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/cost-analysis-tt.jpg"
+          subtitle="Table XXX: Cost analysis of thermal transmission subsystem only"></image-component>
+        <p>
+          Per system, the system size of 6 is cheaper by SGD$4.67, but when considering a per rig cost (instead of per system of rigs), the system size of 4 costs $68.98 while system size of 6 costs $46.77 (32.20% reduction in cost). This reduction is the result of having the pump cost (most expensive item in the system for thermal transmission) distributed over more rigs.
+        </p>
+        <p>
+          Looking at the overall system, system size of 6 is cheaper by SGD$29,971.51 (33.39% reduction in cost) for installation on both roofs, which is largely due to the lower number of system of rigs required for system size 6 than system size 4 and overall the lower cost per rig of system size of 6.
+        </p>
+        <p>
+          Hence, considering the costs, system size of 6 is the optimal choice as although it provides less useful energy (by 0.9105%), it is minimal compared to the cost reductions (of 33.39%).
+        </p>
+        <p>
+          In this final system size of 6, the total power required per rig is 15W assuming maximum power of 90W is used [13: pump], meeting the design requirements of 136.96W per rig
+        </p>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="appendix-system-design">
+        <h1>Appendix XX: System design detailed process with all results</h1>
+        <h4>Pipe size</h4>
+        <p>
+          The pipe sizes to be compared are based on commonly used stainless steel pipe sizes in residential plumbing as well as the smallest size (which is the closest to current hose size on our prototype) commonly available. Prior to the calculation of the head, the flow rate needs to be obtained. For the parallel configuration, the flow rate is constant for all the different system sizes (no of rigs) at 0.409 l/min. However, for the series system, the flow rate differs. The flow rate for the series configuration is calculated using 5ºC difference between the inlet and outlet of the TES, assuming no heat loss thorugh the pipe (ie. only considering heat gain from the receivers). The result is below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-fr.jpg"
+          subtitle="Figure XXX: Flow rate versus system size (no of rigs) for series configuration (single loop)"></image-component>
+        <p>
+          Using the flow rate, the system head was calculated considering the different fittings required. The different fittings required and number of fitings are as follows, using the sketch below as a guide for number of fittings:
+        </p>
+        <image-component tag="image" source="assets/tt_final/fittings.jpg"
+          subtitle="Figure XXX: Rough sketch to approximate fittings required for system of rigs"></image-component>
+        <p>
+          Based on that, the system head was calculated for each pipe size, with all graphs located below along with the combined results.
+        </p>
+        <p>
+          For the parallel system
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-18.jpg"
+          subtitle="Figure XXX: System head versus system size for parallel system (1/8 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-34.jpg"
+          subtitle="Figure XXX: System head versus system size for parallel system (3/4 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-1.jpg"
+          subtitle="Figure XXX: System head versus system size for parallel system (1 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-comparison.jpg"
+          subtitle="Figure XXX: System head versus system size for parallel system (comparison)"></image-component>
+        <p>
+          For the series system
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-18.jpg"
+          subtitle="Figure XXX: System head versus system size for series system (1/8 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-34.jpg"
+          subtitle="Figure XXX: System head versus system size for series system (3/4 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-1.jpg"
+          subtitle="Figure XXX: System head versus system size for series system (1 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-head-comparison.jpg"
+          subtitle="Figure XXX: System head versus system size for series system (comparison)"></image-component>
+        <p>
+          The Net Positive Suction Head available (NPSHa) was also calculated and to be used if the system is able to use centrifugal pumps. The length of pipe on the suction side of the pump was assumed to be 0.5m in length as an overestimation and can be altered from the main MATLAB code under <i>L_npsh</i>.
+        </p>
+        <p>
+          For the parallel system
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-npsha-18.jpg"
+          subtitle="Figure XXX: NPSHa versus system size for parallel system (1/8 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-npsha-34.jpg"
+          subtitle="Figure XXX: NPSHa versus system size for parallel system (3/4 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-npsha-1.jpg"
+          subtitle="Figure XXX: NPSHa versus system size for parallel system (1 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-npsha-comparison.jpg"
+          subtitle="Figure XXX: NPSHa versus system size for parallel system (comparison)"></image-component>
+        <p>
+          For the series system
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-npsha-18.jpg"
+          subtitle="Figure XXX: NPSHa versus system size for series system (1/8 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-npsha-34.jpg"
+          subtitle="Figure XXX: NPSHa versus system size for series system (3/4 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-npsha-1.jpg"
+          subtitle="Figure XXX: NPSHa versus system size for series system (1 inch)"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-npsha-comparison.jpg"
+          subtitle="Figure XXX: NPSHa versus system size for series system (comparison)"></image-component>
+
+        <h4>Thermal efficiency of pipes in system of rigs</h4>
+        <p>
+          The thermal efficiency is calculated based on the rate of heat loss per meter of 7.1722W/m obtained by:
+        </p>
+        <ol>
+          <li>25mm thickness of aircon insulation</li>
+          <li>3/4" pipe</li>
+          <li>35ºC temperature difference between water and atmosphere</li>
+        </ol>
+        <p>
+          Combined with the length of pipe estimated using the layout of pipes seen below, the thermal efficiency of the pipes in a system of rigs is obtained for the series and parallel configuration.
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/parallel-length.jpg"
+          subtitle="Figure XXX: Rough sketch to approximate length required for system of rigs for parallel configuration"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/series-length.jpg"
+          subtitle="Figure XXX: Rough sketch to approximate length required for system of rigs for series configuration"></image-component>
+        <p>
+          The results are plotted below for the thermal efficiency of the pipe per system size for both parallel and series configurations.
+        </p>
+        <image-component tag="image" source="assets/tt_final/separate-loop/separate-internal-eff.jpg"
+          subtitle="Figure XXX: Thermal efficiency of pipe versus system size for parallel configuration"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-internal-eff.jpg"
+          subtitle="Figure XXX: Thermal efficiency of pipe versus system size for series configuration"></image-component>
+        <p>
+          The thermal efficiency of the pipe improves with increasing system size for the series configuration only. This is the result of the average length of pipe per rig decreasing as system size increases. Thus, it is the most efficient not only in reducing overall heat loss, but also in reducing total material and cost required.
+        </p>
+
+        <h4>Performance of entire system (Single rooftop)</h4>
+        <p>
+          In this section, the aim is to obtain the optimal system size. To do so, consider the potential layout on the rooftop which is done for 1 rooftop for ease (see Appendix XX), using the sample connection plans below.
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
+          subtitle="Figure XXX: Dimensions of available space and sample connections between TES and hot water storage tank"></image-component>
+        <p>
+           Using this, the thermal efficiency of the entire piping system on one rooftop is obtained (see below).
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-overall-eff.jpg"
+          subtitle="Figure XXX: Comparing the thermal efficiency of entire system by system size in series system"></image-component>
+        <p>
+          The thermal efficiency of the entire system generally follows the trend of the thermal efficiency within the system of rigs. To obtain the optimal size, the total useful energy attained is used as not all system size allows the full usage of the rooftop area. Thus, the useful energy (W) per system size for the entire system under series configuration on one rooftop is calculated.
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-energy.jpg"
+          subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system"></image-component>
+        <p>
+          Based on the graph, the useful energy peaked at system size of 4 and 6. The cost of these 2 configuration sizes will be compared to decide on the optimal size.
+        </p>
+        <h4>Cost analysis</h4>
+        <p>
+          The cost of the 2 system sizes are compared considering the layout provided above in the figures below. The additional fittings required along with the pipes are:
+        </p>
+        <ol>
+          <li>Tank connectors, to connect the pipes to the TES tank</li>
+          <li>Couplers, to connect the pipes to the pump and to join pipe to the receiver</li>
+          <li>Pressure relief valve, for safety against high pressure</li>
+          <li>Non-return valve, to prevent backflow</li>
+        </ol>
+        <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs-4.jpg"
+          subtitle="Figure XXX: System diagram for system size = 4"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs.jpg"
+          subtitle="Figure XXX: System diagram for system size = 6"></image-component>
+        <p>
+          The cost of the entire system is calculated below.
+        </p>
+        <p>
+          From the cost analysis, the overall cost of full implementation of the csp rigs for system size 6 is 33.39% less than system size 4. By comparison to the 0.9105% fall in useful energy, the system size of 6 is more cost effective with minimal energy losses, making it the optimal choice.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+    
+    <div>
+      <h2>References</h2>
+      <p>
+        [1] B. Happold, “Transparent insulation,” www.designingbuildings.co.uk. https://www.designingbuildings.co.uk/wiki/Transparent_insulation
+      </p>
+      <p>
+        [2] Engineering toolbox, “Absorbed Solar Radiation,” Engineeringtoolbox.com, 2009. https://www.engineeringtoolbox.com/solar-radiation-absorbed-materials-d_1568.html
+      </p>
+      <p>
+        ‌[3] “The Solar-AC FAQ: Table of absorptivity and emissivity of common materials and coatings,” www.solarmirror.com. http://www.solarmirror.com/fom/fom-serve/cache/43.html
+      </p>
+      <p>
+        [4] [1]“Type Of Water Pipe | High-Quality Plumbing Services Singapore,” Active-Plumbing. https://activeplumbing.sg/type-of-water-pipe/
+      </p>
+      <p>
+        ‌[5] “Stainless Steel Round Pipe Singapore | HiMetal,” HiMetal Enterprise Pte Ltd, Jun. 10, 2025. https://www.himetal.com.sg/stainless-steel-round-pipe/
+      </p>
+      <p>
+        [6] “SS Pipe Size Chart - Nandishwar Steel,” Nandishwarsteel.com, 2026. https://www.nandishwarsteel.com/stainless-steel-pipe-dimensions.html 
+      </p>
+      <p>
+        [7] SSContent, “What Pipe Size for House Plumbing? A Complete Guide,” Splash Plumbing, Feb. 28, 2025. https://www.splashplumbing.com/what-size-pipe-for-house-plumbing-a-guide-to-choosing-the-right-dimensions/
+      </p>
+      <p>
+        [8] Zhejiang Hailiang Co., Ltd., “Hailiang Custom Fireproof Black Rubber Thermal Insulation Pipe,” Made-in-China.com. https://hailiang1.en.made-in-china.com/product/QZNaBgfYaJcW/China-Hailiang-Custom-Fireproof-Black-Rubber-Thermal-Insulation-Pipe.html?acc=5494762105-lxy&cpn=21714728580-&tgt=&net=x&dev=c-&gid=CjwKCAjwspPOBhB9EiwATFbi5LcM3xtO6p1yNPq527jXaa6mTHovafQ-oeqxcfyLIuN9QMxQ_--SJxoCaNsQAvD_BwE&kwd=&mtp=&loc=9062542-&gad_source=1&gad_campaignid=21721137545&gbraid=0AAAAA-M7K1iP3cuouqCv8a6A5c06mehHi&gclid=CjwKCAjwspPOBhB9EiwATFbi5LcM3xtO6p1yNPq527jXaa6mTHovafQ-oeqxcfyLIuN9QMxQ_--SJxoCaNsQAvD_BwE
+      </p>
+      <p>
+        [9] “Stainless Steel Oval Pipe 304/316/316L/304L,” Made‑in‑China.com. https://tjstdco.en.made-in-china.com/product/gbhmfRzjJdYA/China-Stainless-Steel-Oval-Pipe-304-316-316L-304L-Stainless-Steel-Oval-Pipe.html?pv_id=1jkhr2l2o62&faw_id=1jkhr3bqr58f&bv_id=1jkhrd2didb8&pbv_id=1jkhr2kca750r
+      </p>
+      <p>
+        [10] “Factory Wholesale Stainless Steel Pipe Fittings SS304 SS316 Coupling,” Made‑in‑China.com. https://sxbhms.en.made-in-china.com/product/qwOGnyjdQXtl/China-Factory-Wholesale-Stainless-Steel-Pipe-Fittings-SS304-SS316-Coupling.html?acc=5494762105-lxy&cpn=23486536000-&tgt=&net=x&dev=c-&gid=Cj0KCQjw7IjOBhDyARIsAFzrWQyqeF31-hLCxTxBb_QmwmjvD6HwPgnEMRfilcqhx8pUtIkLYmGqc2UaAvZfEALw_wcB&kwd=&mtp=&loc=9062542-&gad_source=1&gad_campaignid=23481894866&gclid=Cj0KCQjw7IjOBhDyARIsAFzrWQyqeF31-hLCxTxBb_QmwmjvD6HwPgnEMRfilcqhx8pUtIkLYmGqc2UaAvZfEALw_wcB
+      </p>
+      <p>
+        [11] Jiangsu Daocheng Stainless Steel Pipe Co., Ltd., “304 Thin Wall Stainless Steel Round Tube DN25 Home Water Sanitary Piping 316 Food Grade Stainless Steel Pipe,” Made-in-China.com. https://dcstainless.en.made-in-china.com/product/xElUaOgoaShi/China-304-Thin-Wall-Stainless-Steel-Round-Tube-DN25-Home-Water-Sanitary-Piping-316-Food-Grade-Stainless-Steel-Pipe.html?pv_id=1jkmiibvqdb8&faw_id=1jkmiifto5aa&bv_id=1jkmijpbu919&pbv_id=1jkmiibogb9bi
+      </p>
+      <p>
+        [12] Bmag Brass Safety Air Pressure Relief Valve for Solar Water Heaters System, Made‑in‑China.com. https://bw-valves.en.made-in-china.com/product/yAZrsvNjceVk/China-Bmag-Brass-Safety-Air-Pressure-Relief-Valve-for-Solar-Water-Heaters-System.html?header_search_page=lv&pv_id=1jkhn9ggja55&faw_id=1jkhna2fqdfd&bv_id=1jkhna2fr23a&pbv_id=1jkhn9g0ncf4u
+      </p>
+      <p>
+        [13] “Diaphragm Metering Pump Corrosion Resistant and Leak‑Free Chemical Dosing Pump Manufacturer Dosence HDM PVDF SUS316 PVC,” Made‑in‑China.com, JumpTa. https://jumpta.en.made-in-china.com/product/NQkrjYRHZspy/China-Diaphragm-Metering-Pump-Corrosion-Resistant-and-Leak-Free-Chemical-Dosing-Pump-Manufacturer-Dosence-Hdm-PVDF-SUS316-PVC.html
+      </p>
+      <p>
+        [14] “200 psi 3/4 Inch Female Non‑Return Valve Model Type H14W,” Made‑in‑China.com, Industry Valves. https://industryvalves.en.made-in-china.com/product/uqGntNkJOZAW/China-200psi-3-4-Inch-Female-Non-Return-Valve-Model-type-H14W-.html?acc=5494762105-lxy&cpn=21714728580-&tgt=&net=x&dev=c-&gid=Cj0KCQjw7IjOBhDyARIsAFzrWQz13uhEpRHQI5YCSV3M_pIuUDGNTyuBsTAPrx08GnNgzVEyHShcfgsaAsaGEALw_wcB&kwd=&mtp=&loc=9062542-&gad_source=1&gad_campaignid=21721137545&gclid=Cj0KCQjw7IjOBhDyARIsAFzrWQz13uhEpRHQI5YCSV3M_pIuUDGNTyuBsTAPrx08GnNgzVEyHShcfgsaAsaGEALw_wcB
+      </p>
+      <p>
+        [15] “Pipe Fitting 3/4 Tee,” Made‑in‑China.com, LG Valve. https://lg-valve.en.made-in-china.com/product/pvxmrhRbayYS/China-Pipe-Fitting-3-4-Tee.html?acc=5494762105-lxy&cpn=21714728580-&tgt=&net=x&dev=c-&gid=Cj0KCQjw7IjOBhDyARIsAFzrWQwMArIRjXHIAZdtX-zNQ47ktXsMxij-5pqaalAYsDhQCa52pBLA2UoaAjnoEALw_wcB&kwd=&mtp=&loc=9062542-&gad_source=1&gad_campaignid=21721137545&gclid=Cj0KCQjw7IjOBhDyARIsAFzrWQwMArIRjXHIAZdtX-zNQ47ktXsMxij-5pqaalAYsDhQCa52pBLA2UoaAjnoEALw_wcB
+      </p>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+   <sl-button size="medium" pill onclick href="thermalenergystoragesubs.html">Next subsection: Thermal Energy Storage</sl-button>
+
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component-thermal-transmission.js"></script>
+</body>
+
+</html>

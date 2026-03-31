@@ -7,7 +7,7 @@ fprintf('For stainless steel pipe: \n');
 power_water = 142.3; % W
 perc_loss = 5;
 T_water = 60; % Assuming temp of water is 60ºC for the whole of the pipe
-k_water = 650.91; % Thermal conductivity of water at 60ºC https://www.engineeringtoolbox.com/water-liquid-gas-thermal-conductivity-temperature-pressure-d_2012.html
+k_water = 0.65091; % Thermal conductivity of water at 60ºC https://www.engineeringtoolbox.com/water-liquid-gas-thermal-conductivity-temperature-pressure-d_2012.html
 L = 3.0; % Length of pipe. Here is total length to account for both sides
 
 % Hose
