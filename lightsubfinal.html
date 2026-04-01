@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -45,19 +43,8 @@
 </head>
 
 <body>
-  <style>
-  body {
-    font-family: Arial, sans-serif; /* or whatever font you want */
-  }
 
-  /* Optional: limit model-viewer styles to itself only */
-  model-viewer {
-    all: initial; /* resets all inherited styles */
-    width: 600px;
-    height: 400px;
-    background-color: #f5f5f5;
-  }
-</style>
+  <div class="content">
 
     <sl-button size="medium" pill onclick href="index_interim.html">Back to main page</sl-button>
     <h1>3.1 Light Subsystem</h1>
@@ -565,11 +552,21 @@
     <td>Both the plain parabolic wok and the wok with mirrors attached outperformed the setup without a reflector. Among the three, the wok with mirrors attached proved to be the most effective at concentrating light.</td>
   </tr>
 </table>
+      </div>
 
 
+<sl-divider></sl-divider>
+<sl-button size="medium" pill onclick href="thermaltransmissionsubs.html">Next subsection: Thermal Transmission</sl-button>
 
-        
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component-light.js"></script>
 </body>
-</script>
-      </head>
+
 </html>
