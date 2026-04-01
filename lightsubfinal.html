@@ -47,20 +47,12 @@
   <div class="content">
 
     <sl-button size="medium" pill onclick href="index_interim.html">Back to main page</sl-button>
-    <h1>Light Subsystem</h1>
-    <p>The goal of the light subsystem is to capture as much thermal energy as possible. This is typically achieved by using reflectors to direct sunlight onto the receiver. The captured thermal energy is then transferred to the thermal energy storage for later use via thermal transmission, which will be discussed in later sections.</p>
-     <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/applicationrequirements.png"
-              subtitle="Table XX: Application Requirements "
-              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-
+    <h1>3.1 Light Subsystem</h1>
+    <p>The goal of the light subsystem is to capture as much thermal energy as possible. This is typically achieved by using reflectors to direct sunlight onto the receiver. </p>
+     
     <sl-divider></sl-divider>
 
-    <div>
+    <!--<div>
     <div id="Design Specifications">
         <h1><u> Design Specifications </u></h1>
       
@@ -88,99 +80,11 @@
             ></image-component>
           </div>
     <p> The surface area of the receiver is another key factor. Increasing the surface area allows for greater thermal absorption but may also increase heat losses due to convection and radiation []. For low-temperature applications (<200 °C), the concentration ratio (area of reflector / area of receiver) is typically 1:5 []. However, based on data from a solar tower configuration conducted by the UROP team, we will scale up the receiver area to match the aluminum pot used in their experiments.</p>
-  </div>
+  </div>-->
       
     <sl-divider></sl-divider>
 
-    <div>
-      <div id="Summary of previous semester's experiments">
-      <h1><u> Summary of previous semester's experiments </u></h1>
-
-      <style>
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 8px;
-    text-align: justify;
-    vertical-align: top;
-  }
-</style>
-      <table border="1">
-  <tr>
-    <th>Component</th>
-    <th></th>
-    <th>Objective</th>
-    <th>Result</th>
-  </tr>
-  <tr>
-    <td> Receiver </td>
-    <td> 01 </td>
-    <td>
-    Copper was selected for constructing the receiver because it is one of the most cost effective and thermally conductive metals available commercially. To investigate whether surface treatment could enhance absorption, the effect of applying black paint to the copper surface was tested, as black surfaces are known to exhibit high absorption.
-    Consequently, both a polished copper coil and a black painted copper coil were tested to determine which configuration achieved a higher absorption rate.
-    <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/ex01receiver.png"
-              subtitle="Figure XX: "
-              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-    </td>
-    <td>The black painted surface demonstrated superior energy absorption and heat transfer, and the receiver was coated with black paint.</td>
-  </tr>
-  <tr>
-    <td>Receiver</td>
-    <td>02</td>
-    <td>
-    Additionally, the effectiveness of thin versus thick tubes in absorbing and transferring heat to the water inside the receiver was compared. Two coils of the same surface area but different thicknesses were used in this experiment.
-    <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/ex02receiver.png"
-              subtitle="Figure XX: "
-              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-    </td>
-    <td>The thinner coil was found to be more effective at transferring heat to the water. Consequently, the thinner copper tube was selected for constructing the receiver.</td>
-  </tr>
-  <tr>
-    <td>Reflector</td>
-    <td>01</td>
-    <td>The effectiveness of the reflector system in concentrating light onto the receiver was evaluated by attempting to heat the water using three setups: 
-    <ul> 
-    <li>Plain parabolic wok</li>
-     <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/wokreflector.png"
-              subtitle="Figure XX: "
-              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-    <li>Wok with mirrors attached</li>
-       <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/mirrorwokreflector.png"
-              subtitle="Figure XX: "
-              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-    <li>Without a reflector</li>
-       <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/woreflector.png"
-              subtitle="Figure XX: "
-              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-    </ul></td>
-    <td>Both the plain parabolic wok and the wok with mirrors attached outperformed the setup without a reflector. Among the three, the wok with mirrors attached proved to be the most effective at concentrating light.</td>
-  </tr>
-</table>
+    
 
 
      <sl-divider></sl-divider>
@@ -479,65 +383,99 @@
 
     <sl-divider></sl-divider>
     <h1 style="padding-top: 20px;"><u>Appendix</u></h1>
-     <h4> Calculation of thermal energy absorption by light subsystem</h4>   
-    <iframe src="https://docs.google.com/spreadsheets/d/1b6kNC0b0F7TF5hfcEgi__fyNmvIr6X9d/edit?usp=sharing&ouid=100335267796115351273&rtpof=true&sd=true"
-        style="width:100%; height:600px; border:none;">
-    </iframe>
+<div>
+      <div id="Summary of previous semester's experiments">
+      <h1><u> Summary of previous semester's experiments </u></h1>
 
-    <h4>Equations</h4>
-    <div id = 'a ghi'>
-        <img src="assets/a ghi.png"
-             style="width: 100%; height: auto; display: block; margin: 0 auto 5px auto;padding-bottom: 10px;">
-    </div>
+      <style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: justify;
+    vertical-align: top;
+  }
+</style>
+      <table border="1">
+  <tr>
+    <th>Component</th>
+    <th></th>
+    <th>Objective</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td> Receiver </td>
+    <td> 01 </td>
+    <td>
+    Copper was selected for constructing the receiver because it is one of the most cost effective and thermally conductive metals available commercially. To investigate whether surface treatment could enhance absorption, the effect of applying black paint to the copper surface was tested, as black surfaces are known to exhibit high absorption.
+    Consequently, both a polished copper coil and a black painted copper coil were tested to determine which configuration achieved a higher absorption rate.
+    <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/ex01receiver.png"
+              subtitle="Figure XX: "
+              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+    </td>
+    <td>The black painted surface demonstrated superior energy absorption and heat transfer, and the receiver was coated with black paint.</td>
+  </tr>
+  <tr>
+    <td>Receiver</td>
+    <td>02</td>
+    <td>
+    Additionally, the effectiveness of thin versus thick tubes in absorbing and transferring heat to the water inside the receiver was compared. Two coils of the same surface area but different thicknesses were used in this experiment.
+    <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/ex02receiver.png"
+              subtitle="Figure XX: "
+              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+    </td>
+    <td>The thinner coil was found to be more effective at transferring heat to the water. Consequently, the thinner copper tube was selected for constructing the receiver.</td>
+  </tr>
+  <tr>
+    <td>Reflector</td>
+    <td>01</td>
+    <td>The effectiveness of the reflector system in concentrating light onto the receiver was evaluated by attempting to heat the water using three setups: 
+    <ul> 
+    <li>Plain parabolic wok</li>
+     <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/wokreflector.png"
+              subtitle="Figure XX: "
+              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+    <li>Wok with mirrors attached</li>
+       <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/mirrorwokreflector.png"
+              subtitle="Figure XX: "
+              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+    <li>Without a reflector</li>
+       <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/woreflector.png"
+              subtitle="Figure XX: "
+              style="width: 80%; height: auto; display: block; margin: 0 auto 30px auto;"
+            ></image-component>
+          </div>
+    </ul></td>
+    <td>Both the plain parabolic wok and the wok with mirrors attached outperformed the setup without a reflector. Among the three, the wok with mirrors attached proved to be the most effective at concentrating light.</td>
+  </tr>
+</table>
 
-    <div id = 'a irradiance'>
-        <img src="assets/a irradiance.png"
-             style="width: 100%; height: auto; display: block; margin: 0 auto 5px auto;padding-bottom: 10px;">
-    </div>
 
-    <div id = 'a focal point'>
-        <img src="assets/a focal point.png"
-             style="width: 100%; height: auto; display: block; margin: 0 auto 5px auto;padding-bottom: 10px;">
-    </div>
 
-    <div id = 'a convection loss'>
-        <img src="assets/a convection loss.png"
-             style="width: 100%; height: auto; display: block; margin: 0 auto 5px auto;padding-bottom: 10px;">
-    </div>
-
-    <div id = 'a radiative loss'>
-        <img src="assets/a radiative loss.png"
-             style="width: 100%; height: auto; display: block; margin: 0 auto 5px auto;padding-bottom: 10px;">
-    </div>
-
-    <div id = 'a distance'>
-        <img src="assets/a distance.png"
-             style="width: 100%; height: auto; display: block; margin: 0 auto 5px auto;padding-bottom: 10px;">
-    </div>
-
-    <div id = 'appendix'>
-        <img src="assets/appendix.png"
-             style="width: 100%; height: auto; display: block; margin: 0 auto 5px auto;padding-bottom: 10px;">
-    </div>
-
-    
-  </div>
-
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-
-   <sl-button size="medium" pill onclick href="thermaltransmissionsubs.html">Next subsection: Thermal Transmission</sl-button>
-
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
-  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
-    <sl-icon name="arrow-up" label="Settings"></sl-icon>
-  </sl-button>
-
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-  <script type="module" src="./components/table-component/table-component-light.js"></script>
+        
 </body>
 
 </html>
