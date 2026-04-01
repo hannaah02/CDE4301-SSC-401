@@ -67,17 +67,20 @@
       <div id="final_intro">
         <h2>Introduction</h2>
         <p>
-            The hotel occupies an area of 0.5 hectares. Based on visual estimation (see images of hotel below) and using reference dimensions of standard hotel width (maximum 14m) [1], the approximate layout and usable installation areas (greyed out) are illustrated below.
+          The layout of the hotel is approximated below with the viable area for implementation being 1288<math><msup><mi>m</mi><mn>2</mn></msup></math> of 0.5hectares land area, using hotel widths as reference. [1]
+          <!--
+          The hotel occupies an area of 0.5 hectares. Based on visual estimation (see images of hotel below) and using reference dimensions of standard hotel width (maximum 14m) [1], the approximate layout and usable installation areas (greyed out) are illustrated below.
+          -->
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/dimensions-only.jpg"
           subtitle="Figure XXX: Dimensions of hotel"></image-component>
         <p>
-          The CSP system to be integrated will consist of modular ‘system of rigs’ where each system consists of multiple rigs (receiver and reflectors only, each rig is 1x1m) connected to a TES tank. (see figure XX) This aims to reduce overall cost per rig.
+          The final CSP system consist of modular ‘system of rigs’ where each system consists of multiple rigs (receiver and reflectors only, each rig is 1x1m) connected to a TES tank. (see figure XX) This aims to reduce overall cost per rig.
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs.jpg"
           subtitle="Figure XXX: System layout for system of rigs"></image-component>
         <p>
-          Water will be supplied to the TES tank via the water mains, which also provides pressure to drive flow to the hot water storage tank and showers. The hot water storage tank is located in the hotel where it reduces the length of cold water when the shower is switched on, serves as a storage location for extra hot water, to be used when the day has less sun, and provides additional heating when required to maintain water temperatures.
+          Water is supplied to the TES tank via the water mains, which also provides pressure driving flow to the hot water storage tank and showers. The hot water storage tank is located in the hotel where it <!--reduces the length of cold water when the shower is switched on,--> serves as a storage location for extra hot water<!--, to be used when the day has less sun,--> and provides additional heating to maintain water temperatures.
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
           subtitle="Figure XXX: Overall system layout"></image-component>
@@ -94,7 +97,7 @@
         <p>
           <!--
           In the final design, the system will be connected to the water mains for steady supply of water and pressure driving the flow from the TES to the shower. Furthermore, a system of rigs will be utilised, where multiple rigs will be connected to 1 TES. -->
-          For each system size (number of rigs in a system), the layout below is chosen to minimise distance between each rig to the TES and allows for modular expansion.
+          The layout for the system of rigs for each system size (number of rigs in a system) is shown below, and is selected to minimise distance between each rig and TES while allowing for modular expansion.
         </p>
         <image-component tag="image" source="assets/tt_final/rig-layout.jpg"
           subtitle="Figure XXX: Diagram of system rigs layout for different system size (no of rigs), up to 10 rigs"></image-component>
@@ -108,13 +111,10 @@
           <li>Non-return valve to prevent backflow</li>
         </ol>
         <p>
-          These will be further explained with system layouts under cost analysis.
-        </p>
-        <p>
-          Furthermore, considering the system of rigs, two connection configurations are considered:
+          Furthermore, two configurations to connect the receivers to the TES are considered:
         </p>
         <ol>
-          <li>Parallel configuration, where each rig are connected independantly to the TES</li>
+          <li>Parallel configuration, where each reciver is connected independantly to the TES</li>
           <image-component tag="image" source="assets/tt_final/separate-loop-diagram.jpg"
           subtitle="Figure XXX: Diagram of pipe system for parallel system (separate loop)"></image-component>
           <li>Series configuration, where fluid flows sequentially through multiple rigs</li>
@@ -193,12 +193,12 @@
           subtitle="Figure XXX: Sample of rig layout (system size = 5)"></image-component>
         
         <p>
-          Based on the layout, the thermal efficiency of the system can be obtained, assuming maximum number of system of rigs are used for each system size. The thermal efficiency versus system size is below.
+          Based on the layout, the pipe loss of the system can be obtained, assuming maximum number of system of rigs are used for each system size. The pipe loss versus system size is below.
         </p> 
-        <image-component tag="image" source="assets/tt_final/single-loop/single-overall-eff.jpg"
-          subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system"></image-component>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-pipe-loss.jpg"
+          subtitle="Figure XXX: Comparing the pipe loss versus system size (no of rigs) for entire series system"></image-component>
         <p>
-          The thermal efficiency generally follows the trend observed in the earlier results for within the system of rigs, where the efficiency improves with increasing system size. To meet the design specifications of pipe losses <math><mn>&le;</mn></math>17.5%, the system size should be over 3.
+          To meet the design specifications of pipe losses <math><mn>&le;</mn></math>17.5%, the system size should be over 3.
         </p>
         <p>
           To accurately assess the potential of the system, the total useful energy for these configurations is considered to better assess the performance of the system. Not all system size allows the full usage of the rooftop area (see system size 7 versus 4 below) and the useful energy comparison is a more accurate comparison as to the potential of the system.
@@ -234,7 +234,7 @@
           Hence, considering the costs, system size of 6 is the optimal choice as although it provides less useful energy (by 0.9105%), it is minimal compared to the cost reductions (of 33.39%).
         </p>
         <p>
-          In this final system size of 6, the total power required per rig is 15W assuming maximum power of 90W is used [13: pump], meeting the design requirements of 136.96W per rig
+          In this final system size of 6, the total power required per rig is 15W assuming maximum power of 90W is used [13: pump], meeting the design requirements of 136.96W per rig.
         </p>
 
     <br />
@@ -345,7 +345,15 @@
         <image-component tag="image" source="assets/tt_final/single-loop/single-overall-eff.jpg"
           subtitle="Figure XXX: Comparing the thermal efficiency of entire system by system size in series system"></image-component>
         <p>
-          The thermal efficiency of the entire system generally follows the trend of the thermal efficiency within the system of rigs. To obtain the optimal size, the total useful energy attained is used as not all system size allows the full usage of the rooftop area. Thus, the useful energy (W) per system size for the entire system under series configuration on one rooftop is calculated.
+          The thermal efficiency of the entire system generally follows the trend of the thermal efficiency within the system of rigs. The pipe loss can also be obtained.
+        </p>
+        <image-component tag="image" source="assets/tt_final/single-loop/single-pipe-loss.jpg"
+          subtitle="Figure XXX: Comparing the pipe loss versus system size (no of rigs) for entire series system"></image-component>
+        <p>
+          Using the design specifications, which limits the pipe loss to <math><mn>&le;</mn></math>17.5%, the minimum system size is 3 rigs.
+        </p>
+        <p>
+           To obtain the optimal size, the total useful energy attained is used as not all system size allows the full usage of the rooftop area. Thus, the useful energy (W) per system size for the entire system under series configuration on one rooftop is calculated.
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-energy.jpg"
           subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system"></image-component>
@@ -370,7 +378,7 @@
           The cost of the entire system is calculated below.
         </p>
         <p>
-          From the cost analysis, the overall cost of full implementation of the csp rigs for system size 6 is 33.39% less than system size 4. By comparison to the 0.9105% fall in useful energy, the system size of 6 is more cost effective with minimal energy losses, making it the optimal choice.
+          From the cost analysis, the cost per rig for system size 6 is 32.20% less than system size 4. For the overall cost, the reduction between 6 and 4 is 33.39% less than system size 4. By comparison to the 0.9105% fall in useful energy, the system size of 6 is more cost effective with minimal energy losses, making it the optimal choice.
         </p>
       </div>
     </div>
