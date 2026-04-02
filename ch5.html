@@ -112,7 +112,10 @@
           subtitle="Figure XXX: Diagram of pipe system for series system (single loop)"></image-component>
         </ol>
         <p>
-          Finally, the optimal system size for the island has to be determined.
+          Finally, the optimal island size for the island has to be determined.
+        </p>
+        <p>
+          Detailed derivations, calculation methodology, and supporting models are provided in Appendix A.
         </p>
         <p>
           The following assumptions are applied in the calculations within this section:
@@ -127,7 +130,7 @@
 
         <h3>Pipe size</h3>
         <p>
-          For optimal pipe size, the system head is compared across different pipe diameters. A higher system head indicates greater flow resistance, which requires a more powerful pump.
+          For optimal pipe size, the system head is compared across different pipe diameters (see Appendix A). A higher system head indicates greater flow resistance, which requires a more powerful pump.
         </p>
         
         <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-comparison.jpg"
@@ -137,48 +140,37 @@
         <p>
           3/4” and 1” pipes provide similar low system head, with minimal differences among the 3 sizes across both configurations. 3/4” pipe is selected for providing comparable hydraulic performance with less material requirements.
         </p>
-        <!--
-        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-34.jpg"
-        subtitle="Figure XXX: Comparing the system head per island size for parallel system (3/4 inch pipe)"></image-component>
-        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-1.jpg"
-        subtitle="Figure XXX: Comparing the system head per island size for parallel system (1 inch pipe)"></image-component>
-        
-        <image-component tag="image" source="assets/tt_final/single-loop/single-head-34.jpg"
-        subtitle="Figure XXX: Comparing the system head per island size for series system (3/4 inch pipe)"></image-component>
-        <image-component tag="image" source="assets/tt_final/single-loop/single-head-1.jpg"
-        subtitle="Figure XXX: Comparing the system head per island size for series system (1 inch pipe)"></image-component>
-        -->
         <h3>Parallel vs series configuration</h3>
         <p>
-          The thermal efficiency of the piping network is evaluated using the commonly available 25mm thickness aircon insulation that exhibits heat loss of 7.1722W/m, satisfying design requirements of ≤7.95W/m. [8]
+          The thermal efficiency of the piping network is evaluated using the commonly available 25mm thickness aircon insulation that exhibits heat loss of 7.1722W/m, satisfying design requirements of ≤7.95W/m. (see Appendix A) [8]
         </p>
         <image-component tag="image" source="assets/tt_final/separate-loop/separate-internal-eff.jpg"
           subtitle="Figure XXX: Comparing the thermal efficiency of pipes within the island by island size in parallel system"></image-component>
         <image-component tag="image" source="assets/tt_final/single-loop/single-internal-eff.jpg"
           subtitle="Figure XXX: Comparing the thermal efficiency of pipes within the island of island size in series system"></image-component>
         <p>
-          The results shows that thermal efficiency decreases with system size in the parallel configuration but increases in the series configuration. This is due to the average pipe length per rig decreasing in the series configuration, but increasing in the parallel configuration. Therefore, the series configuration is chosen for lower heat loss.
+          The results shows that thermal efficiency decreases with island size in the parallel configuration but increases in the series configuration. This is due to the average pipe length per rig decreasing in the series configuration, but increasing in the parallel configuration. Therefore, the series configuration is chosen for lower heat loss.
         </p>
 
-        <h3>Optimal system size </h3>
+        <h3>Optimal island size </h3>
         <h4>Design 1: Maximum islands</h4>
         <p>
-          Design 1 focusses on maximising total useful energy collected and the maximum number of islands that fits on one roof is assessed for all island size.
+          Design 1 focusses on maximising total useful energy collected and the maximum number of islands that fits on one roof is assessed for all island size. The total pipe length is estimated based on the system layout geometry and used in the calculations in this section, with detailed calculations provided in Appendix A.
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-pipe-loss.jpg"
-          subtitle="Figure XXX: Comparing the pipe loss versus system size (no of rigs) for entire series system (Design 1)"></image-component>
+          subtitle="Figure XXX: Comparing the pipe loss versus island size for entire series system (Design 1)"></image-component>
         <p>
-          The pipe loss in the entire system indicates island size of ≥3 meets design requirements of 17.5%.
+          The pipe loss in the entire system indicates island size of ≥3 meets design requirements of 17.5%. (see Appendix A)
         </p>
 
         <image-component tag="image" source="assets/tt_final/single-loop/single-energy.jpg"
-          subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system (Design 1)"></image-component>
+          subtitle="Figure XXX: Comparing the useful energy versus island size for entire series system (Design 1)"></image-component>
         <p>
-          The total useful energy is compared since not all configuration uses all the available space. The total useful energy peaks at system sizes 4 and 6, with system size 6 producing 730.5W less than system size 4 (a 0.9016% reduction). Both configurations have a compact rectangular/square layout that supports modularity and efficient space utilisation. A cost analysis is used to finalise the optimal size.
+          The total useful energy is compared since not all configuration uses all the available space. The total useful energy peaks at system sizes 4 and 6, with island size 6 producing 730.5W less than island size 4 (a 0.9016% reduction). Both configurations have a compact rectangular/square layout that supports modularity and efficient space utilisation. A cost analysis is used to finalise the optimal size.
         </p>
         <h5>Cost analysis</h5>
         <p>
-          The equipment required for each island follows the diagram below.
+          The equipment required for each island follows the diagram below (see Appendix A for details).
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs-general.jpg"
           subtitle="Figure XXX: General system diagram for island size = n"></image-component>
@@ -193,20 +185,20 @@
         </p>
         <h4>Design 2: Meeting requirements</h4>
         <p>
-          In design 2, the focus is on meeting the maximum daily hot water requirements of the hotel (7500L). This minimises the energy wastage caused by excessive hot water production (up to 12,880L in design 1) and reduces the overall implementation costs.
+          In design 2, the focus is on meeting the maximum daily hot water requirements of the hotel (7500L). This minimises the energy wastage caused by excessive hot water production (up to 12,880L in design 1) and reduces the overall implementation costs. The total pipe length is estimated based on the system layout geometry and used in the calculations in this section, with detailed calculations provided in Appendix A.
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-pipe-loss-minimal.jpg"
-          subtitle="Figure XXX: Comparing the pipe loss versus system size (no of rigs) for entire series system (Design 2)"></image-component>
+          subtitle="Figure XXX: Comparing the pipe loss versus island size for entire series system (Design 2)"></image-component>
         <p>
           The pipe losses in this design indicates island size ≥3 meets design specifications.
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-overall-eff-minimal.jpg"
-          subtitle="Figure XXX: Comparing the thermal efficiency versus system size (no of rigs) for entire series system (Design 2)"></image-component>
+          subtitle="Figure XXX: Comparing the thermal efficiency versus island size for entire series system (Design 2)"></image-component>
         <p>
           Considering the thermal efficiency of the entire system (used to maximise the stored energy), the efficiency peaks at island size 9 with local peak at 6. This corresponds to the trends seen in the total useful energy.
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-energy-minimal.jpg"
-          subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system (Design 2)"></image-component>
+          subtitle="Figure XXX: Comparing the useful energy versus island size for entire series system (Design 2)"></image-component>
 
         <h5>Cost analysis</h5>
         <p>
@@ -236,38 +228,108 @@
       <div id="appendix-system-design">
         <h1>Appendix A: System design detailed process with all results</h1>
         <h4>Key assumptions</h4>
-        <p>
-          For flow rate:
-        </p>
         <ul>
           <li>Temperature difference across TES = 5°C</li>
-          <li>No heat loss in pipe</li>
-        </ul>
-        <p>
-          For heat loss:
-        </p>
-        <ul>
-          <li>Ambient temperature difference = 35°C (60ºC water and 25ºC ambient)</li>
-          <li>
-            Heat losses are assumed to occur only through the piping network
-          </li>
-          <li>Assuming turbulent flow in pipe</li>
+          <li>Heat loss in pipes neglected for flow rate calculations</li>
+          <li>Flow is assumed turbulent</li>
+          <li>Heat losses occur only through piping network</li>
+          <li>Ambient temperature = 25°C, water temperature = 60°C for heat loss analysis</li>
         </ul>
         <h4>Pipe size</h4>
         <p>
-          The pipe sizes to be compared are based on commonly used stainless steel pipe sizes in residential plumbing as well as the smallest size (which is the closest to current hose size on our prototype) commonly available. Prior to the calculation of the head, the flow rate needs to be obtained. The effectiveness of heat transfer depends on the rate of fluid circulation, where a higher flow rate allows more heated fluid to be transported to the TES per unit time. However, very high flow rates reduces the residence time of the fluid within the TES, limiting heat transfer to the PCM. The flow rate is determined using an energy balance across the TES, based on Q = mdot c ∆T. A temperature difference of 5°C is selected, which is within the typical range used in water-based thermal systems. [C1][C2] This provides a balance between achieving sufficient heat transfer while avoiding excessively high flow rates.
+          The mass flow rate is determined using an energy balance across the TES,
+          <math>
+            <mi>Q</mi>
+            <mo>=</mo>
+            <mrow>
+              <mover>
+                <mi>m</mi>
+                <mo>&#x02D9;</mo>
+              </mover>
+              <mi>c</mi>
+              <mi>&#x0394;</mi>
+              <mi>T</mi>
+            </mrow>
+          </math>, where a temperature difference of 5°C is used. The corresponding mass flow rate and volumetric flow rate are calculated. All flow rates presented in this report refer to volumetric flow rate.
+        </p>
 
-
-          For the parallel configuration, the flow rate is constant for all the different island sizes (no of rigs) at 0.409 l/min. However, for the series system, the flow rate differs. For the series configuration, the flow rate is determined using an energy balance across the TES, assuming a 5°C temperature rise and neglecting pipe heat loss. The result is below.
+        <p>
+          For the parallel configuration, the flow rate is constant at 0.409 L/min for all island sizes. For the series configuration, the flow rate varies with island size and is determined using the same energy balance. The results are shown below.
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-fr.jpg"
-          subtitle="Figure XXX: Flow rate versus system size (no of rigs) for series configuration (single loop)"></image-component>
+          subtitle="Figure XXX: Flow rate versus island size for series configuration (series)"></image-component>
         <p>
-          The system head is calculated as the sum of frictional losses in the pipe, receiver coil, and fittings:
+          System head is given by: System head = Static head + Hydraulic losses
         </p>
-        <p>System head = losses along pipe + minor losses</p>
         <p>
-          Pipe losses are calculated using the Darcy–Weisbach equation, while minor losses are estimated using loss coefficients (K-values) for fittings. A constant friction factor of 0.02 is assumed, corresponding to turbulent flow in stainless steel pipes, and tank pressure is assumed based on typical residential water mains pressure. The rig layout for pipe length and fittings required are below.
+          For a closed loop system, the static head is 0m.
+        </p>
+        <p>
+          Hydraulic losses are the sum of pipe losses and minor losses. Pipe losses are calculated using the Darcy–Weisbach equation:
+        </p>
+        <p>
+          <math>
+            <mi>h</mi>
+            <mo>=</mo>
+            <mrow>
+              <msub>
+                <mo>&#x2211;</mo>
+                <mi>i</mi>
+              </msub>
+              <msub>
+                <mn>f</mn>
+                <mi>i</mi>
+              </msub>
+              <mo>&#x2062;</mo>
+              <mfrac>
+                <mi>L</mi>
+                <mi>d</mi>
+              </mfrac>
+              <mo>&#x2062;</mo>
+              <mfrac>
+                <msup>
+                  <mi>V</mi>
+                  <mn>2</mn>
+                </msup>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>g</mi>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        <p>
+          Minor losses are calculated using loss coefficients (K-values) for each fitting:
+        </p>
+        <p>
+          <math>
+            <mi>h</mi>
+            <mo>=</mo>
+            <mrow>
+              <msub>
+                <mo>&#x2211;</mo>
+                <mi>j</mi>
+              </msub>
+              <msub>
+                <mn>K</mn>
+                <mi>j</mi>
+              </msub>
+              <mo>&#x2062;</mo>
+              <mfrac>
+                <msup>
+                  <mi>V</mi>
+                  <mn>2</mn>
+                </msup>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>g</mi>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </p>
+        <p>
+          A constant friction factor (f) of 0.02 is assumed, corresponding to turbulent flow. The rig layout to obtain internal pipe length (within island) and fittings required are below.
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/parallel-length.jpg"
           subtitle="Figure XXX: Rough sketch to approximate length required for system of rigs for parallel configuration"></image-component>
@@ -276,40 +338,43 @@
         <image-component tag="image" source="assets/tt_final/fittings.jpg"
           subtitle="Figure XXX: Rough sketch to approximate fittings required for system of rigs"></image-component>
         <p>
-          Based on that, the system head was calculated for each pipe size, with all graphs located below along with the combined results.
+          The resulting system head for each pipe size is shown below.
         </p>
         <p>
           For the parallel system
         </p>
         <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-18.jpg"
-          subtitle="Figure XXX: System head versus system size for parallel system (1/8 inch)"></image-component>
+          subtitle="Figure XXX: System head versus island size for parallel system (1/8 inch)"></image-component>
         <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-34.jpg"
-          subtitle="Figure XXX: System head versus system size for parallel system (3/4 inch)"></image-component>
+          subtitle="Figure XXX: System head versus island size for parallel system (3/4 inch)"></image-component>
         <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-1.jpg"
-          subtitle="Figure XXX: System head versus system size for parallel system (1 inch)"></image-component>
-        <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-comparison.jpg"
-          subtitle="Figure XXX: System head versus system size for parallel system (comparison)"></image-component>
+          subtitle="Figure XXX: System head versus island size for parallel system (1 inch)"></image-component>
         <p>
           For the series system
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-head-18.jpg"
-          subtitle="Figure XXX: System head versus system size for series system (1/8 inch)"></image-component>
+          subtitle="Figure XXX: System head versus island size for series system (1/8 inch)"></image-component>
         <image-component tag="image" source="assets/tt_final/single-loop/single-head-34.jpg"
-          subtitle="Figure XXX: System head versus system size for series system (3/4 inch)"></image-component>
+          subtitle="Figure XXX: System head versus island size for series system (3/4 inch)"></image-component>
         <image-component tag="image" source="assets/tt_final/single-loop/single-head-1.jpg"
-          subtitle="Figure XXX: System head versus system size for series system (1 inch)"></image-component>
-        <image-component tag="image" source="assets/tt_final/single-loop/single-head-comparison.jpg"
-          subtitle="Figure XXX: System head versus system size for series system (comparison)"></image-component>
+          subtitle="Figure XXX: System head versus island size for series system (1 inch)"></image-component>
         
         <h4>Thermal efficiency of pipes in island</h4>
         <p>
-          The thermal efficiency,
-            <math>
+          The thermal efficiency is defined as:
+        </p>
+        <p>
+          <math>
+            <mi>&#x03B7;</mi>
+            <mo>=</mo>
               <mfrac>
                 <mtext>output energy</mtext>
                 <mtext>input energy</mtext>
               </mfrac>
-            </math>, is calculated based on the rate of heat loss per meter of 7.1722W/m obtained by:
+            </math>
+        </p>
+        <p>
+          Heat loss is calculated using a rate of 7.1722 W/m, obtained from the following assumptions:
         </p>
         <ol>
           <li>25mm thickness of aircon insulation</li>
@@ -317,46 +382,240 @@
           <li>35ºC temperature difference between water and atmosphere</li>
         </ol>
         <p>
-          Using the length of pipe from layout above, the thermal efficiency of the pipes in a system of rigs is obtained for the series and parallel configuration.
+          The heat loss per meter is derived from conduction (through pipe and insulation) and convection (within the pipe and to atmosphere):
+        </p>
+        <p>
+          <math>
+            <mrow>
+              <msup>
+                <mi>q</mi>
+                <mo>&#x2032;</mo>
+              </msup>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>&#x03C0;</mi>
+                  <mi>L</mi>
+                  <mo>(</mo>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>i</mi>
+                  </msub>
+                  <mo>-</mo>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>o</mi>
+                  </msub>
+                  <mo>)</mo>
+                </mrow>
+                <mrow>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                      <msub>
+                        <mi>r</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <msub>
+                        <mi>h</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>ln</mi>
+                      <mo>(</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>2</mn>
+                        </msub>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>1</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mi>pipe</mi>
+                    </msub>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>ln</mi>
+                      <mo>(</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>3</mn>
+                        </msub>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>2</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mi>insulation</mi>
+                    </msub>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                      <msub>
+                        <mi>r</mi>
+                        <mn>3</mn>
+                      </msub>
+                      <msub>
+                        <mi>h</mi>
+                        <mi>c</mi>
+                      </msub>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </p>
+        <p>
+          <math>
+            <msup><mi>q</mi><mo>&#x2032;</mo></msup>
+          </math>
+          : Heat loss per unit length (W/m)
+        </p>
+
+        <p>
+          <math>
+            <mi>L</mi>
+          </math>
+          : Length of the pipe (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>T</mi><mi>i</mi></msub>
+          </math>
+          : Water temperature (°C)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>T</mi><mi>o</mi></msub>
+          </math>
+          : Ambient temperature (°C)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>1</mn></msub>
+          </math>
+          : Inner radius of the pipe (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>2</mn></msub>
+          </math>
+          : Outer radius of the pipe/Inner boundary of insulation (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>3</mn></msub>
+          </math>
+          : Outer radius of the insulation (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>h</mi><mi>i</mi></msub>
+          </math>
+          : Convective heat transfer coefficient of water (W/m²·K) – Inside pipe
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>h</mi><mi>c</mi></msub>
+          </math>
+          : Convective heat transfer coefficient of air (W/m²·K) – Outside insulation
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>k</mi><mi>pipe</mi></msub>
+          </math>
+          : Thermal conductivity of the pipe (W/m·K)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>k</mi><mi>insulation</mi></msub>
+          </math>
+          : Thermal conductivity of the insulation (W/m·K)
+        </p>
+        <p>
+          Using the pipe length estimation from layout above, the thermal efficiency of the pipes in a system of rigs is obtained for the series and parallel configuration.
         </p>  
         <p>
-          The results are plotted below for the thermal efficiency of the pipe per system size for both parallel and series configurations.
+          The resulting thermal efficiency is shown below:
         </p>
         <image-component tag="image" source="assets/tt_final/separate-loop/separate-internal-eff.jpg"
           subtitle="Figure XXX: Thermal efficiency of pipe versus island size for parallel configuration"></image-component>
         <image-component tag="image" source="assets/tt_final/single-loop/single-internal-eff.jpg"
           subtitle="Figure XXX: Thermal efficiency of pipe versus island size for series configuration"></image-component>
-        <p>
-          The thermal efficiency of the pipe improves with increasing system size for the series configuration only. This is the result of the average length of pipe per rig decreasing as system size increases. Thus, the series configuration reduces heat loss per rig and also shortens total pipe length, contributing to lower material usage and cost.
-        </p>
-
         <h4>Optimal island size: Design 1</h4>
         <p>
-          In this section, the aim is to obtain the optimal system size. To do so, the layout of the islands on one of the rooftop is obtained (see Appendix XX), using the sample connection plans below.
+          The island size is evaluated based on the following analysis. The layout of the islands on one of the rooftop is obtained (see Appendix B), using the sample connection plans below.
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
           subtitle="Figure XXX: Dimensions of available space and sample connections between TES and hot water storage tank"></image-component>
         <p>
-           Using this, the thermal efficiency of the entire piping system on one rooftop is obtained (see below).
+          The length of pipe between the islands and to the hot water storage tank (total external pipe length) are inserted into the MATLAB script <i>overall_sys_eff.m</i> and is calculated with referenced to the sketches in Appendix B.
+        </p>
+        <p>
+          The total external pipe length and the sum of all the internal pipe length (within each island) are used to evaluate system performance, including thermal efficiency and pipe loss.
+        </p>
+        <p>
+           The thermal efficiency of the entire piping system on one rooftop is obtained (see below).
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-overall-eff.jpg"
           subtitle="Figure XXX: Comparing the thermal efficiency of entire system by island size in series system"></image-component>
         <p>
-          The thermal efficiency of the entire system generally follows the trend of the thermal efficiency within the system of rigs. The pipe loss can also be obtained.
+          Pipe loss (expressed as a percentage of energy loss relative to output energy) is defined as:
+        </p>
+        <p>
+          <math>
+            <mrow>
+              <mfrac>
+                <mrow>
+                  <mi>energy</mi>
+                  <mo>&#xA0;</mo>
+                  <mi>loss</mi>
+                </mrow>
+                <mrow>
+                  <mi>output</mi>
+                  <mo>&#xA0;</mo>
+                  <mi>energy</mi>
+                </mrow>
+              </mfrac>
+              <mo>&#xD7;</mo>
+              <mn>100%</mn>
+            </mrow>
+          </math>
+        </p>
+         Using this equation, the results are shown below.
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-pipe-loss.jpg"
-          subtitle="Figure XXX: Comparing the pipe loss versus system size (no of rigs) for entire series system"></image-component>
-        <p>
-          Using the design specifications, which limits the pipe loss to <math><mn>&le;</mn></math>17.5%, the minimum system size is 3 rigs.
-        </p>
-        <p>
-           To obtain the optimal size, the total useful energy attained is used as not all system size allows the full usage of the rooftop area. Thus, the useful energy (W) per system size for the entire system under series configuration on one rooftop is calculated.
-        </p>
-        <image-component tag="image" source="assets/tt_final/single-loop/single-energy.jpg"
-          subtitle="Figure XXX: Comparing the useful energy versus system size (no of rigs) for entire series system"></image-component>
-        <p>
-          Based on the graph, the useful energy peaked at system size of 4 and 6. The cost of these 2 configuration sizes will be compared to decide on the optimal size.
-        </p>
+          subtitle="Figure XXX: Comparing the pipe loss versus island size for entire series system"></image-component>
         <h4>Cost analysis: Design 1</h4>
         <p>
           The cost of the system are compared considering the layout provided in the figures. The additional fittings required along with the pipes are:
@@ -372,35 +631,64 @@
         </p>
         <image-component tag="image" source="assets/tt_final/cost-analysis-tt.jpg"
           subtitle="Table XXX: Cost analysis of thermal transmission subsystem only (Design 1)"></image-component>
-
-        <p>
-          The island size 6 results in an overall lower cost of system implementation, but the costs is still very high.
-        </p>
         <h4>Optimal island size: Design 2</h4>
         <p>
-          In this design, we limit the number of rigs to meet the requirements of the hotel. So of 7500L required, 3750L is generated on each roof to ensure same volume of water on both sides of the hotel. Then, the minimum number of rigs required for each roof is 370 each rig contributing 10 L of heated water per day. From here, we get the new layout.
+          In design 2, we limit the number of rigs to meet the requirements of the hotel. Of the total 7500 L required, 3750 L is allocated to each roof to ensure equal distribution of hot water production. The minimum number of rigs required per roof is 370, with each rig contributing approximately 10 L of heated water per day. From here, we get the new layout (see Appendix B), where the values are inputted in the MATLAB script <i>overall_sys_eff_shortened.m</i>. All other calculations are the same as in design 1.
         </p>
-        <image-component tag="image" source="assets/tt_final/single-loop/single-pipe-loss-minimum.jpg"
-          subtitle="Figure XXX: Comparing the pipe loss versus system size (no of rigs) for entire series system"></image-component>
-        <p>
-          The pipe loss is calculated and comparing with the design specifications, the minimum number of rigs is 3.
-        </p>
-        <image-component tag="image" source="assets/tt_final/single-loop/single-overall-eff-minimum.jpg"
-          subtitle="Figure XXX: Comparing the thermal efficiency of entire system by island size in series system"></image-component>
-        <p>
-          In the thermal efficiency, the maximum for the system is at island size of 9, with local maximum at 6. The thermal efficiency trend is consistent with the useful energy results, where both show a global peak at island size 9 and a local peak at size 6. As such, we compare size 6 and 9 further using cost analysis.
-        </p>
-        <image-component tag="image" source="assets/tt_final/single-loop/single-energy-minimum.jpg"
-          subtitle="Figure XXX: Comparing the useful energy of entire system by island size in series system"></image-component>
-        <h4>Cost analysis: Design 2</h4>
-        <p>
-          The cost of the system implementation are below. The pump required for island size 9 differs due to the significantly higher system head (199.715 m) compared to island size 6 (59.1773 m), resulting in increased cost.
-        </p>
-        <image-component tag="image" source="assets/tt_final/cost-analysis-tt-minimal.jpg"
-          subtitle="Table XXX: Cost analysis of thermal transmission subsystem only (Design 2)"></image-component>
-        <p>
-          The overall cost of implementation of island size 6 is cheaper. Based on hydraulic performance, thermal efficiency, and cost analysis, island size 6 provides the best balance between performance and cost under both design approaches.
-        </p>
+        
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="appendix-system">
+        <h1>Appendix B: Layout of islands</h1>
+        <h3>Design 1</h3>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-1.jpg"
+          subtitle="Table XXX: Layout of rig 1 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-2.jpg"
+          subtitle="Table XXX: Layout of rig 2 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-3.jpg"
+          subtitle="Table XXX: Layout of rig 3 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-4.jpg"
+          subtitle="Table XXX: Layout of rig 4 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-5.jpg"
+          subtitle="Table XXX: Layout of rig 5 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-6.jpg"
+          subtitle="Table XXX: Layout of rig 6 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-7.jpg"
+          subtitle="Table XXX: Layout of rig 7 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-8.jpg"
+          subtitle="Table XXX: Layout of rig 8 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-9.jpg"
+          subtitle="Table XXX: Layout of rig 9 in design 1"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-10.jpg"
+          subtitle="Table XXX: Layout of rig 10 in design 1"></image-component>
+        <h3>Design 2</h3>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-1-2.jpg"
+          subtitle="Table XXX: Layout of rig 1 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-2-2.jpg"
+          subtitle="Table XXX: Layout of rig 2 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-3-2.jpg"
+          subtitle="Table XXX: Layout of rig 3 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-4-2.jpg"
+          subtitle="Table XXX: Layout of rig 4 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-5-2.jpg"
+          subtitle="Table XXX: Layout of rig 5 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-6-2.jpg"
+          subtitle="Table XXX: Layout of rig 6 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-7-2.jpg"
+          subtitle="Table XXX: Layout of rig 7 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-8-2.jpg"
+          subtitle="Table XXX: Layout of rig 8 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-9-2.jpg"
+          subtitle="Table XXX: Layout of rig 9 in design 2"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/rig-10-2.jpg"
+          subtitle="Table XXX: Layout of rig 10 in design 2"></image-component>
+
       </div>
     </div>
 

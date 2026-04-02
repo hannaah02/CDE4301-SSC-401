@@ -86,7 +86,7 @@
           The PUR/PIR insulation selected in the interim is compared with the commercially available aircon insulation (polypropylene random polymer, PPR), and a translucent insulation based off the concept of transparent insulation material (TIM).
         </p>
         <p>
-          PUR/PIR insulation was selected in the interim, comparing the cost, thickness required and durability. For this experiment, spray PUR/PIR foam is used to cover the 9mm outer diameter (OD) hose with a 7mm diameter aluminium duct to encapsulate the insulation, with support used to centre the insulation.
+          PUR/PIR insulation was selected in the interim, comparing the cost, thickness required and durability. For this experiment, spray PUR/PIR foam is used to cover the 9mm outer diameter (OD) hose with a 7mm diameter aluminium duct to encapsulate the insulation, with support used to centre the insulation. (see Appendix A for thickness calculation)
         </p>
         <image-component tag="image" source="assets/tt_final/images/purpir.jpg"
           subtitle="Figure XXX: Image of PUR/PIR insulation"></image-component>
@@ -98,7 +98,7 @@
         <image-component tag="image" source="assets/tt_final/images/aircon.jpg"
           subtitle="Figure XXX: Image of aircon insulation"></image-component>
         <p>
-          TIM prevents heat loss through suppression of convection in the air pockets (see below), while allowing irradiance to heat the absorber (hose with water) though the transparent material. [0.1] Using this concept, translucent corrugated plastic board is used to wrap around the 9mm OD hose, forming air gaps between each layer (each layer is 0.03mm plastic sheet and 3.24mm trapped air).
+          TIM prevents heat loss through suppression of convection in the air pockets (see below), while allowing irradiance to heat the absorber (hose with water) though the transparent material. [0.1] Using this concept, translucent corrugated plastic board is used to wrap around the 9mm OD hose, forming air gaps between each layer (each layer is 0.03mm plastic sheet and 3.24mm trapped air). (see Appendix A for thickness calculation)
         </p>
         <image-component tag="image" source="assets/tt_final/images/ti-structures.jpg"
           subtitle="Figure XXX: Example of geometry that traps air [1]"></image-component>
@@ -223,32 +223,421 @@
 
     <div>
       <div id="tt-appendix-insulation">
-        <h1>Appendix XX: Insulation experiment</h1>
+        <h1>Appendix A: Insulation experiment</h1>
+        </p>
           <h4>Minimum insulation for PUR/PIR and translucent insulation</h4>
           <p>
-            Using 
+            For the PUR/PIR insulation and translucent insulation, the thickness required can be calculated to ensure minimum thickness is met to satisfy a 2.37W/m heat loss.
           </p>
           <p>
-            For PUR/PIR: (from interim)
+            For PUR/PIR, the results is based on this equation:
+          </p>
+          <math>
+            <mrow>
+              <msup>
+                <mi>q</mi>
+                <mo>&#x2032;</mo>
+              </msup>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>&#x03C0;</mi>
+                  <mi>L</mi>
+                  <mo>(</mo>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>i</mi>
+                  </msub>
+                  <mo>-</mo>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>o</mi>
+                  </msub>
+                  <mo>)</mo>
+                </mrow>
+                <mrow>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                      <msub>
+                        <mi>r</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <msub>
+                        <mi>h</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>ln</mi>
+                      <mo>(</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>2</mn>
+                        </msub>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>1</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mi>hose</mi>
+                    </msub>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>ln</mi>
+                      <mo>(</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>3</mn>
+                        </msub>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>2</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mi>PUR/PIR</mi>
+                    </msub>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                      <msub>
+                        <mi>r</mi>
+                        <mn>3</mn>
+                      </msub>
+                      <msub>
+                        <mi>h</mi>
+                        <mi>c</mi>
+                      </msub>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </p>
+        <p>
+          <math>
+            <msup><mi>q</mi><mo>&#x2032;</mo></msup>
+          </math>
+          : Heat loss per unit length (W/m)
+        </p>
+
+        <p>
+          <math>
+            <mi>L</mi>
+          </math>
+          : Length of PUR/PIR (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>T</mi><mi>i</mi></msub>
+          </math>
+          : Water temperature (°C)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>T</mi><mi>o</mi></msub>
+          </math>
+          : Ambient temperature (°C)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>1</mn></msub>
+          </math>
+          : Inner radius of the hose (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>2</mn></msub>
+          </math>
+          : Outer radius of the hose/Inner boundary of PUR/PIR (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>3</mn></msub>
+          </math>
+          : Outer radius of PUR/PIR (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>h</mi><mi>i</mi></msub>
+          </math>
+          : Convective heat transfer coefficient of water (W/m²·K) – Inside pipe
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>h</mi><mi>c</mi></msub>
+          </math>
+          : Convective heat transfer coefficient of air (W/m²·K) – Outside insulation
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>k</mi><mi>hose</mi></msub>
+          </math>
+          : Thermal conductivity of the hose (W/m·K)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>k</mi><mi>PUR/PIR</mi></msub>
+          </math>
+          : Thermal conductivity of PUR/PIR (W/m·K)
+        </p>
+          <p>
+            Based on the MATLAB script <i>pipe_insulation_main.m</i>, the thickness required is 27.982177mm. 70mm pipe is used for 30.5mm thickness of PUR/PIR as it meets the minimum thickness required and was the closest size available to allow the insulation to be built with minimum thickness.
           </p>
           <p>
-            Thickness required: 27.982177mm
+            For translucent insulation, each layer consists of a 0.03 mm plastic sheet and a 3.24 mm stagnant air gap, giving a total thickness of 3.27 mm per layer. The calculation is based off this:
           </p>
+          <math>
+            <mrow>
+              <msup>
+                <mi>q</mi>
+                <mo>&#x2032;</mo>
+              </msup>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>&#x03C0;</mi>
+                  <mi>L</mi>
+                  <mo>(</mo>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>i</mi>
+                  </msub>
+                  <mo>-</mo>
+                  <msub>
+                    <mi>T</mi>
+                    <mi>o</mi>
+                  </msub>
+                  <mo>)</mo>
+                </mrow>
+                <mrow>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                      <msub>
+                        <mi>r</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <msub>
+                        <mi>h</mi>
+                        <mi>i</mi>
+                      </msub>
+                    </mrow>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>ln</mi>
+                      <mo>(</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>2</mn>
+                        </msub>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>1</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mi>hose</mi>
+                    </msub>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>ln</mi>
+                      <mo>(</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>3</mn>
+                        </msub>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>2</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mi>air</mi>
+                    </msub>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>ln</mi>
+                      <mo>(</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>4</mn>
+                        </msub>
+                        <msub>
+                          <mi>r</mi>
+                          <mn>3</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <msub>
+                      <mi>k</mi>
+                      <mi>plastic</mi>
+                    </msub>
+                  </mfrac>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mn>1</mn>
+                    <mrow>
+                      <msub>
+                        <mi>r</mi>
+                        <mn>4</mn>
+                      </msub>
+                      <msub>
+                        <mi>h</mi>
+                        <mi>c</mi>
+                      </msub>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+              </mfrac>
+            </mrow>
+          </math>
+        </p>
+        <p>
+          <math>
+            <msup><mi>q</mi><mo>&#x2032;</mo></msup>
+          </math>
+          : Heat loss per unit length (W/m)
+        </p>
+
+        <p>
+          <math>
+            <mi>L</mi>
+          </math>
+          : Length of PUR/PIR (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>T</mi><mi>i</mi></msub>
+          </math>
+          : Water temperature (°C)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>T</mi><mi>o</mi></msub>
+          </math>
+          : Ambient temperature (°C)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>1</mn></msub>
+          </math>
+          : Inner radius of the hose (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>2</mn></msub>
+          </math>
+          : Outer radius of the hose/Inner radius of air gap (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>3</mn></msub>
+          </math>
+          : Outer radius of air gap/Inner boundary of plastic (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>r</mi><mn>4</mn></msub>
+          </math>
+          : Outer radius of plastic (m)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>h</mi><mi>i</mi></msub>
+          </math>
+          : Convective heat transfer coefficient of water (W/m²·K) – Inside pipe
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>h</mi><mi>c</mi></msub>
+          </math>
+          : Convective heat transfer coefficient of air (W/m²·K) – Outside insulation
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>k</mi><mi>hose</mi></msub>
+          </math>
+          : Thermal conductivity of the hose (W/m·K)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>k</mi><mi>air</mi></msub>
+          </math>
+          : Thermal conductivity of stagnant air (W/m·K)
+        </p>
+
+        <p>
+          <math>
+            <msub><mi>k</mi><mi>plastic</mi></msub>
+          </math>
+          : Thermal conductivity of plastic (W/m·K)
+        </p>
           <p>
-            For translucent insulation: Consider each layer to be plastic layer of 0.03mm and stagnant air of 3.24mm, so each layer is 3.27mm.
-          </p>
-          <p>
-            Number of layers: 10 (3.27cm)
+            Based on the MATLAB script <i>insulation_twinwall_layers_main.m</i>, a total of 10 layers are used, giving an overall thickness of approximately 32.7 mm.
           </p>
           <image-component tag="image" source="assets/tt_final/images/translucent-inner.jpg"
           subtitle="Figure A1: Inner cross-section of translucent insulation"></image-component>
 
           <h4>In shade</h4>
+          <!--
           <image-component tag="image" source="assets/tt_final/insulation-shade.jpg"
           subtitle="Figure A XXX: Results of insulation test #1 in shade"></image-component>
-          <p>
-            The PUR/PIR and aircon insulation performed best at the start with the same low rate of heat loss, but as temperature drops, the aircon insulation graph has a higher rate of heat loss than PUR/PIR insulation (see below). The translucent insulation did not perform as well as the PUR/PIR and aircon insulation at high temperatures (around 60ºC), but as the temperature fell, the heat loss decreased, reaching lower heat loss than both PUR/PIR and aircon insulation (see below).
-          </p>
           <image-component tag="image" source="assets/tt_final/insulation-shade-60.jpg"
             subtitle="Figure XXX: Result of insulation experiment in shade at 60ºC"></image-component>
           <image-component tag="image" source="assets/tt_final/insulation-shade-45.jpg"
@@ -256,35 +645,21 @@
           <image-component tag="image" source="assets/tt_final/insulation-shade-40.jpg"
             subtitle="Figure XXX: Result of insulation experiment in shade at 40ºC"></image-component>
           <p>
-            Overall, the CSP system is expected to function at high temperatures above 40ºC up to 60ºC. Thus, the trend at high temperatures is most important, of which PUR/PIR insulation performed best, with aircon insulation being second best.
+            -->
+            Additional results to verify trend are below.
           </p>
           <image-component tag="image" source="assets/tt_final/insulation-shade-2.jpg"
           subtitle="Figure A XXX: Results of insulation test #2 in shade"></image-component>
-          <image-component tag="image" source="assets/tt_final/insulation-shade-3.jpg"
-          subtitle="Figure A XXX: Results of insulation test #3 in shade"></image-component>
 
           <h4>In sunlight</h4>
+          <!--
           <image-component tag="image" source="assets/tt_final/insulation-direct-sun.jpg"
           subtitle="Figure A XXX: Results of insulation test under direct sun"></image-component>
           <image-component tag="image" source="assets/tt_final/insulation-indirect-sun.jpg"
-          subtitle="Figure A XXX: Results of insulation test under indirect sun"></image-component>
+          subtitle="Figure A XXX: Results of insulation test under indirect sun"></image-component>-->
           <image-component tag="image" source="assets/tt_final/insulation-direct-sun-long.jpg"
           subtitle="Figure A XXX: Results of insulation test under direct sun for extended period"></image-component>
-          <p>
-            When conducting the experiments under sunlight, 2 different results were obtained where PUR/PIR and aircon insulation performed best in each of them. This is determined to be the result of testing under different conditions: direct and indirect sunlight. When conducted under mainly direct sunlight, the aircon insulation performed better with a lower rate of heat loss, whereas in mainly indirect sunlight, the PUR/PIR insulation performed better. This is theorised to be a result of the different absorptivity between the aircon insulation and the PUR/PIR insulation. As the aircon insulation is of black colour, it has a high absorptivity of about 0.9 [2], whereas the aluminium foil covering the PUR/PIR insulation has an absorptivity of 0.15. [3] Between the two insulations, PUR/PIR insulation will thus have lower energy absorbed than the aircon insulation. This is verified as the PUR/PIR has more stable temperature under sunlight compared to the aircon insulation (see below). This accounts for the variations between the aircon and PUR/PIR insulation results conducted under sunlight.
-          </p>
-          <image-component tag="image" source="assets/tt_final/insulation-sun-details.jpg"
-            subtitle="Figure XXX: More fluctuations in water temperature with aircon insulation than with PUR/PIR insulation"></image-component>
-          <p>
-            Under direct sunlight, there is higher irradiance compared to indirect. So, the aircon insulation is able to absorb larger amount of solar energy, which offsets the heat loss causing the lower net rate of heat loss oberved under that condition. As such, aircon insulation performing better under direct sunlight.
-          </p>
-
-          <h4>From sunlight to shade</h4>
-          <image-component tag="image" source="assets/tt_final/insulation-direct-sun-shade.jpg"
-          subtitle="Figure A XXX: Results of insulation test under direct sun to shade (Aircon insulation was under shade earlier than the rest)"></image-component>
-          <image-component tag="image" source="assets/tt_final/insulation-indirect-sun-shade.jpg"
-          subtitle="Figure A XXX: Results of insulation test under indirect sun to shade"></image-component>
-
+          
       </div>
     </div>
 
