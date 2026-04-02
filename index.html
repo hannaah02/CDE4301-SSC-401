@@ -164,416 +164,91 @@
     <sl-divider></sl-divider>
 
     <div>
-      <div id="intro">
-        <h2>1. Background (research gaps in lit review recap)</h2>
+      <div id="chapter1">
+        <h2> 1.</h2>
         <p>
-          
+          XX
         </p>
-        <h3>Small-scale concentrated solar power</h3>
-
-        <h3>Application/Client</h3>
-
-        <h3>Aims and Objectives</h3>
-
-
       </div>
-      <div id="background">
-        <h2> 1. Background</h2>
-        <image-component tag="image" source="assets/csp.jpg"
-        subtitle="Figure 01: Large scale Concentrated Solar Power Plant [1]"></image-component>
-        <p> Concentrated solar power (CSP) is a system that collects thermal energy. It redirects and concentrates sunlight using mirrors onto a receiver. The receiver conducts the thermal energy to the heat transfer fluid (HTF) within it, which is then transferred to a thermal energy storage (TES) system or the application.</p>
-        <p> CSP systems are used globally, with 7360MW in operation and 3351MW in construction as of March 2025. Its market is worth USD 5.8 billion (2025), with a compound annual growth rate (CAGR) of 8.3% from 2025 to 2035 [2].</p>
-        <p> However, most of these systems are large-scale, about 5-10 acres of land per MW are used, mainly for electricity generation, with an electric efficiency up to 16% [2].</p>
-        <p> Despite that, there are small-scale plants used for industrial process heat and in rural or off-grid areas for electricity or poly-generation [2]. The electric efficiency is comparable with large-scale systems, of up to 15% or 30% for low temperature (<500ºC) and high temperature (>500ºC) systems respectively [3].</p>
-        
+    </div> 
+
+    <div>
+      <div id="chapter2">
+        <h2>2. System Design</h2>
+        <h3>Case study</h3>
+        <p>
+          The layout of the hotel is approximated below, with a usable implementation area of 1,288m^2 (greyed out) identified from the total land area of 0.5 hectares, using standard hotel width dimensions as a reference. [2.1]
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/dimensions-only.jpg"
+          subtitle="Figure XXX: Dimensions of hotel"></image-component>
+        <h3>Proposed System Design</h3>
+        <p>
+          The functional requirements of the client are as follows:
+        </p>
+        <image-component tag="image" source="assets/final-functional-req.jpg"
+          subtitle="Figure XXX: Dimensions of hotel"></image-component>
+        <p>
+          The final proposed system is as follows:
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
+          subtitle="Figure XXX: Overall system layout"></image-component>
+        <p>
+          The proposed system consists of modular islands, where each island consists of multiple rigs (receiver and reflectors) connected to a thermal energy storage (TES) tank (see below).
+        </p>
+        <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs.jpg"
+          subtitle="Figure XXX: Layout of island"></image-component>
+        <p>
+          Water is supplied to the TES tank via the water mains, which also provides pressure to drive flow to the hot water storage tank and subsequently to the showers. The hot water storage tank is located in the hotel where it reduces delay in hot water delivery, stores excess thermal energy for periods of low solar irradiance, and provides additional heating to maintain water temperatures.
+        </p>
+        <h3>Proposed System Design Specifications</h3>
+        <p>
+          Our system design specifications are as follows to meet the clients requirements:
+        </p>
+        <h3>Improvements on Rig Design</h3>
+        <h4>Previous Rig Design from August to Dec 2025</h4>
+        <p>
+          In Semester 1, the solar tower and parabolic dish configurations were tested independently, and the resulting static water temperatures were recorded. The solar tower configuration achieved a maximum temperature of 82 °C, while the parabolic dish reached a maximum of 61.6 °C. However, a fully integrated system combining the light capture, thermal transmission, and thermal energy storage subsystems was not developed at that stage.
+        </p>
+        <h4>Enhanced Rig Design from Jan to Apr 2026</h4>
+        <p>
+          By the end of Semester 2, all subsystems, light , thermal transmission, and thermal energy storage were successfully integrated to form a fully functional system. The final test rig was able to heat 10 L of water to a maximum temperature of 55 °C and maintain the water temperature above 40 °C for 9 hours.
+        </p>
+        <p>
+          This performance was achieved by increasing the reflective surface area, incorporating insulation to minimise heat losses, and integrating a thermal energy storage system to sustain the water temperature above the desired range.
+        </p>
       </div>
-
-      <div id="small-scale CSP">
-        <h3 style = "margin-top: 50px;"> 1.1 Why focus on small scale Concentrated Solar Power?</h3>
-        <p> Over the years, many have adopted photovoltaics (PV) to generate electricity from sunlight. However, concentrated solar power (CSP) offers several advantages. CSP systems have lower installation and maintenance costs due to their simpler mechanical design [4]. They also have a longer lifespan, whereas PV systems typically last around 25 years. Additionally, CSP components are easier to recycle since they are made from less complex materials [5],[6].</p>
-        <p> Given these benefits, we aim to explore how small-scale CSP systems can be integrated into everyday applications to provide a more sustainable and efficient source of energy.</p>
-      </div>
-
-      <div id="UROP Solar Tower rig">
-        <h3 style = "margin-top: 50px;"> 1.2 UROP Solar Tower rig</h3>
-        <p> The rig we will be optimising is the current 1x1m CSP rig that was built alongside the UROP team (see below). It consists of a 1m<sup>3</sup> area underneath, 8 parabolic mirrors, a black aluminium pot with water as the receiver. The specifications are given below.</p>
-
-        <image-component tag="image" source="assets/mains-urop-rig.png"
-        subtitle="Figure 02: UROP rig, with 1x1x1m space underneath reflectors and receiver"></image-component>
-        <br/>
-        <image-component tag="image" source="assets/mains-urop-rig-2.png"
-        subtitle="Figure 03: UROP CSP rig at rooftop"></image-component>
-        <br/>
-        <image-component tag="image" source="assets/mains-urop-reflectors.png"
-        subtitle="Figure 04: Dimensions of reflectors"></image-component>
-        <br/>
-        <image-component tag="image" source="assets/mains-urop-dim.png"
-        subtitle="Table 01: Specifications of UROP CSP rig"></image-component>
-      </div>
-
-      <div id="aims & objectives">
-        <h3 style = "margin-top: 50px;"> 1.3 Aims & Objectives</h3>
-        <p> The aim of this project is to identify the optimal configuration of a scalable, low-cost CSP system consisting of the light, thermal transmission and thermal energy storage (TES) subsystems. </p>
-        <image-component tag="image" source="assets/mains-subsection-aim.png"
-        subtitle="Table 02: Aims of each subsection"></image-component>
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/overall system.png"
-              subtitle="Figure 05: Complete (Light, Thermal Transmission, Thermal Energy Storage) system"
-              style="width: 80%; height: auto;display: block; margin: 40px auto 30px auto;"
-            ></image-component>
-          </div>
-      </div>
-
-      <div id="potential use case">
-        <h3 style = "margin-top: 50px;"> 1.4 Potential Use Case </h3>
-        <p> Multiple 1 m² CSP rigs will be deployed to help meet the energy demands of the selected applications. </p>
-        <h4>Indonesia</h4>
-        <p>Our industry partner, ES&T Environmental, has identified a growing demand among coastal hotels in Indonesia for efficient and sustainable hot water production for showering. With abundant sunlight and ample space, small-scale CSP systems are well-suited for this purpose.</p>
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/indonesia.png"
-              subtitle="Figure 06: Hotel in Tanjung Balai"
-              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-
-  
-        <h4>Vietnam</h4>
-        <p>In northern Vietnam, salt production depends on solar evaporation of seawater, but the process is inefficient due to poor humidity control. Using brine obtained from seawater, desalination can help accelerate salt production by reducing the overall drying time.</p>
-        <div style="display: flex; justify-content: center;">
-            <image-component
-              tag="image"
-              source="assets/vietnam.jpg"
-              subtitle="Figure 07: Salt Production in Vietnam"
-              style="width: 100%; height: auto;display: block; margin: 0 auto 30px auto;"
-            ></image-component>
-          </div>
-        
-        <h4><u>Application</u></h4>
-        <P>To address these use cases, particularly focusing on hot water production for showering in Indonesia, we propose two solutions:</P>
-        <ul>
-          <li>1-stage process - Hot water production (40-45<sup>°</sup>C [7]) using tap water</li>
-          <li>2-stage process - Hot water production using seawater</li>
-          <ul>
-            <li>Heating of seawater to obtain freshwater and brine (100<sup>°</sup>C)</li>
-            <li>Heating of freshwater to produce hot water (40-45<sup>°</sup>C [7])</li>
-          </ul>
-        </ul>
-
-        <p>The single-stage process is designed specifically for the Indonesia case, while the two-stage process applies to both the Indonesia and Vietnam cases. Both processes will be tested. The two-stage process will be implemented only if seawater can be heated to 100<sup>°</sup>C</p>
-    
-      </div>
-
-      <div id="value prop">
-        <h3 style = "margin-top: 50px;"> 1.5 Value Proposition </h3>
-        <p>A scalable 1×1 m CSP system that uses free resources such as sunlight and seawater to provide a reliable hot water supply for showering at 45 °C [7] or produce brine, offering an affordable, sustainable solution for communities in equatorial developing regions (16% of the world population)[8],[9].</p>
-      </div>
-
-      <div id = 'discussion'>
-        <h3> 1.6 Discussion </h3>
-        <p>The project focuses on developing an optimized, customizable, and scalable low-cost CSP rig for research purposes. Further improvements are needed (as discussed in respective sections) before testing its water storage capacity and temperature performance for the intended use case. Beyond this, additional design modifications will be made to improve compatibility, such as using alternative materials to reduce cost, and enhancing portability and ease of setup.</p>
-      </div>
-
-      <div id = 'project plan'>
-        <h3> 1.7 Project Plan </h3>
-        <p>The project timeline is summarized in the Gantt chart below, with detailed tasks outlined for the current subsections. New subsections will be added for hot water production, focusing on assessing the volume of water that can be maintained at 40–45°C and evaluating the feasibility of desalination if heating up to 100°C is achievable.</p>
-      </div>
-      <image-component tag="image" source="assets/mains-proj-plan.png"
-      subtitle="Figure 08: Project plan gantt chart for the rest of project"></image-component>
-    </div>
-    <br />
-    <br />
-    <sl-divider></sl-divider>
+    </div> 
 
     <div>
       <div id="subsections">
-        <h2>2. Subsections</h2>
+        <h2>Subsections</h2>
         <p>
-        The project is currently split to 3 subsections, and the information on each subsection is displayed on its respective page below.
+        XX
         <ol>
           <li><a href="lightsubfinal.html">Light</a></li>
           <li><a href="thermaltransmissionfinal.html">Thermal Transmission</a></li>
           <li><a href="thermalenergystoragesubs.html">Thermal Energy Storage</a></li>
           <li><a href="sensingsubs.html">Sensing</a>  (only used during the design and testing phase to capture data and optimise the system)</li>
+          <li><a href="integrated.html">Integrated System</a></li>
+          <li><a href="finalsystem.html">Final System</a></li>
         </ol>
         </p>
       </div>
     </div>
-    <br />
-    <br />
-    <!--sl-divider></sl-divider>
 
-    
+
     <br />
     <br />
     <sl-divider></sl-divider>
 
-
-        <!-- This is an example of how you might use the video component
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
-        -->
-
-        <!-- This is an example of how you might use the table component -->
-        <!--table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
-      -->
-      
-    <sl-button size="medium" pill onclick href="ch2.html">Next: System Design</sl-button>
-
-    <div id="references" class="references">
-      <sl-divider></sl-divider>
-      <h2>References</h2>
-      <ul>
-        <li>[1] “3,009 Concentrated Solar Power Stock Videos, Footage & 4K Video Clips,” Getty Images, [Online]. Available : https://www.gettyimages.com/videos/concentrated-solar-power. Accessed: Nov. 3, 2025.</li>
-        
-        <li>[2] “Concentrated Solar Power [CSP] Market Size and Growth, 2028,” www.fortunebusinessinsights.com. https://www.fortunebusinessinsights.com/industry-reports/concentrated-solar-power-market-100751 </li>
-        
-        <li>[3] “CSP Projects Around the World,” SolarPACES. https://www.solarpaces.org/worldwide-csp/csp-projects-around-the-world/</li>
-        
-        <li>[4] “Why are solar panels so expensive? | SaveOnEnergy,” SaveOnEnergy.com, Jan. 16, 2025. https://www.saveonenergy.com/solar-energy/are-solar-panels-expensive/</li>
-        
-        <li>[5] Chowdhury, M.S.,Rahman, K.S.,T.Chowdhury, N.Nuthammachot, K.Techato, M.Akhtaruzzaman, S.K.Tiong, K.Sopian&N.Amin, “An overview of solar photovoltaic panels’end‑of‑life material recycling”, EnergyStrategyReviews, vol.27, p.100431,2020.</li>
-        
-        <li>[6] S. Kraemer, “What are the Pros and Cons of Longer Solar Contracts?,” SolarPACES, Mar. 05, 2024. [Online]. Available: https://www.solarpaces.org/what-are-the-pros-and-cons-of-longer-solar-contracts/</li>
-
-        <li>[7] “What is the Ideal Temperature to Shower in?”, RHEE Asia, Blog, Oct. 2, 2019. [Online]. Available: https://www.rheemasia.com/blog/what-is-the-ideal-temperature-to-shower-in/. </li>
-        
-        <li>[8] “Tropics,” Wikipedia, [Online]. Available: https://en.wikipedia.org/wiki/Tropics. Accessed: Nov. 3, 2025. (en.wikipedia.org)</li>
-        
-        <li>[9] United Nations, “Percentage of Total Population Living in Coastal Areas,” Methodology Sheet, Division for Sustainable Development, Dept. of Economic and Social Affairs, Oct. 2014. [Online]. Available:https://www.un.org/esa/sustdev/natlinfo/indicators/methodology_sheets/oceans_seas_coasts/pop_coastal_areas.pdf. </li>
-
-        <li>[10] T. H. G. “Solar Radiation Spectrum,” SunWind Solar, [Online]. Available: https://sunwindsolar.com/blog/solar-radiation-spectrum/.</li>
-
-        <li>[11] First Green Consulting, “Differentiate between the DNI, DHI and GHI?,” May 03, 2012. https://firstgreenconsulting.wordpress.com/2012/04/26/differentiate-between-the-dni-dhi-and-ghi/</li>
-
-        <li>[12] Solcast, “Historical data — Solcast API Toolkit.” [Online]. Available: https://toolkit.solcast.com.au/historical. </li>
-
-        <li>[13] U.Kumar, “Understanding Solar Angles: Elevation, Incidence & More,” Arka360 Blog, Sept. 23 2025. [Online]. Available: https://arka360.com/ros/solar-angles.</li>
-
-        <li>[14] M.Avgoulas, W.Keller, S.R.R.Pireaux et al., “Technical, environmental and economic comparison of building‑integrated photovoltaic (BIPV) window technologies in a Scandinavian climate,” Journal of Energy Storage, vol. 37, p. 102469, May 2021. [Online]. Available: https://www.sciencedirect.com/science/article/abs/pii/S2213138821004446. </li>
-
-        <li>[15] C.K.Ho and B.Iverson, “Review of Central Receiver Designs for High‑Temperature Power Cycles,” presented at the [conference name unknown], 2012. [Online]. Available: https://www.osti.gov/biblio/1141055</li>
-
-        <li>[16] C. Belmonte and R. Tayactac, “Advances in Pressurized Volumetric Solar Receivers: A review,” E3S Web of Conferences, vol. 566, p. 04005, Jan. 2024, doi: 10.1051/e3sconf/202456604005.</li>
-
-        <li>[17] L. Pang, T. Wang, R. Li, and Y. Yang, “Two-stage solar power tower cavity-receiver design and thermal performance analysis,” AIP Conference Proceedings, vol. 1850, p. 030037, Jan. 2017, doi: 10.1063/1.4984380.</li>
-
-        <li>[18] E. Bellosa, E. Bousia, C. Tzivanidis, and S. Pavlovic, “Optical and thermal analysis of different cavity receiver designs for solar dish concentrators,” Energy Convers. Manag. X, vol. 6, p. 100086, 2020.</li>
-
-        <li>[19] G. Gentile, F. S. Carli, M. Speranzella, M. Binotti, M. E. Cholette, and G. Manzolini, “Enhancing solar tower competitiveness with star-shaped receivers,” Appl. Energy, vol. 391, p. 125844, Aug. 2025, doi: 10.1016/j.apenergy.2025.125844.</li>
-
-        <li>[20] M. Laporte-Azcué, P. Á. González, M. R. Rodriguez-Sanchez, and D. Santana, “Material selection for solar central receiver tubes,” Sol. Energy Mater. Sol. Cells, vol. 231, p. 111317, Oct. 2021, doi: 10.1016/j.solmat.2021.111317.</li>
-
-        <li>[21] Humboldt State University and WGBH Educational Foundation, “Saved by The Sun,” 2007. [Online]. Available: https://www.pbs.org/wgbh/nova/education/activities/pdf/3406_solar_03.pdf</li>
-
-        <li>[22] Editor Engineeringtoolbox, “Understanding convective heat Transfer: Coefficients, Formulas & Examples,” Mar. 06, 2025. https://www.engineeringtoolbox.com/convective-heat-transfer-d_430.html</li>
-
-        <li>[23] Editor Engineeringtoolbox, “Radiation heat transfer,” Mar. 24, 2025. https://www.engineeringtoolbox.com/radiation-heat-transfer-d_431.html</li>
-
-        <li>[24] Editor Engineeringtoolbox, “Thermal Conductivity of Metals and Alloys: Data Table & Reference Guide,” Mar. 04, 2025. https://www.engineeringtoolbox.com/thermal-conductivity-metals-d_858.html</li>
-
-        <li>[25] C. Titakis and P. Vassiliou, “Evaluation of 4-Year Atmospheric Corrosion of Carbon Steel, Aluminum, Copper and Zinc in a Coastal Military Airport in Greece,” Corros. Mater. Degrad., vol. 1, no. 1, p. 8, May 2020, doi: 10.3390/cmd1010008.</li>
-
-        <li>[26] “Physical ductility of the elements - FailureCriteria.com.” https://www.failurecriteria.com/physicalductilit.html</li>
-
-        <li>[27] “Metal costs - Roy Mech.” https://roymech.org/Useful_Tables/Matter/Costs.html</li>
-
-        <li>[28] D.Dunning, “Is Solar Panel Efficiency Important?,” ThinkSolar Knowledge Hub, April 26, 2024. [Online]. Available: https://thinksolar.co.nz/knowledge‑hub‑posts/is‑solar‑panel‑efficiency‑important/</li>
-
-        <li>[29] “Recent Strategies for High-Performing Indoor Perovskite Photovoltaics,” Nanomaterials, vol. 13, no. 2, p. 259, Jan. 2023, doi: 10.3390/nano13020259.</li>
-
-        <li>[30] “Absorption of light | Research Starters | EBSCO Research,” EBSCO. https://www.ebsco.com/research-starters/science/absorption-light</li>
-
-        <li>[31] Quora, “Are lumens linearly additive? If I have two light sources side-by-side emitting 1000 lumens each, am I going to have the same amount of light emitted in an enclosed room as if I had a single light source that’s …?”, Quora, 2025. [Online]. Available: https://www.quora.com/Are-lumens-linearly-additive-If-I-have-two-light-sources-side-by-side-emitting-1000-lumens-each-am-I-going-to-have-the-same-amount-of-light-emitted-in-an-enclosed-room-as-if-I-had-a-single-light-source-thats?top_ans=72720041.</li>
-
-        <li>[32] “Inverse Square Law,” BYJU'S, [Online]. Available: https://byjus.com/physics/inverse-square-law/ </li>
-
-        <li>[33] Concentration Ratio — an overview, ScienceDirect Topics: Engineering, Elsevier. [Online]. Available: https://www.sciencedirect.com/topics/engineering/concentration-ratio.</li>
-
-        <li>[34] OpenStax, “4.4 Electric Power and Energy – includes Heat energy,” Douglas College Physics 1207. https://pressbooks.bccampus.ca/introductorygeneralphysics2phys1207/chapter/20-4-electric-power-and-energy/</li>
-
-        <li>[35] R.Peamsuwan, P.Waramit, I.Worapun, B.Krittacom, T.Phoo‑Ngernkham, and R.Luampon, “Investigation of Tungsten Halogen Lamp for Possible Usage as Heat Source for Testing Solar Collector,” Energy and Built Environment, vol. 4, pp. 517‑528, Apr. 2024, doi:10.1016/j.enbenv.2023.04.002.</li>
-
-        <li>[36] PUB, “Water Price,” PUB, Singapore’s National Water Agency, 2025. https://www.pub.gov.sg/Public/WaterLoop/Water-Price.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[37] Engineering ToolBox, “Water - Thermal Conductivity,” Engineeringtoolbox.com, 2012. https://www.engineeringtoolbox.com/water-liquid-gas-thermal-conductivity-temperature-pressure-d_2012.html.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[38] “Ethanol 50%, (v/v).” Available: https://www.columbuschemical.com/MSDS/SDS/Ethanol%2050%25%2C%20%28v-v%29%208589.pdf.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[39] “Therminol® VP1 Heat Transfer Fluid.” Accessed: Oct. 31, 2025. [Online]. Available: https://americasinternational.com/wp-content/uploads/2020/03/THERMINOL-VP1-SDS-EASTMAN.pdf.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[40] Super User, “Potassium Sodium Alloy - ESPI Metals,” Espimetals.com, 2015. https://www.espimetals.com/index.php/msds/799-Potassium%20Sodium%20Alloy.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[41] L. Heller, “Literature Review on Heat Transfer Fluids and Thermal Energy Storage Systems in CSP Plants STERG Report,” 2018. https://www.semanticscholar.org/paper/Literature-Review-on-Heat-Transfer-Fluids-and-in-Heller/05353e299330ac84882ab456a6c63fcd9ecc3118.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[42] P. Zhang, X. Li, and S. Shang, “Effect of height difference on the performance of two-phase thermosyphon loop used in air conditioning system.,” Jul. 2014, Available: https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2516&context=iracc.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[43] “Amazon.com: NTBL GROTHEN G328A Peristaltic Pump 100-240V 114-500ml/min Adjustable High Flow Rate Food Grade Platinum Vulcanized Silicone Tube for DIY Aquarium Lab Chemical Analysis Dosing Additives : Industrial & Scientific,” Amazon.com, 2025. https://www.amazon.com/NTBL-Peristaltic-114-500ml-Adjustable-Vulcanized/dp/B0BNL1514C.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[44] “Graflsoa GROTHEN G928 High-Flow Peristaltic Pump with 304 Stainless Steel Frame, 12V/24V DC Motor, 500mL/min Flow Rate, Easy Maintenance, Wide Applications in Labs and Pharmaceuticals,” Walmart.ca, 2025. https://www.walmart.ca/en/ip/Graflsoa-GROTHEN-G928-High-Flow-Peristaltic-Pump-304-Stainless-Steel-Frame-12V-24V-DC-Motor-500mL-min-Flow-Rate-Easy-Maintenance-Wide-Applications-La/45MRVPFB4B6P.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[45] Shopee.sg, 2017. https://shopee.sg/Peristaltic-Pump-Dosing-Pump-500ml-min-12V-DC-Grothen-G928-For-Analytical-Lab-i.352892875.26482359116.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[46] U. Mini, “USB Mini Submersible Water Pump,” Voltaat, 2021. https://www.voltaat.com/products/usb-mini-submersible-water-pump.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[47] "Multiflow peristaltic pump," Sigmaaldrich. https://www.sigmaaldrich.com/SG/en/product/aldrich/z678414.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[48] L. Wuidart, “APPLICATION NOTE ® UNDERSTANDING POWER FACTOR.” Available: https://www.st.com/resource/en/application_note/an523-understanding-power-factor-stmicroelectronics.pdf.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[49] “The Efficiency Levels of different Power Supplies,” CircuitBread. https://www.circuitbread.com/ee-faq/what-are-the-efficiency-levels-of-different-power-supplies.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[50] kissdumbo.sg, "GROTHEN G328A Peristaltic Pump 100-240V 114-500ml/min Adjustable High Flow Rate Food Grade Platinum Vulcanized Silicone Tube for DIY Aquarium Lab Chemical Analysis Dosing Additives," Shopee. https://shopee.sg/kissdumbo.sg/24001582496.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[51] officestucio.sg, "GROTHEN DC 12V Peristaltic Pump with Silicone Tubing High Flow Water Liquid Pump Dosing Vacuum Pump Self-Priming Anti-Corrosion Adjustable Flow for DIY Aquarium Lab Chemical A OFSG," Shopee. https://shopee.sg/officestucio.sg/23492563891.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[52] xuwaijiao.sg, "Silica Nano Aerogel CompoSite Thermal insulation Blanket Silica Thermal insulation Material Nano Thermal insulation Gel Board", Shopee. https://shopee.sg/xuwaijiao.sg/29878292492.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[53] pratamafoamid.sg, "Super PU Foam Sheet 100x50cm - Steam Iron Base Foam Coaster," Shopee. https://shopee.sg/pratamafoamid.sg/19407230558.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[54] huangciawi.sg, "PE FOAM 3MM & 5MM THICK 1.2M WIDTH SOLD BY THE METER," Shopee. https://shopee.sg/huangciawi.sg/27713302260.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[55] SHENGLI OILFIELD DONGRUN MACHINERY ENGINEERING CO.,LTD, “What is the typical lifespan of Aerogel Felt in different applications? - Blog,” Farersteelpipe.com, Oct. 06, 2025. https://www.farersteelpipe.com/blog/what-is-the-typical-lifespan-of-aerogel-felt-in-different-applications-1329997.html.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[56] J. Tamparong, “10 Things You Must Know Before Using Polyurethane Foam Boards for Insulation,” General Plastics, Jul. 27, 2025. https://www.generalplastics.com/blog/10-things-you-must-know-before-using-polyurethane-foam-boards-for-insulation.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[57] leadong, “What is the life expectancy of PE insulation?,” Lukwom.com, Oct. 07, 2025. https://www.lukwom.com/What-is-the-life-expectancy-of-PE-insulation-id48918585.html.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[58] "Insulation materials and their thermal properties," Greenspec. http://www.greenspec.co.uk/building-design/insulation-materials-thermal-properties/.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[59] “Polyethylene Foam Material,” The Rubber Company. https://therubbercompany.com/sponge-foam/polyethylene-foam/polyethylene-foam.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[60] Clients Now Technologies, “DIFFERENCE BETWEEN PIR AND PUF INSULATION,” Alaska PUF Industries, 2025. https://www.alaskapuf.com/difference-between-pir-and-puf-insulation.php.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[61] “How to deal with thermal pipe expansion and contraction,” Walraven United Kingdom. https://www.walraven.com/en/how-to-guides/thermal-pipe-expansion/.<!-- [Accessed: 1 Nov 2025].--></li>
-
-        <li>[62] “GROTHEN DC 12V ปั๊มรีดพร้อมท่อซิลิโคน ปั๊มปุ๋ย ปั๊มสารเคมี เกรดอุตสาหกรรม 12VDC สีใส สีเขียว,” Miniature-solution.com, 2025. https://www.miniature-solution.com/p/911.<!-- [Accessed: 4 Nov 2025].--></li>
-
-        <li>[63] N. V. Velson, J. Charles, and J. Wang, “Loop Thermosyphon Enhanced Solar Collector,” OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information), Jul. 2022, doi: https://doi.org/10.2172/2324931.</li>
-
-        <li>[64] Collins Chike Kwasi-Effah. (2024). Heat Transfer Fluids in Solar Thermal Power Plants: A Review. NIPES - Journal of Science and Technology Research. Retrieved from https://journals.nipes.org/index.php/njstr/article/view/1109.</li>
-
-        <li>[65] K. Vignarooban, X. Xu, A. Arvay, K. Hsu, and A. M. Kannan, “Heat transfer fluids for concentrating solar power systems – A review,” Applied Energy, vol. 146, pp. 383–396, May 2015, doi: https://doi.org/10.1016/j.apenergy.2015.01.125.</li>
-
-        <!--HTF table-->
-        <li>[66] “HELISOL® 5A,” WACKER Website, 2025. https://www.wacker.com/h/en-us/c/helisol-5a/p/000006109 (accessed Nov. 02, 2025).</li>
-
-        <li>[67] M. Botejara-Antúnez, J. González-Domínguez, F. J. Rebollo-Castillo, and J. García-Sanz-Calcedo, “Life cycle and environmental impact assessment of heat transfer fluids in parabolic trough CSP plants,” Sustainable Energy Technologies and Assessments, vol. 74, p. 104188, Jan. 2025, doi: https://doi.org/10.1016/j.seta.2025.104188.</li>
-
-        <li>[68] Alami, A.H., Ramadan, M., Tawalbeh, M. et al. A critical insight on nanofluids for heat transfer enhancement. Sci Rep 13, 15303 (2023). https://doi.org/10.1038/s41598-023-42489-0</li>
-
-        <li>[69] A. Heinzel et al., “Liquid Metals as Efficient High-Temperature Heat-Transport Fluids,” Energy Technology, vol. 5, no. 7, pp. 1026–1036, Mar. 2017, doi: https://doi.org/10.1002/ente.201600721.</li>
-
-        <li>[70] A. Yahya, Jaouad Zerhouni, El Ghali Bennouna, Nourddine Boutammachte, and A. Lagrioui, “An Overview of Silicone-Based Heat Transfer Fluids in Concentrated Solar Power Systems,” E3S Web of Conferences, vol. 649, pp. 01007–01007, Jan. 2025, doi: https://doi.org/10.1051/e3sconf/202564901007.</li>
-
-        <li>[71] “Pumps for Concentrated Solar Power,” Ruhrpumpen.com, Feb. 19. https://www.ruhrpumpen.com/en/downloads/resources/markets/65-solar-market-en/file.html.</li>
-
-        <li>[72] Ruhrpumpen Group Website - Molten Salt Pump for Yumen Xinneng CSP plant,” Ruhrpumpen.com, Dec. 07, 2018. https://www.ruhrpumpen.com/en/media-center/molten-salt-pump-for-yumen-xinneng-csp.</li>
-
-        <li>[73] “Sulzer technology selected for 100 MW solar energy project in China | Sulzer,” Sulzer.com, 2024. https://www.sulzer.com/en/shared/news/240702-sulzer-technology-selected-for-100-mw-solar-energy-project-in-china.</li>
-
-        <li>[74] S. S. HUSSAIN, “Solar water heaters are an eco-friendly and efficient way to utilize solar energy for daily hot water needs. Among the various designs available, the thermosyphon system stands out due to its simplicity and effectiveness.,” Linkedin.com, Jun. 05, 2024. https://www.linkedin.com/pulse/understanding-thermosyphon-effect-solar-water-heaters-hussain-h33dc. </li>
-
-        <li>[75] A. Jamar, Z. A. A. Majid, W. H. Azmi, M. Norhafana, and A. A. Razak, “A review of water heating system for solar energy applications,” International Communications in Heat and Mass Transfer, vol. 76, pp. 178–187, Aug. 2016, doi: https://doi.org/10.1016/j.icheatmasstransfer.2016.05.028.</li>
-
-        <li>[76] P. D. Ranjan, S. Basu, and P, Dhanush A, “Experimental investigation on the performance of thermosyphon charging of a single-medium stratified storage system for concentrated solar power applications,” arXiv (Cornell University), Dec. 2022, doi: https://doi.org/10.48550/arxiv.2211.16953.</li>
-
-        <li>[77] J. Saed, M. Abdunnabi, A. Essnid, and A. Buishi, “New Designed Thermosyphon Solar Water Heater with Small Sized Parabolic Trough Collectors,” Solar Energy and Sustainable Development Journal, vol. 6, no. 2, pp. 30–41, Dec. 2017, doi: https://doi.org/10.51646/jsesd.v6i2.44.</li>
-
-        <li>[78] J. Charles and N. V. Velson, “LOOP THERMOSYPHON DESIGN FOR SOLAR THERMAL DESALINATION,” Proceeding of 5-6th Thermal and Fluids Engineering Conference (TFEC), pp. 239–248, Jan. 2021, doi: https://doi.org/10.1615/tfec2021.cmd.036291.</li>
-
-        <li>[79] Falahat, Farah & Gomaa, Mohamed. (2022). A review study on solar tower using different heat transfer fluid. Technology Audit and Production Reserves. 5. 10.15587/2706-5448.2022.267560.</li>
-
-        <li>[80] Heller, Lukas. “Literature Review on Heat Transfer Fluids and Thermal Energy Storage Systems in CSP Plants STERG Report.” (2013).</li>
-
-        <li>[81] abalasevicius, “The Ultimate Guide to Heat Transfer Fluids,” Thermtest, Sep. 29, 2023. https://thermtest.com/the-ultimate-guide-to-heat-transfer-fluids.<!-- [Accessed: 28 Oct 2025].--></li>
-
-        <li>[82] “Thermal stability - an overview | sciencedirect topics,” ScienceDirect, https://www.sciencedirect.com/topics/materials-science/thermal-stability.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[83] “Nusselt number - an overview | sciencedirect topics,” ScienceDirect, https://www.sciencedirect.com/topics/chemical-engineering/nusselt-number.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[84] N. Connor, “What is Laminar vs Turbulent - Nusselt Number - Definition,” Thermal Engineering, May 22, 2019. https://www.thermal-engineering.org/what-is-laminar-vs-turbulent-nusselt-number-definition/.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[85] iwakiamerica-emarketing, “The Science Behind Total Dynamic Head and Its Relevance in Fluid Dynamics,” Iwaki America Inc., Jun. 27, 2024. https://iwakiamerica.com/blog/the-science-behind-total-dynamic-head-and-its-relevance-in-fluid-dynamics/.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[86] M. Davey, “What Role Does Head Pressure Play?,” Globalpumps.com.au, 2025. https://www.globalpumps.com.au/blog/what-role-does-head-pressure-play.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[87] “Pump Selection Basics – Calculating Total Dynamic Head,” Grundfos ECADEMY. https://www.grundfos.com/content/dam/global/page-assets/learn/ecademy/pdfs/us-course-108L-module-1-pump-selection-basics.pdf.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[88] GRUNDFOS (Singapore) Pte.Ltd, “Pump NPSH (Net Positive Suction Head),” Grundfos Singapore, Oct. 30, 2025. https://www.grundfos.com/sg/learn/research-and-insights/npsh-net-positive-suction-head.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[89] S. Hooton, “Low NPSH Pumps Guide,” @NorthRidgePumps, Dec. 09, 2019. https://www.northridgepumps.com/article-67_low-npsh-pumps-guide.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[90] “NPSH Calculation: A Step-by-Step Guide,” Pumps and Systems Magazine, 2018. https://www.pumpsandsystems.com/npsh-calculation-step-step-guide.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[91] “Calculating Power Supply AC Input Current,” Magna-Power, 2025. https://magna-power.com/learn/kb/calculating-power-supply-ac-input-current.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[92] Fluke, “What is Power Factor? | How to Calculate Power Factor Formula | Fluke,” Fluke.com, May 16, 2019. https://www.fluke.com/en-sg/learn/blog/power-quality/power-factor-formula.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[93] Monolithicpower.com, 2024. https://www.monolithicpower.com/en/learning/resources/power-factor-correction.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[94] “What Is a Switching Power Supply (SMPS)?,” Tek.com, Mar. 25, 2025. https://www.tek.com/en/blog/what-is-a-switching-power-supply.<!-- [Accessed: 31 Oct 2025].--></li>
-
-        <li>[95] “Thermal Resistance: Definition, How It Works, Importance, Calculations, and Factors,” www.xometry.com. https://www.xometry.com/resources/materials/thermal-resistance/.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[96] “EE Thermal 101 – Thermal Basics for Electrical Engineers (Part 2 of 4) - System, PCB, & Package Design - Cadence Blogs - Cadence Community,” community.cadence.com, Jul. 25, 2018. https://community.cadence.com/cadence_blogs_8/b/pcb/posts/ee-thermal-101-thermal-basics-for-electrical-engineers-part-2-of-4-893913089.<!-- [Accessed: 30 Oct 2025].--></li>
-
-        <li>[97] “Converting Pump Head to Pressure and Vice Versa,” Engineeringtoolbox.com, 2019. https://www.engineeringtoolbox.com/pump-head-pressure-d_663.html. <!-- [Accessed: 2 Nov 2025].--></li>
-
-        <li>[98] S. Kiyabu, A. Shkatulov, A. Ahmed, S. M. Greene, H. P. Huinink, and D. J. Siegel, “Materials for thermochemical energy storage and conversion: attributes for low-temperature applications,” Materials Horizons, 2025, doi: 10.1039/D5MH01794G.</li>
-        
-        <li>[99] G. Ferruzzi, C. Delcea, A. Barberi, V. Di Dio, M. Di Somma, P. Catrini, S. Guarino, F. Rossi, M. L. Parisi, A. Sinicropi, and S. Longo, "Concentrating Solar Power: The State of the Art, Research Gaps and Future Perspectives," Energies, 2023. https://doi.org/10.3390/en16248082. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[100] D. Aydin, S. R. N. A. Khan, and N. Ozkan, "Review of transport phenomena and reactors in thermochemical energy storage," Renewable and Sustainable Energy Reviews, 2015. https://doi.org/10.1016/j.rser.2014.08.061. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[101] C. Prieto and L. F. Cabeza, "Thermal energy storage (TES) with phase change materials (PCM) in solar power plants (CSP): Concept and plant performance," Applied Energy, vol. 254, p. 113646, 2019. https://doi.org/10.1016/j.apenergy.2019.113646. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[102] W. Q. Li et al., "Heat transfer enhancement of nano‐encapsulated phase change materials for thermal energy storage," *Thermochimica Acta*, vol. 704, p. 179–215, 2021. https://doi.org/10.1016/j.tca.2020.147900. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[103] M. Barrasso, G. Langella, A. Amoresano, and P. Iodice, "Latest advances in thermal energy storage for solar plants," Processes, 2023. https://doi.org/10.3390/pr11061832. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[104] A. Gil et al., "State of the art on high temperature thermal energy storage for power generation. Part 1—Concepts, materials and modellization," Renewable and Sustainable Energy Reviews, 2010. https://doi.org/10.1016/j.rser.2009.07.035. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[105] G. Li, "Sensible heat thermal storage energy and exergy performance evaluations," Renewable and Sustainable Energy Reviews, 2016. https://doi.org/10.1016/j.rser.2015.10.096. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[106] E. Palacios, "Experimental analysis of solar thermal storage in a water tank: thermal stratification within the storage tank is preferred because stratification allows the collector to operate at lower temperatures," [Source unspecified]. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[107] B. Zalba, J. M. Marín, L. F. Cabeza, and H. Mehling, "Review on thermal energy storage with phase change materials, heat transfer analysis and applications," Applied Thermal Engineering, 2003. https://doi.org/10.1016/S1359-4311(02)00192-8. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[108] A. H. Abedin and M. A. Rosen, "A critical review of thermochemical energy storage systems," International Journal of Energy Research, 2011. https://doi.org/10.1002/er.1693. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[109] P. Pardo, A. Deydier, Z. Anxionnaz-Minvielle, S. Rougé, M. Cabassud, and J. M. Fourmigué, "Thermochemical heat storage: A review on material properties and system design issues," Applied Energy, 2014. https://doi.org/10.1016/j.apenergy.2013.12.074. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[110] K. E. N’Tsoukpoe, H. Liu, N. Le Pierrès, and L. Luo, "A review on long-term sorption solar energy storage," Renewable and Sustainable Energy Reviews, 2009. https://doi.org/10.1016/j.rser.2009.04.011. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[111] S. Zavattoni, M. Mercangöz, and G. Zanganeh, "Thermochemical heat storage—System design and integration perspectives," Energy Procedia, 2014. https://doi.org/10.1016/j.egypro.2014.01.047. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[112] M. S. Güney, "Solar power and application methods," Renewable and Sustainable Energy Reviews, 2016. https://doi.org/10.1016/j.rser.2015.12.194. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[113] M. M. Farid et al., "A review on phase change energy storage: materials and applications," Energy Conversion and Management, 2004. https://doi.org/10.1016/j.enconman.2003.09.015. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[114] N. T. Mehrjardi et al., "Experimental investigation on the effect of the ratio of tank volume to total encapsulated paraffin volume on hot water output for a mantled hot water tank," Solar Energy, 2022. https://doi.org/10.1016/j.solener.2022.07.025. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[115] A. Lázaro, J. Gasia, and L. F. Cabeza, "Encapsulation of phase change materials for thermal energy storage," Energy Storage, 2018. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[116] P. Zhang, X. Xiao, and Z. Meng, "A review on thermal energy storage systems using phase change materials in buildings," Renewable and Sustainable Energy Reviews, 2016. https://doi.org/10.1016/j.rser.2016.06.062. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[117] I. Sarbu and C. Sebarchievici, "A comprehensive review of thermal energy storage systems," Renewable and Sustainable Energy Reviews, 2022. https://doi.org/10.1016/j.rser.2022.112903. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[118] I. Sarbu and T. Dorca, "Review on heat transfer analysis in thermal energy storage using latent heat storage systems and phase change materials," Energy Conversion and Management, 2019. https://doi.org/10.1016/j.enconman.2018.10.076. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[119] P. Zhang, H. Jiang, and H. He, "Applications of metal foam in latent thermal energy storage: A review," Applied Energy, 2016. https://doi.org/10.1016/j.apenergy.2016.03.103. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[120] A. A. Al-Abidi et al., "Metal containers in PCM-based TES systems," Energy Conversion and Management, 2013. https://doi.org/10.1016/j.enconman.2012.12.010. <!-- [Accessed: 3 Nov 2025].--></li>
-
-        <li>[121] A. Sarı and K. Kaygusuz, "Thermal performance of paraffin as a phase change material," Energy Conversion and Management, 2001. https://doi.org/10.1016/S0196-8904(00)00147-3. <!-- [Accessed: 3 Nov 2025].--></li>
-
-      </ul>
+    <div>
+      <div id="references">
+        <h2>References</h2>
+        <ul>
+          <li>[2.1] “Residential and mixed-use buildings,” www.steelconstruction.info, 2013. https://www.steelconstruction.info/Residential_and_mixed-use_buildings</li>
+        </ul>
     </div>
+      
   </div>
 
   <!-- This is the code to display the scroll to top button for ergonomic -->
