@@ -135,6 +135,26 @@
               style="width: 100%; height: auto; display: block; margin: 30px auto 30px auto;"
             ></image-component>
           </div>
+
+      <p>The sunlight conditions in Indonesia are assumed to be 1,000 W/m² and AM1.5 based on standard test conditions []. The average Direct Normal Irradiance is assumed to be 385 W/m², based on data from Solcast [], and the sunlight hours are assumed to be 5.5 hrs [].</p>
+      <p>The reflectivity of commercially available cost-effective mirrors ranges between 85% – 95%. </p>
+
+      <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/energycalc.png"
+              subtitle="Figure XX: "
+              style="width: 100%; height: auto; display: block; margin: 30px auto 30px auto;"
+            ></image-component>
+          </div>
+  
+      <p>Based on the weather data assumed above, the required reflector area needed if 100% of the captured rays are reflected and absorbed by the water (thermal transmission fluid) in the receiver would be 0.165 m². However, accounting for losses from the reflectors, receiver, thermal transmission and thermal energy storage, the reflector area can be scaled up to a minimum of 1 m², as the test rig area is 1 m².</p>
+      <p>The absorptivity of the material used in the receiver is crucial, as it determines how effectively the receiver can absorb sunlight reflected by the mirrors. Therefore, an absorptivity of 90% is chosen for the receiver material.</p>
+      <p>A highly absorptive material is also highly emissive. In the case of the receiver, we aim to maximize absorption while minimizing emissivity. Therefore, the emissivity will be controlled within 1.5%–70%, as the emissivity of black paint is 90% [], and surfaces with measured emissivity values for temperatures in the 100 – 400 °C range fall within this range.</p>
+      <p>Thermal conductivity is also an important factor, as the absorbed thermal energy by the receiver must be efficiently transferred to the water inside. The receiver can be built using different materials such as metals or ceramics. Among commercially available options, metals are easy to shape, cost-effective, and have thermal conductivities in the range of  300 – 400 W/mK [].</p>
+      <p>The surface area of the receiver is another key factor. Increasing the surface area allows for greater thermal absorption but may also increase heat losses due to convection and radiation []. For low-temperature applications (<200 °C), the concentration ratio (area of reflector / area of receiver) is typically 1:5 []. However, based on data from a solar tower configuration conducted by the UROP team, we will scale up the receiver area to match the aluminum pot used in their experiments.</p>
+      <p>The weight is not considered as a critical factor as the installation will be fixed in place after setup. Additionally, the rig will be transported in parts, allowing for easy assembly, so weight considerations are minimal.</p>
+  
       </div>
 
 
