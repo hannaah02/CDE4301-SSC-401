@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Integrated System</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="stylesheet" href="./components/team-member/team-member.css">
+  <script type="module" src="./components/team-member/team-member.js"></script>
+
+  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+
+  <script type="module" src="./components/image/image-component.js"></script>
+
+  <script type="module" src="./components/video/video.js"></script>
+
+  <link rel="stylesheet" href="./components/references/references.css">
+
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+
+  <script src=".components/table-component/table-component-thermal-transmission.js"></script>
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+  <style> 
+     .square { 
+        border: 1px solid black;
+        padding: 20px;
+        display: inline-block;
+    } 
+   </style>
+
+<!-- ~~~~~~~ -->
+  <style>
+    .gridjs-table {
+      table-layout: auto !important;
+      width: 100% !important;
+    }
+
+    .gridjs-th {
+      white-space: nowrap !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+
+    <sl-button size="medium" pill onclick href="index.html">Back to main page</sl-button>
+    <h1>Integrated System</h1>
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="tt-integration">
+        <h2>Integration of system</h2>
+        <p>
+          This section evaluates the performance on integration of the light, thermal transmission and TES subsections.
+        </p>
+        <h3>Initial integration</h3>
+        <p>
+          The pipe is routed from the receiver through the central frame and connected to the TES (20L of water) and pump (see below). A longer pipe length was used initially to allow flexibility in positioning TES, and is reduced later.
+        </p>
+        <p>
+          Insulation was not applied along the full pipe length due to flexibility limitations of PUR/PIR and restrictions on insulating certain sections of pipe to avoid damage on removal.
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/integrated-1-insulation.jpg"
+          subtitle="Figure XXX: Insulation in integrated system"></image-component>
+        <p>
+          Below are the temperature of water in the TES for the uninsulated and insulated system.
+        </p>
+        <image-component tag="image" source="assets/tt_final/integrated-1-uninsulated-labelled.jpg"
+          subtitle="Figure XXX: Temperature of water in TES and in control for uninsulated pipes (Max: 41.44ºC, 36.19ºC)"></image-component>
+        <image-component tag="image" source="assets/tt_final/integrated-1-insulated-labelled.jpg"
+          subtitle="Figure XXX: Temperature of water in TES and in control for insulated pipes (Max: 43.81ºC, 35.56ºC)"></image-component>
+        <p>
+          The temperature difference between TES and control water temperature increased from 5.25ºC to 8.25ºC (57.14% improvement).
+        </p>
+        <h4>Isolation of the TES from the receiver</h4>
+        <p>
+          After sundown, TES temperature dropped to match the control, indicating complete loss of stored thermal energy overnight. This is attributed to the continuous pump operation, causing heat loss thorugh the receiver. To reduce heat loss, the TES is isolated from the receiver system between 5pm and 10am through:
+        </p>
+        <ol>
+          <li>the installation of a relay to shut off power to the pump between 5pm to 10am</li>
+          <li>lifting the TES inlet pipe from the surface of the water in the TES (physically isolating system)</li>
+        </ol>
+        <p>
+          The volume of water in the TES was also reduced to 10L to increase maximum temperature and extend the duration the water is kept over 40ºC. The results of these changes are below. 
+        </p>
+        <image-component tag="image" source="assets/tt_final/integrated-2-isolation-compare-prev-addpts.jpg"
+            subtitle="Figure XXX: Temperature of water in TES and in control before isolating systems (Max: 43.81ºC, 35.56ºC)"></image-component>
+        <image-component tag="image" source="assets/tt_final/integrated-2-isolation-addpts.jpg"
+            subtitle="Figure XXX: Temperature of water in TES and in control after isolating systems (Max: 49.81ºC, 38.25ºC)"></image-component>
+        <p>
+          Based on the results, the TES water temperature is consistently above the control water temperature overnight, indicating retained thermal energy carried forward from the previous day, as temperature difference increased from 8.25ºC to 11.56ºC (40.12% improvement). Thus, the system's abilty to retain temperature over 40ºC is lengthened.
+        </p>
+        <h4>Shortening of the pipe and improved insulation</h4>
+        <p>
+          The TES was repositioned to shorten the pipe. This reduces total surface area available for heat exchange with the environment, thus, reducing heat losses along the pipes. Insulation coverage was improved by including aircon insulation at areas the PUR/PIR insulation is unable to cover.
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/integrated-3-general.jpg"
+            subtitle="Figure XXX: Layout of integrated system after shortening the pipe and improving insulation"></image-component>
+        <p>
+          On removal, it was observed that some sections of the pipe lacked the PUR/PIR insulation along longer pipe sections due to spray insulation being unable to reach deeper into the pipe.
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/empty-al.jpg"
+            subtitle="Figure XXX: Aluminium pipe lacking PUR/PIR near the centre of the long length of pipe"></image-component>
+        <p>
+          Also, support structures to maintain central position of hose is unable to be inserted in the long sections of pipe, resulting in the hose laying on the edge of the aluminium pipe (see below).
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/support.jpg"
+          subtitle="Figure XXX: Cardboard (support structure) keeping the hose centred"></image-component>
+        <p>
+          Due to these, the results were less efficient than expected. The updated insulations removes the need for long pipe lengths and the issues associated with it.
+        </p>
+        <p>
+          The results of the changes are as follows:
+        </p>
+        <image-component tag="image" source="assets/tt_final/images/integrated-3-insulation.jpg"
+            subtitle="Figure XXX: PUR/PIR mainly used with aircon insulation along bends"></image-component>
+        <image-component tag="image" source="assets/tt_final/integrated-2-isolation-addpts.jpg"
+            subtitle="Figure XXX: Temperature of water in TES and in control before shortening pipes and fixing insulation (Max: 49.81ºC, 38.25ºC)"></image-component>
+        <image-component tag="image" source="assets/tt_final/integrated-3-shortening-addpts.jpg"
+            subtitle="Figure XXX: Temperature of water in TES and in control after shortening pipes and fixing insulation (Max: 55.19ºC, 36.31ºC)"></image-component>
+        <p>
+          The temperature difference increased from 11.56ºC to 18.88ºC, which is a 63.32% improvement. Water temperature was sustained above 40ºC for approximately 9 hours, demonstrating system performance for sustained thermal storage.
+        </p>
+        <h4>Conclusion and Further Work</h4>
+        <p>
+          The integrated system maintains water temperatures above 40°C for approximately 9 hours, demonstrating effective thermal storage and transmission performance.
+        </p>
+        <p>
+          Although PUR/PIR provides better thermal performance, its rigidity and integration issues makes it difficult to implement effectively. Aircon insulation is thus preferred due its flexibility, ease of implementation, and good thermal properties.
+        </p>
+        <p>
+          Also, future improvements includes the testing of thermosyphons in the prototype CSP rig, which will be explained in the next section.
+        </p>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <h2>References</h2>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+   <sl-button size="medium" pill onclick href="thermalenergystoragesubs.html">Next subsection: Thermal Energy Storage</sl-button>
+
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component-thermal-transmission.js"></script>
+</body>
+
+</html>

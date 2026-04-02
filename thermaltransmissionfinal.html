@@ -65,15 +65,9 @@
 
      <div>
       <div id="tt_recapn">
-        <h2>Add details into recap, add more theory (explain and cite), remove the integrated test, no need to rework</h2>
         <h2>Recap</h2>
-        <!--
         <p>
-          In the interim, the HTF options was compared and water was selected. The methods of thermal transmission was also considered, with pumps being the most feasible. The pump was also proven to allow thermal transmission. Lastly, heat loss was identified in the pipes and different insulating materials were compared, settling with __ as optimal insulating material.
-        </p>
-        -->
-        <p>
-          This subsection focusses on effectively transfering heat from the receiver to the thermal energy storage (TES) with minimal power consumption. In the interim, water was selected at heat transfer fluid, pump-driven thermal transmission method was validated and heat loss was identified as limitation with PUR/PIR selected as optimal material.
+          This subsection focusses on effectively transfering heat from the receiver to the TES with minimal power consumption. In the interim, water was selected at heat transfer fluid, pump-driven thermal transmission method was validated and heat loss was identified as limitation with PUR/PIR selected as optimal material.
         </p>
         <p>
           In this subsection, the implementation and evaluation of insulation and thermal transmission methods are conducted, analysing their impact on the overall system performance.
@@ -88,24 +82,24 @@
     <div>
       <div id="tt_insulation">
         <h2>Insulation</h2>
-        <h2>state clearly how its made. details.</h2>
         <p>
           The PUR/PIR insulation selected in the interim is compared with the commercially available aircon insulation (polypropylene random polymer, PPR), and a translucent insulation based off the concept of transparent insulation material (TIM).
         </p>
         <p>
-          PUR/PIR insulation was selected in the interim, comparing the cost, thickness required and durability. For this experiment, spray PUR/PIR foam is used with a 7mm diameter aluminium duct to encapsulate the insulation.
+          PUR/PIR insulation was selected in the interim, comparing the cost, thickness required and durability. For this experiment, spray PUR/PIR foam is used to cover the 9mm outer diameter (OD) hose with a 7mm diameter aluminium duct to encapsulate the insulation, with support used to centre the insulation.
         </p>
         <image-component tag="image" source="assets/tt_final/images/purpir.jpg"
           subtitle="Figure XXX: Image of PUR/PIR insulation"></image-component>
+        <image-component tag="image" source="assets/tt_final/images/support.jpg"
+          subtitle="Figure XXX: Cardboard (support structure) keeping the hose centred"></image-component>
         <p>
-          Aircon insulation is a common insulation that is evaluated due to its ease of implementation. Here, PPR of thickness 5mm and inner diameter 17mm is used.
+          Aircon insulation is a common insulation that is evaluated due to its ease of implementation. Here, PPR of thickness 5mm and inner diameter 17mm is used with 9mm OD hose.
         </p>
         <image-component tag="image" source="assets/tt_final/images/aircon.jpg"
           subtitle="Figure XXX: Image of aircon insulation"></image-component>
         <p>
-          TIM prevents heat loss thorugh prevention of convection in the air pockets (see below), while allowing irradiance to heat the absorber (hose with water) though the transparent material. Using this concept, translucent corrugated plastic board is used to wrap around the hose to allow transmission of irradiance while trapping air between the layers.
+          TIM prevents heat loss through suppression of convection in the air pockets (see below), while allowing irradiance to heat the absorber (hose with water) though the transparent material. [0.1] Using this concept, translucent corrugated plastic board is used to wrap around the 9mm OD hose, forming air gaps between each layer (each layer is 0.03mm plastic sheet and 3.24mm trapped air).
         </p>
-        <h2>add more theory here. cite.</h2>
         <image-component tag="image" source="assets/tt_final/images/ti-structures.jpg"
           subtitle="Figure XXX: Example of geometry that traps air [1]"></image-component>
         <image-component tag="image" source="assets/tt_final/images/translucent.jpg"
@@ -114,7 +108,7 @@
         <h3>Insulation Experiment</h3>
         <h2>purpose of this, and how it fits with the system as a whole</h2>
         <p>
-          The insulation experiments were conducted under different conditions to assess their rate of heat loss and was repeated for validation. As the system is expected to function at high temperatures up to 60ºC, and with 40ºC as lowest temperature, the trends at high temperatures from 40-60ºC is the focus with the higher ranges of 60ºc being most important.
+          The insulation experiments were conducted under different conditions to assess their rate of heat loss and was repeated for validation. As the system is expected to function between 40-60ºC, the focus is on trends at these temperatures to support system requirement of maintaining water temperature above 40ºC.
         </p>
         <image-component tag="image" source="assets/tt_final/insulation-details.jpg"
           subtitle="Table XXX: Details of insulation experiment"></image-component>
@@ -124,14 +118,14 @@
         <image-component tag="image" source="assets/tt_final/insulation-shade.jpg"
           subtitle="Figure XXX: Result of insulation experiment in shade"></image-component>
         <p>
-          Under shaded conditions, PUR/PIR and aircon insulation performed best with similar heat loss rates at 60ºC, with PUR/PIR having lower rate of heat loss than aircon insulation as temperature drops below 60ºC.
+          Under shaded conditions, PUR/PIR insulation performed best, as it has the lowest thermal conductivity (0.023W/(m.k)) [A1] and the thickest insulation thickness (30.5mm). However, aircon insulation has almost the same performance as PUR/PIR despite higher thermal conductivity (0.036W/(m.k)) [A2] and lower thickness (5mm). This is because of the airgap between the insulation and hose which increases the thermal resistance. Since the gap is small, convection is limited and heat transfer is primarily via conduction, which is less efficient in heat transfer. Thus, the thermal resistance increases with the added airgap, leading to similar performances between aircon and PUR/PIR insulation.
         </p>
 
         <h4>Under indirect sunlight</h4>
         <image-component tag="image" source="assets/tt_final/insulation-indirect-sun.jpg"
           subtitle="Figure XXX: Results of experiment in indirect sunlight"></image-component>
         <p>
-          Under indirect sunlight, PUR/PIR insulation performs best due to its lower thermal conductivity. This trend is further supported by the transition test below, where PUR/PIR is also observed to maintain temperature over 40ºC for longest duration.
+          Under indirect sunlight (cloudy), PUR/PIR insulation performs best, with similar findings for the indirect to shade test. This trend follows from the results obtained in the experiment under shade.
         </p>
         <image-component tag="image" source="assets/tt_final/insulation-indirect-sun-shade.jpg"
           subtitle="Figure XXX: Results of experiment from indirect sunlight to shade"></image-component>
@@ -142,14 +136,14 @@
         <image-component tag="image" source="assets/tt_final/insulation-direct-sun-shade.jpg"
           subtitle="Figure XXX: Results of experiment from direct sunlight to shade"></image-component>
         <p>
-          Under direct sunlight, aircon insulation has the lowest net heat loss. This results from its higher absorptivity, allowing it to absorb more solar energy. The direct sunlight to shade test below verifies this, with aircon insulation also able to keep the water over 40ºC the longest.
-        </p>
-        <h4>Analysis</h4>
-        <p>
-          Under sunlight, the varation in performance is attributed to differences in absorptivity. The black aircon insulation has a high abrorptivity (0.9 [2]) whereas the aluminium covered PUR/PIR insulation has a significantly lower absorptivity (0.15 [3]). This makes the aircon insulation more sensitive to irradiance, as seen by the temperature fluctuations below. Under direct sunlight, higher irradiance allows the aircon insulation to absorb greater amounts of energy, resulting in improved overall performance.
+          Under direct sunlight, aircon insulation has lower net heat loss due to its higher solar absorptivity (~0.9). [2] This results in greater solar energy absorption, which partially offsets heat losses. In contrast, PUR/PIR insulation has a reflective aluminium surface with lower absorptivity (~0.15), reducing energy gain. [3] This is seen below from the greater temperature fluctuations in aircon insulation than PUR/PIR insulation. Hence, the net heat loss of aircon insulation appears lower despite PUR/PIR having beter insulation performance. Further test from direct sunlight to shade test below verifies the low net heat loss of aircon insulation which allows it to maintain water temperature ≥40ºC the longest.
         </p>
         <image-component tag="image" source="assets/tt_final/insulation-sun-details.jpg"
           subtitle="Figure XXX: More fluctuations in water temperature with aircon insulation than with PUR/PIR insulation"></image-component>
+        <h4>Conclusion</h4>
+        <p>
+          The results concluded that PUR/PIR has better performance in shade and under indirect sunlight while aircon insulation performs best under direct sunlight. The hypothesis is partially supported with the absorptivity differences accounting for differences under direct sunlight.
+        </p>
         <p>
           However, in the intended application, the insulation will be largely underneath the reflectors (see below) and will be shaded. Under these conditions, the PUR/PIR insulation demonstrates better thermal performance.
         </p>
@@ -162,113 +156,11 @@
     <br />
     <sl-divider></sl-divider>
 
-    <!--
-    ------------------------------------------------------------------------------------------------------
-    ------------------------------------------------------------------------------------------------------
-    ------------------------------------------------------------------------------------------------------
-    -->
-
-    <div>
-      <div id="tt-integration">
-        <h2>Integration of system</h2>
-        <h3>Initial integration</h3>
-        <p>
-          The pipe is routed from the receiver through the central frame and connected to the TES (20L of water) and pump (see below). A longer pipe length was used initially to allow TES movement, and is reduced later.
-        </p>
-        <p>
-          Insulation was not applied along the full pipe length due to flexibility limitations of PUR/PIR and restrictions on insulating certain sections of pipe to avoid damage on removal.
-        </p>
-        <image-component tag="image" source="assets/tt_final/images/integrated-1-insulation.jpg"
-          subtitle="Figure XXX: Insulation in integrated system"></image-component>
-        <p>
-          Below are the temperature of water in the TES for the uninsulated and insulated system.
-        </p>
-        <image-component tag="image" source="assets/tt_final/integrated-1-uninsulated-labelled.jpg"
-          subtitle="Figure XXX: Temperature of water in TES and in control for uninsulated pipes (Max: 41.44ºC, 36.19ºC)"></image-component>
-        <image-component tag="image" source="assets/tt_final/integrated-1-insulated-labelled.jpg"
-          subtitle="Figure XXX: Temperature of water in TES and in control for insulated pipes (Max: 43.81ºC, 35.56ºC)"></image-component>
-        <p>
-          The temperature difference between TES and control water temperature increased from 5.25ºC to 8.25ºC (57.14% improvement).
-        </p>
-        <h4>Isolation of the TES from the receiver</h4>
-        <p>
-          After sundown, TES temperature dropped to match the control, indicating complete loss of stored thermal energy overnight. This is attributed to the continuous pump operation, causing heat loss thorugh the receiver. To reduce heat loss, the TES is isolated from the receiver system between 5pm and 10am through:
-        </p>
-        <ol>
-          <li>the installation of a relay to shut off power to the pump between 5pm to 10am</li>
-          <li>lifting the TES inlet pipe from the surface of the water in the TES (physically isolating system)</li>
-        </ol>
-        <p>
-          The volume of water in the TES was also reduced to 10L to increase maximum temperature and extend the duration the water is kept over 40ºC. The results of these changes are below. 
-        </p>
-        <image-component tag="image" source="assets/tt_final/integrated-2-isolation-compare-prev-addpts.jpg"
-            subtitle="Figure XXX: Temperature of water in TES and in control before isolating systems (Max: 43.81ºC, 35.56ºC)"></image-component>
-        <image-component tag="image" source="assets/tt_final/integrated-2-isolation-addpts.jpg"
-            subtitle="Figure XXX: Temperature of water in TES and in control after isolating systems (Max: 49.81ºC, 38.25ºC)"></image-component>
-        <p>
-          Based on the results, the TES water temperature is consistently above the control water temperature overnight, indicating retained thermal energy carried forward from the previous day. The effect of this is seen in the rise in the temperature difference from 8.25ºC to 11.56ºC (40.12% improvement).
-        </p>
-        <h4>Shortening of the pipe and improved insulation</h4>
-        <p>
-          Thermal losses due to pipe length and incomplete insulation were reduced by repositioning the TES at the centre of the rig and improving insulation coverings by including aircon insulation at areas the PUR/PIR insulation is unable to cover.
-        </p>
-        <image-component tag="image" source="assets/tt_final/images/integrated-3-general.jpg"
-            subtitle="Figure XXX: Layout of integrated system after shortening the pipe and improving insulation"></image-component>
-        <p>
-          On removal, it was observed that some sections of the pipe lacked the PUR/PIR insulation along longer pipe sections due to spray insulation being unable to reach deeper into the pipe.
-        </p>
-        <image-component tag="image" source="assets/tt_final/images/empty-al.jpg"
-            subtitle="Figure XXX: Aluminium pipe lacking PUR/PIR near the centre of the long length of pipe"></image-component>
-        <p>
-          Also, support structures to maintain central position of hose is unable to be inserted in the long sections of pipe, resulting in the hose laying on the edge of the aluminium pipe (see below).
-        </p>
-        <image-component tag="image" source="assets/tt_final/images/support.jpg"
-          subtitle="Figure XXX: Cardboard (support structure) keeping the hose centred"></image-component>
-        <image-component tag="image" source="assets/tt_final/images/not-centred.jpg"
-          subtitle="Figure XXX: Hose touching the side of the aluminium pipe"></image-component>
-        <p>
-          Due to these, the results were less efficient than expected. The updated insulations removes the need for long pipe lengths and the issues associated with it.
-        </p>
-        <p>
-          The results of the changes are as follows:
-        </p>
-        <image-component tag="image" source="assets/tt_final/images/integrated-3-insulation.jpg"
-            subtitle="Figure XXX: PUR/PIR mainly used with aircon insulation along bends"></image-component>
-        <image-component tag="image" source="assets/tt_final/integrated-2-isolation-addpts.jpg"
-            subtitle="Figure XXX: Temperature of water in TES and in control before shortening pipes and fixing insulation (Max: 49.81ºC, 38.25ºC)"></image-component>
-        <image-component tag="image" source="assets/tt_final/integrated-3-shortening-addpts.jpg"
-            subtitle="Figure XXX: Temperature of water in TES and in control after shortening pipes and fixing insulation (Max: 55.19ºC, 36.31ºC)"></image-component>
-        <p>
-          The temperature difference increased from 11.56ºC to 18.88ºC, which is a 63.32% improvement. The water temperature is also kept above 40ºC for about 9 hours consistently.
-        </p>
-        <h4>Conclusion and Further Work</h4>
-        <p>
-          The integrated system successfully concentrates and stores thermal energy and maintains water above 40ºC for 9 hours.
-        </p>
-        <p>
-          Although PUR/PIR provides better thermal performance, its rigidity and integration issues makes it difficult to implement effectively. Aircon insulation is thus preferred due its flexibility and good performance.
-        </p>
-        <p>
-          Also, future improvements includes the testing of thermosyphons in the prototype CSP rig, which will be explained in the next section.
-        </p>
-      </div>
-    </div>
-
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-
-    <!--
-    ------------------------------------------------------------------------------------------------------
-    ------------------------------------------------------------------------------------------------------
-    ------------------------------------------------------------------------------------------------------
-    -->
-
     <div>
       <div id="tt_transmission_methods">
         <h2>Testing methods of thermal transmission</h2>
         <p>
-          In the interim, pump-driven circulation was validated as method of thermal transmission. In this section, thermosyphons are evaluated at small-scale to assess their feasibility as a passive alternative.
+          In the interim, pump-driven circulation was validated as method of thermal transmission. In this section, thermosyphons are evaluated at small-scale to assess their feasibility as a passive alternative. Thermosyphons work by utilising gravity and density differences between hot and cold fluid to generate natural convection to circulate fluid. [B1]
         </p>
         <h4>Baseline test of standard thermosyphon</h4>
         <p>
@@ -292,11 +184,11 @@
         <source src="assets/tt_final/vid/thermosyphon-2.mp4" type="video/mp4">
         </video>
         <p>
-          No clear convection patterns was observed in this configuration. This confirms that the operation is dependant on gravittaional effects and density differences. While heat transfer still occurs through conduction and local convection, natural convection as in the baseline test does not occur, which limits the effectiveness of the heat transfer.
+          In the horizontal configuration, no sustained circulation was observed. This is because thermosyphon flow is driven by buoyancy forces from density differences between hot and cold fluid. Without a vertical height difference, the pressure gradient required to drive flow is absent. Hence, only local convection occurs, significantly reducing heat transfer effectiveness.
         </p>
         <h4>Test with constraints as in integrated system</h4>
         <p>
-          The third test is conducted with the heated section below the tank (as in baseline test), but replicates the constraints of the integrated system, where drilling the sides of the container would affect its insulation. The heated section was also replaced with a coil to simulate the receiver. The rough layout is in the diagram below.
+          The third test is conducted with the heated section below the tank (as in baseline test), but replicates the constraints of the integrated system, where drilling the sides of the container would affect its insulation. The heated section was also replaced with a coil to simulate the receiver. This tests if thermosyphon operation is affected by complexity of the pipes. The rough layout is in the diagram below.
         </p>
         <image-component tag="image" source="assets/tt_final/thermosyphon/test-3.jpg"
             subtitle="Figure XXX: Rough layout of constrained test"></image-component>
@@ -304,14 +196,17 @@
         <source src="assets/tt_final/vid/thermosyphon-3.mp4" type="video/mp4">
         </video>
         <p>
-          Flow was observed at the outlet. The onset of flow was delayed due to the longer pipe and complex layouts. Overall, it demonstrates that flow can be achieved despite increased complexity, so long as height differences between the pipe inlet, pipe outlet and the heated section is maintained.
+          Although flow was observed in the constrained configuration, the delayed onset and weak circulation indicate limited driving pressure. The effectiveness of heat transfer depends on the rate at which fluid circulated, and a higher flow rate allows more heated fluid to be transported to the TES. When compared to pump-driven flow, the thermosyphon provides significantly lower flow rates which is insufficient for effective heat transfer in the full-scale system, where just the receiver length is 10.3m.
         </p>
         <h4>Future work</h4>
         <p>
-          Further testings is required to assess the thermosyphon's feasibility in the prototype. A thermosyphon is not self-priming and requires regular monitoring to prevent air accumulation. Furthermore, the heat loss through the receiver after sundown needs to be addressed thorugh addition of valves at the inlet and outlet pipes to isolate the TES from the receiver.
+          Future work should include quantifying flow rates under different height differences and temperature gradients to determine the minimum viable operating conditions.
         </p>
         <p>
-          The implementation also requires the TES to be located outside of the 1x1m rig, exceeding the intended footprint of the system. Hence, future work includes exploring alternate TES configuurations to maintain height difference within the TES and receiver and maintain 1x1m configuration.
+          When testing on integrated rig, the implementation requires the TES to be located outside of the 1x1m rig, exceeding the intended footprint of the system. Hence, future work also includes exploring alternate TES configuurations to maintain height difference within the TES and receiver and maintain 1x1m configuration.
+        </p>
+        <p>
+          Based on the results, thermosyphons are not yet suitable for the current system configuration due to insufficient flow rate and spatial constraints.
         </p>
       </div>
     </div>
@@ -331,7 +226,7 @@
         <h1>Appendix XX: Design specifications for thermal transmission</h1>
         <p>
           Power consumption per rig is estimated against power available per meter square for solar panels, and 
-          1288m^2 of rigs available, and 1176m^2 of area available for solar panel (front of hotel rooftop). Total power produced by solar panels is 176,400W (assuming minimum produced of 150W/m^2). [https://www.energydawnice.com/solar-panel-output-per-square-meter/] Hence, maxiumum power that can be consumed by each rig assuming full space usage is 136.96W. Thus, the power consumption per rig is set at <math><mn>&le;</mn></math>136.96W.
+          1288m^2 of rigs available, and 1176m^2 of area available for solar panel (front of hotel rooftop). Total power produced by solar panels is 176,400W (assuming minimum produced of 150W/m^2). [C1] Hence, maxiumum power that can be consumed by each rig assuming full space usage is 136.96W. Thus, the power consumption per rig is set at <math><mn>&le;</mn></math>136.96W.
         </p>
         <p>
           The efficiency of the system's insulation is measured by:
@@ -341,10 +236,10 @@
           <li>Pipe losses as percentage of total energy delivered, and</li>
         </ol>
         <p>
-          Heat loss per meter is the main measurement of the insulation's effectiveness. In residential units, the heat loss per meter is within the range of 5.1-10.8W/m for insulated domestic hot water systems. [https://www.researchgate.net/publication/355301258_Heat_Loss_Due_to_Domestic_Hot_Water_Pipes] For our system usage, the representative threshold value of 7.95W/m will be used in design specifications.
+          Heat loss per meter is the main measurement of the insulation's effectiveness. In residential units, the heat loss per meter is within the range of 5.1-10.8W/m for insulated domestic hot water systems. [C2] For our system usage, the representative threshold value of 7.95W/m will be used in design specifications.
         </p>
         <p>
-          Pipe losses as percentage of total energy delivered is on average 16-19% in residential units. [https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/hot_water_distribution_model.pdf] In conventional hot water systems, pipe losses are expressed as a percentage of the total energy input to the water heater. However, in the CSP system, there is no heater supplying energy as all the energy is collected from solar energy. In the prototype, the total energy delivered is defined as the total thermal energy that the water absorbs at the receiver. Hence, we set the value in the design specifications as 17.5% for reference which is the average estimate for pipe losses based on residential hot water systems.
+          Pipe losses as percentage of total energy delivered is on average 16-19% in residential units. [C3] In conventional hot water systems, pipe losses are expressed as a percentage of the total energy input to the water heater. However, in the CSP system, there is no heater supplying energy as all the energy is collected from solar energy. In the prototype, the total energy delivered is defined as the total thermal energy that the water absorbs at the receiver. Hence, we set the value in the design specifications as 17.5% for reference which is the average estimate for pipe losses based on residential hot water systems.
         </p>
       </div>
     </div>
@@ -353,6 +248,9 @@
       <div id="tt-appendix-insulation">
         <h1>Appendix XX: Insulation experiment</h1>
           <h4>Minimum insulation for PUR/PIR and translucent insulation</h4>
+          <p>
+            Using 
+          </p>
           <p>
             For PUR/PIR: (from interim)
           </p>
@@ -372,7 +270,7 @@
           <image-component tag="image" source="assets/tt_final/insulation-shade.jpg"
           subtitle="Figure A XXX: Results of insulation test #1 in shade"></image-component>
           <p>
-            The PUR/PIR and aircon insulation performed best at the start with the same low rate of heat loss, but as temperature drops, the aircon insulation graph has a higher rate of heat loss than PUR/PIR insulation (see below). The translucent insulation did not perform as well as the PUR/PIR and aircon insulation at high temperatures (around 60ºC), but as the temperature fell, the rate of heat loss improved, reaching lower heat loss than both PUR/PIR and aircon insulation (see below).
+            The PUR/PIR and aircon insulation performed best at the start with the same low rate of heat loss, but as temperature drops, the aircon insulation graph has a higher rate of heat loss than PUR/PIR insulation (see below). The translucent insulation did not perform as well as the PUR/PIR and aircon insulation at high temperatures (around 60ºC), but as the temperature fell, the heat loss decreased, reaching lower heat loss than both PUR/PIR and aircon insulation (see below).
           </p>
           <image-component tag="image" source="assets/tt_final/insulation-shade-60.jpg"
             subtitle="Figure XXX: Result of insulation experiment in shade at 60ºC"></image-component>
@@ -416,23 +314,20 @@
     <br />
     <br />
     <sl-divider></sl-divider>
-    
-    <div>
-      <div id="appendix-thermosyphon">
-        <p>
-
-        </p>
- 
-      </div>
-    </div>
-    <br />
-    <br />
-    <sl-divider></sl-divider>
 
     <div>
       <h2>References</h2>
       <p>
+        [0.1] A. Paneri, I. L. Wong, and S. Burek, “Transparent insulation materials: An overview on past, present and future developments,” Solar Energy, vol. 184, pp. 59–83, May 2019, doi: https://doi.org/10.1016/j.solener.2019.03.091.
+      </p>
+      <p>
         [1] B. Happold, “Transparent insulation,” www.designingbuildings.co.uk. https://www.designingbuildings.co.uk/wiki/Transparent_insulation
+      </p>
+      <p>
+        [A1] http://www.greenspec.co.uk/building-design/insulation-materials-thermal-properties/]
+      </p>
+      <p>
+        [A2] Zhejiang Hailiang Co., Ltd., “Hailiang Custom Fireproof Black Rubber Thermal Insulation Pipe,” Made-in-China.com. https://hailiang1.en.made-in-china.com/product/QZNaBgfYaJcW/China-Hailiang-Custom-Fireproof-Black-Rubber-Thermal-Insulation-Pipe.html?acc=5494762105-lxy&cpn=21714728580-&tgt=&net=x&dev=c-&gid=CjwKCAjwspPOBhB9EiwATFbi5LcM3xtO6p1yNPq527jXaa6mTHovafQ-oeqxcfyLIuN9QMxQ_--SJxoCaNsQAvD_BwE&kwd=&mtp=&loc=9062542-&gad_source=1&gad_campaignid=21721137545&gbraid=0AAAAA-M7K1iP3cuouqCv8a6A5c06mehHi&gclid=CjwKCAjwspPOBhB9EiwATFbi5LcM3xtO6p1yNPq527jXaa6mTHovafQ-oeqxcfyLIuN9QMxQ_--SJxoCaNsQAvD_BwE
       </p>
       <p>
         [2] Engineering toolbox, “Absorbed Solar Radiation,” Engineeringtoolbox.com, 2009. https://www.engineeringtoolbox.com/solar-radiation-absorbed-materials-d_1568.html
@@ -441,7 +336,16 @@
         ‌[3] “The Solar-AC FAQ: Table of absorptivity and emissivity of common materials and coatings,” www.solarmirror.com. http://www.solarmirror.com/fom/fom-serve/cache/43.html
       </p>
       <p>
-        [4]
+        [B1] A. Jamar, Z. A. A. Majid, W. H. Azmi, M. Norhafana, and A. A. Razak, “A review of water heating system for solar energy applications,” International Communications in Heat and Mass Transfer, vol. 76, pp. 178–187, Aug. 2016, doi: https://doi.org/10.1016/j.icheatmasstransfer.2016.05.028.
+      </p>
+      <p>
+        [C1] Dawnice and Dawnice, “Solar Panel Output per Square Meter: Efficiency Factors & Future Trends,” Energy Dawnice, Apr. 30, 2025. https://www.energydawnice.com/solar-panel-output-per-square-meter/
+      </p>
+      <p>
+        [C2] A. Hamburg, A. Mikola, T.-M. Parts, and T. Kalamees, “Heat Loss Due to Domestic Hot Water Pipes,” Energies, vol. 14, no. 20, p. 6446, Jan. 2021, doi: https://doi.org/10.3390/en14206446.
+      </p>
+      <p>
+        [C3] C. Backman and M. Hoeschele, “Validation of a Hot Water Distribution Model Using Laboratory and Field Data Alliance for Residential Building Innovation,” 2013. Accessed: Apr. 02, 2026. [Online]. Available: https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/hot_water_distribution_model.pdf
       </p>
     </div>
 

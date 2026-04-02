@@ -67,23 +67,15 @@
       <div id="final_intro">
         <h2>Introduction</h2>
         <p>
-          The layout of the hotel is approximated below with the viable area for implementation being 1288<math><msup><mi>m</mi><mn>2</mn></msup></math> of 0.5hectares land area, using hotel widths as reference. [1]
-          <!--
-          The hotel occupies an area of 0.5 hectares. Based on visual estimation (see images of hotel below) and using reference dimensions of standard hotel width (maximum 14m) [1], the approximate layout and usable installation areas (greyed out) are illustrated below.
-          -->
+          In the previous sections, a prototype rig was proven to be able to maintain 10L of water above 40ºC for 9 hours. Here, we propose further design of the rig for deployment under the hotel case study.
         </p>
-        <image-component tag="image" source="assets/tt_final/overall-system/dimensions-only.jpg"
-          subtitle="Figure XXX: Dimensions of hotel"></image-component>
         <p>
-          The final CSP system consist of modular ‘system of rigs’ where each system consists of multiple rigs (receiver and reflectors only, each rig is 1x1m) connected to a TES tank. (see figure XX) This aims to reduce overall cost per rig.
-        </p>
-        <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs.jpg"
-          subtitle="Figure XXX: System layout for system of rigs"></image-component>
-        <p>
-          Water is supplied to the TES tank via the water mains, which also provides pressure driving flow to the hot water storage tank and showers. The hot water storage tank is located in the hotel where it <!--reduces the length of cold water when the shower is switched on,--> serves as a storage location for extra hot water<!--, to be used when the day has less sun,--> and provides additional heating to maintain water temperatures.
+          The final proposed system will consist of multiple islands, of which contains multiple rigs connected to one TES. (see below)
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
           subtitle="Figure XXX: Overall system layout"></image-component>
+        <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs.jpg"
+          subtitle="Figure XXX: Layout of island"></image-component>
       </div>
     </div>
 
@@ -121,11 +113,22 @@
         <p>
           Finally, the optimal system size for the island has to be determined.
         </p>
+        <p>
+          The following assumptions are applied in the calculations within this section:
+        </p>
+        <ul>
+          <li>temperature difference across the inlet and outlet pipe of the TES to be 5ºC, which is within the typical range of water thermal systems, [C1][C2] to balance residence time of the fluid within the TES and effectiveness of heat transfer</li>
+          <li>no heat loss through pipe for flow rate calculation, allowing immediate usage of heat energy calculation (Q = mc∆T)</li>
+          <li>turbulent flow in pipes for system head</li>
+          <li>heat loss calculations only considers heat loss through pipes</li>
+          <li>60ºC water temperature and 25ºC ambient temperature to assess heat loss under high temperature difference situations</li>
+        </ul>
 
         <h3>Pipe size</h3>
         <p>
           For optimal pipe size, the system head is compared across different pipe diameters. A higher system head indicates greater flow resistance, which requires a more powerful pump.
         </p>
+        
         <image-component tag="image" source="assets/tt_final/separate-loop/separate-head-comparison.jpg"
           subtitle="Figure XXX: Comparing the system head per island size for parallel system"></image-component>
         <image-component tag="image" source="assets/tt_final/single-loop/single-head-comparison.jpg"
@@ -251,7 +254,10 @@
         </ul>
         <h4>Pipe size</h4>
         <p>
-          The pipe sizes to be compared are based on commonly used stainless steel pipe sizes in residential plumbing as well as the smallest size (which is the closest to current hose size on our prototype) commonly available. Prior to the calculation of the head, the flow rate needs to be obtained. For the parallel configuration, the flow rate is constant for all the different system sizes (no of rigs) at 0.409 l/min. However, for the series system, the flow rate differs. For the series configuration, the flow rate is determined using an energy balance across the TES, assuming a 5°C temperature rise and neglecting pipe heat loss. The result is below.
+          The pipe sizes to be compared are based on commonly used stainless steel pipe sizes in residential plumbing as well as the smallest size (which is the closest to current hose size on our prototype) commonly available. Prior to the calculation of the head, the flow rate needs to be obtained. The effectiveness of heat transfer depends on the rate of fluid circulation, where a higher flow rate allows more heated fluid to be transported to the TES per unit time. However, very high flow rates reduces the residence time of the fluid within the TES, limiting heat transfer to the PCM. The flow rate is determined using an energy balance across the TES, based on Q = mdot c ∆T. A temperature difference of 5°C is selected, which is within the typical range used in water-based thermal systems. [C1][C2] This provides a balance between achieving sufficient heat transfer while avoiding excessively high flow rates.
+
+
+          For the parallel configuration, the flow rate is constant for all the different island sizes (no of rigs) at 0.409 l/min. However, for the series system, the flow rate differs. For the series configuration, the flow rate is determined using an energy balance across the TES, assuming a 5°C temperature rise and neglecting pipe heat loss. The result is below.
         </p>
         <image-component tag="image" source="assets/tt_final/single-loop/single-fr.jpg"
           subtitle="Figure XXX: Flow rate versus system size (no of rigs) for series configuration (single loop)"></image-component>
@@ -416,6 +422,13 @@
       </p>
       <p>
         [7] SSContent, “What Pipe Size for House Plumbing? A Complete Guide,” Splash Plumbing, Feb. 28, 2025. https://www.splashplumbing.com/what-size-pipe-for-house-plumbing-a-guide-to-choosing-the-right-dimensions/
+      </p>
+      <p>
+        [C1] S. A. Kalogirou and G. A. Florides, “Solar Space Heating and Cooling Systems,” Comprehensive Renewable Energy, pp. 501–531, 2022, doi: https://doi.org/10.1016/b978-0-12-819727-1.00003-0.
+      </p>
+
+      <p>
+        [C2]https://mypdh.engineer/lessons/controls/
       </p>
       <p>
         [8] Zhejiang Hailiang Co., Ltd., “Hailiang Custom Fireproof Black Rubber Thermal Insulation Pipe,” Made-in-China.com. https://hailiang1.en.made-in-china.com/product/QZNaBgfYaJcW/China-Hailiang-Custom-Fireproof-Black-Rubber-Thermal-Insulation-Pipe.html?acc=5494762105-lxy&cpn=21714728580-&tgt=&net=x&dev=c-&gid=CjwKCAjwspPOBhB9EiwATFbi5LcM3xtO6p1yNPq527jXaa6mTHovafQ-oeqxcfyLIuN9QMxQ_--SJxoCaNsQAvD_BwE&kwd=&mtp=&loc=9062542-&gad_source=1&gad_campaignid=21721137545&gbraid=0AAAAA-M7K1iP3cuouqCv8a6A5c06mehHi&gclid=CjwKCAjwspPOBhB9EiwATFbi5LcM3xtO6p1yNPq527jXaa6mTHovafQ-oeqxcfyLIuN9QMxQ_--SJxoCaNsQAvD_BwE
