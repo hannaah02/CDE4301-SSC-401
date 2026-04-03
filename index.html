@@ -63,41 +63,30 @@
           <a href="#acknowledgements">Acknowledgements</a>
         </sl-tree-item>
 
-        <sl-tree-item expanded>
-          <a href="#background">1. Background</a>
-          <sl-tree-item>
-            <a href="#small-scale CSP">1.1 Why focus on small scale Concentrated Solar Power?</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#UROP Solar Tower rig">1.2 UROP Solar Tower rig</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#aims & objectives">1.3 Aims & Objectives</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#potential use case">1.4 Potential Use Case</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#value prop">1.5 Value Proposition</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#discussion">1.6 Discussion</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#project plan">1.7 Project Plan</a>
-          </sl-tree-item>
-        </sl-tree-item>
-
-        <sl-tree-item >
+        <sl-tree-item>
+          <a href="#background">1. Introduction</a>
+        </sl-tree>
+      
+        <sl-tree-item expanded >
           <a href="ch2.html">2. System Design</a>
+           <sl-tree-item> <a href = lightsubfinal.html> 2.1 Case Study</a></sl-tree-item>
+           <sl-tree-item> <a href = lightsubfinal.html> 2.2 Proposed System Design</a></sl-tree-item>
+           <sl-tree-item> <a href = lightsubfinal.html> 2.3 Improvements on Rig Design</a></sl-tree-item>
         </sl-tree-item>
         
-        <sl-tree-item >
+        <sl-tree-item expanded >
           <a href="ch3.html">3. CSP Rig Development</a>
+          <sl-tree-item> <a href = lightsubfinal.html> 3.1 Light Subsystem</a></sl-tree-item>
+          <sl-tree-item> <a href = thermaltransmissionfinal.html> 3.2 Thermal Transmission Subsystem</a></sl-tree-item>
+          <sl-tree-item> <a href = lightsubfinal.html> 3.3 Thermal Energy Storage Subsystem</a></sl-tree-item>
+          <sl-tree-item> <a href = lightsubfinal.html> 3.4 Sensor Subsystem</a></sl-tree-item>
+          <sl-tree-item> <a href = ch3.html> 3.5 Integrated Test Results</a></sl-tree-item>
         </sl-tree-item>
 
-        <sl-tree-item >
+        <sl-tree-item expanded >
           <a href="ch4.html">4. Final System</a>
+           <sl-tree-item> <a href = ch4.html> 4.1 Final Design of CSP Rig & Cost </a></sl-tree-item>
+           <sl-tree-item> <a href = ch4.html> 4.2 Optimum Parameters for the system </a></sl-tree-item>
         </sl-tree-item>
 
         <sl-tree-item >
@@ -137,7 +126,7 @@
         <sl-tree-item>
           <a href="#references">References</a>
         </sl-tree-item>
-      </sl-tree>
+      
     </div>
     <sl-divider></sl-divider>
 
@@ -145,8 +134,7 @@
       <h1>Click <a href="index_interim.html">here</a> to acess interim report</h1>
       <div id="abstract">
         <h2>Abstract</h2>
-        <p>Large-scale Concentrated Solar Power (CSP) plants have been widely studied and successfully implemented for electricity generation. However, small-scale CSP systems remain largely unexplored, despite offering several advantages over solar PV panels, including simpler mechanical designs, lower installation and maintenance costs, longer lifespans, and easier recyclability. These advantages highlight the potential for CSP technology to support practical, small-scale uses. This project investigates the development of a scalable, low-cost CSP system. A potential application of the proposed system is hot water production for showering. The project aims to design and evaluate the feasibility of small-scale CSP as a sustainable thermal energy solution.</p>
-      </div>
+        <p>Concentrated Solar Power (CSP) systems use reflective surfaces to focus sunlight onto a receiver, where a thermal transmission fluid absorbs the concentrated heat and transfers it for storage and later use. While large-scale CSP has been widely implemented for electricity generation, small-scale applications remain relatively unexplored. However, small-scale CSP offers advantages over solar photovoltaic panels, including simpler mechanical design, lower installation and maintenance costs, longer lifespan, and easier recyclability. This project investigates the design and development of a scalable, low cost CSP system for hot water generation, with the aim of evaluating its feasibility as a practical and sustainable thermal energy solution.</p>
     </div>
     <br />
     <br />
@@ -165,29 +153,40 @@
 
     <div>
       <div id="chapter1">
-        <h2> 1.</h2>
-        <p>
-          XX
-        </p>
+        <h1> 1.0 Introduction</h1>
+        <p>There is a growing adoption of large scale Concentrated Solar Power plants worldwide, examples include Cresecent Dunes, Noor Energy 1 [1] etc.</p>
+        <p>However, limited research exists on small-scale CSP systems for independent buildings. The smallest deployed systems are typically in the kW range or larger and are used for rural electrification. Examples include:</p>
+        <ul>
+          <li>Small scale concentrating solar plants for rural electrification [2]</li>
+          <li>Small-scale CSP plants for decentralized power production using piston steam engines [3]</li>
+        </ul>
+        
+        <p>The aim of this project is to evaluate the technological and economic feasibility of small-scale CSP systems. In collaboration with E&ST Environmental, a potential deployment site has been identified at a hotel in Tanjung Balai, Indonesia, where solar conditions are favourable. Situated 3° north of the equator, Indonesia benefits from consistently high solar exposure, with a three year average Direct Normal Irradiance of 385 W/m², exceeding Singapore’s average of 335 W/m². [4]. This exceeds the 228 W/m² threshold [5] for CSP viability approximately 54.1% of the time, compared to 44.75% in Singapore, where the prototype was tested.</p>
+
+         <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/dnisgindo.png"
+              subtitle="Figure 01: Average Direct Normal Irradiance in Singapore and Indonesia (2025)"
+              style="width: 100%; height: auto; display: block; margin: 30px auto 30px auto;"
+            ></image-component>
+          </div>
+
+        <p>In addition, the greater availability of land in Indonesia makes it well suited for CSP installations, in contrast to land-constrained countries such as Singapore, where higher energy density solutions are typically prioritised. </p>
+        <p>In hotels, approximately 15 - 25% of electricity consumption is attributed to hot water generation, with primary uses including showering, kitchen operations, and laundry [6],[7],[8]. This project will focus specifically on hot water for showering, as it represents the largest share of hot water demand [9]. </p>
+
+        <p>According to recent news, the electricity costs are expected to rise  by 2.1% if oil prices stay high [10]. Although current business tariffs in Indonesia are around IDR 1,114.7 per kWh and have been kept stable through government subsidies [11],[12], this approach is unlikely to be sustainable in the long term. Enhancing energy resilience through increased domestic energy production and reduced reliance on external sources would help alleviate fiscal pressure and support more effective allocation of resources for national development.</p>
+        <p>By supplementing the energy supply of the hotel with an alternate source, we aim to decrease the electricity cost by approximately 10%, which is the proportion used for hot water showering. Considering the escalation cost, the total amount of electricity cost reduction is 12%.</p>
+        <p>This project evaluates the potential of a small-scale CSP system for hotel hot water production to reduce long-term operating costs and mitigate exposure to fluctuating energy prices, through the design and assessment of a system based on an enhanced CSP rig developed by the team from August 2025 to April 2026.</p>
+
+        <h2>Value Proposition</h2>
+
+        <p>The proposed CSP system harnesses freely available solar energy to deliver a reliable supply of hot water at 40 - 45 °C for showering between 8:00 AM and 4:00 PM, reducing electricity costs by approximately 10% and offering an affordable, sustainable solution for hot water production in Indonesia.</p>
+      
       </div>
     </div> 
 
-
-    <div>
-      <div id="subsections">
-        <h2>Subsections</h2>
-        <p>
-        XX
-        <ol>
-          <li><a href="lightsubfinal.html">Light</a></li>
-          <li><a href="thermaltransmissionfinal.html">Thermal Transmission</a></li>
-          <li><a href="thermalenergystoragesubs.html">Thermal Energy Storage</a></li>
-          <li><a href="sensingsubs.html">Sensing</a>  (only used during the design and testing phase to capture data and optimise the system)</li>
-        </ol>
-        </p>
-      </div>
-    </div>
-
+     <sl-button size="medium" pill onclick href="ch2.html">Next: 02. System Design</sl-button>
 
     <br />
     <br />
