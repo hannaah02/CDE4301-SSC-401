@@ -227,6 +227,9 @@
     <div>
       <div id="appendix-system-design">
         <h1>Appendix A: System design detailed process with all results</h1>
+        <p>
+          The main MATLAB script is <i>system_scaling_single.m</i> for series configuration and <i>system_scaling_separate.m</i> for parallel configuration.
+        </p>
         <h4>Key assumptions</h4>
         <ul>
           <li>Temperature difference across TES = 5°C</li>
@@ -338,7 +341,7 @@
         <image-component tag="image" source="assets/tt_final/fittings.jpg"
           subtitle="Figure A4: Rough sketch to approximate fittings required for system of rigs"></image-component>
         <p>
-          The resulting system head for each pipe size is shown below.
+          The system head is computed using a MATLAB function (<i>NPSH_system_head_single.m</i> for series configuration and <i>NPSH_system_head_separate.m</i> for parallel configuration). The resulting system head for each pipe size is shown below.
         </p>
         <p>
           For the parallel system
@@ -563,7 +566,7 @@
           : Thermal conductivity of the insulation (W/m·K)
         </p>
         <p>
-          Using the pipe length estimation from layout above, the thermal efficiency of the pipes in a system of rigs is obtained for the series and parallel configuration.
+          Using the pipe length estimation from layout above, the thermal efficiency of the pipes in a system of rigs is obtained for the series and parallel configuration. Thermal efficiency is computed uisng a MATLAB function (<i>pipe_efficiency_single.m</i> for series configuration and <i>pipe_efficiency_separate.m</i> for parallel configuration.)
         </p>  
         <p>
           The resulting thermal efficiency is shown below:
