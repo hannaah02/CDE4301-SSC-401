@@ -210,15 +210,15 @@
       </div>
     </div>
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-
     <!--
     ------------------------------------------------------------------------------------------------------
     ------------------------------------------------------------------------------------------------------
     ------------------------------------------------------------------------------------------------------
     -->
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
 
     <div>
       <div id="tt-appendix-insulation">
@@ -705,16 +705,18 @@
     <sl-divider></sl-divider>
 
    <sl-button size="medium" pill onclick href="thermalenergystoragesubs.html">Next subsection: Thermal Energy Storage</sl-button>
+    <sl-divider></sl-divider>
+    <!-- This is the code to display the scroll to top button for ergonomic -->
+    <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+    <!-- but it might reduce the user experience. -->
 
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
-  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+
+    <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
     <sl-icon name="arrow-up" label="Settings"></sl-icon>
-  </sl-button>
+    </sl-button>
 
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-  <script type="module" src="./components/table-component/table-component-thermal-transmission.js"></script>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script type="module" src="./components/table-component/table-component-thermal-transmission.js"></script>
 </body>
 
 </html>
