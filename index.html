@@ -135,7 +135,7 @@
     <sl-divider></sl-divider>
 
     <div>
-      <h1>Click <a href="index_interim.html">here</a> to acess interim report</h1>
+      <h1>Click <a href="index_interim.html">here</a> to access interim report</h1>
       <div id="abstract">
         <h2>Abstract</h2>
         <p>Concentrated Solar Power (CSP) systems use reflective surfaces to focus sunlight onto a receiver, where a thermal transmission fluid absorbs the concentrated heat and transfers it for storage and later use. While large-scale CSP has been widely implemented for electricity generation, small-scale applications remain relatively unexplored. However, small-scale CSP offers advantages over solar photovoltaic panels, including simpler mechanical design, lower installation and maintenance costs, longer lifespan, and easier recyclability. This project investigates the design and development of a scalable, low cost CSP system for hot water generation, with the aim of evaluating its feasibility as a practical and sustainable thermal energy solution.</p>
@@ -158,7 +158,7 @@
     <div>
       <div id="chapter1">
         <h1> 1.0 Introduction</h1>
-        <p>There is a growing adoption of large scale Concentrated Solar Power plants worldwide, examples include Cresecent Dunes, Noor Energy 1 [1] etc.</p>
+        <p>There is a growing adoption of large-scale Concentrated Solar Power (CSP) plants worldwide, such as Crescent Dunes and Noor Energy 1. These plants are typically hundreds of megawatts in capacity and use mirrors or lenses to concentrate sunlight onto a central receiver, heating a fluid like molten salt. This stored thermal energy allows them to generate electricity even when the sun isn’t shining, providing reliable, dispatchable power [1].</p>
         <p>However, limited research exists on small-scale CSP systems for independent buildings. The smallest deployed systems are typically in the kW range or larger and are mostly used for rural electrification, and limited research is being conducted on water heating applications. Examples include:</p>
         <ul>
           <li>Small scale concentrating solar plants for rural electrification [2]</li>
@@ -171,7 +171,7 @@
             <image-component
               tag="image"
               source="assets/dnisgindo.png"
-              subtitle="Figure 01: Average Direct Normal Irradiance in Singapore and Indonesia (2025) [4]"
+              subtitle="Figure 1: Average Direct Normal Irradiance in Singapore and Indonesia (2025) [4]"
               style="width: 100%; height: auto; display: block; margin: 30px auto 30px auto;"
             ></image-component>
           </div>
@@ -183,6 +183,52 @@
         <p>By supplementing the energy supply of the hotel with an alternate source, we aim to decrease the electricity cost by approximately 10% [13], which is the proportion used for hot water showering. Considering the escalation cost, the total amount of electricity cost reduction is 12%.</p>
         <p>This project evaluates the potential of a small-scale CSP system for hotel hot water production to reduce long-term operating costs and mitigate exposure to fluctuating energy prices, through the design and assessment of a system based on an enhanced CSP rig developed by the team from August 2025 to April 2026.</p>
 
+
+        <h1> 1.1 Competitor Analysis</h1>
+
+        <h2>1.1.1 Existing small-scale CSP systems</h2>
+        
+        <p>
+       A research paper published by Gazi University presents a small-scale CSP system with a reflector area of 3.6 m² using a parabolic trough configuration and solar tracking []. The system uses water as the heat transfer fluid but does not incorporate thermal energy storage. While the study does not specify a particular application, this design is not well suited for hotel hot water systems. Hotels require a continuous and large supply of hot water, meaning multiple units or a significantly larger collector would be needed. However, deploying multiple parabolic troughs introduces spacing requirements to prevent mutual shading, which reduces effective use of available installation area. Alternatively, installing a single large unit on a rooftop may negatively impact the building’s aesthetics, which is an important consideration for hotel operators.
+      </p>
+      <p>
+       Another study published by Taylor & Francis describes a 1.5 m² parabolic trough collector designed for domestic water heating in Pakistan []. The system was able to heat 100 L of water to 60 °C within 5 hours, although the number of collectors used was not specified. Similar to the previous design, water is used as the working fluid, and circulation is achieved through a thermosiphon mechanism. However, this system also doesn’t include thermal energy storage, which is a critical limitation for the intended application, as the proposed system must be capable of supplying hot water beyond daylight hours.
+      </p>
+
+      <table style="border: 0; border-collapse: collapse; width: 100%;">
+  <tr>
+    <th>
+      <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/comparison 01.png"
+              subtitle="Figure XX: CSP system by Gazi University [] "
+              style="width: 80%; height: auto; display: block; margin: 60px auto 30px auto;"
+            ></image-component>
+          </div>
+    </th>
+    <th>
+      <div style="display: flex; justify-content: center;">
+            <image-component
+              tag="image"
+              source="assets/comparison 02.png"
+              subtitle="Figure XX: CSP system by Taylor & Francis []"
+              style="width: 100%; height: auto; display: block; margin: 60px auto 30px auto;"
+            ></image-component>
+          </div>
+    </th>
+  </tr>
+    </table>
+
+  <h2>1.1.2 Solar water heater</h2>
+
+
+
+
+
+
+
+        
         <h2>Value Proposition</h2>
 
         <p>The proposed CSP system harnesses freely available solar energy to deliver a reliable supply of hot water at 40 - 45 °C [14] for showering between 8:00 AM and 4:00 PM, reducing electricity costs by approximately 10% and offering an affordable, sustainable solution for hot water production in Indonesia.</p>
