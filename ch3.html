@@ -10,8 +10,7 @@
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
-  <script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
   <link rel="stylesheet" href="./index.css">
 
@@ -33,13 +32,13 @@
 
   <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 
-  <style> 
-     .square { 
-        border: 1px solid black;
-        padding: 20px;
-        display: inline-block;
-    } 
-   </style>
+  <style>
+    .square {
+      border: 1px solid black;
+      padding: 20px;
+      display: inline-block;
+    }
+  </style>
 
 </head>
 
@@ -49,86 +48,96 @@
 
     <sl-button size="medium" pill onclick href="index.html">Back to main page</sl-button>
     <div id="CSP_Rig_Development">
-    <h1>3.0 CSP Rig Development</h1>
-        <p>
+      <h1>3.0 CSP Rig Development</h1>
+      <p>
         The development of the scalable CSP rig is presented in three subsections, with design iterations from Semester 01, as well as tests and analyses for each subsection, detailed on the respective pages below.
-        <ul>
-          <li><a href="lightsubfinal.html">3.1 Light</a></li>
-          <li><a href="thermaltransmissionfinal.html">3.2 Thermal Transmission</a></li>
-          <li><a href="thermalenergystoragesubs.html">3.3 Thermal Energy Storage</a></li>
-          <li><a href="sensingsubs.html">3.4 Sensing</a>  (only used during the design and testing phase to capture data and optimise the system)</li>
-        </ul>
-        </p>
+      <ul>
+        <li><a href="lightsubfinal.html">3.1 Light</a></li>
+        <li><a href="thermaltransmissionfinal.html">3.2 Thermal Transmission</a></li>
+        <li><a href="thermalenergystoragesubs.html">3.3 Thermal Energy Storage</a></li>
+        <li><a href="sensingsubs.html">3.4 Sensing</a> (only used during the design and testing phase to capture data and optimise the system)</li>
+      </ul>
+      </p>
 
-    <h2>3.5 Integrated Test Results</h2>
+      <h2>3.5 Integrated Test Results</h2>
       <p>
         This section evaluates the performance on integration of the light, thermal transmission and TES subsections.
       </p>
-      <h3>Initial integration</h3>
+      <h3>3.5.1 Initial integration</h3>
       <p>
-        The pipe is routed from the receiver through the central frame and connected to the TES (20L of water) and pump (see below). A longer pipe length was used initially to allow flexibility in positioning TES, and is reduced later.
+        The pipe is routed from the receiver through the central frame and connected to the TES and pump. A longer pipe length was used initially to allow flexibility in positioning TES, and is reduced later. Control plastic drum with minimal insulation with equal amount of water volume is used in comparison with insulated TES. </p>
+        <p>
+          Pipe is not insulated initially. Later insulation was partially applied along the full pipe length due to flexibility limitations of PUR/PIR and restrictions on insulating certain sections of pipe to avoid damage on removal. In the end, pipes are fully insulated.
+        
       </p>
-      <p>
-        Insulation was not applied along the full pipe length due to flexibility limitations of PUR/PIR and restrictions on insulating certain sections of pipe to avoid damage on removal.
-      </p>
-      <image-component tag="image" source="assets/tt_final/images/integrated-1-insulation.jpg"
-        subtitle="Figure XXX: Insulation in integrated system"></image-component>
-      <p>
-        Below are the temperature of water in the TES for the uninsulated and insulated system.
-      </p>
-      <image-component tag="image" source="assets/tt_final/integrated-1-uninsulated-labelled.jpg"
-        subtitle="Figure XXX: Temperature of water in TES and in control for uninsulated pipes (Max: 41.44ºC, 36.19ºC)"></image-component>
-      <image-component tag="image" source="assets/tt_final/integrated-1-insulated-labelled.jpg"
-        subtitle="Figure XXX: Temperature of water in TES and in control for insulated pipes (Max: 43.81ºC, 35.56ºC)"></image-component>
-      <p>
-        The temperature difference between TES and control water temperature increased from 5.25ºC to 8.25ºC (57.14% improvement).
-      </p>
-      <h4>Isolation of the TES from the receiver</h4>
-      <p>
-        After sundown, TES temperature dropped to match the control, indicating complete loss of stored thermal energy overnight. This is attributed to the continuous pump operation, causing heat loss thorugh the receiver. To reduce heat loss, the TES is isolated from the receiver system between 5pm and 10am through:
-      </p>
-      <ol>
-        <li>the installation of a relay to shut off power to the pump between 5pm to 10am</li>
-        <li>lifting the TES inlet pipe from the surface of the water in the TES (physically isolating system)</li>
-      </ol>
-      <p>
-        The volume of water in the TES was also reduced to 10L to increase maximum temperature and extend the duration the water is kept over 40ºC. The results of these changes are below. 
-      </p>
-      <image-component tag="image" source="assets/tt_final/integrated-2-isolation-compare-prev-addpts.jpg"
-          subtitle="Figure XXX: Temperature of water in TES and in control before isolating systems (Max: 43.81ºC, 35.56ºC)"></image-component>
-      <image-component tag="image" source="assets/tt_final/integrated-2-isolation-addpts.jpg"
-          subtitle="Figure XXX: Temperature of water in TES and in control after isolating systems (Max: 49.81ºC, 38.25ºC)"></image-component>
-      <p>
-        Based on the results, the TES water temperature is consistently above the control water temperature overnight, indicating retained thermal energy carried forward from the previous day, as temperature difference increased from 8.25ºC to 11.56ºC (40.12% improvement). Thus, the system's abilty to retain temperature over 40ºC is lengthened.
-      </p>
+      <p>Sensor used: DS18B20, RDXL6SD-US-B-CAL-3, SP-420, DHT11(for rain detection)</p>
+      <image-component tag="image" source="assets/tt_final/images/integrated-1-insulation.jpg" subtitle="Figure XXX: Insulation in integrated system"></image-component>
+
+    <h3>3.5.2 Iterations and Results</h3>
+
+    <h4>3.5.2.1 Iteration 1: Effect of Pipe Insulation</h4>
+
+    <p><strong>Purpose:</strong> To assess the impact of pipe insulation on the gradient of TES outlet water temperature and the maximum temperature difference between TES outlet water and control water.</p>
+
+    <p><strong>Method:</strong> Two experimental conditions were compared: (1) without pipe insulation (14/3–15/3) and (2) with partial pipe insulation (16/3–17/3). In both cases, water was pumped continuously at 20% of the maximum pump capacity, the TES was filled with 20 L of water, and 25 PCM pipes (maximum number of pipes) were installed inside the TES.</p>
+
+    <p><strong>Hypothesis:</strong> The insulated system will produce a greater maximum temperature difference between TES water and control water, and the temperature in the TES will increase faster than in the uninsulated system.</p>
+
+    <image-component
+      tag="image"
+      source="assets/Integrated1.png"
+      subtitle="Figure X.X: Temperature profiles of TES water and control water for the uninsulated pipe system (top, 14/3–15/3) and partial insulated pipe system (bottom, 16/3–17/3).">
+    </image-component>
+
+    <p><strong>Discussion:</strong> The insulated system achieved a higher TES water temperature and a larger TES–control temperature difference than the uninsulated system. This is because pipe insulation reduces heat loss from the fluid during circulation, allowing more thermal energy collected from the receiver to be retained and transferred into the TES. As a result, the maximum energy stored in the TES increases, leading to a higher peak temperature. In addition, the rate of temperature rise in the TES is steeper in the insulated case, indicating faster heat accumulation. The insulated system also showed longer temperature retention near its peak temperature. This trend is consistent with the expected reduction in heat loss along the piping network (see Appendix B0 for theoretical computation).</p>
+
+    <p><strong>Result:</strong> The maximum temperature difference between TES water and control water increased from <em>5.19</em>°C in the uninsulated system to <em>8</em> °C in the insulated system, corresponding to an improvement of <em>54%</em>. The average heating slope of the TES water also increased from <em>2.03</em>°C/h to <em>2.33</em> °C/h, and the duration near the maximum temperature was extended in the insulated system. Therefore, the results support the hypothesis. At the 80% confidence level, the two-tailed test gave <em>p ≈ 0.148</em> for maximum temperature difference and <em>p ≈ 0.200</em> for heating slope, indicating weak statistical significance.</p>
+
+    <p><strong>Limitation:</strong> Solar irradiance varied from day to day, so the two cases were not tested under perfectly identical weather conditions. The analysis assumes that the irradiance conditions were broadly comparable based on similar peak and average values, although 15/3 was a rainy day and may not be suitable for direct comparison in hypothesis testing. Other uncontrolled factors, such as ambient temperature and transient cloud cover, may also affect the observed temperature profiles.</p>
+
+    <h4>3.5.2.2 Iteration 2: Effect of TES Water Volume and Pump Mode</h4>
+
+    <p><strong>Purpose:</strong> To assess the impact of TES water volume and pump mode on the temperature retention time of TES outlet water and the maximum temperature difference between TES water and control water.</p>
+
+    <p><strong>Method:</strong> Two experimental conditions were compared: (1) a 20 L partially insulated TES without relay, with continuous pumping at 20% of the maximum pump capacity (16/03–19/03), and (2) a 10 L partially insulated TES with relay-controlled pump mode, where the pump was switched on at 10:00 and off at 17:00 (21/03–22/03). In both cases, 25 PCM pipes (maximum number of pipes) were installed inside the TES.</p>
+    
+    <p><strong>Hypothesis:</strong> The 10 L relay-controlled system will produce a greater maximum temperature difference between TES water and control water, a longer duration above 40°C, and a longer cooling period before the TES temperature approaches the control temperature.</p>
+
+    <image-component
+      tag="image"
+      source="assets/Integrated2-0.png"
+      subtitle="Figure X.X: Temperature profiles of TES water and control water for the 20 L partially insulated TES without relay (top, 16/03–19/03) and the 10 L partially insulated TES with relay-controlled pump operation (bottom, 21/03–22/03).">
+    </image-component>
+
+    <p><strong>Discussion:</strong> The 10 L relay-controlled system achieved a higher peak TES temperature, a larger TES–control temperature difference, and a longer temperature retention period than the 20 L system without relay. This can be explained by two main factors. First, reducing the TES water volume increases the temperature rise for the same amount of stored heat because the thermal mass of the water is smaller. Second, switching off the pump after 17:00 reduces night-time heat loss through the receiver loop, allowing more thermal energy to remain inside the TES. As a result, the TES temperature remained above the control temperature overnight and cooled more slowly. The relay-controlled system also remained above 40°C for a longer duration, which is beneficial for hot-water applications requiring sustained useful temperature.</p>
+
+  
+
+    <p><strong>Result:</strong> The maximum temperature difference between TES water and control water increased from <em>8.25</em>°C in the <em>20 L partially insulated system without relay</em> to <em>11.56</em>°C in the <em>10 L partially insulated system with relay-controlled pump mode</em>, corresponding to an improvement of <em>40.1%</em>. The retention time above 40°C also increased from about <em>4.5</em> h in the earlier 20 L configuration to <em>8.67</em> h in the 10 L relay-controlled configuration, corresponding to an improvement of about <em>92.7%</em>. Moreover, the cooling duration before the TES temperature approached the lower threshold increased from about <em>11</em> h to <em>17.5</em> h, an extension of about <em>59.1%</em>. Therefore, the results support the hypothesis that reducing TES water volume and isolating the TES from the receiver during non-heating hours improve thermal retention and extend the duration of useful hot water.</p>
+
+    <p><strong>Limitation:</strong> Solar irradiance varied from day to day, so the two cases were not tested under identical weather conditions. The relay-controlled setup used a fixed switching schedule rather than a temperature-responsive valve, so the TES was not fully isolated under all operating conditions. The selected pump on/off times were based on expected irradiance patterns and may not have matched the exact solar conditions each day. In addition, more than one variable was changed simultaneously, namely water volume and pump mode, so the individual contribution of each factor cannot be isolated from this iteration alone. The retention times and temperature differences were also estimated from the graph and may contain small reading errors.</p>
       <h4>Shortening of the pipe and improved insulation</h4>
       <p>
         The TES was repositioned to shorten the pipe. This reduces total surface area available for heat exchange with the environment, thus, reducing heat losses along the pipes. Insulation coverage was improved by including aircon insulation at areas the PUR/PIR insulation is unable to cover.
       </p>
-      <image-component tag="image" source="assets/tt_final/images/integrated-3-general.jpg"
-          subtitle="Figure XXX: Layout of integrated system after shortening the pipe and improving insulation"></image-component>
+      <image-component tag="image" source="assets/tt_final/images/integrated-3-general.jpg" subtitle="Figure XXX: Layout of integrated system after shortening the pipe and improving insulation"></image-component>
       <p>
         On removal, it was observed that some sections of the pipe lacked the PUR/PIR insulation along longer pipe sections due to spray insulation being unable to reach deeper into the pipe.
       </p>
-      <image-component tag="image" source="assets/tt_final/images/empty-al.jpg"
-          subtitle="Figure XXX: Aluminium pipe lacking PUR/PIR near the centre of the long length of pipe"></image-component>
+      <image-component tag="image" source="assets/tt_final/images/empty-al.jpg" subtitle="Figure XXX: Aluminium pipe lacking PUR/PIR near the centre of the long length of pipe"></image-component>
       <p>
         Also, support structures to maintain central position of hose is unable to be inserted in the long sections of pipe, resulting in the hose laying on the edge of the aluminium pipe (see below).
       </p>
-      <image-component tag="image" source="assets/tt_final/images/not-centred.jpg"
-        subtitle="Figure XXX: Hose at side of the pipe"></image-component>
+      <image-component tag="image" source="assets/tt_final/images/not-centred.jpg" subtitle="Figure XXX: Hose at side of the pipe"></image-component>
       <p>
         Due to these, the results were less efficient than expected. The updated insulations removes the need for long pipe lengths and the issues associated with it.
       </p>
       <p>
         The results of the changes are as follows:
       </p>
-      <image-component tag="image" source="assets/tt_final/images/integrated-3-insulation.jpg"
-          subtitle="Figure XXX: PUR/PIR mainly used with aircon insulation along bends"></image-component>
-      <image-component tag="image" source="assets/tt_final/integrated-2-isolation-addpts.jpg"
-          subtitle="Figure XXX: Temperature of water in TES and in control before shortening pipes and fixing insulation (Max: 49.81ºC, 38.25ºC)"></image-component>
-      <image-component tag="image" source="assets/tt_final/integrated-3-shortening-addpts.jpg"
-          subtitle="Figure XXX: Temperature of water in TES and in control after shortening pipes and fixing insulation (Max: 55.19ºC, 36.31ºC)"></image-component>
+      <image-component tag="image" source="assets/tt_final/images/integrated-3-insulation.jpg" subtitle="Figure XXX: PUR/PIR mainly used with aircon insulation along bends"></image-component>
+      <image-component tag="image" source="assets/tt_final/integrated-2-isolation-addpts.jpg" subtitle="Figure XXX: Temperature of water in TES and in control before shortening pipes and fixing insulation (Max: 49.81ºC, 38.25ºC)"></image-component>
+      <image-component tag="image" source="assets/tt_final/integrated-3-shortening-addpts.jpg" subtitle="Figure XXX: Temperature of water in TES and in control after shortening pipes and fixing insulation (Max: 55.19ºC, 36.31ºC)"></image-component>
       <p>
         The temperature difference increased from 11.56ºC to 18.88ºC, which is a 63.32% improvement. Water temperature was sustained above 40ºC for approximately 9 hours, demonstrating system performance for sustained thermal storage.
       </p>
@@ -143,23 +152,23 @@
 
     <br />
     <br />
-     <sl-button size="medium" pill onclick href="ch4.html">Next section: 04. Final System</sl-button>
+    <sl-button size="medium" pill onclick href="ch4.html">Next section: 04. Final System</sl-button>
 
     <sl-divider></sl-divider>
-      
-
-      
-    
-    
-    
-    </div>
 
 
 
 
 
 
- <!-- This is the code to display the scroll to top button for ergonomic -->
+  </div>
+
+
+
+
+
+
+  <!-- This is the code to display the scroll to top button for ergonomic -->
   <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
   <!-- but it might reduce the user experience. -->
   <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
