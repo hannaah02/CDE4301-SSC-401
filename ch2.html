@@ -56,7 +56,7 @@
         <h1>2.0 System Design</h1>
         <h2>2.1 Case study</h2>
         <p>
-          The layout of the hotel is approximated below, with a usable implementation area of 1288sqm (greyed out) identified from the total land area of 0.5 hectares, using standard hotel width dimensions as a reference. [1]
+          The layout of the hotel is approximated below, with a usable implementation area of 1288sqm (greyed out) identified from the total land area of 0.5 hectares, using standard hotel width dimensions as a reference. <a href="#ref-15">[1]</a>
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/dimensions-only.jpg"
           subtitle="Figure 1: Dimensions of hotel"></image-component>
@@ -66,7 +66,7 @@
           The functional requirements of the client are as follows:
         </p>
         <image-component tag="image" source="assets/final-functional-req.jpg"
-          subtitle="Table 1: Functional requirements of hotel [2][3]"></image-component>
+          subtitle="Table 1: Functional requirements of hotel <a href="#ref-13">[2]</a><a href="#ref-14">[3]</a>"></image-component>
         <p>
           The final proposed system is as follows:
         </p>
@@ -132,7 +132,7 @@
             ></image-component>
           </div>
 
-      <p>The sunlight conditions in Indonesia are assumed to be 1,000 W/m² and AM1.5 based on standard test conditions [4]. The average Direct Normal Irradiance is assumed to be 385 W/m², based on data from Solcast, and the sunlight hours are assumed to be 5.5 hrs [5].</p>
+      <p>The sunlight conditions in Indonesia are assumed to be 1,000 W/m² and AM1.5 based on standard test conditions <a href="#ref-16">[4]</a>. The average Direct Normal Irradiance is assumed to be 385 W/m², based on data from Solcast, and the sunlight hours are assumed to be 5.5 hrs <a href="#ref-17">[5]</a>.</p>
       <p>The reflectivity of commercially available cost-effective mirrors ranges between 85% – 95%. </p>
 
       <div style="display: flex; justify-content: center;">
@@ -146,9 +146,9 @@
   
       <p>Based on the weather data assumed above, the required reflector area needed if 100% of the captured rays are reflected and absorbed by the water (thermal transmission fluid) in the receiver would be 0.165 m². However, accounting for losses from the reflectors, receiver, thermal transmission and thermal energy storage, the reflector area can be scaled up to a minimum of 1 m², as the test rig area is 1 m².</p>
       <p>The absorptivity of the material used in the receiver is crucial, as it determines how effectively the receiver can absorb sunlight reflected by the mirrors. Therefore, an absorptivity of 90% is chosen for the receiver material.</p>
-      <p>A highly absorptive material is also highly emissive. In the case of the receiver, we aim to maximize absorption while minimizing emissivity. Therefore, the emissivity will be controlled within 1.5%–70%, as the emissivity of black paint is 90% [6], and surfaces with measured emissivity values for temperatures in the 100 – 400 °C range fall within this range.</p>
-      <p>Thermal conductivity is also an important factor, as the absorbed thermal energy by the receiver must be efficiently transferred to the water inside. The receiver can be built using different materials such as metals or ceramics. Among commercially available options, metals are easy to shape, cost-effective, and have thermal conductivities in the range of  300 – 400 W/mK [7].</p>
-      <p>The surface area of the receiver is another key factor. Increasing the surface area allows for greater thermal absorption but may also increase heat losses due to convection and radiation [8]. For low-temperature applications (<200 °C), the concentration ratio (area of reflector / area of receiver) is typically 1:5 [9]. However, based on data from a solar tower configuration conducted by the UROP team, we will scale up the receiver area to match the aluminum pot used in their experiments.</p>
+      <p>A highly absorptive material is also highly emissive. In the case of the receiver, we aim to maximize absorption while minimizing emissivity. Therefore, the emissivity will be controlled within 1.5%–70%, as the emissivity of black paint is 90% <a href="#ref-18">[6]</a>, and surfaces with measured emissivity values for temperatures in the 100 – 400 °C range fall within this range.</p>
+      <p>Thermal conductivity is also an important factor, as the absorbed thermal energy by the receiver must be efficiently transferred to the water inside. The receiver can be built using different materials such as metals or ceramics. Among commercially available options, metals are easy to shape, cost-effective, and have thermal conductivities in the range of  300 – 400 W/mK <a href="#ref-19">[7]</a>.</p>
+      <p>The surface area of the receiver is another key factor. Increasing the surface area allows for greater thermal absorption but may also increase heat losses due to convection and radiation <a href="#ref-20">[8]</a>. For low-temperature applications (<200 °C), the concentration ratio (area of reflector / area of receiver) is typically 1:5 <a href="#ref-21">[9]</a>. However, based on data from a solar tower configuration conducted by the UROP team, we will scale up the receiver area to match the aluminum pot used in their experiments.</p>
       <p>The weight is not considered as a critical factor as the installation will be fixed in place after setup. Additionally, the rig will be transported in parts, allowing for easy assembly, so weight considerations are minimal.</p>
   
       </div>
@@ -162,7 +162,7 @@
         <h1>Appendix B: Design specifications for thermal transmission subsystem</h1>
         <p>
           Power consumption per rig is estimated against power available per meter square for solar panels, and 
-          1288m^2 of rigs available, and 1176m^2 of area available for solar panel (front of hotel rooftop). Total power produced by solar panels is 176,400W (assuming minimum produced of 150W/m^2). [10] Hence, maxiumum power that can be consumed by each rig assuming full space usage is 136.96W. Thus, the power consumption per rig is set at <math><mn>&le;</mn></math>136.96W.
+          1288m^2 of rigs available, and 1176m^2 of area available for solar panel (front of hotel rooftop). Total power produced by solar panels is 176,400W (assuming minimum produced of 150W/m^2). <a href="#ref-22">[10]</a> Hence, maxiumum power that can be consumed by each rig assuming full space usage is 136.96W. Thus, the power consumption per rig is set at <math><mn>&le;</mn></math>136.96W.
         </p>
         <p>
           The efficiency of the system's insulation is measured by:
@@ -172,10 +172,10 @@
           <li>Pipe losses as percentage of total energy delivered, and</li>
         </ol>
         <p>
-          Heat loss per meter is the main measurement of the insulation's effectiveness. In residential units, the heat loss per meter is within the range of 5.1-10.8W/m for insulated domestic hot water systems. [11] For our system usage, the representative threshold value of 7.95W/m will be used in design specifications.
+          Heat loss per meter is the main measurement of the insulation's effectiveness. In residential units, the heat loss per meter is within the range of 5.1-10.8W/m for insulated domestic hot water systems. <a href="#ref-23">[11]</a> For our system usage, the representative threshold value of 7.95W/m will be used in design specifications.
         </p>
         <p>
-          Pipe losses as percentage of total energy delivered is on average 16-19% in residential units. [12] In conventional hot water systems, pipe losses are expressed as a percentage of the total energy input to the water heater. However, in the CSP system, there is no heater supplying energy as all the energy is collected from solar energy. In the prototype, the total energy delivered is defined as the total thermal energy that the water absorbs at the receiver. Hence, we set the value in the design specifications as 17.5% for reference which is the average estimate for pipe losses based on residential hot water systems.
+          Pipe losses as percentage of total energy delivered is on average 16-19% in residential units. <a href="#ref-24">[12]</a> In conventional hot water systems, pipe losses are expressed as a percentage of the total energy input to the water heater. However, in the CSP system, there is no heater supplying energy as all the energy is collected from solar energy. In the prototype, the total energy delivered is defined as the total thermal energy that the water absorbs at the receiver. Hence, we set the value in the design specifications as 17.5% for reference which is the average estimate for pipe losses based on residential hot water systems.
         </p>
       </div>
     </div>
