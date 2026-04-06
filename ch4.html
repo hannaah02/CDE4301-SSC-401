@@ -268,7 +268,7 @@
           Overall, the final thermal transmission system has a heat loss of 7.1722W/m, pipe loss of 11.6511% and power consumption of 10W per rig, [13] satisfying the design specifications.
         </p>
         <p>
-          The entire system thus requires input of 7560W to power the pumps, which adds a cost of SGD$XX to the calculations above, making the total cost of the entire system [C0.5]
+          The entire system thus requires input of 7560W to power the pumps, which adds a cost of SGD$340.20 to the calculations above, making the total cost of the entire system SGD$24,521. [C0.5]
         </p>
 
         <!--
@@ -285,6 +285,19 @@
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/final-combined.jpg"
           subtitle="Table XXX: Final island design"></image-component>
+
+        <p>
+          The total cost of the entire system is:
+        </p>
+        <math>
+          <mn>SGD24,521</mn>
+          <mo>+</mo><mo>(</mo><mn>SGD272.96</mn><mo>&times;</mo><mn>126</mn><mo>)</mo>
+          <mo>+</mo><mo>(</mo><mn>SGD634.43</mn><mo>&times;</mo><mn>126</mn><mo>)</mo>
+          <mo>=</mo><mn>SGD138,852.14</mn>
+        </math>
+        <p>
+          For the hotel in indonesia, with electricity costs of Rp1444,70/kWh, [D1] or SGD0.11 (as of 6 April 2026), the electricity costs is expected to be SGD5,249.6125 per year. (see <a href="#appendix-cost">Appendix C</a> for calculations). Thus, the payback period is 26.45 years.
+        </p>
         <p>
           For businesses, the incentives of adopting renewable energy goes beyond saving electricity costs. The Indonesian government is actively encouraging industries, including tourism industry, to adopt sustainable energy and reduce their reliance on non-renewable resources. [C1][C2][C3] For hotels, adoption of renewable energy drives them to the direction of attaining green building or green hotel standards, making them eligible for incentives or awards. [C4][C5] Overall, beyond monetary benefits, they seek to gain government support and even more customers from their status.
         </p>
@@ -346,6 +359,9 @@
       </p>
       <p>
         [C0.5 - if not in table] “Aluminum Solar Panel Mounting Brackets with Adjustable Angle Design,” Made-in-China.com. [Online]. https://vaaluminum.en.made-in-china.com/product/ERUrDWobVuhJ/China-Aluminum-Solar-Panel-Mounting-Brackets-with-Adjustable-Angle-Design.html?ads_tp=ppc&ads_id=CmrJWTlOanhK&ads_tp=ppc&ads_id=CmrJWTlOanhK&pv_id=1jlg8i38kb58&faw_id=1jlg8i9hv620&bv_id=1jlg8i9i00e
+      </p>
+      <p>
+        [D1] davidnoorma1, “Detail Tarif Listrik Berdasarkan Golongan Daya dan Jenisnya - PT PLN (Persero),” PT PLN (Persero), Dec. 12, 2025. https://web.pln.co.id/media/2025/12/tarif-listrik
       </p>
       <p>
         [C1] A. M. Tegar, “Indonesia to boost renewable energy investment to shield economy,” Antara News, Apr. 2026. https://en.antaranews.com/news/410641/indonesia-to-boost-renewable-energy-investment-to-shield-economy
@@ -836,6 +852,32 @@
         <image-component tag="image" source="assets/tt_final/overall-system/rig-10-2.jpg"
           subtitle="Table B20: Layout of rig 10 in design 2"></image-component>
 
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+    <div>
+      <div id="appendix-cost">
+        <h1>Appendix C: Cost analysis calculation</h1>
+        <h2>Calculation for cost per year to heat water for showering</h2>
+        <math>
+          <mn>Energy required per day</mn><mo>=</mo>
+          <mn>7,500</mn><mo>&times;</mo><mn>4184</mn><mo>&times;</mo><mo>(</mo><mn>40</mn><mo>-</mo><mn>25</mn><mo>)</mo>
+          <mo>=</mo><mn>470,700,000J</mn>
+        </math>
+        <math>
+          <mn>Power used per day</mn><mo>=</mo>
+          <mn>470,700,000</mn><mo>&divide;</mo><mn>3.6e+6</mn>
+          <mo>=</mo><mn>130.75kWh</mn>
+        </math>
+        <math>
+          <mn>Cost per year</mn><mo>
+            <mn>130.75</mn><mo>&times;</mo><mn>0.11</mn><mo>&times;</mo><mn>365</mn>
+            <mo>=</mo><mn>SGD5,249.6125</mn>
+        </math>
       </div>
     </div>
 
