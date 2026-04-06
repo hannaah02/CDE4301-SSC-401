@@ -56,27 +56,27 @@
         <h1>2.0 System Design</h1>
         <h2>2.1 Case study</h2>
         <p>
-          The layout of the hotel is approximated below, with a usable implementation area of 1288sqm (greyed out) identified from the total land area of 0.5 hectares, using standard hotel width dimensions as a reference. [26]
+          The layout of the hotel is approximated below, with a usable implementation area of 1288sqm (greyed out) identified from the total land area of 0.5 hectares, using standard hotel width dimensions as a reference. [1]
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/dimensions-only.jpg"
-          subtitle="Figure 7: Dimensions of hotel"></image-component>
+          subtitle="Figure 1: Dimensions of hotel"></image-component>
         <div id = "proposed-system-design"> 
         <h2>2.2 Proposed System Design</h2>
         <p>
           The functional requirements of the client are as follows:
         </p>
         <image-component tag="image" source="assets/final-functional-req.jpg"
-          subtitle="Table 1: Functional requirements of hotel [13][14]"></image-component>
+          subtitle="Table 1: Functional requirements of hotel [2][3]"></image-component>
         <p>
           The final proposed system is as follows:
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/overall-system-layout.jpg"
-          subtitle="Figure 8: Overall system layout"></image-component>
+          subtitle="Figure 2: Overall system layout"></image-component>
         <p>
           The proposed system consists of modular islands, where each island consists of multiple rigs (receiver and reflectors) connected to a thermal energy storage (TES) tank (see below). This aims to reduce overall cost per rig by having common components across multiple rigs.
         </p>
         <image-component tag="image" source="assets/tt_final/overall-system/system-layout-system-of-rigs.jpg"
-          subtitle="Figure 9: Layout of island"></image-component>
+          subtitle="Figure 3: Layout of island"></image-component>
         <p>
           Water is supplied to the TES tank via the water mains, which also provides pressure to drive flow to the hot water storage tank and subsequently to the showers. The hot water storage tank is located in the hotel where it reduces delay in hot water delivery, stores excess thermal energy for periods of low solar irradiance, and provides additional heating to maintain water temperatures.
         </p>
@@ -98,7 +98,7 @@
           In Semester 1, the solar tower and parabolic dish configurations were tested independently, and the resulting static water temperatures were recorded. The solar tower configuration achieved a maximum temperature of 82 °C, while the parabolic dish reached a maximum of 61.6 °C. However, a fully integrated system combining the light capture, thermal transmission, and thermal energy storage subsystems was not developed at that stage.
         </p>
         <image-component tag="image" source="assets/chap2-interim.jpg"
-          subtitle="Figure 10: Details of interim rig"></image-component>
+          subtitle="Figure 4: Details of interim rig"></image-component>
         <h4>Enhanced Rig Design from Jan to Apr 2026</h4>
         <p>
           By the end of Semester 2, all subsystems, light , thermal transmission, and thermal energy storage were successfully integrated to form a fully functional system. The final test rig was able to heat 10 L of water to a maximum temperature of 55 °C and maintain the water temperature above 40 °C for 9 hours.
@@ -107,7 +107,7 @@
           This performance was achieved by increasing the reflective surface area, incorporating insulation to minimise heat losses, and integrating a thermal energy storage system to sustain the water temperature above the desired range.
         </p>
         <image-component tag="image" source="assets/chap2-final.jpg"
-          subtitle="Figure 11: Details of final rig"></image-component>
+          subtitle="Figure 5: Details of final rig"></image-component>
       </div>
     </div> 
          </div>
@@ -120,35 +120,35 @@
     <br />
     <br />
     <sl-divider></sl-divider>
-    <h1 style="padding-top: 20px;">Appendix B: Design specifications for light subsystem</h1>
+    <h1 style="padding-top: 20px;">Appendix A: Design specifications for light subsystem</h1>
 <div>
  
       <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/designspecslight.png"
-              subtitle="Table B1: Design specifications - light subsystem "
+              subtitle="Table A1: Design specifications - light subsystem "
               style="width: 100%; height: auto; display: block; margin: 30px auto 30px auto;"
             ></image-component>
           </div>
 
-      <p>The sunlight conditions in Indonesia are assumed to be 1,000 W/m² and AM1.5 based on standard test conditions [27]. The average Direct Normal Irradiance is assumed to be 385 W/m², based on data from Solcast, and the sunlight hours are assumed to be 5.5 hrs [28].</p>
+      <p>The sunlight conditions in Indonesia are assumed to be 1,000 W/m² and AM1.5 based on standard test conditions [4]. The average Direct Normal Irradiance is assumed to be 385 W/m², based on data from Solcast, and the sunlight hours are assumed to be 5.5 hrs [5].</p>
       <p>The reflectivity of commercially available cost-effective mirrors ranges between 85% – 95%. </p>
 
       <div style="display: flex; justify-content: center;">
             <image-component
               tag="image"
               source="assets/energycalc.png"
-              subtitle="Table B2: Reflector area calculation "
+              subtitle="Table A2: Reflector area calculation "
               style="width: 100%; height: auto; display: block; margin: 30px auto 30px auto;"
             ></image-component>
           </div>
   
       <p>Based on the weather data assumed above, the required reflector area needed if 100% of the captured rays are reflected and absorbed by the water (thermal transmission fluid) in the receiver would be 0.165 m². However, accounting for losses from the reflectors, receiver, thermal transmission and thermal energy storage, the reflector area can be scaled up to a minimum of 1 m², as the test rig area is 1 m².</p>
       <p>The absorptivity of the material used in the receiver is crucial, as it determines how effectively the receiver can absorb sunlight reflected by the mirrors. Therefore, an absorptivity of 90% is chosen for the receiver material.</p>
-      <p>A highly absorptive material is also highly emissive. In the case of the receiver, we aim to maximize absorption while minimizing emissivity. Therefore, the emissivity will be controlled within 1.5%–70%, as the emissivity of black paint is 90% [29], and surfaces with measured emissivity values for temperatures in the 100 – 400 °C range fall within this range.</p>
-      <p>Thermal conductivity is also an important factor, as the absorbed thermal energy by the receiver must be efficiently transferred to the water inside. The receiver can be built using different materials such as metals or ceramics. Among commercially available options, metals are easy to shape, cost-effective, and have thermal conductivities in the range of  300 – 400 W/mK [30].</p>
-      <p>The surface area of the receiver is another key factor. Increasing the surface area allows for greater thermal absorption but may also increase heat losses due to convection and radiation [31]. For low-temperature applications (<200 °C), the concentration ratio (area of reflector / area of receiver) is typically 1:5 [32]. However, based on data from a solar tower configuration conducted by the UROP team, we will scale up the receiver area to match the aluminum pot used in their experiments.</p>
+      <p>A highly absorptive material is also highly emissive. In the case of the receiver, we aim to maximize absorption while minimizing emissivity. Therefore, the emissivity will be controlled within 1.5%–70%, as the emissivity of black paint is 90% [6], and surfaces with measured emissivity values for temperatures in the 100 – 400 °C range fall within this range.</p>
+      <p>Thermal conductivity is also an important factor, as the absorbed thermal energy by the receiver must be efficiently transferred to the water inside. The receiver can be built using different materials such as metals or ceramics. Among commercially available options, metals are easy to shape, cost-effective, and have thermal conductivities in the range of  300 – 400 W/mK [7].</p>
+      <p>The surface area of the receiver is another key factor. Increasing the surface area allows for greater thermal absorption but may also increase heat losses due to convection and radiation [8]. For low-temperature applications (<200 °C), the concentration ratio (area of reflector / area of receiver) is typically 1:5 [9]. However, based on data from a solar tower configuration conducted by the UROP team, we will scale up the receiver area to match the aluminum pot used in their experiments.</p>
       <p>The weight is not considered as a critical factor as the installation will be fixed in place after setup. Additionally, the rig will be transported in parts, allowing for easy assembly, so weight considerations are minimal.</p>
   
       </div>
@@ -159,10 +159,10 @@
 
       <div>
       <div id="tt-des-specs">
-        <h1>Appendix C: Design specifications for thermal transmission subsystem</h1>
+        <h1>Appendix B: Design specifications for thermal transmission subsystem</h1>
         <p>
           Power consumption per rig is estimated against power available per meter square for solar panels, and 
-          1288m^2 of rigs available, and 1176m^2 of area available for solar panel (front of hotel rooftop). Total power produced by solar panels is 176,400W (assuming minimum produced of 150W/m^2). [33] Hence, maxiumum power that can be consumed by each rig assuming full space usage is 136.96W. Thus, the power consumption per rig is set at <math><mn>&le;</mn></math>136.96W.
+          1288m^2 of rigs available, and 1176m^2 of area available for solar panel (front of hotel rooftop). Total power produced by solar panels is 176,400W (assuming minimum produced of 150W/m^2). [10] Hence, maxiumum power that can be consumed by each rig assuming full space usage is 136.96W. Thus, the power consumption per rig is set at <math><mn>&le;</mn></math>136.96W.
         </p>
         <p>
           The efficiency of the system's insulation is measured by:
@@ -172,12 +172,37 @@
           <li>Pipe losses as percentage of total energy delivered, and</li>
         </ol>
         <p>
-          Heat loss per meter is the main measurement of the insulation's effectiveness. In residential units, the heat loss per meter is within the range of 5.1-10.8W/m for insulated domestic hot water systems. [34] For our system usage, the representative threshold value of 7.95W/m will be used in design specifications.
+          Heat loss per meter is the main measurement of the insulation's effectiveness. In residential units, the heat loss per meter is within the range of 5.1-10.8W/m for insulated domestic hot water systems. [11] For our system usage, the representative threshold value of 7.95W/m will be used in design specifications.
         </p>
         <p>
-          Pipe losses as percentage of total energy delivered is on average 16-19% in residential units. [35] In conventional hot water systems, pipe losses are expressed as a percentage of the total energy input to the water heater. However, in the CSP system, there is no heater supplying energy as all the energy is collected from solar energy. In the prototype, the total energy delivered is defined as the total thermal energy that the water absorbs at the receiver. Hence, we set the value in the design specifications as 17.5% for reference which is the average estimate for pipe losses based on residential hot water systems.
+          Pipe losses as percentage of total energy delivered is on average 16-19% in residential units. [12] In conventional hot water systems, pipe losses are expressed as a percentage of the total energy input to the water heater. However, in the CSP system, there is no heater supplying energy as all the energy is collected from solar energy. In the prototype, the total energy delivered is defined as the total thermal energy that the water absorbs at the receiver. Hence, we set the value in the design specifications as 17.5% for reference which is the average estimate for pipe losses based on residential hot water systems.
         </p>
       </div>
+    </div>
+
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+          <div id="references" class="references">
+        <h1>References</h1>
+         <ul>
+
+        <li id="ref-15">[1] “Residential and mixed-use buildings,” www.steelconstruction.info, 2013. https://www.steelconstruction.info/Residential_and_mixed-use_buildings</li>
+
+         <li id="ref-13">[2] Ariston, “How much water is consumed for a shower?,” The Comfort Way – Ariston Advice on the World of Heating, 26 Jul. 2023. [Online]. Available: https://www.ariston.com/en-me/the-comfort-way/news/how-much-water-is-consumed-for-a-shower/</li>
+        <li id="ref-14">[3] Essendon Plumbing Services, “What is a safe temperature for my shower water?,” Essendon Plumbing Services – Plumbing Guides, 2025. [Online]. Available: https://essendonplumbingservices.com.au/plumbing/what-is-a-safe-temperature-for-my-shower-water</li>
+        <li id="ref-16">[4] D.Dunning, “Is Solar Panel Efficiency Important?,” ThinkSolar Knowledge Hub, April 26, 2024. [Online]. Available: https://thinksolar.co.nz/knowledge‑hub‑posts/is‑solar‑panel‑efficiency‑important/</li>
+        <li id="ref-17">[5] Solcast, “Historical data — Solcast API Toolkit.” [Online]. Available: https://toolkit.solcast.com.au/historical</li>
+        <li id="ref-18">[6] C. E. Kennedy, Review of Mid‑ to High‑Temperature Solar Selective Absorber Materials, NREL/TP‑520‑31267, National Renewable Energy Laboratory, Golden, CO, USA, Jul. 2002. [Online]. Available: https://www.nrel.gov/docs/fy02osti/31267.pdf</li>
+        <li id="ref-19">[7] Thermtest, “Top 10 thermally conductive materials,” Thermtest – Thermal Resources, 2026. [Online]. Available: https://thermtest.com/thermal-resources/top-10-resources/top-10-thermally-conductive-materials</li>
+        <li id="ref-20">[8] Engineering Toolbox, “Convective heat transfer coefficient — fluids,” Engineering Toolbox, 2026. [Online]. Available: https://www.engineeringtoolbox.com/convective-heat-transfer-d_430.html</li>
+        <li id="ref-21">[9] H. A. Al‑Ansary, Unit 4: Solar Collectors – Concentrating Collectors, ME 476: Solar Energy course material, College of Engineering, King Saud University, Riyadh, Saudi Arabia, 2025. [Online]. Available: https://faculty.ksu.edu.sa/sites/default/files/unit_4_-_solar_collectors_-_concentrating_collectors_1.pdf</li>
+        <li id="ref-22">[10] Dawnice and Dawnice, “Solar Panel Output per Square Meter: Efficiency Factors & Future Trends,” Energy Dawnice, Apr. 30, 2025. https://www.energydawnice.com/solar-panel-output-per-square-meter/</li>
+        <li id="ref-23">[11] A. Hamburg, A. Mikola, T.-M. Parts, and T. Kalamees, “Heat Loss Due to Domestic Hot Water Pipes,” Energies, vol. 14, no. 20, p. 6446, Jan. 2021, doi: https://doi.org/10.3390/en14206446.</li>
+        <li id="ref-24">[12] C. Backman and M. Hoeschele, “Validation of a Hot Water Distribution Model Using Laboratory and Field Data Alliance for Residential Building Innovation,” 2013. Accessed: Apr. 02, 2026. [Online]. Available: https://www1.eere.energy.gov/buildings/publications/pdfs/building_america/hot_water_distribution_model.pdf</li>
+      </ul>
+    </div> 
     </div>
 
     <br />
