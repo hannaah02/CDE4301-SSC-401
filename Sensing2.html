@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sensing Subsystem</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+
+  <link rel="stylesheet" href="./index.css">
+
+  <link rel="stylesheet" href="./components/team-member/team-member.css">
+  <script type="module" src="./components/team-member/team-member.js"></script>
+
+  <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+
+  <script type="module" src="./components/image/image-component.js"></script>
+
+  <script type="module" src="./components/video/video.js"></script>
+
+  <link rel="stylesheet" href="./components/references/references.css">
+
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+
+  <script src=".components/table-component/table-component-sensing.js"></script>
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+  <style> 
+     .square { 
+        border: 1px solid black;
+        padding: 20px;
+        display: inline-block;
+    } 
+   </style>
+
+</head>
+
+<body>
+
+  <div class="content">
+
+    <sl-button size="medium" pill onclick href="index.html">Back to main page</sl-button>
+   <h1>3.4 Sensor Subsystem</h1>
+<sl-divider></sl-divider>
+
+<div>
+  <div id="sensing">
+    <p>
+      To see which sensors and electronics used in semester 1 click <a href="sensingsubs.html">here</a>
+    </p>
+
+    <h2>3.4.1 Purpose of the Sensing Subsystem</h2>
+    <p>
+  The sensing subsystem was used to measure operating parameters, support system monitoring, enable water circulation control, and provide data for performance evaluation of the small-scale CSP system.
+</p>
+
+    <h2>3.4.2 Sensing elements</h2>
+    <p>
+  The project mainly used an irradiance sensor to measure solar input and temperature sensors to monitor the receiver, pipes, and TES temperatures. Additional components in the sensing and control subsystem included a humidity sensor for rain detection, a wind sensor for environmental monitoring, an ESP32 as the sensor controller, a Raspberry Pi as the multitask server and data-processing unit, and a MOSFET as a timed on-off switching component.
+</p>
+    <h2>3.4.3 Data Acquisition and Processing Components</h2>
+    <p>
+      Data acquisition and processing components such as the Raspberry Pi, ESP32, thermocouple data loggers. 
+    </p>
+
+    <h2>3.4.4 Basis for Component Selection</h2>
+    <p><strong>ESP32-DEVKITC-32UE:</strong> Selected as a low-cost and compact sensor controller for data acquisition. Compared with common alternatives such as Arduino or non-wireless microcontrollers, it offers built-in wireless connectivity, allowing continuous data transmission to brokers or online databases with simpler integration.</p>
+
+    <p><strong>Raspberry Pi 5:</strong> Used as the central processing and logging unit. Compared with lighter microcontrollers, it provides stronger computing capability, multitasking, and offline data storage, making it suitable for coordinating multiple sensing components and supporting the ESP32 within the overall sensing system.</p>
+
+    <p><strong>Apogee SP-420 pyranometer:</strong> The SP-420 provides direct USB output and simple data logging when connected to Pi 5, making it easy to integrate into the prototype. also IPX7 rated for outdoor measurement [https://www.apogeeinstruments.com/content/SP-100-200-spec-sheet.pdf].
+    
+    <p><strong>6-Channel Omega:</strong> Selected for its SD-card data logging capability and small probe size, this thermometer was the most suitable option for measuring temperature inside the small copper tubes of the receiver.</p>
+    
+    <p><strong>IRLB8743 MOSFET:</strong> Although other relay or switching components are possible, the system only requires a simple on-off switch controlled by the Raspberry Pi 5. A power MOSFET was therefore selected as a suitable switching component for the 24 V DC pump.</p>
+    <h2>3.4.5 Sensor Placement and Measurement Points</h2>
+    <p>
+      For outdoor test. the controlling sensing components are inside electric boxes, preventing rain from coming in and continuously measure. 
+      <image-component tag="image" source="assets/sensing1.png"
+          subtitle="Figure XXX: Sensor Placement in Electric Box"></image-component>
+    </p>
+      Measurement points include: Jelly can water, TES Water, Reciever inlet, atmospheric temperature, wind speed, sunlight irradiance
+     <p>
+      
+      <image-component tag="image" source="assets/sensing2.png"
+          subtitle="Figure XXX: Sensor Placement and Measurement Points in Integrated system"></image-component>
+    </p>
+    </p>
+  </div>
+</div>
+    <br />
+    <br />
+    <sl-divider></sl-divider>
+
+   <sl-button size="medium" pill onclick href="index_interim.html">Back to main page</sl-button>
+
+  <!-- This is the code to display the scroll to top button for ergonomic -->
+  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
+  <!-- but it might reduce the user experience. -->
+  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
+    <sl-icon name="arrow-up" label="Settings"></sl-icon>
+  </sl-button>
+
+  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+  <script type="module" src="./components/table-component/table-component-sensing.js"></script>
+</body>
+
+</html>
